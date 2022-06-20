@@ -1,6 +1,3 @@
-let leftSide = 0;
-let rightSide = 0;
-
 function handleClick() {
     $('html').click('click',(e) => {
         if ($('.click-text').length){
@@ -13,15 +10,6 @@ function handleClick() {
         }
         const randomY = Math.round(Math.random() < 0.5 ? Math.random() * -45 : Math.random() * 40);
         const randomRot = Math.round(Math.random() < 0.5 ? Math.random() * -30 : Math.random() * 30);
-
-        if (randomX < 0) {
-            leftSide++;
-        }
-        else {
-            rightSide++;
-        }
-        console.log('Left Side: ' + leftSide);
-        console.log('Right Side: ' + rightSide);
         let positionX = e.pageX + randomX;
         let positionY = e.pageY + randomY;
         let rotation = randomRot;
@@ -32,10 +20,3 @@ function handleClick() {
 $(document).ready(() => {
     handleClick();
 });
-// minimum bounds
-// -70 < x < 10
-// -30 < y < 30
-
-// absolute bounds
-// -100 < x < 30
-// -50 < y < 50
