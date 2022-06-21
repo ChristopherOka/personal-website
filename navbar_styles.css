@@ -21,6 +21,8 @@
     color: #A47CD8;
     font-size: 2rem;
     text-decoration: none;
+    /* cursor: pointer; */
+    pointer-events: none;
 }
 
 @media (max-width: 650px) {

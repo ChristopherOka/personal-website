@@ -29,6 +29,7 @@ html, body {
     position: absolute;
     animation-name: click-text-animation;
     animation-duration: 0.7s;
+    animation-fill-mode: forwards;
 }
 
 .name-well {

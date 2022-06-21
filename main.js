@@ -18,7 +18,19 @@ function handleClick() {
 }
 
 function renderNavbar() {
-    $('#navbar').load('./navbar.html');
+    $('#navbar').load('./navbar.html', bindRedirects);
+}
+
+function delayRedirect(url) {
+    setTimeout(()=> {window.location.href = './' + url;}, 500);
+}
+
+async function bindRedirects(){
+    const urls = ['index.html', 'interests.html', 'experience.html', 'nav-bonus.html']
+    const anchors = ['#nav-home', '#nav-interests', '#nav-experience', '#nav-bonus']
+    for (let i in urls) {
+        $(anchors[i]).click(() => {delayRedirect(urls[i])})
+    }
 }
 
 $(document).ready(() => {
