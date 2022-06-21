@@ -17,6 +17,11 @@ function handleClick() {
     });
 }
 
+function renderNavbar() {
+    $('#navbar').load('./navbar.html');
+}
+
 $(document).ready(() => {
     handleClick();
+    renderNavbar();
 });
