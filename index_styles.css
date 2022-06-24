@@ -22,7 +22,7 @@ html, body {
     100% {opacity: 0%}
 }
 
-.click-text {
+#click-text {
     pointer-events: none;
     color: #EF78B8;
     font-size: 25px;
@@ -32,7 +32,7 @@ html, body {
     animation-fill-mode: forwards;
 }
 
-.name-well {
+#name-well {
     width: 100%;
     height: 100%;
     display: flex;
@@ -41,9 +41,54 @@ html, body {
     text-align: center;
 }
 
-.name {
+@keyframes name-pop-in {
+    0% {visibility: hidden}
+    50% {visibility: hidden}
+    100% {visibility: visible}
+
+}
+#name {
+    position: relative;
     color: #00AFBA;
     font-size: 60px; 
     padding-bottom: 20vh;
     pointer-events: none;
+    animation-name: name-pop-in;
+    animation-duration: 5s;
+}
+
+@keyframes name-outline-fade-in {
+    0% {opacity: 0%;}
+    50% {opacity: 0%; width: 600px; height: 400px;}
+    52% {opacity: 100%;}
+    60% {opacity: 0%; width: 700px; height: 467px;}
+    100% {opacity: 0%}
+}
+
+#name-outline {
+    position: absolute;
+    padding-bottom: 20vh;
+    width: 600px;
+    height: 400px;
+    animation-name: name-outline-fade-in;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes pop-in {
+    0% {opacity: 0%}
+    50% {opacity: 0%}
+    52% {opacity: 100%}
+    65% {opacity: 0%}
+    100% {opacity: 0%}
+
+}
+
+#pop {
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    animation-name: pop-in;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
 }

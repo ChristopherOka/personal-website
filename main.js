@@ -1,7 +1,7 @@
 function handleClick() {
-    $('html').click('click',(e) => {
-        if ($('.click-text').length){
-            $('.click-text').remove();
+    document.documentElement.addEventListener('click', (e) => {
+        if (document.getElementById('click-text')){
+            document.getElementById('click-text').remove();
         }
         let randomX = 0;
         while (randomX > -65 && randomX < 20) {
@@ -13,13 +13,21 @@ function handleClick() {
         let positionX = e.pageX + randomX;
         let positionY = e.pageY + randomY;
         let rotation = randomRot;
-        $('body').append(`<div class='click-text' style='top: ${positionY}px; left: ${positionX}px; transform: rotate(${rotation}deg)'>click!</div>`)
+        document.body.innerHTML += `<div id='click-text' style='top: ${positionY}px; left: ${positionX}px; transform: rotate(${rotation}deg)'>click!</div>`;
     });
 }
 
-function renderNavbar() {
-    $('#navbar').load('./navbar.html', bindRedirects);
-}
+function handlePop() {
+    let positionX = 0;
+    while (positionX > -80 && positionX < 430) {
+        positionX = Math.round(Math.random() < 0.50 ? Math.random() * -150 : Math.random() * 550);
+        
+    }
+    const positionY = Math.round(Math.random() < 0.5 ? Math.random() * -100 : Math.random() * 50);
+    const rotation = Math.round(Math.random() < 0.5 ? Math.random() * -30 : Math.random() * 30);
+
+    document.getElementById('pop').style =`top: ${positionY}px; left: ${positionX}px; transform: rotate(${rotation}deg)`;
+    };
 
 function delayRedirect(url) {
     setTimeout(()=> {window.location.href = './' + url;}, 500);
@@ -33,7 +41,7 @@ async function bindRedirects(){
     }
 }
 
-$(document).ready(() => {
+window.onload = () => {
     handleClick();
-    renderNavbar();
-});
+    handlePop();
+};
