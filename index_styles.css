@@ -1,3 +1,11 @@
+:root {
+    --title: #72DDF7;
+    --heading-1: #B388EB;
+    --heading-2: #8093F1;
+    --emphasis: #F7AEF8;
+    --neutral: #F4F4ED;
+}
+
 @font-face {
     font-family: SignikaNegative;
     src: url('./Signika_Negative/SignikaNegative-Regular.ttf')
@@ -24,7 +32,7 @@ html, body {
 
 #click-text {
     pointer-events: none;
-    color: #EF78B8;
+    color: var(--emphasis);
     font-size: 25px;
     position: absolute;
     animation-name: click-text-animation;
@@ -49,7 +57,7 @@ html, body {
 }
 #name {
     position: relative;
-    color: #00AFBA;
+    color: var(--title);
     font-size: 60px; 
     padding-bottom: 20vh;
     pointer-events: none;
@@ -79,7 +87,7 @@ html, body {
     0% {opacity: 0%}
     50% {opacity: 0%}
     52% {opacity: 100%}
-    65% {opacity: 0%}
+    70% {opacity: 0%}
     100% {opacity: 0%}
 
 }
