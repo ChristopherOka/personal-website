@@ -62,7 +62,7 @@ html, body {
     padding-bottom: 20vh;
     pointer-events: none;
     animation-name: name-pop-in;
-    animation-duration: 5s;
+    animation-duration: 5.5s;
 }
 
 @keyframes name-outline-fade-in {
@@ -80,7 +80,7 @@ html, body {
     width: 600px;
     height: 400px;
     animation-name: name-outline-fade-in;
-    animation-duration: 5s;
+    animation-duration: 5.5s;
     animation-fill-mode: forwards;
 }
 
@@ -98,6 +98,29 @@ html, body {
     font-size: 30px;
     color: var(--neutral);
     animation-name: pop-in;
-    animation-duration: 5s;
+    animation-duration: 5.5s;
     animation-fill-mode: forwards;
+}
+
+@keyframes me-arrow-appear {
+    0% {height: 0}
+    30% {height: 0}
+    100% {height: 200px}
+}
+#me-arrow-well {
+    position: absolute;
+    bottom: 30vh;
+    left: 50vw;
+    animation-name: me-arrow-appear;
+    animation-duration: 4s;
+    animation-timing-function: cubic-bezier(0.46, 1.45, 1, 1);
+    /* animation-iteration-count: infinite; */
+    overflow: hidden;
+    transform: rotate(180deg);
+}
+
+#me-arrow {
+    transform: rotate(180deg);
+    width: auto;
+    height: 200px;
 }
