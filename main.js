@@ -13,14 +13,18 @@ function handleClick() {
         let positionX = e.pageX + randomX;
         let positionY = e.pageY + randomY;
         let rotation = randomRot;
-        document.body.innerHTML += `<div id='click-text' style='top: ${positionY}px; left: ${positionX}px; transform: rotate(${rotation}deg)'>click!</div>`;
+        let clickTextNode = document.createElement('div');
+        clickTextNode.id = 'click-text';
+        clickTextNode.style = `top: ${positionY}px; left: ${positionX}px; transform: rotate(${rotation}deg)`;
+        clickTextNode.textContent = 'click!';
+        document.body.appendChild(clickTextNode);
     });
 }
 
 function handlePop() {
     let positionX = 0;
-    while (positionX > -80 && positionX < 430) {
-        positionX = Math.round(Math.random() < 0.50 ? Math.random() * -150 : Math.random() * 550);
+    while (positionX > -100 && positionX < 460) {
+        positionX = Math.round(Math.random() < 0.50 ? Math.random() * -200 : Math.random() * 600);
         
     }
     const positionY = Math.round(Math.random() < 0.5 ? Math.random() * -100 : Math.random() * 50);

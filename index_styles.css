@@ -76,6 +76,7 @@ html, body {
 #name-outline {
     position: absolute;
     padding-bottom: 20vh;
+    pointer-events: none;
     width: 600px;
     height: 400px;
     animation-name: name-outline-fade-in;
@@ -95,7 +96,7 @@ html, body {
 #pop {
     position: absolute;
     font-size: 30px;
-    color: white;
+    color: var(--neutral);
     animation-name: pop-in;
     animation-duration: 5s;
     animation-fill-mode: forwards;
