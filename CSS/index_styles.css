@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: SignikaNegative;
-    src: url('./Signika_Negative/SignikaNegative-Regular.ttf')
+    src: url('../Signika_Negative/SignikaNegative-Regular.ttf')
 }
 
 html, body {
@@ -125,7 +125,6 @@ html, body {
     animation-name: me-arrow-appear;
     animation-duration: 3.5s;
     animation-timing-function: cubic-bezier(0.46, 1.45, 1, 1);
-    /* animation-iteration-count: infinite; */
     overflow: hidden;
     transform: rotate(180deg);
 }
@@ -156,7 +155,7 @@ html, body {
 }
 
 #left-sidebar {
-    background-image: url('./crumpled_paper.jpg');
+    background-image: url('../Images/crumpled_paper.jpg');
     width: 25vw;
     height: 85vh;
     margin-top: 10vh;
@@ -171,7 +170,7 @@ html, body {
 }
 
 #right-sidebar {
-    background-image: url('./crumpled_paper.jpg');
+    background-image: url('../Images/crumpled_paper.jpg');
     width: 25vw;
     height: 85vh;
     margin-top: 10vh;
