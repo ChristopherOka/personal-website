@@ -243,3 +243,9 @@ html, body {
     padding-right: 25px;
 }
 
+.proj{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+}
