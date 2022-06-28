@@ -101,7 +101,7 @@ async function testfn() {
 }
 
 window.onload = () => {
-   testfn();
-    handleClick();
-    handlePop();
+//    testfn();
+    // handleClick();
+    // handlePop();
 };
