@@ -40,6 +40,11 @@ body {
 
 #main-headers > a {
     padding: 4vh 0;
+    transition: transform 1s ease;
+}
+
+#main-headers > a:hover {
+    transform: translateY(-7vh);
 }
 
 #headshot-well {
@@ -94,7 +99,7 @@ body {
         padding-top: 10vh;
     }
     #headshot {
-        height: 30vh;
+        height: 27vh;
         margin: 6vh 0 0 0;
         /* margin-left: 6vw;
         margin-top: 6vh; */
@@ -108,6 +113,9 @@ body {
         /* padding-left: 6vw; */
         padding: 0;
     }
+    #main-headers > a:hover {
+        transform: translateY(-5vh);
+    }
 }
 
 @media (max-width: 560px) {
@@ -118,6 +126,15 @@ body {
         height: 38vh;
     }
 }
+
+@keyframes float-up {
+    0% {
+        transform: translateX
+    }
+
+}
+
+
 .proj {
     position: absolute;
     width: 10px;
