@@ -39,12 +39,32 @@ body {
 }
 
 #main-headers > a {
-    padding: 4vh 0;
+    padding: 7.5vh 0;
     transition: transform 1s ease;
+    display: grid;
+    grid-template-rows: 0.9fr 0.1fr;
+    justify-content: start;
 }
 
 #main-headers > a:hover {
     transform: translateY(-7vh);
+}
+
+#main-headers a > b {
+    text-align: center;
+    background-color: var(--bg-color);
+    z-index: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#main-headers a > div {
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+#main-headers a > b {
+    height: 9vh;
 }
 
 #headshot-well {
@@ -132,6 +152,102 @@ body {
         transform: translateX
     }
 
+}
+
+.third-header-logos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 0;
+    padding-top: 10vh;
+    z-index: 1;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+.third-header-logos img {
+    height: 8vh;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    opacity: 0;
+    transform: translateY(-7vh);
+    transition: opacity 0.3s ease, transform 0.6s;
+}
+
+.third-header-logos img:hover {
+    transform: rotate(20deg);
+}
+
+.third-header-logos div {
+    display: flex;
+    justify-content: center;
+}
+
+#tdsb {
+    height: 6vh;   
+}
+
+#front-rush {
+    transition-delay: 0.1s;
+}
+
+#tbits {
+    transition-delay: 0.2s;
+}
+
+#hack-the-north {
+    transition-delay: 0.3s;
+}
+
+#python {
+    transition-delay: 0.4s;
+}
+
+#third-header:hover img {
+    opacity: 100%;
+    transform: translateY(0);
+}
+
+#third-header:hover div div {
+    animation-name: float;
+
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.68,-0.01, 0.45, 0.99);
+    animation-fill-mode: both;
+}
+
+.third-header-logos div:nth-child(1) {
+    animation-duration: 5s;
+}
+
+.third-header-logos div:nth-child(2) {
+    animation-duration: 5s;
+    animation-delay: 0.2s;
+}
+
+.third-header-logos div:nth-child(3) {
+    animation-duration: 5s;
+    animation-delay: 0.4s;
+}
+
+.third-header-logos div:nth-child(4) {
+    animation-duration: 5s;
+    animation-delay: 0.6s;
+}
+
+.third-header-logos div:nth-child(5) {
+    animation-duration: 5s;
+    animation-delay: 0.8s;
 }
 
 
