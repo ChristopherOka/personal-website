@@ -39,7 +39,7 @@ body {
 }
 
 #main-headers > a {
-    padding: 7.5vh 0;
+    margin: 7.5vh 0;
     transition: transform 1s ease;
     display: grid;
     grid-template-rows: 0.9fr 0.1fr;
@@ -165,13 +165,13 @@ body {
 
 @keyframes float {
     0% {
-        transform: translateY(5px);
+        transform: translateY(15px);
     }
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-5px);
     }
     100% {
-        transform: translateY(5px);
+        transform: translateY(15px);
     }
 }
 
@@ -180,12 +180,8 @@ body {
     padding-right: 1vw;
     padding-left: 1vw;
     opacity: 0;
-    transform: translateY(-7vh);
+    transform: translateY(-7vh) rotate(-5deg) scale(0.8);
     transition: opacity 0.3s ease, transform 0.6s;
-}
-
-.third-header-logos img:hover {
-    transform: rotate(20deg);
 }
 
 .third-header-logos div {
@@ -215,7 +211,7 @@ body {
 
 #third-header:hover img {
     opacity: 100%;
-    transform: translateY(0);
+    transform: translateY(0) rotate(0deg) scale(1);
 }
 
 #third-header:hover div div {
@@ -226,28 +222,24 @@ body {
     animation-fill-mode: both;
 }
 
-.third-header-logos div:nth-child(1) {
-    animation-duration: 5s;
+.third-header-logos div {
+    animation-duration: 7s;
 }
 
 .third-header-logos div:nth-child(2) {
-    animation-duration: 5s;
-    animation-delay: 0.2s;
+    animation-delay: 0.5s;
 }
 
 .third-header-logos div:nth-child(3) {
-    animation-duration: 5s;
-    animation-delay: 0.4s;
+    animation-delay: 1s;
 }
 
 .third-header-logos div:nth-child(4) {
-    animation-duration: 5s;
-    animation-delay: 0.6s;
+    animation-delay: 1.5s;
 }
 
 .third-header-logos div:nth-child(5) {
-    animation-duration: 5s;
-    animation-delay: 0.8s;
+    animation-delay: 2s;
 }
 
 
