@@ -257,11 +257,24 @@ body {
     animation-delay: 2s;
 }
 
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(50vh);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
 #first-header-body {
     display: none;
 }
 
 #first-header-body p{
+    animation-name: fade-in;
+    animation-duration: 1s;
     color: var(--default-text);
     font-size: 2.5vh;
 }
@@ -279,6 +292,11 @@ body {
     border: 3px solid var(--heading-1);
     margin: 0 12vw -10vw 6vw;
     transform: translateY(-20vh);
+    transition: transform 0.4s ease;
+}
+
+#headshot:hover {
+    transform: scale(1.05) translateY(-20vh);
 }
 
 .second-paragraph {

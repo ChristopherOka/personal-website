@@ -101,12 +101,14 @@ async function testfn() {
 }
 
 function firstHeaderClick () {
+    const mainHeaders = document.getElementById('main-headers');
+    mainHeaders.className = '';
+    mainHeaders.style = 'justify-content: flex-start';
+    document.getElementById('first-header').style = 'margin-top: 10vh';
     document.getElementById('second-header').style.display = 'none';
     document.getElementById('third-header').style.display = 'none';
-    document.getElementById('main-headers').className = '';
+    document.querySelector('#main-headers > a').style.cursor = 'default';
     document.getElementsByClassName('first-header-logos')[0].style.display = 'none';
-    document.getElementById('main-headers').style = 'justify-content: flex-start';
-    document.getElementById('first-header').style = 'margin-top: 10vh';
     document.getElementById('first-header-body').style.display = 'block';
     document.getElementById('back-btn').style.display = 'block';
 }
@@ -116,6 +118,7 @@ function returnHome() {
     document.getElementById('third-header').style.display = 'grid';
     document.getElementById('main-headers').className = 'enable-hover';
     document.getElementsByClassName('first-header-logos')[0].style.display = 'flex';
+    document.querySelector('#main-headers > a').style.cursor = 'pointer';
     document.getElementById('main-headers').style = 'justify-content: center';
     document.getElementById('first-header').style = 'margin-top: 0';
     document.getElementById('first-header-body').style.display = 'none';
