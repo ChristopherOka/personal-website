@@ -4,8 +4,7 @@
     --heading-1: #EFE1F0;
     --default-text: #EFE1F0;
     --heading-2: #8093F1;
-    /* --emphasis: #F7AEF8; */
-    --emphasis: #ff59ff;
+    --emphasis: #FFBADF;
     --neutral: #F4F4ED;
 }
 
@@ -37,10 +36,11 @@ body {
     justify-content: center;
     padding-left: 10vw;
     min-width: 50vw;
-    cursor: pointer;
+    
 }
 
 #main-headers > a {
+    cursor: pointer;    
     margin: 2.5vh 0;
     transition: transform 1s ease;
     display: grid;
@@ -48,7 +48,7 @@ body {
     justify-content: start;
 }
 
-#main-headers > a:hover {
+#main-headers.enable-hover > a:hover {
     transform: translateY(-7vh);
 }
 
@@ -285,14 +285,43 @@ body {
     margin-right: 10vw;
 }
 
-#back {
+@keyframes back-btn-slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-5vw);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+
+#back-btn {
     display: none;
     position: absolute;
-    font-size: 20px;
-    border: 3px solid white;
-    border-radius: 5px;
-    color: white;
+    cursor: pointer;
+    border-right: 3px solid var(--emphasis);
+    border-left: 3px solid rgba(255, 186, 223, 0.1);
+    border-bottom: 3px solid rgba(255, 186, 223, 0.1);
+    border-top: 3px solid rgba(255, 186, 223, 0.1);
+    background-color: rgba(255, 186, 223, 0.1);
+    left: 0;
+    height: 100vh;
+    width: 4vw;
+    animation-name: back-btn-slide-in;
+    animation-duration: 1s;
+    transition: width 0.5s ease;
 }
+
+#back-btn:hover {
+    width: 5.5vw;
+}
+
+#back-btn img {
+    width: 2vw;
+    height: auto;
+}
+
 .proj {
     position: absolute;
     width: 10px;
