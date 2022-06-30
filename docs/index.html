@@ -10,7 +10,7 @@
     </head>
     <body>
         <div id="main-headers">
-            <a id="first-header">
+            <a id="first-header" onclick="firstHeaderClick()">
                 <b>
                     <span class='larger-text'>Who I Am</span>
                     <span class='smaller-text'>About</span>
@@ -24,6 +24,35 @@
                     </div>
                 </div>
             </a>
+            <div id='first-header-body'>
+                <div class="paragraph-and-image">
+                    <p class="first-paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies maximus dui, 
+                        eu eleifend ex. Aenean pulvinar, nulla quis tempor ultrices, risus est condimentum 
+                        purus, ut tempor mi libero nec lorem. Aliquam tincidunt ullamcorper diam vitae consequat. 
+                        Ut eu felis in arcu pharetra maximus ac sed enim. Quisque suscipit est ligula, ac sagittis
+                        urna vehicula eget. Mauris sapien tellus, dapibus vitae felis ut, suscipit faucibus eros. 
+                        Donec rutrum dui non dictum vestibulum. Aliquam tincidunt ullamcorper diam vitae consequat. 
+                        Ut eu felis in arcu pharetra maximus ac sed enim. Aliquam tincidunt ullamcorper diam vitae consequat. 
+                        Ut eu felis in arcu pharetra maximus ac sed enim.
+                    </p>
+                    <img id="headshot" src="./Images/chris_headshot_cropped.jpg">
+                </div>
+                <p class="second-paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies maximus dui, 
+                    eu eleifend ex. Aenean pulvinar, nulla quis tempor ultrices, risus est condimentum 
+                    purus, ut tempor mi libero nec lorem. Aliquam tincidunt ullamcorper diam vitae consequat. 
+                    Ut eu felis in arcu pharetra maximus ac sed enim. Quisque suscipit est ligula, ac sagittis
+                    urna vehicula eget. Mauris sapien tellus, dapibus vitae felis ut, suscipit faucibus eros. 
+                    Donec rutrum dui non dictum vestibulum. Aliquam tincidunt ullamcorper diam vitae consequat. 
+                    Ut eu felis in arcu pharetra maximus ac sed enim. Quisque suscipit est ligula, ac sagittis
+                    urna vehicula eget. Mauris sapien tellus, dapibus vitae felis ut, suscipit faucibus eros. 
+                    Donec rutrum dui non dictum vestibulum. Aliquam tincidunt ullamcorper diam vitae consequat. 
+                    Ut eu felis in arcu pharetra maximus ac sed enim. Quisque suscipit est ligula, ac sagittis
+                    urna vehicula eget. Mauris sapien tellus, dapibus vitae felis ut, suscipit faucibus eros. 
+                    Donec rutrum dui non dictum vestibulum. 
+                </p>
+            </div>
             <a id="second-header">
                 <b>
                    <span class="larger-text">What I Love</span>
@@ -74,6 +103,9 @@
         <div id="headshot-well">
             <!-- <img id="headshot" src="./Images/chris_headshot_cropped.jpg"> -->
         </div>
+        <button id="back" onclick="returnHome()">
+            BACK
+        </button>
         
     </body>
 </html>

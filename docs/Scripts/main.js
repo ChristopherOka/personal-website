@@ -100,6 +100,26 @@ async function testfn() {
     console.log(`Execution time: ${end - start} ms`); 
 }
 
+function firstHeaderClick () {
+    document.getElementById('second-header').style.display = 'none';
+    document.getElementById('third-header').style.display = 'none';
+    document.getElementsByClassName('first-header-logos')[0].style.display = 'none';
+    document.getElementById('main-headers').style = 'justify-content: flex-start';
+    document.getElementById('first-header').style = 'margin-top: 10vh';
+    document.getElementById('first-header-body').style.display = 'block';
+    document.getElementById('back').style.display = 'block';
+}
+
+function returnHome() {
+    document.getElementById('second-header').style.display = 'grid';
+    document.getElementById('third-header').style.display = 'grid';
+    document.getElementsByClassName('first-header-logos')[0].style.display = 'flex';
+    document.getElementById('main-headers').style = 'justify-content: center';
+    document.getElementById('first-header').style = 'margin-top: 0';
+    document.getElementById('first-header-body').style.display = 'none';
+    document.getElementById('back').style.display = 'none';    
+}
+
 window.onload = () => {
 //    testfn();
     // handleClick();
