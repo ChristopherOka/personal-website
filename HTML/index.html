@@ -1,63 +1,80 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="./index_styles.css">
-<link rel="stylesheet" href="./navbar_styles.css">
+<link rel="stylesheet" href="./CSS/index_styles.css">
+<link rel="stylesheet" href="./CSS/navbar_styles.css">
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?">
-        <script src="./main.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href=".Images/favicon.ico?">
+        <script src="./Scripts/main.js"></script>
         <title>Christopher Oka</title>
     </head>
     <body>
-        <script id="replace_with_navbar" src="navbar.js"></script>
-        <div id="main-body">
-            <div id="left-sidebar">
-                <div id="left-sidebar-title">
-                    <p style="margin-bottom: 5px; margin-top: 0"><b>What I Love</b></p>
-                </div>
-                <div id="sidebar-content">
-                    <div id="curling">
-                        <object data="./curling.svg" id="curling-svg"></object>
-                        <p>
-                            I’ve been <a href="#"><b>curling</b></a> competitively since I was 
-                            13. I absolutely love this sport  
-                        </p>
+        <div id="main-headers">
+            <a id="first-header">
+                <b>
+                    <span class='larger-text'>Who I Am</span>
+                    <span class='smaller-text'>About</span>
+                </b>
+                <div class="first-header-logos">
+                    <div>
+                        <img id="uofw" src="./Images/uofw.png" alt="university of waterloo logo">
                     </div>
-                    <div id="guitar">
-                        <object data="./guitar.svg" id="guitar-svg"></object>
-                        <p>I started taking <a href="#"><b>guitar</b></a> lessons when I was 10, now I play whenever I have spare time</p>
-                    </div>
-                    <div id="hockey">
-                        <object data="./hockey.svg" id="hockey-svg"></object>
-                        <p>I recently learned how to play <a href="#"><b>hockey</b></a>, taught by my wonderful hockey-playing friends</p>
-                    </div>
-                    <div id="ultimate-frisbee">
-                        <object data="./frisbee.svg" id="frisbee-svg"></object>
-                        <p>I’ve loved playing <a href="#"><b>ultimate frisbee</b></a> for years,
-                            but still haven’t played it in an organized 
-                            manner</p>
-                    </div>
-                    <div id="video-games">
-                        <object data="./video_games.svg" id="video-games-svg"></object>
-                        <p>Who doesn’t love a good <a href="#"><b>video game</b></a>? There’s something out there for everybody</p>
+                    <div>
+                        <img id="code" src="./Images/code.png" alt="carats used while coding">
                     </div>
                 </div>
-            </div>
-            <div id="center-well">
-                <div id="name-well">
-                    <div id="name">
-                        <b>Christopher Oka</b>
-                        <p id="pop">pop!</p>
+            </a>
+            <a id="second-header">
+                <b>
+                   <span class="larger-text">What I Love</span>
+                   <span class='smaller-text'>Hobbies</span>
+                </b>
+                <div class="second-header-logos">
+                    <div>
+                        <img id='curling' src="./Images/curling.png" alt="curling rock">
                     </div>
-                    <object id="name-outline" data="name_outline.svg"></object>
-                    <div id="me-arrow-well">
-                        <object id="me-arrow" data="me_arrow.svg"></object>
+                    <div>
+                        <img id='guitar' src="./Images/guitar.png" alt="guitar">
                     </div>
-                    <p id="thats-me">that's me!</p>
+                    <div>
+                        <img id="hockey" src="./Images/hockey.png" alt="hockey stick and puck">
+                    </div>
+                    <div>
+                        <img id="frisbee" src="./Images/frisbee.png" alt="frisbee flying through the air">
+                    </div>
+                    <div>
+                        <img id="video-games" src="./Images/video_games.png" alt="video game controller">
+                    </div>
                 </div>
-            </div>
-            <div id="right-sidebar"></div>
+            </a>
+            <a id="third-header">
+                <b>
+                    <span class="larger-text">What I've Done</span>
+                    <span class='smaller-text'>Experience</span>
+                </b>
+                <div class="third-header-logos">
+                    <div>
+                        <img id='tdsb' src="./Images/tdsb.png" alt="Toronto District School Board logo">
+                    </div>
+                    <div>
+                        <img id='front-rush' src="./Images/front_rush.png" alt="Front Rush logo">
+                    </div>
+                    <div>
+                        <img id="tbits" src="./Images/tbits.png" alt="Tradable Bits logo">
+                    </div>
+                    <div>
+                        <img id="hack-the-north" src="./Images/hack_the_north.png" alt="Hack the North logo">
+                    </div>
+                    <div>
+                        <img id="python" src="./Images/python.png" alt="Python coding language logo">
+                    </div>
+                </div>
+            </a>
         </div>
+        <div id="headshot-well">
+            <!-- <img id="headshot" src="./Images/chris_headshot_cropped.jpg"> -->
+        </div>
+        
     </body>
 </html>
