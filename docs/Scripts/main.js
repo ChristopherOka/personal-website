@@ -114,15 +114,31 @@ function firstHeaderClick () {
 }
 
 function returnHome() {
-    document.getElementById('second-header').style.display = 'grid';
-    document.getElementById('third-header').style.display = 'grid';
-    document.getElementById('main-headers').className = 'enable-hover';
-    document.getElementsByClassName('first-header-logos')[0].style.display = 'flex';
-    document.querySelector('#main-headers > a').style.cursor = 'pointer';
-    document.getElementById('main-headers').style = 'justify-content: center';
-    document.getElementById('first-header').style = 'margin-top: 0';
-    document.getElementById('first-header-body').style.display = 'none';
-    document.getElementById('back-btn').style.display = 'none';    
+    const first_header_body_els = document.querySelectorAll('#first-header-body p, #first-header-body img');
+    for (const el of first_header_body_els) {
+        el.classList.add('reverse-animation');
+        el.style.animation = 'none';
+        el.offsetHeight; /* trigger reflow */
+        el.style.animation = null; 
+    }
+    setTimeout(() => {
+        document.getElementById('second-header').style.display = 'grid';
+        document.getElementById('third-header').style.display = 'grid';
+        document.getElementById('main-headers').className = 'enable-hover';
+        document.getElementsByClassName('first-header-logos')[0].style.display = 'flex';
+        document.querySelector('#main-headers > a').style.cursor = 'pointer';
+        document.getElementById('main-headers').style = 'justify-content: center';
+        document.getElementById('first-header').style = 'margin-top: 0';
+        document.getElementById('first-header-body').style.display = 'none';
+        document.getElementById('back-btn').style.display = 'none'; 
+        const first_header_body_elmnts = document.querySelectorAll('#first-header-body p, #first-header-body img');
+        for (const el of first_header_body_elmnts) {
+            el.classList.remove('reverse-animation');
+        }
+    }, 1000);
+    
+    
+       
 }
 
 window.onload = () => {

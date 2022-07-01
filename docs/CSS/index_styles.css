@@ -36,7 +36,7 @@ body {
     justify-content: center;
     padding-left: 10vw;
     min-width: 50vw;
-    
+    overflow: hidden;
 }
 
 #main-headers > a {
@@ -285,6 +285,15 @@ body {
     justify-content: space-between;
 }
 
+@keyframes slide-in-from-right {
+    0% {
+        transform: translate(50vw, -20vh);
+    }
+    100% {
+        transform: translate(0, -20vh);
+    }
+}
+
 #headshot {
     height: 45vh;
     width: auto;
@@ -293,6 +302,8 @@ body {
     margin: 0 12vw -10vw 6vw;
     transform: translateY(-20vh);
     transition: transform 0.4s ease;
+    animation-name: slide-in-from-right;
+    animation-duration: 1s;
 }
 
 #headshot:hover {
@@ -318,16 +329,16 @@ body {
     display: none;
     position: absolute;
     cursor: pointer;
-    border-right: 3px solid var(--emphasis);
-    border-left: 3px solid rgba(255, 186, 223, 0.1);
-    border-bottom: 3px solid rgba(255, 186, 223, 0.1);
-    border-top: 3px solid rgba(255, 186, 223, 0.1);
+    outline: 3px solid var(--emphasis);
+    border: none;
     background-color: rgba(255, 186, 223, 0.1);
     left: 0;
     height: 100vh;
     width: 4vw;
     animation-name: back-btn-slide-in;
     animation-duration: 1s;
+    animation-delay: 1.2s;
+    animation-fill-mode: both;
     transition: width 0.5s ease;
 }
 
@@ -338,6 +349,26 @@ body {
 #back-btn img {
     width: 2vw;
     height: auto;
+}
+
+@keyframes slide-to-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+.slide-to-right {
+    animation-name: slide-to-right;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.reverse-animation {
+    animation-direction: reverse;
+    animation-fill-mode: both;
 }
 
 .proj {
