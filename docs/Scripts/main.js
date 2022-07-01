@@ -111,6 +111,7 @@ function renderNewPage (currentHeaderEl) {
     firstOtherHeader.classList.add('fade-out');
     secondOtherHeader.classList.add('fade-out');
 
+    currentHeader.classList.remove(`${currentHeaderId}-initial-position`);
     firstOtherHeader.classList.remove(`${firstOtherHeaderId}-initial-position`);
     secondOtherHeader.classList.remove(`${secondOtherHeaderId}-initial-position`);
 
