@@ -37,13 +37,6 @@ function delayRedirect(url) {
     setTimeout(()=> {window.location.href = './' + url;}, 500);
 }
 
-async function bindRedirects(){
-    const urls = ['index.html', 'interests.html', 'experience.html', 'nav-bonus.html']
-    const anchors = ['#nav-home', '#nav-interests', '#nav-experience', '#nav-bonus']
-    for (let i in urls) {
-        $(anchors[i]).click(() => {delayRedirect(urls[i])})
-    }
-}
 
 function projectileEqnCoordGenerator(initCoords, initVelocities, t) {
     const x = initCoords[0];
@@ -100,49 +93,107 @@ async function testfn() {
     console.log(`Execution time: ${end - start} ms`); 
 }
 
-function firstHeaderClick () {
-    const mainHeaders = document.getElementById('main-headers');
-    mainHeaders.className = '';
-    mainHeaders.style = 'justify-content: flex-start';
-    document.getElementById('first-header').style = 'margin-top: 10vh';
-    document.getElementById('second-header').style.display = 'none';
-    document.getElementById('third-header').style.display = 'none';
-    document.querySelector('#main-headers > a').style.cursor = 'default';
-    document.getElementsByClassName('first-header-logos')[0].style.display = 'none';
-    document.getElementById('first-header-body').style.display = 'block';
+function renderNewPage (currentHeaderEl) {
+    const headers = ['first-header', 'second-header', 'third-header'];
+    const currentHeaderId = currentHeaderEl.id;
+    const otherHeaders = headers.filter(e => e !== currentHeaderId);
+
+    const firstOtherHeaderId = otherHeaders[0];
+    const secondOtherHeaderId = otherHeaders[1];
+    const currentHeader = document.getElementById(currentHeaderId);
+    const firstOtherHeader = document.getElementById(firstOtherHeaderId);
+    const secondOtherHeader = document.getElementById(secondOtherHeaderId);
+   
+    currentHeader.classList.remove('fade-in');
+    firstOtherHeader.classList.remove('fade-in');
+    secondOtherHeader.classList.remove('fade-in');
+
+    firstOtherHeader.classList.add('fade-out');
+    secondOtherHeader.classList.add('fade-out');
+
+    firstOtherHeader.classList.remove(`${firstOtherHeaderId}-initial-position`);
+    secondOtherHeader.classList.remove(`${secondOtherHeaderId}-initial-position`);
+
+    currentHeader.classList.add(`${currentHeaderId}-to-top`, 'top-header');
+
+    currentHeader.style.pointerEvents = 'none';
+    firstOtherHeader.style.pointerEvents = 'none';
+    secondOtherHeader.style.pointerEvents = 'none';
+
+    currentHeader.classList.add('disable-transition');
+
     document.getElementById('back-btn').style.display = 'block';
+
+    document.getElementById(`${currentHeaderId}-body`).style.display = 'block';
 }
 
 function returnHome() {
-    const first_header_body_els = document.querySelectorAll('#first-header-body p, #first-header-body img');
-    for (const el of first_header_body_els) {
+    const currentHeaderId = document.getElementsByClassName('top-header')[0].id;
+
+    const header_body_els = document.querySelectorAll(`#${currentHeaderId}-body p, #${currentHeaderId}-body img, #back-btn`);
+    for (const el of header_body_els) {
         el.classList.add('reverse-animation');
         el.style.animation = 'none';
         el.offsetHeight; /* trigger reflow */
         el.style.animation = null; 
     }
+
+    const headers = ['first-header', 'second-header', 'third-header'];
+    const otherHeaders = headers.filter(e => e !== currentHeaderId);
+
+    const currentHeader = document.getElementById(currentHeaderId);
+
+    const firstOtherHeader = document.getElementById(otherHeaders[0]);
+    const secondOtherHeader = document.getElementById(otherHeaders[1]);
+
     setTimeout(() => {
-        document.getElementById('second-header').style.display = 'grid';
-        document.getElementById('third-header').style.display = 'grid';
-        document.getElementById('main-headers').className = 'enable-hover';
-        document.getElementsByClassName('first-header-logos')[0].style.display = 'flex';
-        document.querySelector('#main-headers > a').style.cursor = 'pointer';
-        document.getElementById('main-headers').style = 'justify-content: center';
-        document.getElementById('first-header').style = 'margin-top: 0';
-        document.getElementById('first-header-body').style.display = 'none';
+        currentHeader.classList.remove(`${currentHeaderId}-to-top`, 'top-header');
+        currentHeader.classList.add(`${currentHeaderId}-initial-position`);
+
+        currentHeader.style.pointerEvents = 'auto';
+        firstOtherHeader.style.pointerEvents = 'auto';
+        secondOtherHeader.style.pointerEvents = 'auto';
+
+        currentHeader.classList.remove('disable-transition');
+
+        currentHeader.classList.remove('fade-out');
+        firstOtherHeader.classList.remove('fade-out');
+        secondOtherHeader.classList.remove('fade-out');
+
+        firstOtherHeader.classList.add('fade-in');
+        secondOtherHeader.classList.add('fade-in');
+
+        document.getElementById(`${currentHeaderId}-body`).style.display = 'none';
         document.getElementById('back-btn').style.display = 'none'; 
-        const first_header_body_elmnts = document.querySelectorAll('#first-header-body p, #first-header-body img');
-        for (const el of first_header_body_elmnts) {
+
+        const header_body_elmnts = document.querySelectorAll(`#${currentHeaderId}-body p, #${currentHeaderId}-body img, #back-btn`);
+        for (const el of header_body_elmnts) {
             el.classList.remove('reverse-animation');
         }
     }, 1000);
+}
+
+function secondHeaderClick () {
+    const mainHeaders = document.getElementById('main-headers');
+    const firstHeader = document.getElementById('first-header');
+    const secondHeader = document.getElementById('second-header');
+    const thirdHeader = document.getElementById('third-header');
     
-    
-       
+    mainHeaders.className = '';
+    mainHeaders.style = 'justify-content: flex-start';
+    // document.getElementById('second-header').style = 'margin-top: 10vh';
+    secondHeader.classList.add('float-up');
+    firstHeader.style.display = 'none';
+    thirdHeader.style.display = 'none';
+    document.querySelector('#main-headers > a').style.cursor = 'default';
+    document.getElementsByClassName('first-header-logos')[0].style.display = 'none';
+    document.getElementById('first-header-body').style.display = 'block';
+    document.getElementById('back-btn').style.display = 'block';
+    moveHeaderToTop(secondHeader);
 }
 
 window.onload = () => {
 //    testfn();
-    // handleClick();
+    handleClick();
     // handlePop();
 };

@@ -14,32 +14,27 @@
 }
  
 html, body {
+    position: relative;
     width: 100%;
     height: 100%;
     margin: 0;
     background-color: var(--bg-color);
 }
 
-body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 #main-headers {
+    position: absolute;
     height: 100%;
+    width: calc(100% - 10vw);
     font-size: 13vh;
     font-family: SignikaNegative;
     color: var(--title);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding-left: 10vw;
     min-width: 50vw;
     overflow: hidden;
 }
 
 #main-headers > a {
+    position: absolute;
     cursor: pointer;    
     margin: 2.5vh 0;
     transition: transform 1s ease;
@@ -48,12 +43,11 @@ body {
     justify-content: start;
 }
 
-#main-headers.enable-hover > a:hover {
-    transform: translateY(-7vh);
+#main-headers > a:hover {
+    transform: translateY(-5vh);
 }
 
 #main-headers a > b {
-    background-color: var(--bg-color);
     z-index: 2;
     grid-row-start: 1;
     grid-row-end: 2;
@@ -129,12 +123,128 @@ body {
     }
 }
 
-@keyframes float-up {
-    0% {
-        transform: translateX
-    }
 
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
 }
+
+.fade-in {
+    animation-name: fade-in;
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+}
+
+@keyframes fade-out {
+    0% {opacity: 100%}
+    100% {opacity: 0}
+}
+
+.fade-out {
+    animation-name: fade-out;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+#main-headers .disable-transition {
+    transition: none;
+}
+
+#first-header.first-header-to-top {
+    top: 11vh;
+}
+
+@keyframes second-header-to-top {
+    0% {
+        top: 35vh;
+    }
+    100% {
+        top: 11vh;
+    }
+}
+
+#second-header.second-header-to-top {
+    animation-name: second-header-to-top;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes third-header-to-top {
+    0% {
+        top: 59vh;
+    }
+    100% {
+        top: 11vh;
+    }
+}
+
+#third-header.third-header-to-top {
+    animation-name: third-header-to-top;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes first-header-initial-position {
+    0% {
+        top: 11vh;
+    }
+    100% {
+        top: 16vh;
+    }
+}
+
+.first-header-initial-position {
+    animation-name: first-header-initial-position;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes second-header-initial-position {
+    0% {
+        top: 11vh;
+    }
+    100% {
+        top: 40vh;
+    }
+}
+
+.second-header-initial-position {
+    animation-name: second-header-initial-position;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes third-header-initial-position {
+    0% {
+        top: 11vh;
+    }
+    100% {
+        top: 64vh;
+    }
+}
+
+.third-header-initial-position {
+    animation-name: third-header-initial-position;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#first-header {
+    top: 16vh;
+}
+
+#second-header {
+    top: 40vh;
+}
+
+#third-header {
+    top: 64vh;
+}
+
 
 .third-header-logos, .second-header-logos, .first-header-logos {
     display: flex;
@@ -257,7 +367,7 @@ body {
     animation-delay: 2s;
 }
 
-@keyframes fade-in {
+@keyframes fade-in-translate {
     0% {
         opacity: 0;
         transform: translateY(50vh);
@@ -268,16 +378,22 @@ body {
     }
 }
 
-#first-header-body {
+.hidden-well {
     display: none;
 }
 
-#first-header-body p{
-    animation-name: fade-in;
+#first-header-body, #second-header-body, #third-header-body {
+    position: absolute;
+    margin-top: 28vh;
+}
+
+#first-header-body p, #second-header-body p, #third-header-body p {
+    animation-name: fade-in-translate;
     animation-duration: 1s;
     color: var(--default-text);
     font-size: 2.5vh;
 }
+
 
 .paragraph-and-image {
     display: flex;
@@ -369,7 +485,9 @@ body {
 .reverse-animation {
     animation-direction: reverse;
     animation-fill-mode: both;
+    animation-delay: 0s !important;
 }
+
 
 .proj {
     position: absolute;
