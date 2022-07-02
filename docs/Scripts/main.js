@@ -208,18 +208,18 @@ function showIcons () {
     }, 300);
     setTimeout(() => {
         firstHeader.classList.remove('hover');
-    }, 900);
+    }, 1300);
     setTimeout(() => {
         secondHeader.classList.remove('hover');
-    }, 1000);
+    }, 1400);
     setTimeout(() => {
         thirdHeader.classList.remove('hover');
-    }, 1100);
+    }, 1500);
     setTimeout(() => {
         firstHeader.classList.add('float');
         secondHeader.classList.add('float');
         thirdHeader.classList.add('float');
-    }, 1200);
+    }, 1600);
 }
 
 window.onload = () => {
