@@ -274,7 +274,7 @@ html, body {
 }
 
 #second-header .second-header-logos img {
-    filter: invert(100);
+    /* filter: invert(100); */
     width: 9vh;
     height: auto;
 }
