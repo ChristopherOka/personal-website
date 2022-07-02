@@ -8,6 +8,22 @@
     --neutral: #F4F4ED;
 }
 
+::-webkit-scrollbar {
+    width: 16px;
+  }
+  
+::-webkit-scrollbar-thumb {
+    border: 5px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: rgba(100, 100, 100, 70);
+    transition: background-color 1s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a3a3a3;
+}
+
 @font-face {
     font-family: SignikaNegative;
     src: url('../Signika_Negative/SignikaNegative-Regular.ttf')
@@ -76,51 +92,14 @@ html, body {
 }
 
 @media (max-width: 1180px) {
-    #headshot-well {
-        align-items: start;
-        padding-top: 21vh;
-    }
-    #headshot {
-        height: 42vh;
-    }
+ 
 }
 
 @media (max-width: 875px) {
-    body {
-        flex-wrap: wrap-reverse;
-    }
-    #headshot-well {    
-        height: 40%;
-        width: 100%;
-        padding-top: 10vh;
-    }
-    #headshot {
-        height: 27vh;
-        margin: 6vh 0 0 0;
-        /* margin-left: 6vw;
-        margin-top: 6vh; */
-    }
-    #main-headers {
-        height: 60%;
-        font-size: 11vh;
-        align-items: center;
-        width: 100vw;
-        justify-content: flex-end;
-        /* padding-left: 6vw; */
-        padding: 0;
-    }
-    #main-headers > a:hover {
-        transform: translateY(-5vh);
-    }
+  
 }
 
 @media (max-width: 560px) {
-    #main-headers {
-        font-size: 8vh;
-    }
-    #headshot {
-        height: 38vh;
-    }
 }
 
 
@@ -155,7 +134,18 @@ html, body {
 }
 
 #first-header.first-header-to-top {
-    top: 11vh;
+    animation-name: first-header-to-top;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes first-header-to-top {
+    0% {
+        top: 11vh;
+    }
+    100% {
+        top: 6vh;
+    }
 }
 
 @keyframes second-header-to-top {
@@ -163,7 +153,7 @@ html, body {
         top: 35vh;
     }
     100% {
-        top: 11vh;
+        top: 6vh;
     }
 }
 
@@ -178,7 +168,7 @@ html, body {
         top: 59vh;
     }
     100% {
-        top: 11vh;
+        top: 6vh;
     }
 }
 
@@ -190,7 +180,7 @@ html, body {
 
 @keyframes first-header-initial-position {
     0% {
-        top: 11vh;
+        top: 6vh;
     }
     100% {
         top: 16vh;
@@ -205,7 +195,7 @@ html, body {
 
 @keyframes second-header-initial-position {
     0% {
-        top: 11vh;
+        top: 6vh;
     }
     100% {
         top: 40vh;
@@ -220,7 +210,7 @@ html, body {
 
 @keyframes third-header-initial-position {
     0% {
-        top: 11vh;
+        top: 6vh;
     }
     100% {
         top: 64vh;
@@ -274,7 +264,6 @@ html, body {
 }
 
 #second-header .second-header-logos img {
-    /* filter: invert(100); */
     width: 9vh;
     height: auto;
 }
@@ -384,10 +373,10 @@ html, body {
 
 #first-header-body, #second-header-body, #third-header-body {
     position: absolute;
-    margin-top: 28vh;
+    margin-top: 26vh;
 }
 
-#first-header-body p, #second-header-body p, #third-header-body p {
+#first-header-body p {
     animation-name: fade-in-translate;
     animation-duration: 1s;
     color: var(--default-text);
@@ -397,7 +386,6 @@ html, body {
 
 .paragraph-and-image {
     display: flex;
-    margin-top: 8vh;
     justify-content: space-between;
 }
 
@@ -488,6 +476,54 @@ html, body {
     animation-delay: 0s !important;
 }
 
+#third-header-body, #second-header-body{
+    width: 83vw;
+    height: 62vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: 2px solid rgb(200, 200, 200);
+    border-left: 2px solid rgb(200, 200, 200);
+    animation-name: fade-in-translate;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.img-text-row {
+    display: grid;
+    grid-template-columns: 12% 88%;
+    justify-items: center;
+    align-items: center;
+    color: var(--default-text);
+    font-size: 2.5vh;
+}
+
+.img-text-row img {
+    width: auto;
+    height: 7vh;
+    padding: 0 1vw;
+}
+
+.img-text-row p, .img-text-row img {
+    margin-top: 0;
+    margin-bottom: 4vh;
+}
+
+.img-text-row img#tdsb-logo {
+    height: 2.5vw;
+    min-height: 35px;
+    width: auto;
+    padding-right: 1.4vw;
+}
+
+.img-text-row img#guitar-logo {
+    height: 5vw;
+    width: auto;
+}
+
+.img-text-row img#hockey-logo {
+    height: 4vw;
+    width: auto;
+}
 
 .proj {
     position: absolute;

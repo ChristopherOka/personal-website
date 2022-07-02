@@ -131,7 +131,7 @@ function renderNewPage (currentHeaderEl) {
 function returnHome() {
     const currentHeaderId = document.getElementsByClassName('top-header')[0].id;
 
-    const header_body_els = document.querySelectorAll(`#${currentHeaderId}-body p, #${currentHeaderId}-body img, #back-btn`);
+    const header_body_els = document.querySelectorAll(`#${currentHeaderId}-body, #back-btn`);
     for (const el of header_body_els) {
         el.classList.add('reverse-animation');
         el.style.animation = 'none';
@@ -167,30 +167,11 @@ function returnHome() {
         document.getElementById(`${currentHeaderId}-body`).style.display = 'none';
         document.getElementById('back-btn').style.display = 'none'; 
 
-        const header_body_elmnts = document.querySelectorAll(`#${currentHeaderId}-body p, #${currentHeaderId}-body img, #back-btn`);
+        const header_body_elmnts = document.querySelectorAll(`#${currentHeaderId}-body, #back-btn`);
         for (const el of header_body_elmnts) {
             el.classList.remove('reverse-animation');
         }
     }, 1000);
-}
-
-function secondHeaderClick () {
-    const mainHeaders = document.getElementById('main-headers');
-    const firstHeader = document.getElementById('first-header');
-    const secondHeader = document.getElementById('second-header');
-    const thirdHeader = document.getElementById('third-header');
-    
-    mainHeaders.className = '';
-    mainHeaders.style = 'justify-content: flex-start';
-    // document.getElementById('second-header').style = 'margin-top: 10vh';
-    secondHeader.classList.add('float-up');
-    firstHeader.style.display = 'none';
-    thirdHeader.style.display = 'none';
-    document.querySelector('#main-headers > a').style.cursor = 'default';
-    document.getElementsByClassName('first-header-logos')[0].style.display = 'none';
-    document.getElementById('first-header-body').style.display = 'block';
-    document.getElementById('back-btn').style.display = 'block';
-    moveHeaderToTop(secondHeader);
 }
 
 function showIcons () {
