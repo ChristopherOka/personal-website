@@ -43,7 +43,7 @@ html, body {
     justify-content: start;
 }
 
-#main-headers > a:hover {
+#main-headers > a:hover, #main-headers > a.hover {
     transform: translateY(-5vh);
 }
 
@@ -335,12 +335,12 @@ html, body {
     transition-delay: 0.4s;
 }
 
-#third-header:hover img, #second-header:hover img, #first-header:hover img {
+#third-header:hover img, #second-header:hover img, #first-header:hover img, #third-header.hover img, #second-header.hover img, #first-header.hover img {
     opacity: 100%;
     transform: translateY(0) rotate(0deg) scale(1);
 }
 
-#third-header:hover div div, #second-header:hover div div, #first-header:hover div div {
+#third-header.float:hover div div, #second-header.float:hover div div, #first-header.float:hover div div, #third-header.float.hover div div, #second-header.float.hover div div, #first-header.float.hover div div {
     animation-name: float;
     animation-iteration-count: infinite;
     animation-timing-function: cubic-bezier(0.68,-0.01, 0.45, 0.99);

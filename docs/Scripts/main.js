@@ -193,8 +193,38 @@ function secondHeaderClick () {
     moveHeaderToTop(secondHeader);
 }
 
+function showIcons () {
+    const firstHeader = document.getElementById('first-header');
+    const secondHeader = document.getElementById('second-header');
+    const thirdHeader = document.getElementById('third-header');
+    setTimeout(() => {
+        firstHeader.classList.add('hover');
+    }, 100);
+    setTimeout(() => {
+        secondHeader.classList.add('hover');
+    }, 200);
+    setTimeout(() => {
+        thirdHeader.classList.add('hover');
+    }, 300);
+    setTimeout(() => {
+        firstHeader.classList.remove('hover');
+    }, 900);
+    setTimeout(() => {
+        secondHeader.classList.remove('hover');
+    }, 1000);
+    setTimeout(() => {
+        thirdHeader.classList.remove('hover');
+    }, 1100);
+    setTimeout(() => {
+        firstHeader.classList.add('float');
+        secondHeader.classList.add('float');
+        thirdHeader.classList.add('float');
+    }, 1200);
+}
+
 window.onload = () => {
 //    testfn();
-    handleClick();
+    // handleClick();
     // handlePop();
+    showIcons();
 };
