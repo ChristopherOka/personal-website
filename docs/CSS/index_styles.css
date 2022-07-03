@@ -25,8 +25,18 @@
 }
 
 @font-face {
-    font-family: SignikaNegative;
+    font-family: SignikaNegativeBold;
+    src: url('../Signika_Negative/SignikaNegative-Bold.ttf')
+}
+
+@font-face {
+    font-family: SignikaNegativeRegular;
     src: url('../Signika_Negative/SignikaNegative-Regular.ttf')
+}
+
+@font-face {
+    font-family: SignikaNegativeLight;
+    src: url('../Signika_Negative/SignikaNegative-Light.ttf')
 }
  
 html, body {
@@ -37,12 +47,28 @@ html, body {
     background-color: var(--bg-color);
 }
 
+p {
+    font-family: SignikaNegativeLight;
+}
+
+h2 {
+    font-family: SignikaNegativeBold;
+    font-size: 13vh;
+    margin: 0;
+}
+
+h3 {
+    font-family: SignikaNegativeBold;
+    font-size: 3.5vh;
+    margin: 0;
+}
+
 #main-headers {
     position: absolute;
     height: 100%;
     width: calc(100% - 10vw);
     font-size: 13vh;
-    font-family: SignikaNegative;
+    font-family: SignikaNegativeRegular;
     color: var(--title);
     padding-left: 10vw;
     min-width: 50vw;
@@ -59,7 +85,7 @@ html, body {
     justify-content: start;
 }
 
-#main-headers > a:hover, #main-headers > a.hover {
+#main-headers > a.enabled:hover, #main-headers > a.enabled.hover {
     transform: translateY(-5vh);
 }
 
@@ -91,13 +117,13 @@ html, body {
     }
 }
 
+
+
 @media (max-width: 1180px) {
  
 }
 
-@media (max-width: 875px) {
-  
-}
+
 
 @media (max-width: 560px) {
 }
@@ -144,7 +170,7 @@ html, body {
         top: 11vh;
     }
     100% {
-        top: 6vh;
+        top: 4vh;
     }
 }
 
@@ -153,7 +179,7 @@ html, body {
         top: 35vh;
     }
     100% {
-        top: 6vh;
+        top: 4vh;
     }
 }
 
@@ -168,7 +194,7 @@ html, body {
         top: 59vh;
     }
     100% {
-        top: 6vh;
+        top: 4vh;
     }
 }
 
@@ -180,7 +206,7 @@ html, body {
 
 @keyframes first-header-initial-position {
     0% {
-        top: 6vh;
+        top: 4vh;
     }
     100% {
         top: 16vh;
@@ -195,7 +221,7 @@ html, body {
 
 @keyframes second-header-initial-position {
     0% {
-        top: 6vh;
+        top: 4vh;
     }
     100% {
         top: 40vh;
@@ -210,7 +236,7 @@ html, body {
 
 @keyframes third-header-initial-position {
     0% {
-        top: 6vh;
+        top: 4vh;
     }
     100% {
         top: 64vh;
@@ -247,13 +273,13 @@ html, body {
 
 @keyframes float {
     0% {
-        transform: translateY(15px);
+        transform: translateY(0px);
     }
     50% {
-        transform: translateY(-5px);
+        transform: translateY(-10px);
     }
     100% {
-        transform: translateY(15px);
+        transform: translateY(0px);
     }
 }
 
@@ -324,7 +350,7 @@ html, body {
     transition-delay: 0.4s;
 }
 
-#third-header:hover img, #second-header:hover img, #first-header:hover img, #third-header.hover img, #second-header.hover img, #first-header.hover img {
+#third-header.enabled:hover img, #second-header.enabled:hover img, #first-header.enabled:hover img, #third-header.enabled.hover img, #second-header.enabled.hover img, #first-header.enabled.hover img {
     opacity: 100%;
     transform: translateY(0) rotate(0deg) scale(1);
 }
@@ -383,10 +409,9 @@ html, body {
     font-size: 2.5vh;
 }
 
-
-.paragraph-and-image {
-    display: flex;
-    justify-content: space-between;
+#paragraphs {
+    overflow: auto;
+    height: 65vh;
 }
 
 @keyframes slide-in-from-right {
@@ -398,20 +423,36 @@ html, body {
     }
 }
 
-#headshot {
-    height: 45vh;
-    width: auto;
+#headshot-well {
+    display: block;
+    overflow: hidden;
+    height: 40vh;
+    width: 20vw;
+    position: absolute;
+    top: 0;
+    right: 0;
     border-radius: 20px;  
     border: 3px solid var(--heading-1);
-    margin: 0 12vw -10vw 6vw;
+    margin: 5vh 12vw -10vw 6vw;
     transform: translateY(-20vh);
     transition: transform 0.4s ease;
     animation-name: slide-in-from-right;
     animation-duration: 1s;
 }
 
-#headshot:hover {
+#headshot {
+    float: right;
+    transform: translateX(calc(200px - 7vw));
+    width: 500px;
+    height: auto;
+}
+
+#headshot-well:hover {
     transform: scale(1.05) translateY(-20vh);
+}
+
+.first-paragraph {
+    width: 50vw;
 }
 
 .second-paragraph {
@@ -444,6 +485,11 @@ html, body {
     animation-delay: 1.2s;
     animation-fill-mode: both;
     transition: width 0.5s ease;
+    overflow: hidden;
+}
+
+#back-btn-text {
+    display: none;
 }
 
 #back-btn:hover {
@@ -489,12 +535,13 @@ html, body {
 }
 
 .img-text-row {
+    position: relative;
     display: grid;
     grid-template-columns: 12% 88%;
-    justify-items: center;
-    align-items: center;
     color: var(--default-text);
     font-size: 2.5vh;
+    padding-top: 5vh;
+    padding-right: 0.5vw;
 }
 
 .img-text-row img {
@@ -525,10 +572,293 @@ html, body {
     width: auto;
 }
 
+.row-title {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding-left: 12%;
+}
+
+.row-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .proj {
     position: absolute;
     width: 10px;
     height: 10px;
     background-color: white;
+
+}
+
+@media (max-width: 1300px) {
+    #headshot-well {
+        top: 20vh;
+        right: 15vw;
+        margin: 0;
+        height: 35vh;
+    }
+}
+
+@media (max-width: 700px) {
+
+    h2 {
+        font-size: 15vw;
+    }
+    #main-headers {
+        font-size: 15vw;
+        padding-left: 6vw;
+    }
+
+    #first-header {
+        top: 22vh;
+    }
+    
+    #second-header {
+        top: 40vh;
+    }
+    
+    #third-header {
+        top: 58vh;
+    }
+
+    @keyframes first-header-to-top {
+        0% {
+            top: 17vh;
+        }
+        100% {
+            top: 8vh;
+        }
+    }
+    
+    @keyframes second-header-to-top {
+        0% {
+            top: 35vh;
+        }
+        100% {
+            top: 8vh;
+        }
+    }
+    
+    @keyframes third-header-to-top {
+        0% {
+            top: 53vh;
+        }
+        100% {
+            top: 8vh;
+        }
+    }
+    
+    @keyframes first-header-initial-position {
+        0% {
+            top: 8vh;
+        }
+        100% {
+            top: 22vh;
+        }
+    }
+    
+    @keyframes second-header-initial-position {
+        0% {
+            top: 8vh;
+        }
+        100% {
+            top: 40vh;
+        }
+    }
+    
+    @keyframes third-header-initial-position {
+        0% {
+            top: 8vh;
+        }
+        100% {
+            top: 58vh;
+        }
+    }
+    
+    .third-header-logos, .second-header-logos, .first-header-logos {
+        padding-top: 3vh;
+    }
+
+    .third-header-logos img, .second-header-logos img, .first-header-logos img {
+        height: 5vh;
+        padding: 0 1vw;
+        opacity: 0;
+        transform: translateY(-7vh) rotate(-5deg) scale(0.8);
+        transition: opacity 0.3s ease, transform 0.6s;
+    }
+
+    #second-header .second-header-logos img {
+        width: 5vh;
+        height: auto;
+    }
+
+    #tdsb {
+        height: 4vh;   
+    }
+    
+    #uofw {
+        height: 5vh;
+    }
+    
+    #code {
+        height: 5vh;
+    }
+
+    #first-header-body {
+        height: 60vh;
+        overflow: none;
+    }
+
+    #headshot-well {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 30vh;
+        width: auto;
+        margin: 0;
+        transform: none;
+        animation-name: fade-in;
+    }
+
+    #blackout {
+        position: absolute;
+        background-color: var(--bg-color);
+        height: 30vh;
+        width: 100vw;
+        z-index: 1;
+        top: -30vh;
+    }
+
+
+    #headshot { 
+        height: 35vh;
+        transform: none;
+        float: none;
+        width: auto;
+    }
+
+    .first-paragraph {
+        padding-top: 35vh;
+        width: 100%;
+    }
+    
+    #second-header #curling {
+        height: 5vh;
+    }
+    
+    #second-header #guitar {
+        height: 8vh;
+        width: auto;
+        padding: 0 2vw;
+    }
+    
+    #second-header #hockey {
+        height: 6vh;
+        width: auto;
+    }
+    
+    .img-text-row {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: flex-start;
+        color: var(--default-text);
+        font-size: 2vh;
+        padding: 0 5vw;
+    }
+    
+    .img-text-row img {
+        width: auto;
+        height: 7vh;
+        padding: 0 1vw;
+        margin: 0;
+        padding-right: 5vw;
+    }
+
+    #second-header-body .img-text-row img {
+        width: auto;
+        height: 5vh;
+    }
+
+    #second-header-body #hockey-logo {
+        width: auto;
+        height: 7vh;
+    }
+
+    #second-header-body #guitar-logo {
+        width: auto;
+        height: 8vh;
+        padding-left: 4vw;
+    }
+
+    .row-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-text-row img#tdsb-logo {
+        height: 1vw;
+        min-height: 25px;
+        padding-right: 5.5vw;
+    }
+    
+    .img-text-row p {
+        margin-top: 2vh;
+        margin-bottom: 4vh;
+    }
+    
+    .row-img {
+        height: 7vh;
+        display: flex;
+        align-items: end;
+    }
+
+    .row-title {
+        padding: 16px 0 0 89px;
+    }
+
+    #tdsb-row-title {
+        margin-top: -1.5vh;
+    }
+
+    #back-btn:hover {
+        box-shadow: 0 0 10px 0 var(--emphasis) inset, 0 0 15px 2px var(--emphasis);;
+        width: 30vw;
+    }
+
+    #back-btn {
+        border: 2px solid var(--emphasis);
+        outline: none;
+        border-radius: 20px;
+        height: 4vh;
+        width: 30vw;
+        margin: 2vh 7vw;
+        transition: box-shadow 0.4s ease;
+        z-index: 9999;
+    }
+
+    #left-arrow {
+        display: none;
+    }
+
+    #back-btn-text {
+        display: block;
+        font-size: 3vh;
+        margin: 0;
+        color: var(--emphasis);
+    }
+
+    #first-header-body, #second-header-body, #third-header-body {
+        position: absolute;
+        margin-top: 23vh;
+    }
+
+    #third-header-body, #second-header-body{
+        width: 88vw;
+    }
 
 }

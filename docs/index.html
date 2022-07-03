@@ -10,10 +10,10 @@
     </head>
     <body>
         <div id="main-headers">
-            <a id="first-header" onclick="renderNewPage(this)">
+            <a id="first-header" class="enabled" onclick="renderNewPage(this)">
                 <b>
-                    <span class='larger-text'>Who I Am</span>
-                    <span class='smaller-text'>About</span>
+                    <h2 class='larger-text'>Who I Am</h2>
+                    <h2 class='smaller-text'>About</h2>
                 </b>
                 <div class="first-header-logos">
                     <div>
@@ -24,10 +24,10 @@
                     </div>
                 </div>
             </a>
-            <a id="second-header" onclick="renderNewPage(this)">
+            <a id="second-header" class="enabled" onclick="renderNewPage(this)">
                 <b>
-                   <span class="larger-text">What I Love</span>
-                   <span class='smaller-text'>Hobbies</span>
+                   <h2 class="larger-text">What I Love</h2>
+                   <h2 class='smaller-text'>Hobbies</h2>
                 </b>
                 <div class="second-header-logos">
                     <div>
@@ -47,10 +47,10 @@
                     </div>
                 </div>
             </a>
-            <a id="third-header" onclick="renderNewPage(this)">
+            <a id="third-header" class="enabled" onclick="renderNewPage(this)">
                 <b>
-                    <span class="larger-text">What I've Done</span>
-                    <span class='smaller-text'>Experience</span>
+                    <h2 class="larger-text">What I've Done</h2>
+                    <h2 class='smaller-text'>Experience</h2>
                 </b>
                 <div class="third-header-logos">
                     <div>
@@ -71,7 +71,8 @@
                 </div>
             </a>
             <div id='first-header-body'  class="hidden-well">
-                <div class="paragraph-and-image">
+                <div id="blackout"></div>
+                <div id="paragraphs">
                     <p class="first-paragraph">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies maximus dui, 
                         eu eleifend ex. Aenean pulvinar, nulla quis tempor ultrices, risus est condimentum 
@@ -82,28 +83,31 @@
                         Ut eu felis in arcu pharetra maximus ac sed enim. Aliquam tincidunt ullamcorper diam vitae consequat. 
                         Ut eu felis in arcu pharetra maximus ac sed enim.
                     </p>
-                    <a href="https://www.linkedin.com/in/christopher-oka/" target="_blank">
-                        <img id="headshot" src="./Images/chris_headshot_cropped.jpg" alt="a picture of me: Christopher Oka">
-                    </a>
+                    <p class="second-paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies maximus dui, 
+                        eu eleifend ex. Aenean pulvinar, nulla quis tempor ultrices, risus est condimentum 
+                        purus, ut tempor mi libero nec lorem. Aliquam tincidunt ullamcorper diam vitae consequat. 
+                        Ut eu felis in arcu pharetra maximus ac sed enim. Quisque suscipit est ligula, ac sagittis
+                        urna vehicula eget. Mauris sapien tellus, dapibus vitae felis ut, suscipit faucibus eros. 
+                        Donec rutrum dui non dictum vestibulum. Aliquam tincidunt ullamcorper diam vitae consequat. 
+                        Ut eu felis in arcu pharetra maximus ac sed enim. Quisque suscipit est ligula, ac sagittis
+                        urna vehicula eget. Mauris sapien tellus, dapibus vitae felis ut, suscipit faucibus eros. 
+                        Donec rutrum dui non dictum vestibulum. Aliquam tincidunt ullamcorper diam vitae consequat. 
+                        Ut eu felis in arcu pharetra maximus ac sed enim. Quisque suscipit est ligula, ac sagittis
+                        urna vehicula eget. Mauris sapien tellus, dapibus vitae felis ut, suscipit faucibus eros. 
+                        Donec rutrum dui non dictum vestibulum. 
+                    </p>
                 </div>
-                <p class="second-paragraph">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies maximus dui, 
-                    eu eleifend ex. Aenean pulvinar, nulla quis tempor ultrices, risus est condimentum 
-                    purus, ut tempor mi libero nec lorem. Aliquam tincidunt ullamcorper diam vitae consequat. 
-                    Ut eu felis in arcu pharetra maximus ac sed enim. Quisque suscipit est ligula, ac sagittis
-                    urna vehicula eget. Mauris sapien tellus, dapibus vitae felis ut, suscipit faucibus eros. 
-                    Donec rutrum dui non dictum vestibulum. Aliquam tincidunt ullamcorper diam vitae consequat. 
-                    Ut eu felis in arcu pharetra maximus ac sed enim. Quisque suscipit est ligula, ac sagittis
-                    urna vehicula eget. Mauris sapien tellus, dapibus vitae felis ut, suscipit faucibus eros. 
-                    Donec rutrum dui non dictum vestibulum. Aliquam tincidunt ullamcorper diam vitae consequat. 
-                    Ut eu felis in arcu pharetra maximus ac sed enim. Quisque suscipit est ligula, ac sagittis
-                    urna vehicula eget. Mauris sapien tellus, dapibus vitae felis ut, suscipit faucibus eros. 
-                    Donec rutrum dui non dictum vestibulum. 
-                </p>
+                <a id='headshot-well' href="https://www.linkedin.com/in/christopher-oka/" target="_blank">
+                    <img id="headshot" src="./Images/chris_headshot_cropped.jpg" alt="a picture of me: Christopher Oka">
+                </a>
             </div>
             <div id='second-header-body' class="hidden-well">
                 <div class="img-text-row">
-                    <img id="curling-logo" src="./Images/curling.png" alt="Curling rock">
+                    <div class="row-img" id="curling-row">
+                        <img id="curling-logo" src="./Images/curling.png" alt="Curling rock">
+                    </div>
+                    <h3 class="row-title">Curling</h3>
                     <p> 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies maximus dui, 
                         eu eleifend ex. Aenean pulvinar, nulla quis tempor ultrices, risus est condimentum 
@@ -112,7 +116,10 @@
                     </p>
                 </div>
                 <div class="img-text-row">
-                    <img id="guitar-logo" src="./Images/guitar.png" alt="An acoustic guitar">
+                    <div class="row-img">
+                        <img id="guitar-logo" src="./Images/guitar.png" alt="An acoustic guitar">
+                    </div>
+                    <h3 class="row-title">Guitar</h3>
                     <p> 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies maximus dui, 
                         eu eleifend ex. Aenean pulvinar, nulla quis tempor ultrices, risus est condimentum 
@@ -121,7 +128,10 @@
                     </p>
                 </div>
                 <div class="img-text-row">
-                    <img id="hockey-logo" src="./Images/hockey.png" alt="A hockey stick and puck">
+                    <div class="row-img">
+                        <img id="hockey-logo" src="./Images/hockey.png" alt="A hockey stick and puck">
+                    </div>
+                    <h3 class="row-title">Hockey</h3>
                     <p> 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies maximus dui, 
                         eu eleifend ex. Aenean pulvinar, nulla quis tempor ultrices, risus est condimentum 
@@ -130,7 +140,10 @@
                     </p>
                 </div>
                 <div class="img-text-row">
-                    <img id="frisbee-logo" src="./Images/frisbee.png" alt="A frisbee flying through the air">
+                    <div class="row-img">
+                        <img id="frisbee-logo" src="./Images/frisbee.png" alt="A frisbee flying through the air">
+                    </div>
+                    <h3 class="row-title">Ultimate Frisbee</h3>
                     <p> 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies maximus dui, 
                         eu eleifend ex. Aenean pulvinar, nulla quis tempor ultrices, risus est condimentum 
@@ -139,7 +152,10 @@
                     </p>
                 </div>
                 <div class="img-text-row">
-                    <img id="video-games-logo" src="./Images/video_games.png" alt="A video game controller">
+                    <div class="row-img">
+                        <img id="video-games-logo" src="./Images/video_games.png" alt="A video game controller">
+                    </div>
+                    <h3 class="row-title">Video Games</h3>
                     <p> 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies maximus dui, 
                         eu eleifend ex. Aenean pulvinar, nulla quis tempor ultrices, risus est condimentum 
@@ -150,7 +166,10 @@
             </div>
             <div id='third-header-body' class="hidden-well">
                 <div class="img-text-row">
-                    <img id="tbits-logo" src="./Images/tbits.png" alt="Tradable Bits logo">
+                    <div class="row-img">
+                        <img id="tbits-logo" src="./Images/tbits.png" alt="Tradable Bits logo">
+                    </div>
+                    <h3 class="row-title">Tradable Bits</h3>
                     <p> 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies maximus dui, 
                         eu eleifend ex. Aenean pulvinar, nulla quis tempor ultrices, risus est condimentum 
@@ -159,7 +178,10 @@
                     </p>
                 </div>
                 <div class="img-text-row">
-                    <img id="fr-logo" src="./Images/front_rush.png" alt="Front Rush logo">
+                    <div class="row-img">
+                        <img id="fr-logo" src="./Images/front_rush.png" alt="Front Rush logo">
+                    </div>
+                    <h3 class="row-title">Front Rush</h3>
                     <p> 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies maximus dui, 
                         eu eleifend ex. Aenean pulvinar, nulla quis tempor ultrices, risus est condimentum 
@@ -168,7 +190,10 @@
                     </p>
                 </div>
                 <div class="img-text-row">
-                    <img id="tdsb-logo" src="./Images/tdsb.png" alt="Toronto District School Board logo">
+                    <div class="row-img">
+                        <img id="tdsb-logo" src="./Images/tdsb.png" alt="Toronto District School Board logo">
+                    </div>
+                    <h3 class="row-title" id="tdsb-row-title">Toronto District School Board</h3>
                     <p> 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies maximus dui, 
                         eu eleifend ex. Aenean pulvinar, nulla quis tempor ultrices, risus est condimentum 
@@ -177,7 +202,10 @@
                     </p>
                 </div>
                 <div class="img-text-row">
-                    <img id="hack-the-north-logo" src="./Images/hack_the_north.png" alt="Hack the North logo">
+                    <div class="row-img">
+                        <img id="hack-the-north-logo" src="./Images/hack_the_north.png" alt="Hack the North logo">
+                    </div>
+                    <h3 class="row-title">Hack the North</h3>
                     <p> 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies maximus dui, 
                         eu eleifend ex. Aenean pulvinar, nulla quis tempor ultrices, risus est condimentum 
@@ -186,7 +214,10 @@
                     </p>
                 </div>
                 <div class="img-text-row">
-                    <img id="python-logo" src="./Images/python.png" alt="Python logo">
+                    <div class="row-img">
+                        <img id="python-logo" src="./Images/python.png" alt="Python logo">
+                    </div>
+                    <h3 class="row-title">Side Projects</h3>
                     <p> 
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies maximus dui, 
                         eu eleifend ex. Aenean pulvinar, nulla quis tempor ultrices, risus est condimentum 
@@ -197,11 +228,8 @@
             </div>
         </div>
         <button id="back-btn" onclick="returnHome()">
-            <img src="./Images/back_arrow.png" alt="left arrow">
+            <img id="left-arrow" src="./Images/back_arrow.png" alt="left arrow">
+            <p id="back-btn-text">Back</p>
         </button>
-        <div id="headshot-well">
-            <!-- <img id="headshot" src="./Images/chris_headshot_cropped.jpg"> -->
-        </div>
-
     </body>
 </html>
