@@ -679,18 +679,23 @@ h3 {
     }
     
     .third-header-logos, .second-header-logos, .first-header-logos {
-        padding-top: 3vh;
+        padding-top: 6vh;
     }
 
     .third-header-logos img, .second-header-logos img, .first-header-logos img {
         height: 5vh;
-        padding: 0 1vw;
+        padding: 0 2vw;
         opacity: 0;
         transform: translateY(-7vh) rotate(-5deg) scale(0.8);
         transition: opacity 0.3s ease, transform 0.6s;
     }
 
     #second-header .second-header-logos img {
+        width: 5vh;
+        height: auto;
+    }
+
+    #curling {
         width: 5vh;
         height: auto;
     }
@@ -746,7 +751,7 @@ h3 {
     }
     
     #second-header #curling {
-        height: 5vh;
+        height: 4vh;
     }
     
     #second-header #guitar {
@@ -860,5 +865,16 @@ h3 {
     #third-header-body, #second-header-body{
         width: 88vw;
     }
+}
 
+@media (max-width: 600px) {
+    .third-header-logos, .second-header-logos, .first-header-logos {
+        padding-top: 5vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .third-header-logos, .second-header-logos, .first-header-logos {
+        padding-top: 4vh;
+    }
 }
