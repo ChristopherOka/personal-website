@@ -28,32 +28,32 @@
 
 @font-face {
     font-family: SignikaNegativeBold;
-    src: url('../Signika_Negative/SignikaNegative-Bold.ttf');
+    src: url('../Fonts/SignikaNegative-Bold.ttf');
 }
 
 @font-face {
     font-family: SignikaNegativeRegular;
-    src: url('../Signika_Negative/SignikaNegative-Regular.ttf');
+    src: url('../Fonts/SignikaNegative-Regular.ttf');
 }
 
 @font-face {
     font-family: SignikaNegativeLight;
-    src: url('../Signika_Negative/SignikaNegative-Light.ttf');
+    src: url('../Fonts/SignikaNegative-Light.ttf');
 }
 
 @font-face {
     font-family: SecularOne;
-    src: url('../Secular_One/SecularOne-Regular.ttf');
+    src: url('../Fonts/SecularOne-Regular.ttf');
 }
 
 @font-face {
     font-family: OohBaby;
-    src: url('../Oooh_Baby/OoohBaby-Regular.ttf');
+    src: url('../Fonts/OoohBaby-Regular.ttf');
 }
 
 @font-face {
     font-family: PatrickHand;
-    src: url('../Patrick_Hand/PatrickHand-Regular.ttf');
+    src: url('../Fonts/PatrickHand-Regular.ttf');
 }
  
 html, body {
@@ -317,7 +317,7 @@ h3 {
 
 @keyframes first-header-to-top {
     0% {
-        top: 25vh;
+        top: 22vh;
     }
     100% {
         top: 4vh;
@@ -326,7 +326,7 @@ h3 {
 
 @keyframes second-header-to-top {
     0% {
-        top: 50vh;
+        top: 45vh;
     }
     100% {
         top: 4vh;
@@ -341,7 +341,7 @@ h3 {
 
 @keyframes third-header-to-top {
     0% {
-        top: 65vh;
+        top: 68vh;
     }
     100% {
         top: 4vh;
@@ -359,7 +359,7 @@ h3 {
         top: 4vh;
     }
     100% {
-        top: 30vh;
+        top: 27vh;
     }
 }
 
@@ -391,7 +391,7 @@ h3 {
         top: 4vh;
     }
     100% {
-        top: 70vh;
+        top: 73vh;
     }
 }
 
@@ -403,7 +403,7 @@ h3 {
 }
 
 #first-header {
-    top: 28vh;
+    top: 27vh;
 }
 
 #second-header {
