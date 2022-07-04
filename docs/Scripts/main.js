@@ -94,6 +94,7 @@ async function testfn() {
 }
 
 function renderNewPage (currentHeaderEl) {
+    hideSecondaryBg();
     const headers = ['first-header', 'second-header', 'third-header'];
     const currentHeaderId = currentHeaderEl.id;
     const otherHeaders = headers.filter(e => e !== currentHeaderId);
@@ -142,6 +143,7 @@ function renderNewPage (currentHeaderEl) {
 }
 
 function returnHome() {
+    showSecondaryBg();
     const currentHeaderId = document.getElementsByClassName('top-header')[0].id;
 
     const header_body_els = document.querySelectorAll(`#${currentHeaderId}-body, #${currentHeaderId}-body p, #${currentHeaderId}-body a, #back-btn`);
@@ -265,6 +267,30 @@ function moveImageUpwards () {
         scrollbarOffset = 20;
     }
     headshotWell.style.top = `calc(${scrollbarOffset}vh - ${scrollBarPosition}px)`;
+}
+
+function showSecondaryBg() {
+    const secondaryBg = document.getElementById('secondary-bg');
+    const name = document.getElementById('name');
+    secondaryBg.classList.remove('hide-secondary-bg');
+    secondaryBg.style.display = 'block';
+    secondaryBg.classList.add('return-secondary-bg');
+    name.classList.remove('hide-name');
+    name.style.display = 'block';
+    name.classList.add('return-name');
+}
+
+function hideSecondaryBg() {
+    const secondaryBg = document.getElementById('secondary-bg');
+    const name = document.getElementById('name');
+    secondaryBg.classList.remove('return-secondary-bg');
+    secondaryBg.classList.add('hide-secondary-bg');
+    name.classList.remove('return-name');
+    name.classList.add('hide-name');
+    setTimeout(() => {
+        secondaryBg.style.display = 'none';
+        name.style.display = 'none';
+    }, 2000)
 }
 
 window.onload = () => {

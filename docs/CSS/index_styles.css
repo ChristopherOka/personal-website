@@ -1,9 +1,11 @@
 :root {
-    --bg-color: #070707;
-    --title: #8ACDEA;
+    --bg-color: #202020;
+    --bg-color-2: #D9D9D9;
+    /* --title: #8ACDEA; */
     --heading-1: #EFE1F0;
     --default-text: #EFE1F0;
-    --heading-2: #8093F1;
+    /* --heading-2: #8093F1; */
+    --title: #d9d9d9;
     --emphasis: #FFBADF;
     --neutral: #F4F4ED;
 }
@@ -26,17 +28,32 @@
 
 @font-face {
     font-family: SignikaNegativeBold;
-    src: url('../Signika_Negative/SignikaNegative-Bold.ttf')
+    src: url('../Signika_Negative/SignikaNegative-Bold.ttf');
 }
 
 @font-face {
     font-family: SignikaNegativeRegular;
-    src: url('../Signika_Negative/SignikaNegative-Regular.ttf')
+    src: url('../Signika_Negative/SignikaNegative-Regular.ttf');
 }
 
 @font-face {
     font-family: SignikaNegativeLight;
-    src: url('../Signika_Negative/SignikaNegative-Light.ttf')
+    src: url('../Signika_Negative/SignikaNegative-Light.ttf');
+}
+
+@font-face {
+    font-family: SecularOne;
+    src: url('../Secular_One/SecularOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: OohBaby;
+    src: url('../Oooh_Baby/OoohBaby-Regular.ttf');
+}
+
+@font-face {
+    font-family: PatrickHand;
+    src: url('../Patrick_Hand/PatrickHand-Regular.ttf');
 }
  
 html, body {
@@ -45,15 +62,23 @@ html, body {
     height: 100%;
     margin: 0;
     background-color: var(--bg-color);
+    overflow: hidden;
 }
 
 p {
     font-family: SignikaNegativeLight;
 }
 
+h1 {
+    font-family: SecularOne;
+    font-size: 15vh;
+    margin: 0;
+    line-height: 1;
+}
+
 h2 {
-    font-family: SignikaNegativeBold;
-    font-size: 13vh;
+    font-family: PatrickHand;
+    font-size: 12vh;
     margin: 0;
 }
 
@@ -63,14 +88,147 @@ h3 {
     margin: 0;
 }
 
+@keyframes slash {
+    0% {
+        height: 0;
+        transform: rotate(0);
+        width: 0.5vw;
+    }
+    30% {
+        height: 180vh;
+        transform: rotate(0) translateX(0);
+        width: 0.5vw;
+    }
+    60% {
+        height: 180vh;
+        transform: rotate(-25deg) translateX(-5%);
+        width: 0.5vw;
+    }
+    100% {
+        height: 180vh;
+        transform: rotate(-25deg) translateX(-5%) ;
+        width: 70vw;
+    }
+}
+
+#secondary-bg {
+    width: 100vw;
+    background-color: var(--bg-color-2);
+    position: absolute;
+    top: -50vh;
+    left: 53%;
+    animation-name: slash;
+    animation-duration: 3s;
+    animation-delay: 2.5s;
+    animation-fill-mode: both;
+}
+
+@keyframes hide-secondary-bg {
+    0% {
+        height: 180vh;
+        transform: rotate(-25deg) translateX(-5%) ;
+        width: 70vw;
+    }
+    25% {
+        height: 180vh;
+        transform: rotate(0) translateX(-15%) ;
+        width: 70vw;
+    }
+    100% {
+        height: 180vh;
+        transform: rotate(0) translateX(60vw) ;
+        width: 70vw;
+    }
+}
+
+@keyframes return-secondary-bg {
+    0% {
+        height: 180vh;
+        transform: rotate(0) translateX(60vw) ;
+        width: 70vw;
+    }
+    50% {
+        height: 180vh;
+        transform: rotate(0) translateX(-15%) ;
+        width: 70vw;
+    }
+    100% {
+        height: 180vh;
+        transform: rotate(-25deg) translateX(-5%) ;
+        width: 70vw;
+    }
+}
+
+#secondary-bg.hide-secondary-bg {
+    animation-name: hide-secondary-bg;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-delay: 0s;
+}
+
+#secondary-bg.return-secondary-bg {
+    animation-name: return-secondary-bg;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-delay: 0s;
+}
+
+@keyframes hide-name {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(66vw);
+    }
+}
+
+@keyframes return-name {
+    0% {
+        transform: translateX(66vw);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#name {
+    position: absolute;
+    color: var(--bg-color);
+    top: 8vh;
+    right: 5vw;
+    text-align: right;
+    animation-name: fade-in;
+    animation-duration: 0.4s;
+    animation-delay: 4s;
+    animation-fill-mode: both;
+}
+
+#name.hide-name {
+    animation-name: hide-name;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+
+#name.return-name {
+    animation-name: return-name;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+
 #main-headers {
     position: absolute;
     height: 100%;
-    width: calc(100% - 10vw);
+    width: calc(100% - 5vw);
     font-size: 13vh;
-    font-family: SignikaNegativeRegular;
+    font-family: OohBaby;
     color: var(--title);
-    padding-left: 10vw;
+    padding-left: 5vw;
     min-width: 50vw;
     overflow: hidden;
 }
@@ -117,18 +275,6 @@ h3 {
     }
 }
 
-
-
-@media (max-width: 1180px) {
- 
-}
-
-
-
-@media (max-width: 560px) {
-}
-
-
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -167,7 +313,7 @@ h3 {
 
 @keyframes first-header-to-top {
     0% {
-        top: 11vh;
+        top: 25vh;
     }
     100% {
         top: 4vh;
@@ -176,7 +322,7 @@ h3 {
 
 @keyframes second-header-to-top {
     0% {
-        top: 35vh;
+        top: 50vh;
     }
     100% {
         top: 4vh;
@@ -191,7 +337,7 @@ h3 {
 
 @keyframes third-header-to-top {
     0% {
-        top: 59vh;
+        top: 65vh;
     }
     100% {
         top: 4vh;
@@ -209,7 +355,7 @@ h3 {
         top: 4vh;
     }
     100% {
-        top: 16vh;
+        top: 30vh;
     }
 }
 
@@ -224,7 +370,7 @@ h3 {
         top: 4vh;
     }
     100% {
-        top: 40vh;
+        top: 50vh;
     }
 }
 
@@ -239,7 +385,7 @@ h3 {
         top: 4vh;
     }
     100% {
-        top: 64vh;
+        top: 70vh;
     }
 }
 
@@ -250,15 +396,15 @@ h3 {
 }
 
 #first-header {
-    top: 16vh;
+    top: 30vh;
 }
 
 #second-header {
-    top: 40vh;
+    top: 50vh;
 }
 
 #third-header {
-    top: 64vh;
+    top: 70vh;
 }
 
 
@@ -479,7 +625,7 @@ h3 {
     background-color: rgba(255, 186, 223, 0.1);
     left: 0;
     height: 100vh;
-    width: 4vw;
+    width: 2vw;
     animation-name: back-btn-slide-in;
     animation-duration: 1s;
     animation-delay: 1.2s;
@@ -493,11 +639,11 @@ h3 {
 }
 
 #back-btn:hover {
-    width: 5.5vw;
+    width: 3vw;
 }
 
 #back-btn img {
-    width: 2vw;
+    width: 1vw;
     height: auto;
 }
 
