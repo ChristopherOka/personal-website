@@ -101,12 +101,12 @@ h3 {
     }
     60% {
         height: 180vh;
-        transform: rotate(-25deg) translateX(-5%);
+        transform: rotate(-25deg) translateX(2vw);
         width: 0.5vw;
     }
     100% {
         height: 180vh;
-        transform: rotate(-25deg) translateX(-5%) ;
+        transform: rotate(-25deg) translateX(0) ;
         width: 70vw;
     }
 }
@@ -119,19 +119,18 @@ h3 {
     left: 53%;
     animation-name: slash;
     animation-duration: 3s;
-    animation-delay: 2.5s;
     animation-fill-mode: both;
 }
 
 @keyframes hide-secondary-bg {
     0% {
         height: 180vh;
-        transform: rotate(-25deg) translateX(-5%) ;
+        transform: rotate(-25deg) translateX(0) ;
         width: 70vw;
     }
     25% {
         height: 180vh;
-        transform: rotate(0) translateX(-15%) ;
+        transform: rotate(0) translateX(-5vw) ;
         width: 70vw;
     }
     100% {
@@ -149,12 +148,17 @@ h3 {
     }
     50% {
         height: 180vh;
-        transform: rotate(0) translateX(-15%) ;
+        transform: rotate(0) translateX(-5vw) ;
+        width: 70vw;
+    }
+    60% {
+        height: 180vh;
+        transform: rotate(0) translateX(-5vw) ;
         width: 70vw;
     }
     100% {
         height: 180vh;
-        transform: rotate(-25deg) translateX(-5%) ;
+        transform: rotate(-25deg) translateX(0) ;
         width: 70vw;
     }
 }
@@ -168,9 +172,9 @@ h3 {
 
 #secondary-bg.return-secondary-bg {
     animation-name: return-secondary-bg;
-    animation-duration: 2s;
+    animation-duration: 2.5s;
+    animation-delay: 0.5s;
     animation-fill-mode: both;
-    animation-delay: 0s;
 }
 
 @keyframes hide-name {
@@ -189,7 +193,7 @@ h3 {
     0% {
         transform: translateX(66vw);
     }
-    50% {
+    60% {
         transform: translateX(0);
     }
     100% {
@@ -205,7 +209,6 @@ h3 {
     text-align: right;
     animation-name: fade-in;
     animation-duration: 0.4s;
-    animation-delay: 4s;
     animation-fill-mode: both;
 }
 
@@ -218,7 +221,7 @@ h3 {
 #name.return-name {
     animation-name: return-name;
     animation-duration: 2s;
-    animation-delay: 0s;
+    animation-delay: 0.5s;
 }
 
 #main-headers {
@@ -287,6 +290,7 @@ h3 {
 .fade-in {
     animation-name: fade-in;
     animation-duration: 0.4s;
+    animation-delay: 0.7s;
     animation-fill-mode: both;
 }
 
@@ -362,7 +366,8 @@ h3 {
 .first-header-initial-position {
     animation-name: first-header-initial-position;
     animation-duration: 1s;
-    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-fill-mode: both;
 }
 
 @keyframes second-header-initial-position {
@@ -377,7 +382,8 @@ h3 {
 .second-header-initial-position {
     animation-name: second-header-initial-position;
     animation-duration: 1s;
-    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-fill-mode: both;
 }
 
 @keyframes third-header-initial-position {
@@ -392,7 +398,8 @@ h3 {
 .third-header-initial-position {
     animation-name: third-header-initial-position;
     animation-duration: 1s;
-    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-fill-mode: both;
 }
 
 #first-header {
@@ -551,6 +558,8 @@ h3 {
 #first-header-body p {
     animation-name: fade-in-translate;
     animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
     color: var(--default-text);
     font-size: 2.5vh;
 }
@@ -584,6 +593,8 @@ h3 {
     transition: transform 0.4s ease;
     animation-name: slide-in-from-right;
     animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
 }
 
 #headshot {
@@ -665,11 +676,12 @@ h3 {
 .reverse-animation {
     animation-direction: reverse;
     animation-fill-mode: both;
+    animation-duration: 0.8s !important;
     animation-delay: 0s !important;
 }
 
 #third-header-body, #second-header-body{
-    width: 83vw;
+    width: 90vw;
     height: 62vh;
     overflow-x: hidden;
     overflow-y: auto;
@@ -677,6 +689,7 @@ h3 {
     border-left: 2px solid rgb(200, 200, 200);
     animation-name: fade-in-translate;
     animation-duration: 1s;
+    animation-delay: 1s;
     animation-fill-mode: both;
 }
 

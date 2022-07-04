@@ -200,27 +200,38 @@ function showIcons () {
     const secondHeader = document.getElementById('second-header');
     const thirdHeader = document.getElementById('third-header');
     const viewportWidth = window.innerWidth;
-
-    setTimeout(() => {
-        firstHeader.classList.add('hover');
-    }, 100);
-    setTimeout(() => {
-        secondHeader.classList.add('hover');
-    }, 200);
-    setTimeout(() => {
-        thirdHeader.classList.add('hover');
-    }, 300);
-    
+    if (viewportWidth > 700) {
+        setTimeout(() => {
+            firstHeader.classList.add('hover');
+        }, 2800);
+        setTimeout(() => {
+            secondHeader.classList.add('hover');
+        }, 2900);
+        setTimeout(() => {
+            thirdHeader.classList.add('hover');
+        }, 3000);
+    }
+    else {
+        setTimeout(() => {
+            firstHeader.classList.add('hover');
+        }, 100);
+        setTimeout(() => {
+            secondHeader.classList.add('hover');
+        }, 200);
+        setTimeout(() => {
+            thirdHeader.classList.add('hover');
+        }, 300);
+    }
     if (viewportWidth > 700 ){
         setTimeout(() => {
             firstHeader.classList.remove('hover');
-        }, 1300);
+        }, 4000);
         setTimeout(() => {
             secondHeader.classList.remove('hover');
-        }, 1400);
+        }, 4100);
         setTimeout(() => {
             thirdHeader.classList.remove('hover');
-        }, 1500);
+        }, 4200);
     }
     setTimeout(() => {
         firstHeader.classList.add('float');
