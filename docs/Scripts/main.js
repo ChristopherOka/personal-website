@@ -144,15 +144,8 @@ function renderNewPage (currentHeaderEl) {
 
 function returnHome() {
     showSecondaryBg();
-    const currentHeaderId = document.getElementsByClassName('top-header')[0].id;
 
-    const header_body_els = document.querySelectorAll(`#${currentHeaderId}-body, #${currentHeaderId}-body p, #${currentHeaderId}-body a, #back-btn`);
-    for (const el of header_body_els) {
-        el.classList.add('reverse-animation');
-        el.style.animation = 'none';
-        el.offsetHeight; /* trigger reflow */
-        el.style.animation = null; 
-    }
+    const currentHeaderId = document.getElementsByClassName('top-header')[0].id;
 
     const headers = ['first-header', 'second-header', 'third-header'];
     const otherHeaders = headers.filter(e => e !== currentHeaderId);
@@ -161,6 +154,16 @@ function returnHome() {
 
     const firstOtherHeader = document.getElementById(otherHeaders[0]);
     const secondOtherHeader = document.getElementById(otherHeaders[1]);
+
+    const header_body_els = document.querySelectorAll(`#${currentHeaderId}-body, #${currentHeaderId}-body p, #${currentHeaderId}-body a, #back-btn`);
+    for (const el of header_body_els) {
+        el.classList.add('reverse-animation');
+        el.style.animation = 'none';
+        el.offsetHeight; /* trigger reflow */
+        el.style.animation = null; 
+    }
+    
+
 
     setTimeout(() => {
         currentHeader.classList.remove(`${currentHeaderId}-to-top`, 'top-header');
@@ -187,8 +190,11 @@ function returnHome() {
             el.classList.remove('reverse-animation');
         }
     }, 1000);
+    
     const viewportWidth = window.innerWidth;
     if (viewportWidth < 700) {
+        currentHeader.classList.remove(`${currentHeaderId}-to-top`, 'top-header');
+        currentHeader.classList.add(`${currentHeaderId}-initial-position`);
         currentHeader.classList.add('enabled', 'hover');
         firstOtherHeader.classList.add('enabled', 'hover');
         secondOtherHeader.classList.add('enabled', 'hover');
