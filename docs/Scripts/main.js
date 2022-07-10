@@ -155,15 +155,14 @@ function returnHome() {
     const firstOtherHeader = document.getElementById(otherHeaders[0]);
     const secondOtherHeader = document.getElementById(otherHeaders[1]);
 
-    const header_body_els = document.querySelectorAll(`#${currentHeaderId}-body, #${currentHeaderId}-body p, #${currentHeaderId}-body a, #back-btn`);
+    const header_body_els = document.querySelectorAll(`#${currentHeaderId}-body, #${currentHeaderId}-body a, #back-btn`);
+    debugger
     for (const el of header_body_els) {
         el.classList.add('reverse-animation');
         el.style.animation = 'none';
         el.offsetHeight; /* trigger reflow */
         el.style.animation = null; 
     }
-    
-
 
     setTimeout(() => {
         currentHeader.classList.remove(`${currentHeaderId}-to-top`, 'top-header');

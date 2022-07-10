@@ -60,6 +60,11 @@
     font-family: BreeSerif;
     src: url('../Fonts/BreeSerif-Regular.ttf')
 }
+
+@font-face {
+    font-family: MerriweatherSans;
+    src: url('../Fonts/MerriweatherSans-VariableFont_wght.ttf');
+}
  
 html, body {
     position: relative;
@@ -70,7 +75,7 @@ html, body {
     overflow: hidden;
 }
 
-p {
+p, ul {
     font-family: SignikaNegativeLight;
 }
 
@@ -82,13 +87,13 @@ h1 {
 }
 
 h2 {
-    font-family: SignikaNegativeBold;
-    font-size: 12vh;
+    font-family: MerriweatherSans;
+    font-size: 11vh;
     margin: 0;
 }
 
 h3 {
-    font-family: SignikaNegativeBold;
+    font-family: MerriweatherSans;
     font-size: 3.5vh;
     margin: 0;
 }
@@ -121,7 +126,7 @@ h3 {
     background-color: var(--bg-color-2);
     position: absolute;
     top: -50vh;
-    left: 53%;
+    left: 50%;
     animation-name: slash;
     animation-duration: 3s;
     animation-fill-mode: both;
@@ -793,16 +798,14 @@ h3 {
     margin-top: 26vh;
 }
 
-#first-header-body p {
+
+#paragraphs {
     animation-name: fade-in-translate;
     animation-duration: 1s;
     animation-delay: 1s;
     animation-fill-mode: both;
     color: var(--default-text);
     font-size: 2.5vh;
-}
-
-#paragraphs {
     overflow: auto;
     height: 65vh;
 }
@@ -947,6 +950,10 @@ h3 {
     padding: 0 1vw;
 }
 
+.img-text-row ul {
+    margin: 0 0 25px 0;
+}
+
 .img-text-row p, .img-text-row img {
     margin-top: 0;
     margin-bottom: 4vh;
@@ -979,7 +986,7 @@ h3 {
 .row-img {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .proj {
