@@ -31,7 +31,7 @@ function handlePop() {
     const rotation = Math.round(Math.random() < 0.5 ? Math.random() * -30 : Math.random() * 30);
 
     document.getElementById('pop').style =`top: ${positionY}px; left: ${positionX}px; transform: rotate(${rotation}deg)`;
-    };
+}
 
 function delayRedirect(url) {
     setTimeout(()=> {window.location.href = './' + url;}, 500);
@@ -124,9 +124,13 @@ function renderNewPage (currentHeaderEl) {
 
     currentHeader.classList.add('disable-transition');
 
-    document.getElementById('back-btn').style.display = 'block';
+    document.getElementById(`${currentHeaderId}-body`).classList.remove('hidden-well');
+    document.getElementById('back-btn').classList.remove('hidden-well');
 
-    document.getElementById(`${currentHeaderId}-body`).style.display = 'block';
+    if (currentHeaderId === 'third-header') {
+        document.getElementById('resume').classList.remove('hidden-well');
+    }
+
 
     const viewportWidth = window.innerWidth;
 
@@ -155,8 +159,8 @@ function returnHome() {
     const firstOtherHeader = document.getElementById(otherHeaders[0]);
     const secondOtherHeader = document.getElementById(otherHeaders[1]);
 
-    const header_body_els = document.querySelectorAll(`#${currentHeaderId}-body, #${currentHeaderId}-body a, #back-btn`);
-    debugger
+    const header_body_els = document.querySelectorAll(`#${currentHeaderId}-body, #${currentHeaderId}-body a, #back-btn, #paragraphs, #resume`);
+
     for (const el of header_body_els) {
         el.classList.add('reverse-animation');
         el.style.animation = 'none';
@@ -181,10 +185,14 @@ function returnHome() {
         firstOtherHeader.classList.add('fade-in');
         secondOtherHeader.classList.add('fade-in');
 
-        document.getElementById(`${currentHeaderId}-body`).style.display = 'none';
-        document.getElementById('back-btn').style.display = 'none'; 
+        document.getElementById(`${currentHeaderId}-body`).classList.add('hidden-well');
+        document.getElementById('back-btn').classList.add('hidden-well'); 
 
-        const header_body_elmnts = document.querySelectorAll(`#${currentHeaderId}-body, #${currentHeaderId}-body p, #${currentHeaderId}-body a, #back-btn`);
+        if (currentHeaderId === 'third-header') {
+            document.getElementById('resume').classList.add('hidden-well');
+        }
+
+        const header_body_elmnts = document.querySelectorAll(`#${currentHeaderId}-body, #${currentHeaderId}-body a, #back-btn, #paragraphs, #resume`);
         for (const el of header_body_elmnts) {
             el.classList.remove('reverse-animation');
         }
@@ -309,11 +317,55 @@ function hideSecondaryBg() {
     }, 2000)
 }
 
+function updateLiveParagraphVals() {
+    const currentDate = new Date().getTime();
+    let term = 'graduated';
+    const terms = {
+        [new Date(2021, 5, 1).getTime()]: '1A',
+        [new Date(2022, 1, 1).getTime()]: '1B',
+        [new Date(2022, 9, 1).getTime()]: '2A',
+        [new Date(2023, 5, 1).getTime()]: '2B',
+        [new Date(2024, 1, 1).getTime()]: '3A',
+        [new Date(2024, 9, 1).getTime()]: '3B',
+        [new Date(2025, 1, 1).getTime()]: '4A',
+        [new Date(2025, 5, 1).getTime()]: '4B',
+    }
+
+    for (const date in terms) {
+        if (currentDate < parseInt(date)) {
+            term = terms[date];
+            break;
+        }
+    }
+    
+    const schoolPgph = document.getElementById('school-p');
+    const schoolPgphText = schoolPgph.innerText;
+    let replacedSchoolPgphText;
+    if (term !== 'graduated!') {
+        replacedSchoolPgphText = schoolPgphText.replace(/{TERM}/g, term);
+        replacedSchoolPgphText = replacedSchoolPgphText.replace(/\n/g, '');
+    }
+    else {
+        replacedSchoolPgphText = schoolPgphText.replace(/I'm currently studying/g, "I've graduated from");
+        replacedSchoolPgphText = replacedSchoolPgphText.replace(/in my/g, '');
+        replacedSchoolPgphText = replacedSchoolPgphText.replace(/{TERM} term/g, '');
+        replacedSchoolPgphText = replacedSchoolPgphText.replace(/ so far/g, '');
+        replacedSchoolPgphText = replacedSchoolPgphText.replace(/\n/g, '');
+    }
+    schoolPgph.innerText = replacedSchoolPgphText;
+
+    const yearsSince2015 = new Date(currentDate).getFullYear() - new Date(2015, 1, 1).getFullYear();
+    const curlingPgph = document.getElementById('curling-p');
+    const curlingPgphText = curlingPgph.innerText;
+    let replacedCurlingPgphText = curlingPgphText.replace(/{YEARS}/g, yearsSince2015);
+    replacedCurlingPgphText = replacedCurlingPgphText.replace(/\n/g, '');
+    curlingPgph.innerText = replacedCurlingPgphText;
+
+}
+
 window.onload = () => {
-//    testfn();
-    // handleClick();
-    // handlePop();
     showIcons();
     detectParagraphScroll();
     window.addEventListener('resize', detectWindowResize);
+    updateLiveParagraphVals();
 };

@@ -69,6 +69,13 @@
                         <img id="python" src="./Images/python.png" alt="Python coding language logo">
                     </div>
                 </div>
+                <div id="resume" class="hidden-well">
+                    <h3>My Resume:</h3>
+                    <a id="resume-download" href="./coka_resume.pdf" target="_blank">
+                        <img id="pdf-icon" src="./Images/pdf_icon.png">
+                        <p id="pdf-desc">coka_resume.pdf</p>
+                    </a>
+                </div>
             </a>
             <div id='first-header-body'  class="hidden-well">
                 <div id="blackout"></div>
@@ -76,35 +83,35 @@
                     <p class="first-paragraph">
                         Hi! My name's <b>Christopher</b>, usually I go by <b>Chris</b>.
                         <br><br>
-                        I'm an aspiring <b>Software Developer</b>, working primarily in <b>web developement</b>
+                        I'm an aspiring <b>Software Developer</b>, working primarily in <b>web development</b>
                         <br><br>
                         I'm a huge <b>sport</b> and <b>fitness</b> nut, and I love making <b>awful puns</b>.
                     </p>
                     <div class="img-text-row">
-                        <div clas="row-img">
-                            <img src="./Images/uofw.png" alt="University of Waterloo logo">
+                        <div class="row-img">
+                            <img id="first-header-uofw-img" src="./Images/uofw.png" alt="University of Waterloo logo">
                         </div>
                         <h3 class="row-title">Studies</h3>
-                        <p>
+                        <p id="school-p">
                             I'm currently studying <b>Systems Design Engineering</b> at the <b>University of Waterloo</b> in my 
                             {TERM} term. I've enjoyed basically all the courses I've taken so far, being a huge math/physics <b>nerd</b>
                             and loving everything STEM-related!
                         </p>
                     </div>
                     <div class="img-text-row">
-                        <div clas="row-img">
+                        <div class="row-img">
                             <img src="./Images/code.png" alt="carats used while coding">
                         </div>
                         <h3 class="row-title">Coding!</h3>
                         <p>
-                            I intially hated coding when I first tried it, some 6 years ago. I picked it back up a couple years back
+                            I intially hated coding when I first tried it, many years ago. I picked it back up a couple years back
                             and I've loved it ever since. From hackathons to side projects, school courses, and work terms, I've 
                             *developed* my programming skills to where they are now.
                         </p>
                     </div>
                 </div>
                 <a id='headshot-well' href="https://www.linkedin.com/in/christopher-oka/" target="_blank">
-                    <img id="headshot" src="./Images/chris_headshot_cropped.jpg" alt="a picture of me: Christopher Oka">
+                    <img id="headshot" src="./Images/chris_headshot_new_cropped_1.jpg" alt="a picture of me: Christopher Oka in Squamish, BC with mountains and a suspension bridge in the background">
                 </a>
             </div>
             <div id='second-header-body' class="hidden-well">
@@ -114,10 +121,12 @@
                     </div>
                     <h3 class="row-title">Curling</h3>
                     <div>   
-                        <p style="margin-bottom: 5px"> 
-                            I've been <b>curling</b> competitively for {years since 2015} years, a sport I adore (yes, it's a real sport!).
+                        <p id="curling-p" style="margin-bottom: 5px"> 
+                            I've been <b>curling</b> competitively for {YEARS} years, a sport I adore (yes, it's a real sport!).
                             I love the small team aspect of curling, teaching me how to quickly mesh and connect with my teammates.
                             <br><br>
+                        </p>
+                        <p style="margin: 2.5vh 0 1vh 0">
                             Some <b>achievements I'm proud of:</b>
                         </p>
                         <ul>
@@ -247,7 +256,7 @@
                 </div>
             </div>
         </div>
-        <button id="back-btn" onclick="returnHome()">
+        <button id="back-btn" class="hidden-well" onclick="returnHome()">
             <img id="left-arrow" src="./Images/back_arrow.png" alt="left arrow">
             <p id="back-btn-text">Back</p>
         </button>

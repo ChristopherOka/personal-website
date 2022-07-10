@@ -796,6 +796,12 @@ h3 {
 #first-header-body, #second-header-body, #third-header-body {
     position: absolute;
     margin-top: 26vh;
+    width: 90vw;
+}
+
+#first-header-uofw-img {
+    width: 5vw;
+    height: auto;
 }
 
 
@@ -822,26 +828,25 @@ h3 {
 #headshot-well {
     display: block;
     overflow: hidden;
-    height: 40vh;
-    width: 20vw;
+    height: auto;
+    width: 35vw;
     position: absolute;
     top: 0;
     right: 0;
     border-radius: 20px;  
     border: 3px solid var(--heading-1);
-    margin: 5vh 12vw -10vw 6vw;
+    margin: 7vh 0 0 6vw;
     transform: translateY(-20vh);
     transition: transform 0.4s ease;
-    animation-name: slide-in-from-right;
+    animation-name: fade-in;
     animation-duration: 1s;
-    animation-delay: 1s;
+    animation-delay: 2s;
     animation-fill-mode: both;
 }
 
 #headshot {
-    float: right;
-    transform: translateX(calc(200px - 7vw));
-    width: 500px;
+    float: left;
+    width: 35vw;
     height: auto;
 }
 
@@ -851,10 +856,13 @@ h3 {
 
 .first-paragraph {
     width: 50vw;
+    margin-left: 2vw;
+    margin-bottom: 8vh;
+    font-size: 3vh;
 }
 
-.second-paragraph {
-    margin-right: 10vw;
+#first-header-body {
+    width: 85vw;
 }
 
 @keyframes back-btn-slide-in {
@@ -869,7 +877,6 @@ h3 {
 }
 
 #back-btn {
-    display: none;
     position: absolute;
     cursor: pointer;
     outline: 3px solid var(--emphasis);
@@ -921,7 +928,7 @@ h3 {
     animation-delay: 0s !important;
 }
 
-#third-header-body, #second-header-body{
+#third-header-body, #second-header-body, #paragraphs{
     width: 90vw;
     height: 62vh;
     overflow-x: hidden;
@@ -932,6 +939,42 @@ h3 {
     animation-duration: 1s;
     animation-delay: 1s;
     animation-fill-mode: both;
+}
+
+#resume.hidden-well {
+    display: none;
+}
+
+#resume {
+    font-size: 4vh;
+    color: var(--emphasis);
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    height: auto;
+    position: fixed;
+    top: 14vh;
+    right: 5vw;
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+
+#resume-download {
+    display: flex;
+    text-decoration: none;
+}
+
+#pdf-icon {
+    width: 1.5vw;
+    margin: 0 8px 6px 30px;
+}
+
+#pdf-desc {
+    color: white;
+    margin: 0;
+    font-size: 2.8vh;
 }
 
 .img-text-row {
