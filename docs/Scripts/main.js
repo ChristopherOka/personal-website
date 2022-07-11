@@ -130,11 +130,17 @@ function renderNewPage (currentHeaderEl) {
     if (currentHeaderId === 'third-header') {
         document.getElementById('resume').classList.remove('hidden-well');
     }
+    else if (currentHeaderId === 'first-header') {
+        setTimeout(() => {
+            document.getElementById('blackout').classList.remove('hidden-well');
+        }, 1500);
+        
+    }
 
 
     const viewportWidth = window.innerWidth;
 
-    if (viewportWidth < 700) {
+    if (viewportWidth < 900) {
         currentHeader.classList.remove('enabled');
         firstOtherHeader.classList.remove('enabled');
         secondOtherHeader.classList.remove('enabled');
@@ -199,12 +205,17 @@ function returnHome() {
     }, 1000);
     
     const viewportWidth = window.innerWidth;
-    if (viewportWidth < 700) {
+    if (viewportWidth < 900) {
         currentHeader.classList.remove(`${currentHeaderId}-to-top`, 'top-header');
         currentHeader.classList.add(`${currentHeaderId}-initial-position`);
         currentHeader.classList.add('enabled', 'hover');
         firstOtherHeader.classList.add('enabled', 'hover');
         secondOtherHeader.classList.add('enabled', 'hover');
+        setTimeout(() => {
+            if (currentHeaderId === 'first-header') {
+                document.getElementById('blackout').classList.add('hidden-well');
+            }
+        }, 500);
     }
 }
 
@@ -213,7 +224,7 @@ function showIcons () {
     const secondHeader = document.getElementById('second-header');
     const thirdHeader = document.getElementById('third-header');
     const viewportWidth = window.innerWidth;
-    if (viewportWidth > 700) {
+    if (viewportWidth > 900) {
         setTimeout(() => {
             firstHeader.classList.add('hover');
         }, 2800);
@@ -235,7 +246,7 @@ function showIcons () {
             thirdHeader.classList.add('hover');
         }, 300);
     }
-    if (viewportWidth > 700 ){
+    if (viewportWidth > 900 ){
         setTimeout(() => {
             firstHeader.classList.remove('hover');
         }, 4000);
@@ -258,7 +269,7 @@ function detectWindowResize() {
     const firstHeader = document.getElementById('first-header');
     const secondHeader = document.getElementById('second-header');
     const thirdHeader = document.getElementById('third-header');
-    if (viewportWidth > 700) {
+    if (viewportWidth > 900) {
         firstHeader.classList.add('enabled');
         firstHeader.classList.remove('hover');
         secondHeader.classList.add('enabled');
@@ -287,10 +298,10 @@ function moveImageUpwards () {
     const scrollBarPosition = paragraphWell.scrollTop;
     
     let scrollbarOffset = 0;
-    if (viewportWidth < 1300 && viewportWidth > 700) {
+    if (viewportWidth < 1300 && viewportWidth > 900) {
         scrollbarOffset = 20;
     }
-    headshotWell.style.top = `calc(${scrollbarOffset}vh - ${scrollBarPosition}px)`;
+    headshotWell.style.top = `-${scrollBarPosition}px`;
 }
 
 function showSecondaryBg() {
