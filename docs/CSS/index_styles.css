@@ -597,6 +597,17 @@ h3 {
     }
 }
 
+@keyframes headshot-fade-in-translate {
+    0% {
+        opacity: 0;
+        transform: translateY(30vh);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(-20vh);
+    }
+}
+
 #headshot-well {
     display: block;
     overflow: hidden;
@@ -609,10 +620,10 @@ h3 {
     border: 3px solid var(--heading-1);
     margin: 7vh 0 0 6vw;
     transform: translateY(-20vh);
-    transition: transform 0.4s ease;
-    animation-name: fade-in;
+    transition: transform 0.4s ease-out;
+    animation-name: headshot-fade-in-translate;
     animation-duration: 1s;
-    animation-delay: 2s;
+    animation-delay: 1s;
     animation-fill-mode: both;
 }
 
