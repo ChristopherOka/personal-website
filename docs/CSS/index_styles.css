@@ -81,20 +81,20 @@ p, ul {
 
 h1 {
     font-family: SecularOne;
-    font-size: 15vh;
+    font-size: 140px;
     margin: 0;
     line-height: 1;
 }
 
 h2 {
     font-family: MerriweatherSans;
-    font-size: 11vh;
+    font-size: 100px;
     margin: 0;
 }
 
 h3 {
     font-family: MerriweatherSans;
-    font-size: 3.5vh;
+    font-size: 30px;
     margin: 0;
 }
 
@@ -241,7 +241,6 @@ h3 {
     position: absolute;
     height: 100%;
     width: calc(100% - 5vw);
-    font-size: 13vh;
     font-family: OohBaby;
     color: var(--title);
     padding-left: 5vw;
@@ -435,7 +434,7 @@ h3 {
     align-items: center;
     justify-content: flex-start;
     height: 0;
-    padding-top: 9vh;
+    padding-top: 75px;
     z-index: 1;
 }
 
@@ -457,7 +456,7 @@ h3 {
     align-self: center;
 }
 
-#second-header .second-header-logos img {
+.second-header-logos img {
     width: 9vh;
     height: auto;
 }
@@ -487,17 +486,17 @@ h3 {
     height: 7vh;
 }
 
-#second-header #curling {
+#curling {
     height: 6vh;
 }
 
-#second-header #guitar {
+#guitar {
     height: 10vh;
     width: auto;
     padding: 0 2vw;
 }
 
-#second-header #hockey {
+#hockey {
     height: 8vh;
     width: auto;
 }
@@ -583,7 +582,7 @@ h3 {
     animation-delay: 1s;
     animation-fill-mode: both;
     color: var(--default-text);
-    font-size: 2.5vh;
+    font-size: 20px;
     overflow: auto;
     height: 65vh;
 }
@@ -641,7 +640,7 @@ h3 {
     width: 50vw;
     margin-left: 2vw;
     margin-bottom: 8vh;
-    font-size: 3vh;
+    font-size: 25px;
 }
 
 #first-header-body {
@@ -729,7 +728,7 @@ h3 {
 }
 
 #resume {
-    font-size: 4vh;
+    font-size: 35px;
     color: var(--emphasis);
     display: flex;
     align-items: flex-end;
@@ -757,7 +756,7 @@ h3 {
 #pdf-desc {
     color: white;
     margin: 10px 0 0 0;
-    font-size: 2.8vh;
+    font-size: 25px;
 }
 
 .img-text-row {
@@ -765,7 +764,7 @@ h3 {
     display: grid;
     grid-template-columns: 12% 88%;
     color: var(--default-text);
-    font-size: 2.5vh;
+    font-size: 25px;
     padding-top: 5vh;
     padding-right: 0.5vw;
 }
@@ -821,6 +820,54 @@ h3 {
     height: 10px;
     background-color: white;
 
+}
+
+@media (max-width: 2560px) {
+    h1 {
+        font-size: 180px;
+    }
+    h2 {
+        font-size: 140px;
+    }
+    h3 {
+        font-size: 45px;
+    }
+    .third-header-logos, .second-header-logos, .first-header-logos {
+        padding-top: 95px;
+    }
+
+    .first-paragraph {
+        font-size: 38px;
+    }
+
+    .img-text-row {
+        font-size: 30px;
+    }
+
+
+}
+
+@media (max-width: 1920px) {
+    h1 {
+        font-size: 140px;
+    }
+    h2 {
+        font-size: 100px;
+    }
+    h3 {
+        font-size: 35px;
+    }
+    .third-header-logos, .second-header-logos, .first-header-logos {
+        padding-top: 80px;
+    }
+
+    .first-paragraph {
+        font-size: 30px;
+    }
+
+    .img-text-row {
+        font-size: 25px;
+    }
 }
 
 @media(max-width: 1670px) {
@@ -942,8 +989,26 @@ h3 {
     #main-headers .larger-text {
         display: none;
     }
-    #name{
-        font-size: 13vh;
+    h1 {
+        font-size: 120px;
+    }
+    h2 {
+        font-size: 110px;
+    }
+    .third-header-logos, .second-header-logos, .first-header-logos {
+        padding-top: 45px;
+    }
+
+    .first-header-logos img, .second-header-logos img, .third-header-logos img {
+        height: 6vh;
+    }
+
+    #uofw {
+        height: 6vh;
+    }
+
+    #code {
+        height: 6vh;
     }
 }
 
@@ -984,8 +1049,11 @@ h3 {
 }
 
 @media(max-width: 1210px) {
-    #name {
-        font-size: 12vh;
+    h1 {
+        font-size: 100px;
+    }
+    h2 {
+        font-size: 85px;
     }
     #first-header-code-img {
         height: 50px;
@@ -994,11 +1062,8 @@ h3 {
 }
 
 @media(max-width: 1100px) {
-    h2 {
-        font-size: 10vh;
-    }
-    #main-headers .third-header-logos, #main-headers .second-header-logos, #main-headers .first-header-logos {
-        padding-top: 7vh;
+     .third-header-logos, .second-header-logos, .first-header-logos {
+        padding-top: 65px;
     }
     #headshot {
         transform: translateX(40px);
@@ -1006,8 +1071,11 @@ h3 {
 }
 
 @media(max-width: 1085px) {
-    #name {
-        font-size: 11vh;
+    h1 {
+        font-size: 90px;
+    }
+    h2 {
+        font-size: 75px;
     }
 }
 
@@ -1041,7 +1109,7 @@ h3 {
     }
 }
 
-@media(max-width: 950px) {n
+@media(max-width: 950px) {
     #first-header-uofw-img {
         width: 50px;
         height: 50px;
@@ -1055,10 +1123,9 @@ h3 {
 
 @media (max-width: 900px) {
     h2 {
-        font-size: 9vh;
+        font-size: 80px;
     }
     #main-headers {
-        font-size: 15vw;
         padding-left: 6vw;
     }
 
@@ -1128,17 +1195,17 @@ h3 {
         }
     }
 
-    #main-headers .first-header-to-top, #main-headers .second-header-to-top, #main-headers .third-header-to-top {
+    .first-header-to-top, .second-header-to-top, .third-header-to-top {
         animation-delay: 0.5s;
         animation-fill-mode: both;
     }
 
-    #main-headers .first-header-initial-position, #main-headers .second-header-initial-position, #main-headers .third-header-initial-position {
+    .first-header-initial-position, .second-header-initial-position, .third-header-initial-position {
         animation-delay: 0.5s;
     }
 
-    #main-headers .third-header-logos, #main-headers .second-header-logos, #main-headers .first-header-logos {
-        padding-top: 5vh;
+    .third-header-logos, .second-header-logos, .first-header-logos {
+        padding-top: 45px;
     }
 
     #main-headers > #third-header.enabled.hover, #main-headers > #first-header.enabled.hover, #main-headers > #second-header.enabled.hover {
@@ -1154,7 +1221,7 @@ h3 {
         transition: opacity 0.3s ease, transform 0.6s;
     }
 
-    #second-header .second-header-logos img {
+    .second-header-logos img {
         width: 5vh;
         height: auto;
     }
@@ -1191,7 +1258,6 @@ h3 {
         transform: none;
         animation-name: fade-in;
     }
-
     
     #headshot { 
         height: 35vh;
@@ -1215,21 +1281,22 @@ h3 {
     }
 
     .first-paragraph {
+        font-size: 25px;
         padding-top: 35vh;
         width: 100%;
     }
     
-    #second-header #curling {
+    #curling {
         height: 4vh;
     }
     
-    #second-header #guitar {
+    #guitar {
         height: 8vh;
         width: auto;
         padding: 0 2vw;
     }
     
-    #second-header #hockey {
+    #hockey {
         height: 6vh;
         width: auto;
     }
@@ -1238,9 +1305,9 @@ h3 {
         display: flex;
         flex-direction: column;
         justify-items: center;
+        font-size: 22px;
         align-items: flex-start;
         color: var(--default-text);
-        font-size: 2vh;
         padding: 0 5vw;
     }
     
@@ -1321,7 +1388,7 @@ h3 {
 
     #back-btn-text {
         display: block;
-        font-size: 3vh;
+        font-size: 25px;
         margin: 0;
         color: var(--emphasis);
     }
@@ -1354,8 +1421,10 @@ h3 {
         animation-duration: 1s;
     }
 
+    h1 {
+        font-size: 90px;
+    }
     #name {
-        font-size: 9vh;
         animation-delay: 0s;
     }
 
@@ -1510,12 +1579,12 @@ h3 {
 }
 
 @media (max-width: 600px) {
-    #main-headers .third-header-logos,#main-headers .second-header-logos,#main-headers .first-header-logos {
-        padding-top: 4vh;
+    .third-header-logos, .second-header-logos, .first-header-logos {
+        padding-top: 35px;
     }
 
-    #name {
-        font-size: 7vh;
+    h1 {
+        font-size: 80px;
     }
 
     #headshot {
@@ -1523,7 +1592,7 @@ h3 {
     }
 
     h2 {
-        font-size: 8vh;
+        font-size: 70px;
     }
 
     @keyframes first-header-to-top {
@@ -1649,19 +1718,54 @@ h3 {
     #headshot {
         transform: translateX(-120px) translateY(-30px);
     }
+    h2 {
+        font-size: 65px;
+    }
+
+    h1 {
+        font-size: 70px;;
+    }
+
+    .third-header-logos, .second-header-logos, .first-header-logos {
+        padding-top: 30px;
+    }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 440px) {
+    h1 {
+        font-size: 60px;
+    }
     h2 {
-        font-size: 6vh;
+        font-size: 55px;
+    }
+    .third-header-logos, .second-header-logos, .first-header-logos {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 55px;
+    }
+    h2 {
+        font-size: 45px;
+    }
+    .third-header-logos, .second-header-logos, .first-header-logos {
+        padding-top: 15px;
     }
 
-    #name {
-        font-size: 6.5vh;
+}
+
+@media (max-width: 300px) {
+    h1 {
+        font-size: 40px;
     }
 
-    #main-headers .third-header-logos,#main-headers .second-header-logos,#main-headers .first-header-logos {
-        padding-top: 2.5vh;
+    h2 {
+        font-size: 35px;
+    }
+    .third-header-logos, .second-header-logos, .first-header-logos {
+        padding-top: 12px;
     }
 }
 
