@@ -618,7 +618,7 @@ h3 {
     width: 35vw;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -5vw;
     border-radius: 20px;  
     border: 3px solid var(--heading-1);
     margin: 7vh 0 0 6vw;
@@ -773,9 +773,13 @@ h3 {
     padding-right: 0.5vw;
 }
 
+#second-header-body .img-text-row img {
+    height: 65px;
+}
+
 .img-text-row img {
     width: auto;
-    height: 55px;
+    height: 100px;
     padding-right: 1vw;
 }
 
@@ -796,15 +800,19 @@ h3 {
 }
 
 .img-text-row img#guitar-logo {
-    height: 100px;
+    height: 120px;
     width: auto;
     padding-left: 1.2vw;
 }
 
 .img-text-row img#hockey-logo {
-    height: 80px;
+    height: 90px;
     width: auto;
     padding-left: 0.5vw;
+}
+
+.img-text-row img#frisbee-logo {
+    height: 75px;
 }
 
 .row-title {
@@ -1040,6 +1048,21 @@ h3 {
             transform: translateX(0);
         }
     }
+    .img-text-row img{
+        height: 80px;
+    }
+    #second-header-body .img-text-row img {
+        height: 55px;
+    }
+    .img-text-row img#guitar-logo {
+        height: 100px;
+    }
+    .img-text-row img#hockey-logo {
+        height: 80px;
+    }
+    .img-text-row img#frisbee-logo {
+        height: 65px;
+    }
 }
 
 @media(max-width: 1300px) {
@@ -1163,14 +1186,20 @@ h3 {
         font-size: 20px;
         margin: 17px 0 0 0 ;
     }
-    .img-text-row img {
+    #second-header-body .img-text-row img {
         height: 40px;
+    }
+    .img-text-row img {
+        height: 60px;
     }
     .img-text-row img#guitar-logo {
         height: 75px;
     }
     .img-text-row img#hockey-logo {
         height: 65px;
+    }
+    .img-text-row img#frisbee-logo {
+        height: 55px;
     }
     #first-header-uofw-img {
         height: 65px;
@@ -1439,6 +1468,9 @@ h3 {
         width: auto;
         height: 75px;
         padding-left: 2vw;
+    }
+    .img-text-row img#frisbee-logo {
+        height: 50px;
     }
 
     .row-img {
