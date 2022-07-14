@@ -777,6 +777,11 @@ h3 {
     height: 65px;
 }
 
+#first-header-code-img {
+    width: 100px;
+    height: 80px;
+}
+
 .img-text-row img {
     width: auto;
     height: 100px;
