@@ -248,7 +248,7 @@ h3 {
     overflow: hidden;
 }
 
-#main-headers > a {
+#main-headers > .header {
     position: absolute;
     cursor: pointer;    
     margin: 2.5vh 0;
@@ -258,7 +258,7 @@ h3 {
     justify-content: start;
 }
 
-#main-headers > a.enabled:hover, #main-headers > #third-header.enabled.hover {
+#main-headers > .header.enabled:hover, #main-headers > #third-header.enabled.hover {
     transform: translateY(-5vh);
     z-index: 9999;
 }
@@ -273,18 +273,18 @@ h3 {
     z-index: 9999;
 }
 
-#main-headers a > b {
+#main-headers .header > b {
     z-index: 2;
     grid-row-start: 1;
     grid-row-end: 2;
 }
 
-#main-headers a > div {
+#main-headers .header > div {
     grid-row-start: 2;
     grid-row-end: 2;
 }
 
-#main-headers a > b {
+#main-headers .header > b {
     height: 9vh;
 }
 
@@ -711,12 +711,12 @@ h3 {
 }
 
 #third-header-body, #second-header-body, #paragraphs{
-    width: 90vw;
+    width: 94vw;
     height: 62vh;
     overflow-x: hidden;
     overflow-y: auto;
-    border-right: 2px solid rgb(200, 200, 200);
-    border-left: 2px solid rgb(200, 200, 200);
+    /* border-right: 2px solid rgb(200, 200, 200);
+    border-left: 2px solid rgb(200, 200, 200); */
     animation-name: fade-in-translate;
     animation-duration: 1s;
     animation-delay: 1s;
@@ -736,7 +736,7 @@ h3 {
     height: auto;
     position: fixed;
     top: 14vh;
-    right: 15vw;
+    right: 5vw;
     animation-name: fade-in;
     animation-duration: 1s;
     animation-delay: 2s;
@@ -749,7 +749,8 @@ h3 {
 }
 
 #pdf-icon {
-    width: 1.5vw;
+    width: 30px;
+    height: 37px;
     margin: 0 8px 6px 30px;
 }
 
@@ -762,7 +763,7 @@ h3 {
 .img-text-row {
     position: relative;
     display: grid;
-    grid-template-columns: 12% 88%;
+    grid-template-columns: 10% 90%;
     color: var(--default-text);
     font-size: 25px;
     padding-top: 5vh;
@@ -772,7 +773,7 @@ h3 {
 .img-text-row img {
     width: auto;
     height: 7vh;
-    padding: 0 1vw;
+    padding-right: 1vw;
 }
 
 .img-text-row ul {
@@ -805,12 +806,12 @@ h3 {
     position: absolute;
     top: 0;
     margin: 0;
-    padding-left: 12%;
+    padding-left: 10%;
 }
 
 .row-img {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 
@@ -995,9 +996,6 @@ h3 {
     h2 {
         font-size: 110px;
     }
-    .third-header-logos, .second-header-logos, .first-header-logos {
-        padding-top: 45px;
-    }
 
     .first-header-logos img, .second-header-logos img, .third-header-logos img {
         height: 6vh;
@@ -1059,11 +1057,84 @@ h3 {
         height: 50px;
         width: 70px;
     }
+    .third-header-logos, .second-header-logos, .first-header-logos {
+        padding-top: 60px;
+    }
+
+    #first-header {
+        top: 40vh;
+    }
+    
+    #second-header {
+        top: 58vh;
+    }
+    
+    #third-header {
+        top: 75vh;
+    }
+
+    @keyframes first-header-to-top {
+        0% {
+            top: 35vh;
+        }
+        100% {
+            top: 8vh;
+        }
+    }
+    
+    @keyframes second-header-to-top {
+        0% {
+            top: 53vh;
+        }
+        100% {
+            top: 8vh;
+        }
+    }
+    
+    @keyframes third-header-to-top {
+        0% {
+            top: 69vh;
+        }
+        100% {
+            top: 8vh;
+        }
+    }
+    
+    @keyframes first-header-initial-position {
+        0% {
+            top: 8vh;
+        }
+        100% {
+            top: 40vh;
+        }
+    }
+    
+    @keyframes second-header-initial-position {
+        0% {
+            top: 8vh;
+        }
+        100% {
+            top: 58vh;
+        }
+    }
+    
+    @keyframes third-header-initial-position {
+        0% {
+            top: 8vh;
+        }
+        100% {
+            top: 75vh;
+        }
+    }
+
+    #resume {
+        top: 15.5vh;
+    }
 }
 
 @media(max-width: 1100px) {
      .third-header-logos, .second-header-logos, .first-header-logos {
-        padding-top: 65px;
+        padding-top: 55px;
     }
     #headshot {
         transform: translateX(40px);
@@ -1076,6 +1147,16 @@ h3 {
     }
     h2 {
         font-size: 75px;
+    }
+    h3{
+        font-size: 30px;
+    }
+    #resume {
+        top: 14.5vh;
+    }
+    #pdf-desc {
+        font-size: 20px;
+        margin: 17px 0 0 0 ;
     }
 }
 
@@ -1308,7 +1389,7 @@ h3 {
         font-size: 22px;
         align-items: flex-start;
         color: var(--default-text);
-        padding: 0 5vw;
+        padding: 0;
     }
     
     .img-text-row img {
@@ -1355,15 +1436,11 @@ h3 {
     .row-img {
         height: 7vh;
         display: flex;
-        align-items: end;
+        align-items: center;
     }
 
     .row-title {
         padding: 16px 0 0 89px;
-    }
-
-    #tdsb-row-title {
-        margin-top: -1.5vh;
     }
 
     #back-btn:hover {
@@ -1501,6 +1578,23 @@ h3 {
         width: 70px;
         height: 50px;
     }
+    #resume {
+        flex-direction: column;
+        top: 11.5vh;
+        right: 7vw;
+        align-items: flex-start;
+    }
+    #pdf-icon {
+        margin-left: 0;
+        height: 20px;
+        width: 18px;
+    }
+    #resume-download {
+        padding-top: 10px;
+    }
+    #pdf-desc {
+        margin-top: 0;
+    }
 
 }
 
@@ -1578,6 +1672,20 @@ h3 {
     }
 }
 
+@media (max-width: 760px) {
+    #first-header-body, #second-header-body, #third-header-body {
+        position: absolute;
+        margin-top: 30vh;
+    }
+    #resume {
+        flex-direction: row;
+        left: 7vw;
+        top: 22vh;
+        gap: 16px;
+        align-items: flex-end;
+    }
+}
+
 @media (max-width: 600px) {
     .third-header-logos, .second-header-logos, .first-header-logos {
         padding-top: 35px;
@@ -1589,6 +1697,11 @@ h3 {
 
     #headshot {
         transform: translateX(-50px) translateY(-30px);
+    }
+
+    #tdsb-row-title {
+        font-size: 22px;
+        padding-top: 20px;
     }
 
     h2 {
@@ -1738,9 +1851,27 @@ h3 {
     h2 {
         font-size: 55px;
     }
+    h3 {
+        font-size: 22px;
+    }
+    .img-text-row p, ul{
+        font-size: 16px;
+    }
+    .img-text-row img {
+        height: 5vh;
+    }
+    .row-title {
+        padding-left: 70px;
+    }
+    #tdsb-row-title{
+        padding-left: 75px;
+        font-size: 20px;
+    }
+
     .third-header-logos, .second-header-logos, .first-header-logos {
         padding-top: 20px;
     }
+
 }
 
 @media (max-width: 400px) {
@@ -1749,6 +1880,14 @@ h3 {
     }
     h2 {
         font-size: 45px;
+    }
+    #resume {
+        flex-direction: column;
+        left: 7vw;
+        top: 20vh;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0;
     }
     .third-header-logos, .second-header-logos, .first-header-logos {
         padding-top: 15px;

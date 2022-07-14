@@ -10,7 +10,7 @@
     </head>
     <body>
         <div id="main-headers">
-            <a id="first-header" class="enabled" onclick="renderNewPage(this)">
+            <div id="first-header" class="enabled header" onclick="renderNewPage(this)">
                 <b>
                     <h2 class='larger-text'>Who I Am</h2>
                     <h2 class='smaller-text'>About</h2>
@@ -23,8 +23,8 @@
                         <img id="code" src="./Images/code.png" alt="carats used while coding">
                     </div>
                 </div>
-            </a>
-            <a id="second-header" class="enabled" onclick="renderNewPage(this)">
+            </div>
+            <div id="second-header" class="enabled header" onclick="renderNewPage(this)">
                 <b>
                    <h2 class="larger-text">What I Love</h2>
                    <h2 class='smaller-text'>Hobbies</h2>
@@ -46,8 +46,8 @@
                         <img id="video-games" src="./Images/video_games.png" alt="video game controller">
                     </div>
                 </div>
-            </a>
-            <a id="third-header" class="enabled" onclick="renderNewPage(this)">
+            </div>
+            <div id="third-header" class="enabled header" onclick="renderNewPage(this)">
                 <b>
                     <h2 class="larger-text">What I've Done</h2>
                     <h2 class='smaller-text'>Experience</h2>
@@ -69,14 +69,14 @@
                         <img id="python" src="./Images/python.png" alt="Python coding language logo">
                     </div>
                 </div>
-                <div id="resume" class="hidden-well">
-                    <h3>My Resume:</h3>
-                    <a id="resume-download" href="./coka_resume.pdf" target="_blank">
-                        <img id="pdf-icon" src="./Images/pdf_icon.png">
-                        <p id="pdf-desc">coka_resume.pdf</p>
-                    </a>
-                </div>
-            </a>
+            </div>
+            <div class="hidden-well" id="resume">
+                <h3>My Resume:</h3>
+                <a id="resume-download" href="./coka_resume.pdf" target="_blank">
+                    <img id="pdf-icon" src="./Images/pdf_icon.png">
+                    <p id="pdf-desc">coka_resume.pdf</p>
+                </a>
+            </div>
             <div id='first-header-body'  class="hidden-well">
                 <div id="blackout" class="hidden-well"></div>
                 <div id="paragraphs">
