@@ -1,7 +1,7 @@
 # personal-website
-Personal Website
+<b>Personal Website</b>
 
-Built using: 
+<b>Built using: </b>
 <br>HTML
 <br>CSS
 <br>JavaScript
