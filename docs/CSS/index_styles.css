@@ -490,6 +490,10 @@ h3 {
     height: 6vh;
 }
 
+#curling-logo{
+    padding-left: 0.5vw;
+}
+
 #guitar {
     height: 10vh;
     width: auto;
@@ -638,7 +642,6 @@ h3 {
 
 .first-paragraph {
     width: 50vw;
-    margin-left: 2vw;
     margin-bottom: 8vh;
     font-size: 25px;
 }
@@ -1169,6 +1172,14 @@ h3 {
     .img-text-row img#hockey-logo {
         height: 65px;
     }
+    #first-header-uofw-img {
+        height: 65px;
+        width: 65px;
+    }
+    #first-header-code-img {
+        height: 45px;
+        width: 65px;
+    }
 
 }
 
@@ -1344,7 +1355,7 @@ h3 {
     #headshot-well {
         position: absolute;
         top: 0;
-        left: 4vw;
+        left: 0;
         height: 30vh;
         width: 80vw;
         margin: 0;
@@ -1353,11 +1364,11 @@ h3 {
     }
     
     #headshot { 
-        height: 35vh;
+        height: 455px;
         transform: none;
         float: none;
         width: auto;
-        transform: translateY(-20px);
+        transform: translateY(-70px);
     }
 
     #headshot-well:hover {
@@ -1697,6 +1708,9 @@ h3 {
         gap: 16px;
         align-items: flex-end;
     }
+    #headshot {
+        transform: translateY(-70px) translateX(-100px)
+    }
 }
 
 @media (max-width: 600px) {
@@ -1709,7 +1723,7 @@ h3 {
     }
 
     #headshot {
-        transform: translateX(-50px) translateY(-30px);
+        transform: translateX(-180px) translateY(-60px);
     }
 
     #tdsb-row-title {
@@ -1842,7 +1856,7 @@ h3 {
 
 @media (max-width: 480px) {
     #headshot {
-        transform: translateX(-120px) translateY(-30px);
+        transform: translateX(-240px) translateY(-50px);
     }
     h2 {
         font-size: 65px;
@@ -1887,6 +1901,14 @@ h3 {
         padding-left: 75px;
         font-size: 20px;
     }
+    #first-header-uofw-img {
+        height: 50px;
+        width: 50px;
+    }
+    #first-header-code-img {
+        height: 35px;
+        width: 50px;
+    }
 
     .third-header-logos, .second-header-logos, .first-header-logos {
         padding-top: 20px;
@@ -1912,6 +1934,9 @@ h3 {
     .third-header-logos, .second-header-logos, .first-header-logos {
         padding-top: 15px;
     }
+    #headshot {
+        transform: translateX(-250px) translateY(-55px);
+    }
 
 }
 
@@ -1925,6 +1950,10 @@ h3 {
     }
     .third-header-logos, .second-header-logos, .first-header-logos {
         padding-top: 12px;
+    }
+    #headshot {
+        transform: translateX(-180px) translateY(-40px);
+        height: 330px;
     }
 }
 
