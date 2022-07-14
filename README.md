@@ -2,6 +2,6 @@
 Personal Website
 
 Built using: 
-HTML
-CSS
-JavaScript
+<br>HTML
+<br>CSS
+<br>JavaScript
