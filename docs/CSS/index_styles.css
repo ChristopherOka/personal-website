@@ -121,6 +121,38 @@ h3 {
     }
 }
 
+@keyframes headers-appear {
+    0% {
+        height: 100vh;
+        width: 70vw;
+    }
+    30% {
+        height: 100vh;
+        width: 70vw;
+    }
+    55% {
+        height: 100vh;
+        width: 70vw;
+    }
+    100% {
+        height: 100vh;
+        width: 0;
+    }
+}
+
+#header-cover {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    position:absolute;
+    top: 0;
+    left: 0;
+    animation-name: headers-appear;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    z-index: 2;
+}
+
 #secondary-bg {
     width: 100vw;
     background-color: var(--bg-color-2);
@@ -130,6 +162,7 @@ h3 {
     animation-name: slash;
     animation-duration: 3s;
     animation-fill-mode: both;
+    z-index: 1001;
 }
 
 @keyframes hide-secondary-bg {
@@ -222,6 +255,7 @@ h3 {
     animation-duration: 0.4s;
     animation-delay: 1.7s;
     animation-fill-mode: both;
+    z-index: 9999;
 }
 
 
@@ -260,17 +294,17 @@ h3 {
 
 #main-headers > .header.enabled:hover, #main-headers > #third-header.enabled.hover {
     transform: translateY(-5vh);
-    z-index: 9999;
+    z-index: 999;
 }
 
 #main-headers > #first-header.enabled.hover {
     transform: translateY(-11vh);
-    z-index: 9999;
+    z-index: 999;
 }
 
 #main-headers > #second-header.enabled.hover {
     transform: translateY(-8vh);
-    z-index: 9999;
+    z-index: 999;
 }
 
 #main-headers .header > b {
@@ -1348,7 +1382,7 @@ h3 {
 
     #main-headers > #third-header.enabled.hover, #main-headers > #first-header.enabled.hover, #main-headers > #second-header.enabled.hover {
         transform: translateY(-6vh);
-        z-index: 9999;
+        z-index: 999;
     }
 
     .third-header-logos img, .second-header-logos img, .first-header-logos img {
@@ -1558,6 +1592,24 @@ h3 {
         top: -100vh;
         left: 65%;
         animation-duration: 1s;
+    }
+
+    @keyframes headers-appear {
+        0% {
+            transform: translateY(0) translateX(0) rotate(20deg);
+            height: 100vh;
+            width: 100vw;
+        }
+        100% {
+            transform: translateY(100vh) translateX(-100vw) rotate(20deg);;
+            height: 100vh;
+            width: 100vw;
+        }
+    }
+
+    #header-cover {
+        z-index: 1000;
+        animation-duration: 1.8s;
     }
 
     h1 {
