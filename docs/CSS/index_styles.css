@@ -772,7 +772,7 @@ h3 {
 
 .img-text-row img {
     width: auto;
-    height: 7vh;
+    height: 55px;
     padding-right: 1vw;
 }
 
@@ -793,13 +793,15 @@ h3 {
 }
 
 .img-text-row img#guitar-logo {
-    height: 5vw;
+    height: 100px;
     width: auto;
+    padding-left: 1.2vw;
 }
 
 .img-text-row img#hockey-logo {
-    height: 4vw;
+    height: 80px;
     width: auto;
+    padding-left: 0.5vw;
 }
 
 .row-title {
@@ -1158,6 +1160,16 @@ h3 {
         font-size: 20px;
         margin: 17px 0 0 0 ;
     }
+    .img-text-row img {
+        height: 40px;
+    }
+    .img-text-row img#guitar-logo {
+        height: 75px;
+    }
+    .img-text-row img#hockey-logo {
+        height: 65px;
+    }
+
 }
 
 @media(max-width: 1000px) {
@@ -1395,25 +1407,26 @@ h3 {
     .img-text-row img {
         width: auto;
         height: 7vh;
-        padding: 0 1vw;
+        padding: 0 1vw 0 0;
         margin: 0;
         padding-right: 5vw;
     }
 
     #second-header-body .img-text-row img {
         width: auto;
-        height: 5vh;
+        height: 40px;
     }
 
     #second-header-body #hockey-logo {
         width: auto;
-        height: 7vh;
+        height: 65px;
+        padding-left: 1vw;
     }
 
     #second-header-body #guitar-logo {
         width: auto;
-        height: 8vh;
-        padding-left: 4vw;
+        height: 75px;
+        padding-left: 2vw;
     }
 
     .row-img {
@@ -1452,7 +1465,7 @@ h3 {
         border: 2px solid var(--emphasis);
         outline: none;
         border-radius: 20px;
-        height: 4vh;
+        height: 35px;
         width: 30vw;
         margin: 2vh 7vw;
         transition: box-shadow 0.4s ease;
@@ -1858,10 +1871,17 @@ h3 {
         font-size: 16px;
     }
     .img-text-row img {
-        height: 5vh;
+        height: 50px;
+    }
+    #second-header-body #hockey-logo {
+        height: 55px;
+        padding-left: 4vw;
+    }
+    #second-header-body #guitar-logo {
+        height: 65px;
     }
     .row-title {
-        padding-left: 70px;
+        padding: 20px 0 0 70px;
     }
     #tdsb-row-title{
         padding-left: 75px;
