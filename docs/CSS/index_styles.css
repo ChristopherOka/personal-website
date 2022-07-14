@@ -1379,9 +1379,10 @@ h3 {
         position: absolute;
         background-color: var(--bg-color);
         height: 30vh;
-        width: 100vw;
+        width: 120vw;
         z-index: 1;
         top: -30vh;
+        left: -5vw;
     }
 
     .first-paragraph {
