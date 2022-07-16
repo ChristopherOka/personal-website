@@ -138,9 +138,9 @@ function renderNewPage (currentHeaderEl) {
     }
 
 
-    const viewportWidth = window.innerWidth;
+    const canHover = window.matchMedia('(hover: hover)').matches
 
-    if (viewportWidth < 900) {
+    if (!canHover) {
         currentHeader.classList.remove('enabled');
         firstOtherHeader.classList.remove('enabled');
         secondOtherHeader.classList.remove('enabled');
@@ -204,8 +204,9 @@ function returnHome() {
         }
     }, 1000);
     
-    const viewportWidth = window.innerWidth;
-    if (viewportWidth < 900) {
+
+    const canHover = window.matchMedia('(hover: hover)').matches
+    if (!canHover) {
         currentHeader.classList.remove(`${currentHeaderId}-to-top`, 'top-header');
         currentHeader.classList.add(`${currentHeaderId}-initial-position`);
         currentHeader.classList.add('enabled', 'hover');
@@ -224,7 +225,8 @@ function showIcons () {
     const secondHeader = document.getElementById('second-header');
     const thirdHeader = document.getElementById('third-header');
     const viewportWidth = window.innerWidth;
-    if (viewportWidth > 900) {
+    const canHover = window.matchMedia('(hover: hover)').matches
+    if (canHover) {
         setTimeout(() => {
             firstHeader.classList.add('hover');
         }, 2800);
@@ -246,7 +248,7 @@ function showIcons () {
             thirdHeader.classList.add('hover');
         }, 300);
     }
-    if (viewportWidth > 900 ){
+    if (canHover){
         setTimeout(() => {
             firstHeader.classList.remove('hover');
         }, 4000);
@@ -269,7 +271,8 @@ function detectWindowResize() {
     const firstHeader = document.getElementById('first-header');
     const secondHeader = document.getElementById('second-header');
     const thirdHeader = document.getElementById('third-header');
-    if (viewportWidth > 900) {
+    const canHover = window.matchMedia('(hover: hover)').matches;
+    if (canHover) {
         firstHeader.classList.add('enabled');
         firstHeader.classList.remove('hover');
         secondHeader.classList.add('enabled');
