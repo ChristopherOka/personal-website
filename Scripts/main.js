@@ -377,6 +377,20 @@ function updateLiveParagraphVals() {
 
 }
 
+function swapThirdHeaders(el) {
+    console.log('swapping: ', el);
+    const headerPositions = [0, 36, 66];
+    const activeHeader = document.getElementsByClassName('active-header')[0];
+    const clickedHeader = el.parentElement;
+    const activeHeaderX = getComputedStyle(activeHeader).getPropertyValue('left');
+    const clickedHeaderX = getComputedStyle(clickedHeader).getPropertyValue('left');
+    debugger
+    clickedHeader.style.left = `${activeHeaderX}`;
+    activeHeader.style.left = `${clickedHeaderX}`;
+    document.getElementsByClassName('active-header')[0].classList.remove('active-header');
+    el.parentElement.classList.add('active-header');
+}
+
 window.onload = () => {
     showIcons();
     detectParagraphScroll();

@@ -8,6 +8,8 @@
     --title: #d9d9d9;
     --emphasis: #FFBADF;
     --neutral: #F4F4ED;
+    --blue: #8ACDEA;
+    --light-blue: rgba(138, 205, 234, 0.5);
 }
 
 ::-webkit-scrollbar {
@@ -125,10 +127,7 @@ h3 {
     0% {
         transform: rotate(-25deg) translateX(-15vw);
     }
-    30% {
-        transform: rotate(-25deg)  translateX(-15vw);;
-    }
-    60% {
+    50% {
         transform: rotate(-25deg)  translateX(-15vw);;
     }
     100% {
@@ -144,7 +143,7 @@ h3 {
     top: 0;
     left: 0;
     animation-name: headers-appear;
-    animation-duration: 3s;
+    animation-duration: 3.5s;
     animation-fill-mode: both;
     z-index: 999;
 }
@@ -743,7 +742,7 @@ h3 {
     animation-delay: 0s !important;
 }
 
-#third-header-body, #second-header-body, #paragraphs{
+#second-header-body, #paragraphs{
     width: 94vw;
     height: 62vh;
     overflow-x: hidden;
@@ -869,6 +868,53 @@ h3 {
     height: 10px;
     background-color: white;
 
+}
+
+#third-header-body {
+    width: 94vw;
+    /* border-right: 2px solid rgb(200, 200, 200);
+    border-left: 2px solid rgb(200, 200, 200); */
+    animation-name: fade-in-translate;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    margin-top: 22vh;
+}
+
+#third-header-body-headers > h3 {
+    font-size: 60px;
+    cursor: pointer;
+    color: var(--blue);
+}
+
+#third-header-body-headers > h3:hover {
+    color: var(--blue);
+}
+
+#third-header-body-headers > h3:not(.active-header) {
+    color: var(--light-blue);
+}
+
+#third-header-body-headers .first-header {
+    position: absolute;
+    left: 0;
+
+}
+
+#third-header-body-headers .second-header {
+    position: absolute;
+    left: 36vw;
+}
+
+#third-header-body-headers .third-header {
+    position: absolute;
+    left: 66vw;
+}
+
+#TH-FH-body {
+    margin-top: 10vh;
+    overflow-y: scroll;
+    height: 62vh;
 }
 
 @media (max-width: 2560px) {

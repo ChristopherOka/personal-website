@@ -188,13 +188,106 @@
                 </div>
             </div>
             <div id='third-header-body' class="hidden-well">
-                <div class="img-text-row">
+                <div id='third-header-body-headers'>
+                    <h3 class='first-header active-header'><a onclick="swapThirdHeaders(this)">Work Experience</a></h3>
+                    <h3 class="second-header"><a onclick="swapThirdHeaders(this)">Side Projects</a></h3>
+                    <h3 class="third-header"><a onclick="swapThirdHeaders(this)">Hackathons</a></h3>
+                </div>
+                <div id='TH-FH-body'>
+                    <div class="img-text-row">
+                        <div class="row-img">
+                            <img id="tbits-logo" src="./Images/tbits.png" alt="Tradable Bits logo">
+                        </div>
+                        <h3 class="row-title">Tradable Bits</h3>
+                        <p> 
+                            My recent co-op was at <b>Tradable Bits</b>, a SaaS company working to make sports
+                            and music fans' experience better by providing media organizations a streamlined way
+                            to send out prizes, games, and communications.
+                            <br><br>
+                            I worked as a Full-Stack Software Developer, using Python, JavaScript, SQL, HTML, CSS, and a
+                            variety of other tools to build out new features for the platform.
+                        </p>
+                    </div>
+                    <div class="img-text-row">
+                        <div class="row-img">
+                            <img id="fr-logo" src="./Images/front_rush.png" alt="Front Rush logo">
+                        </div>
+                        <h3 class="row-title">Front Rush</h3>
+                        <p> 
+                            My second co-op was at Front Rush, a SaaS company providing a recruiting and inventory
+                            management platform to sports teams across North America.
+                            <br><br>
+                            I worked as a Technical Implementation and Support Specialist, using SQL, Python, JS, HTML and CSS
+                            to develop back-end tools to increase inventory processing efficiency, while doing some front-end
+                            bug-fixing.
+                        </p>
+                    </div>
+                    <div class="img-text-row">
+                        <div class="row-img">
+                            <img id="tdsb-logo" src="./Images/tdsb.png" alt="Toronto District School Board logo">
+                        </div>
+                        <h3 class="row-title" id="tdsb-row-title">Toronto District School Board</h3>
+                        <p> 
+                            My first co-op was at the TDSB, working as a Systems Remediation Specialist.
+                            <br><br>
+                            In this role, I took digital documents and made them accessible for those who read web
+                            content using a screen reader. I learned tons about accessibility and making the web more inclusive.
+                        </p>
+                    </div>
+                </div>
+                <div id="TH-SH-body" class="hidden-well">
+                    <div class="img-text-row">
+                        <div class="row-img">
+                            <img id="python-logo" src="./Images/python.png" alt="Python logo">
+                        </div>
+                        <h3 class="row-title">Side Projects</h3>
+                        <div>
+                            <p style="margin-bottom: 5px"> 
+                                Some side projects I've done include:
+                            </p>
+                            <ul>
+                                <li>Image Recognition Model Generator (Python, TensorFlow, Selenium)</li>
+                                <li>Bakery Business Order Automation Platform (Google Scripts)</li>
+                                <li>This Website! (JavaScript, HTML, CSS)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="TH-TH-body" class="hidden-well">
+                    <div class="img-text-row">
+                        <div class="row-img">
+                            <img id="hack-the-north-logo" src="./Images/hack_the_north.png" alt="Hack the North logo">
+                        </div>
+                        <h3 class="row-title">Hack the North</h3>
+                        <p> 
+                            I've competed in a two hackathons and one 'designathon', learning new programming languages and 3D modelling
+                            tools, while creating functional apps and models.
+                        </p>
+                        <p>Here's a list of events I've participated in:</p>
+                        <ul>
+                            <li><a href="https://devpost.com/software/rally-fq67si">Hack the North 2020 - Project: rally</a></li>
+                            <li><a href="https://github.com/ChristopherOka/WatBank-Website">HackAttack 2020 - Project: WatBank</a></li>
+                            <li>McMaster Designathon 2021 - Project: </li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <button id="back-btn" class="hidden-well" onclick="returnHome()">
+            <img id="left-arrow" src="./Images/back_arrow.png" alt="left arrow">
+            <p id="back-btn-text">Back</p>
+        </button>
+        <div id="header-cover"></div>
+        <div id="secondary-bg"></div>
+        <h1 id="name">Christopher<br>Oka</h1>
+    </body>
+    <!--                 <div class="img-text-row">
                     <div class="row-img">
                         <img id="tbits-logo" src="./Images/tbits.png" alt="Tradable Bits logo">
                     </div>
                     <h3 class="row-title">Tradable Bits</h3>
                     <p> 
-                        My recent co-op was at <b>Tradable Bits</b>, a Saas company working to make sports
+                        My recent co-op was at <b>Tradable Bits</b>, a SaaS company working to make sports
                         and music fans' experience better by providing media organizations a streamlined way
                         to send out prizes, games, and communications.
                         <br><br>
@@ -234,9 +327,15 @@
                     </div>
                     <h3 class="row-title">Hack the North</h3>
                     <p> 
-                        I've done a couple hackathons and one 'designathon', learning new programming languages and 3D modelling
+                        I've competed in a two hackathons and one 'designathon', learning new programming languages and 3D modelling
                         tools, while creating functional apps and models.
                     </p>
+                    <p>Here's a list of events I've participated in:</p>
+                    <ul>
+                        <li><a href="https://devpost.com/software/rally-fq67si">Hack the North 2020 - Project: rally</a></li>
+                        <li><a href="https://github.com/ChristopherOka/WatBank-Website">HackAttack 2020 - Project: WatBank</a></li>
+                        <li>McMaster Designathon 2021 - Project: </li>
+                    </ul>
                 </div>
                 <div class="img-text-row">
                     <div class="row-img">
@@ -253,15 +352,5 @@
                             <li>This Website! (JavaScript, HTML, CSS)</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-        </div>
-        <button id="back-btn" class="hidden-well" onclick="returnHome()">
-            <img id="left-arrow" src="./Images/back_arrow.png" alt="left arrow">
-            <p id="back-btn-text">Back</p>
-        </button>
-        <div id="header-cover"></div>
-        <div id="secondary-bg"></div>
-        <h1 id="name">Christopher<br>Oka</h1>
-    </body>
+                </div> -->
 </html>
