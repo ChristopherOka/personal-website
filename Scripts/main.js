@@ -404,6 +404,8 @@ function swapThirdHeaders(el) {
     activeBody.classList.remove('active-body');
     setTimeout(() => {
         activeBody.classList.add('hidden-well');
+        headerBody.classList.remove('hidden-well', 'well-close');
+        headerBody.classList.add('active-body', 'well-open');
     }, 1000);
     let headerBody;
     if (classList.includes('first-header')) {
@@ -415,8 +417,7 @@ function swapThirdHeaders(el) {
     else if (classList.includes('third-header')) {
         headerBody = document.getElementById('TH-TH-body');
     }
-    headerBody.classList.remove('hidden-well', 'well-close');
-    headerBody.classList.add('active-body', 'well-open');
+    
 }
 
 window.onload = () => {

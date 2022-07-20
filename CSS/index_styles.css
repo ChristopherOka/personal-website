@@ -965,7 +965,6 @@ h3 {
 .well-open {
     animation-name: well-open;
     animation-duration: 1s;
-    animation-delay: 1s;
     animation-fill-mode: both;
 }
 
