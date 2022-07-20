@@ -378,17 +378,45 @@ function updateLiveParagraphVals() {
 }
 
 function swapThirdHeaders(el) {
-    console.log('swapping: ', el);
-    const headerPositions = [0, 36, 66];
     const activeHeader = document.getElementsByClassName('active-header')[0];
-    const clickedHeader = el.parentElement;
-    const activeHeaderX = getComputedStyle(activeHeader).getPropertyValue('left');
-    const clickedHeaderX = getComputedStyle(clickedHeader).getPropertyValue('left');
-    debugger
-    clickedHeader.style.left = `${activeHeaderX}`;
-    activeHeader.style.left = `${clickedHeaderX}`;
-    document.getElementsByClassName('active-header')[0].classList.remove('active-header');
-    el.parentElement.classList.add('active-header');
+    const currentHeader = el.parentElement;
+    if (activeHeader == currentHeader) {
+        return;
+    }
+    const classList = Array.from(currentHeader.classList);
+    let currentPosition;
+    if (classList.includes('left')) {
+            currentPosition = 'left';
+    }
+    else if (classList.includes('middle')) {
+        currentPosition = 'middle';
+    }
+    else if (classList.includes('right')) {
+        currentPosition = 'right';
+    }
+    currentHeader.classList.remove(currentPosition);
+    currentHeader.classList.add('active-header', 'left');
+    activeHeader.classList.remove('active-header', 'left');
+    activeHeader.classList.add(currentPosition);
+    const activeBody = document.getElementsByClassName('active-body')[0];
+    activeBody.classList.remove('well-open');
+    activeBody.classList.add('well-close');
+    activeBody.classList.remove('active-body');
+    setTimeout(() => {
+        activeBody.classList.add('hidden-well');
+    }, 1000);
+    let headerBody;
+    if (classList.includes('first-header')) {
+        headerBody = document.getElementById('TH-FH-body');
+    }
+    else if (classList.includes('second-header')) {
+        headerBody = document.getElementById('TH-SH-body');
+    }
+    else if (classList.includes('third-header')) {
+        headerBody = document.getElementById('TH-TH-body');
+    }
+    headerBody.classList.remove('hidden-well', 'well-close');
+    headerBody.classList.add('active-body', 'well-open');
 }
 
 window.onload = () => {
