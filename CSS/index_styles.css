@@ -697,8 +697,10 @@ h3 {
     border: none;
     background-color: rgba(255, 186, 223, 0.1);
     left: 0;
-    height: 100vh;
-    width: 2vw;
+    top: 5vh;
+    height: 15vh;
+    border-radius: 0 20px 20px 0;
+    width: 3vw;
     animation-name: back-btn-slide-in;
     animation-duration: 1s;
     animation-delay: 1.2s;
@@ -712,7 +714,7 @@ h3 {
 }
 
 #back-btn:hover {
-    width: 3vw;
+    width: 4vw;
 }
 
 #back-btn img {
@@ -972,18 +974,21 @@ h3 {
     margin-top: 10vh;
     overflow-y: scroll;
     height: 62vh;
+    border-bottom: 1px solid var(--default-text);
 }
 
 #TH-SH-body {
     margin-top: 10vh;
     overflow-y: scroll;
     height: 62vh;
+    border-bottom: 1px solid var(--default-text);
 }
 
 #TH-TH-body {
     margin-top: 10vh;
     overflow-y: scroll;
     height: 62vh;
+    border-bottom: 1px solid var(--default-text);
 }
 
 @media (max-width: 2560px) {
