@@ -129,6 +129,11 @@ function renderNewPage (currentHeaderEl) {
 
     if (currentHeaderId === 'third-header') {
         document.getElementById('resume').classList.remove('hidden-well');
+        setTimeout(() => {
+            document.getElementById('TH-FH-body').classList.remove('hidden-well');
+            document.getElementById('TH-FH-body').classList.add('well-open');
+        }, 1500)
+
     }
     else if (currentHeaderId === 'first-header') {
         setTimeout(() => {
@@ -136,7 +141,6 @@ function renderNewPage (currentHeaderEl) {
         }, 1500);
         
     }
-
 
     const canHover = window.matchMedia('(hover: hover)').matches
 
@@ -202,6 +206,8 @@ function returnHome() {
         for (const el of header_body_elmnts) {
             el.classList.remove('reverse-animation');
         }
+
+        resetThirdHeaders();
     }, 1000);
     
 
@@ -218,6 +224,7 @@ function returnHome() {
             }
         }, 500);
     }
+   
 }
 
 function showIcons () {
@@ -295,15 +302,9 @@ function detectParagraphScroll () {
 }
 
 function moveImageUpwards () {
-    const viewportWidth = window.innerWidth;
     const headshotWell = document.getElementById('headshot-well');
     const paragraphWell = document.getElementById('paragraphs');
     const scrollBarPosition = paragraphWell.scrollTop;
-    
-    let scrollbarOffset = 0;
-    if (viewportWidth < 1300 && viewportWidth > 900) {
-        scrollbarOffset = 20;
-    }
     headshotWell.style.top = `-${scrollBarPosition}px`;
 }
 
@@ -418,6 +419,25 @@ function swapThirdHeaders(el) {
         headerBody = document.getElementById('TH-TH-body');
     }
     
+}
+
+function resetThirdHeaders() {
+    const THFHbody = document.getElementById('TH-FH-body');
+    const THSHbody = document.getElementById('TH-SH-body');
+    const THTHbody = document.getElementById('TH-TH-body');
+    THFHbody.classList.add('hidden-well', 'active-body');
+    THSHbody.classList.add('hidden-well');
+    THTHbody.classList.add('hidden-well');
+    THFHbody.classList.remove('well-open', 'well-close');
+    THSHbody.classList.remove('active-body', 'well-open', 'well-close');
+    THTHbody.classList.remove('active-body', 'well-open', 'well-close');
+
+    const THFH = document.getElementById('TH-FH');
+    const THSH = document.getElementById('TH-SH');
+    const THTH = document.getElementById('TH-TH');
+    THFH.className = 'first-header active-header left';
+    THSH.className = 'second-header middle';
+    THTH.className = 'third-header right';
 }
 
 window.onload = () => {

@@ -873,7 +873,7 @@ h3 {
 }
 
 #third-header-body {
-    width: 94vw;
+    width: 92vw;
     /* border-right: 2px solid rgb(200, 200, 200);
     border-left: 2px solid rgb(200, 200, 200); */
     animation-name: fade-in-translate;
@@ -1149,6 +1149,48 @@ h3 {
     #headshot {
         transform: translateX(-30px);
     }
+
+    #third-header-body-headers > h3 {
+        font-size: 55px;
+        cursor: pointer;
+    }
+
+    #third-header-body-headers .first-header.middle {
+        position: absolute;
+        left: 37%;
+        transition: left 1s ease, color 1s ease;
+    }
+    
+    #third-header-body-headers .second-header.middle {
+        position: absolute;
+        left: 40%;
+        transition: left 1s ease, color 1s ease;
+    }
+    
+    #third-header-body-headers .third-header.middle {
+        position: absolute;
+        left: 38%;
+        transition: left 1s ease, color 1s ease;
+    
+    }
+    
+    #third-header-body-headers .first-header.right {
+        position: absolute;
+        left: 68%;
+        transition: left 1s ease, color 1s ease;
+    }
+    
+    #third-header-body-headers .second-header.right {
+        position: absolute;
+        left: 74%;
+        transition: left 1s ease, color 1s ease;
+    }
+    
+    #third-header-body-headers .third-header.right {
+        position: absolute;
+        left: 75%;
+        transition: left 1s ease, color 1s ease;
+    }
 }
 
 @media (max-width: 1541px) {
@@ -1175,6 +1217,48 @@ h3 {
 
     #code {
         height: 6vh;
+    }
+
+    #third-header-body-headers > h3 {
+        font-size: 50px;
+        cursor: pointer;
+    }
+
+    #third-header-body-headers .first-header.middle {
+        position: absolute;
+        left: 39%;
+        transition: left 1s ease, color 1s ease;
+    }
+    
+    #third-header-body-headers .second-header.middle {
+        position: absolute;
+        left: 40%;
+        transition: left 1s ease, color 1s ease;
+    }
+    
+    #third-header-body-headers .third-header.middle {
+        position: absolute;
+        left: 38%;
+        transition: left 1s ease, color 1s ease;
+    
+    }
+    
+    #third-header-body-headers .first-header.right {
+        position: absolute;
+        left: 68%;
+        transition: left 1s ease, color 1s ease;
+    }
+    
+    #third-header-body-headers .second-header.right {
+        position: absolute;
+        left: 74%;
+        transition: left 1s ease, color 1s ease;
+    }
+    
+    #third-header-body-headers .third-header.right {
+        position: absolute;
+        left: 76%;
+        transition: left 1s ease, color 1s ease;
     }
 }
 
@@ -1218,6 +1302,17 @@ h3 {
     .img-text-row img#frisbee-logo {
         height: 65px;
     }
+    #third-header-body-headers .first-header.middle {
+        position: absolute;
+        left: 35%;
+        transition: left 1s ease, color 1s ease;
+    }
+    #third-header-body-headers .second-header.middle {
+        position: absolute;
+        left: 38%;
+        transition: left 1s ease, color 1s ease;
+    }
+    
 }
 
 @media(max-width: 1300px) {
@@ -1226,6 +1321,10 @@ h3 {
         width: 455px;
         height: 270px;
         transform: translateX(30px);
+    }
+    #third-header-body-headers > h3 {
+        font-size: 45px;
+        cursor: pointer;
     }
 }
 
