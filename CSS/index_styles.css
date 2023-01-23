@@ -136,7 +136,7 @@ h3 {
 }
 
 #header-cover {
-    width: 60vw;
+    width: 65vw;
     height: 110vh;
     background-color: var(--bg-color);
     position:absolute;
@@ -993,10 +993,10 @@ h3 {
 
 @media (max-width: 2560px) {
     h1 {
-        font-size: 180px;
+        font-size: 160px;
     }
     h2 {
-        font-size: 140px;
+        font-size: 120px;
     }
     h3 {
         font-size: 45px;
