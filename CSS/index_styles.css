@@ -6,10 +6,11 @@
     --default-text: #D9D9D9;
     /* --heading-2: #8093F1; */
     --title: #d9d9d9;
-    --emphasis: #FFBADF;
+    --emphasis: rgb(199, 158, 33);
     --neutral: #F4F4ED;
     --blue: #8ACDEA;
     --light-blue: rgba(138, 205, 234, 0.5);
+    --gold: rgb(199, 158, 33);
 }
 
 ::-webkit-scrollbar {
@@ -281,10 +282,22 @@ h3 {
     position: absolute;
     cursor: pointer;    
     margin: 2.5vh 0;
-    transition: transform 1s ease;
+    transition: transform 1s ease, color 0.5s ease;
     display: grid;
     grid-template-rows: 0.9fr 0.1fr;
     justify-content: start;
+}
+
+#main-headers > .header h2 {
+    background-color: var(--gold);
+    background-image: linear-gradient(to left, var(--heading-1) 50%, var(--gold) 50%);
+    background-position: right;
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    transition: background-position 1s ease;
 }
 
 #main-headers > .header.enabled:hover, #main-headers > #third-header.enabled.hover {
@@ -292,12 +305,18 @@ h3 {
     z-index: 999;
 }
 
+#main-headers > .header.enabled:hover h2 {
+    background-position: left;
+}
+
 #main-headers > #first-header.enabled.hover {
+    color: rgb(199, 158, 33);
     transform: translateY(-11vh);
     z-index: 999;
 }
 
 #main-headers > #second-header.enabled.hover {
+    color: rgb(199, 158, 33);
     transform: translateY(-8vh);
     z-index: 999;
 }
@@ -353,6 +372,7 @@ h3 {
 }
 
 #first-header.first-header-to-top {
+    color:rgb(199, 158, 33);
     animation-name: first-header-to-top;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -377,6 +397,7 @@ h3 {
 }
 
 #second-header.second-header-to-top {
+    color:rgb(199, 158, 33);
     animation-name: second-header-to-top;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -392,6 +413,7 @@ h3 {
 }
 
 #third-header.third-header-to-top {
+    color:rgb(199, 158, 33);
     animation-name: third-header-to-top;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -485,13 +507,8 @@ h3 {
     align-self: center;
 }
 
-.second-header-logos img {
-    width: 9vh;
-    height: auto;
-}
-
 .third-header-logos img, .second-header-logos img, .first-header-logos img {
-    height: 8vh;
+    height: 80px;
     padding: 0 1vw;
     opacity: 0;
     transform: translateY(-7vh) rotate(-5deg) scale(0.8);
@@ -524,13 +541,13 @@ h3 {
 }
 
 #guitar {
-    height: 10vh;
+    height: 100px;
     width: auto;
     padding: 0 2vw;
 }
 
 #hockey {
-    height: 8vh;
+    height: 80px;
     width: auto;
 }
 
