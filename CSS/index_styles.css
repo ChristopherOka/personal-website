@@ -722,7 +722,7 @@ h3 {
     animation-duration: 1s;
     animation-delay: 1.2s;
     animation-fill-mode: both;
-    transition: width 0.5s ease;
+    transition: width 1s ease;
     overflow: hidden;
 }
 
