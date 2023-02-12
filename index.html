@@ -70,13 +70,6 @@
                     </div>
                 </div>
             </div>
-            <div class="hidden-well" id="resume">
-                <h3>My Resume:</h3>
-                <a id="resume-download" href="./coka_resume.pdf" target="_blank">
-                    <img id="pdf-icon" src="./Images/pdf_icon.png">
-                    <p id="pdf-desc">coka_resume.pdf</p>
-                </a>
-            </div>
             <div id='first-header-body'  class="hidden-well">
                 <div id="blackout" class="hidden-well"></div>
                 <div id="paragraphs">
@@ -111,7 +104,7 @@
                     </div>
                 </div>
                 <a id='headshot-well' href="https://www.linkedin.com/in/christopher-oka/" target="_blank">
-                    <img id="headshot" src="./Images/chris_headshot_new_cropped_1.jpg" alt="a picture of me: Christopher Oka in Squamish, BC with mountains and a suspension bridge in the background">
+                    <img id="headshot" src="./Images/blurred_headshot.png" alt="a picture of me: Christopher Oka in Squamish, BC with mountains and a suspension bridge in the background">
                 </a>
             </div>
             <div id='second-header-body' class="hidden-well">
@@ -189,9 +182,12 @@
             </div>
             <div id='third-header-body' class="hidden-well">
                 <div id='third-header-body-headers'>
-                    <h3 id="TH-FH" class='first-header active-header left'><a onclick="swapThirdHeaders(this)">Work Experience</a></h3>
-                    <h3 id="TH-SH" class="second-header middle"><a onclick="swapThirdHeaders(this)">Side Projects</a></h3>
-                    <h3 id="TH-TH" class="third-header right"><a onclick="swapThirdHeaders(this)">Hackathons</a></h3>
+                    <h3 id="TH-FH" class='first-header active-header left'><a onclick="swapThirdHeaders(this)">Work</a></h3>
+                    <h3 id="TH-SH" class="second-header middle"><a onclick="swapThirdHeaders(this)">Projects</a></h3>
+                    <button class="blue-right-arrow" onclick="toggleSwapThirdHeaders()">
+                        <img src="/Images/blue_right_arrow.svg"/>
+                    </button>
+                    <!-- <h3 id="TH-TH" class="third-header right"><a onclick="swapThirdHeaders(this)">Hackathons</a></h3> -->
                 </div>
                 <div id='TH-FH-body' class="hidden-well active-body">
                     <div class="img-text-row">
@@ -253,7 +249,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="TH-TH-body" class="hidden-well">
+                <!-- <div id="TH-TH-body" class="hidden-well">
                     <div class="img-text-row">
                         <div class="row-img">
                             <img id="hack-the-north-logo" src="./Images/hack_the_north.png" alt="Hack the North logo">
@@ -270,7 +266,7 @@
                             <li>McMaster Designathon 2021 - Project: </li>
                         </ul>
                     </div>
-                </div> 
+                </div>  -->
             </div>
         </div>
         <button id="back-btn" class="hidden-well" onclick="returnHome()">

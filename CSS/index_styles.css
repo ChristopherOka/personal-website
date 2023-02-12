@@ -1,6 +1,6 @@
 :root {
     --bg-color: #202020;
-    --bg-color-2: #D9D9D9;
+    --bg-color-2: #8ACDEA;
     /* --title: #8ACDEA; */
     --heading-1: #EFE1F0;
     --default-text: #D9D9D9;
@@ -151,7 +151,7 @@ h3 {
 
 #secondary-bg {
     width: 100vw;
-    background-color: var(--bg-color-2);
+    background-color: var(--gold);
     position: absolute;
     top: -50vh;
     left: 50%;
@@ -660,15 +660,14 @@ h3 {
 #headshot-well {
     display: block;
     overflow: hidden;
-    height: auto;
-    width: 35vw;
+    height: 400px;
+    width: 500px;
     position: absolute;
     top: 0;
     right: -5vw;
     border-radius: 20px;  
     border: 3px solid var(--heading-1);
-    margin: 7vh 0 0 6vw;
-    transform: translateY(-20vh);
+    margin: 7vh 70px 0 6vw;
     transition: transform 0.4s ease-out;
     animation-name: headshot-fade-in-translate;
     animation-duration: 1s;
@@ -677,8 +676,9 @@ h3 {
 }
 
 #headshot {
+    transform: translateY(-50px);
     float: left;
-    width: 35vw;
+    width: 500px;
     height: auto;
 }
 
@@ -917,18 +917,18 @@ h3 {
 #third-header-body-headers .left {
     position: absolute;
     left: 0;
-    transition: left 1s ease, color 1s ease;
+    transition: left 1s ease, color 1s ease, opacity 1s ease;
 }
 
 #third-header-body-headers .first-header.middle {
     position: absolute;
-    left: 37%;
+    left: 30%;
     transition: left 1s ease, color 1s ease;
 }
 
 #third-header-body-headers .second-header.middle {
     position: absolute;
-    left: 40%;
+    left: 28%;
     transition: left 1s ease, color 1s ease;
 }
 
@@ -941,7 +941,7 @@ h3 {
 
 #third-header-body-headers .first-header.right {
     position: absolute;
-    left: 70%;
+    left: 80%;
     transition: left 1s ease, color 1s ease;
 }
 
@@ -1007,6 +1007,11 @@ h3 {
     height: 62vh;
     border-bottom: 1px solid var(--default-text);
 }
+
+.blue-right-arrow {
+    display: none;
+}
+
 
 @media (max-width: 2560px) {
     h1 {
@@ -1174,7 +1179,7 @@ h3 {
 
     #third-header-body-headers .first-header.middle {
         position: absolute;
-        left: 37%;
+        left: 30%;
         transition: left 1s ease, color 1s ease;
     }
     
@@ -1193,7 +1198,7 @@ h3 {
     
     #third-header-body-headers .first-header.right {
         position: absolute;
-        left: 68%;
+        left: 75%;
         transition: left 1s ease, color 1s ease;
     }
     
@@ -1243,13 +1248,13 @@ h3 {
 
     #third-header-body-headers .first-header.middle {
         position: absolute;
-        left: 39%;
+        left: 30%;
         transition: left 1s ease, color 1s ease;
     }
     
     #third-header-body-headers .second-header.middle {
         position: absolute;
-        left: 40%;
+        left: 30%;
         transition: left 1s ease, color 1s ease;
     }
     
@@ -1262,7 +1267,7 @@ h3 {
     
     #third-header-body-headers .first-header.right {
         position: absolute;
-        left: 68%;
+        left: 75%;
         transition: left 1s ease, color 1s ease;
     }
     
@@ -1321,12 +1326,12 @@ h3 {
     }
     #third-header-body-headers .first-header.middle {
         position: absolute;
-        left: 35%;
+        left: 30%;
         transition: left 1s ease, color 1s ease;
     }
     #third-header-body-headers .second-header.middle {
         position: absolute;
-        left: 38%;
+        left: 30%;
         transition: left 1s ease, color 1s ease;
     }
     
@@ -1782,7 +1787,7 @@ h3 {
         border-radius: 20px;
         height: 35px;
         width: 30vw;
-        margin: 2vh 7vw;
+        margin: 0 7vw;
         transition: box-shadow 0.4s ease;
         z-index: 9999;
     }
@@ -1794,7 +1799,7 @@ h3 {
     #back-btn-text {
         display: block;
         font-size: 25px;
-        margin: 0;
+        margin-top: 0;
         color: var(--emphasis);
     }
 
@@ -2007,7 +2012,6 @@ h3 {
 @media (max-width: 760px) {
     #first-header-body, #second-header-body, #third-header-body {
         position: absolute;
-        margin-top: 30vh;
     }
     #resume {
         flex-direction: row;
@@ -2160,6 +2164,30 @@ h3 {
             transform: translateX(0);
         }
     }
+
+    .second-header {
+        opacity: 0;
+        display: none;
+    }
+
+    .blue-right-arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        position: absolute;
+        right: 5rem;
+        top: 0.6rem;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+    
+    .blue-right-arrow img {
+        height: 100%;
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2221,7 +2249,11 @@ h3 {
     .third-header-logos, .second-header-logos, .first-header-logos {
         padding-top: 20px;
     }
-
+    #third-header-body-headers > h3 {
+        font-size: 35px;
+        cursor: pointer;
+        color: var(--blue);
+    }
 }
 
 @media (max-width: 400px) {
@@ -2246,6 +2278,19 @@ h3 {
         transform: translateX(-250px) translateY(-55px);
     }
 
+    .blue-right-arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        position: absolute;
+        right: 5rem;
+        top: 0.3rem;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
 }
 
 @media (max-width: 300px) {
@@ -2263,6 +2308,8 @@ h3 {
         transform: translateX(-180px) translateY(-40px);
         height: 330px;
     }
+
+
 }
 
 
