@@ -554,6 +554,6 @@ window.onload = function () {
     showIcons();
     detectParagraphScroll();
     window.addEventListener("resize", detectWindowResize);
-    swipeDown();
+    // swipeDown();
     // updateLiveParagraphVals();
 };
