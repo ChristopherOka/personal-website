@@ -876,7 +876,6 @@ h3 {
     animation-delay: 1s;
     animation-fill-mode: both;
     padding-top: 1rem;
-    padding-bottom: 2rem;
     padding-left: 1rem;
     margin-left: -1rem;
 }
@@ -899,6 +898,9 @@ h3 {
     .card {
         width: 330px;
         height: 500px;
+    }
+    .card:last-child {
+        margin-bottom: 2rem;
     }
 }
     
