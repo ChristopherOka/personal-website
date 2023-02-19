@@ -199,6 +199,9 @@ function returnHome() {
         el.style.animation = null;
     }
 
+    const innerWidth = window.innerWidth;
+    const timeoutLength = innerWidth < 915 ? 0 : 1000;
+
     setTimeout(() => {
         currentHeader.classList.remove(
             `${currentHeaderId}-to-top`,
@@ -218,7 +221,9 @@ function returnHome() {
 
         firstOtherHeader.classList.add("fade-in");
         secondOtherHeader.classList.add("fade-in");
+    }, timeoutLength);
 
+    setTimeout(() => {
         document
             .getElementById(`${currentHeaderId}-body`)
             .classList.add("hidden-well");
@@ -507,10 +512,10 @@ function resetThirdHeaders() {
 }
 
 function toggleImageExpand(image) {
-    if(image.classList.contains('expand')){
-        image.classList.remove('expand');
+    if (image.classList.contains("expand")) {
+        image.classList.remove("expand");
     } else {
-        image.classList.add('expand');
+        image.classList.add("expand");
     }
 }
 
