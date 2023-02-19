@@ -826,32 +826,41 @@ h3 {
 }
 
 #second-header-body {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    overflow: auto;
+    height: 70vh;
 }
 
 .card {
-    width: 290px;
+    width: 330px;
     height: 550px;
-    transition: transform 0.4s ease-out;
     position: relative;
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
 
-.card:hover {
-    transform: scale(1.02);
-}
 
-.card:hover .card-body {
-    border: 6px solid var(--emphasis);
+@media screen and (max-width: 500px) {
+    #second-header-body {
+        padding-bottom: 2rem;
+    }
+    .card {
+        width: 330px;
+        height: 500px;
+    }
 }
-
-.card:hover .top-image {
-    height: 100%;
-    border-radius: 12px;
-    z-index: 1;
+    
+@media (hover: hover) {
+    .card:hover .card-body {
+        border: 6px solid var(--emphasis);
+    }
+    .card:hover .top-image {
+        height: 100%;
+        border-radius: 12px;
+        z-index: 1;
+    }
 }
 
 .card .top-image-back {
@@ -886,13 +895,43 @@ h3 {
 }
 
 .card .bottom-logo {
-    height: 30px;
+    height: 40px;
     width: auto;
     position: absolute;
     bottom: 0;
     right: 0;
     margin: 0 1rem 1rem 0;
+}
 
+#bottom-guitar-logo {
+    height: 60px;
+}
+
+#bottom-hockey-logo {
+    height: 50px;
+}
+
+#bottom-frisbee-logo {
+    height: 40px;
+}
+
+@media screen and (max-width: 500px) {
+    .card-body p {
+        font-size: 15px;
+    }
+    .card .bottom-logo {
+        height: 30px;
+    }
+    #bottom-guitar-logo {
+        height: 50px;
+    }
+    #bottom-hockey-logo {
+        height: 50px;
+    }
+    
+    #bottom-frisbee-logo {
+        height: 40px;
+    }
 }
 
 #first-header-code-img {
@@ -1879,7 +1918,7 @@ h3 {
     }
 
     #third-header-body, #second-header-body{
-        width: 88vw;
+        width: 92vw;
     }
 
     @keyframes slash {
