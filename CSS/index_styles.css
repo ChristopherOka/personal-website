@@ -68,6 +68,11 @@
     font-family: MerriweatherSans;
     src: url('../Fonts/MerriweatherSans-VariableFont_wght.ttf');
 }
+
+@font-face {
+    font-family: Montserrat;
+    src: url('../Fonts/Montserrat-VariableFont_wght.ttf');
+}
  
 html, body {
     position: relative;
@@ -90,13 +95,14 @@ h1 {
 }
 
 h2 {
-    font-family: MerriweatherSans;
+    font-family: Montserrat;
     font-size: 100px;
     margin: 0;
+    font-weight: 400;
 }
 
 h3 {
-    font-family: MerriweatherSans;
+    font-family: Montserrat;
     font-size: 30px;
     margin: 0;
 }
@@ -124,20 +130,43 @@ h3 {
     }
 }
 
-@keyframes headers-appear {
+@keyframes tertiary-slash {
     0% {
-        transform: rotate(-25deg) translateX(-15vw);
+        height: 0;
+        transform: rotate(0) translateX(-2vw);
+        width: 0.5vw;
     }
-    50% {
-        transform: rotate(-25deg)  translateX(-15vw);;
+    30% {
+        height: 180vh;
+        transform: rotate(0) translateX(-2vw);
+        width: 0.5vw;
+    }
+    60% {
+        height: 180vh;
+        transform: rotate(-25deg) translateX(0);
+        width: 0.5vw;
     }
     100% {
-        transform: rotate(-25deg)  translateX(-70vw);;
+        height: 180vh;
+        transform: rotate(-25deg) translateX(0) ;
+        width: 70vw;
+    }
+}
+
+@keyframes headers-appear {
+    0% {
+        transform: rotate(-25deg) translateX(-10rem);
+    }
+    50% {
+        transform: rotate(-25deg)  translateX(-10rem);;
+    }
+    100% {
+        transform: rotate(-25deg)  translateX(-90rem);;
     }
 }
 
 #header-cover {
-    width: 65vw;
+    width: 70rem;
     height: 110vh;
     background-color: var(--bg-color);
     position:absolute;
@@ -151,7 +180,7 @@ h3 {
 
 #secondary-bg {
     width: 100vw;
-    background-color: var(--gold);
+    background-color: var(--default-text);
     position: absolute;
     top: -50vh;
     left: 50%;
@@ -161,7 +190,20 @@ h3 {
     z-index: 1001;
 }
 
-@keyframes hide-secondary-bg {
+#tertiary-bg {
+    width: 70vw;
+    height: 180vh;
+    background-color: var(--gold);
+    position: absolute;
+    top: -50vh;
+    left: 49%;
+    animation-name: tertiary-slash;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    z-index: 1000;
+}
+
+@keyframes hide-bg {
     0% {
         height: 180vh;
         transform: rotate(-25deg) translateX(0) ;
@@ -179,7 +221,7 @@ h3 {
     }
 }
 
-@keyframes return-secondary-bg {
+@keyframes return-bg {
     0% {
         height: 180vh;
         transform: rotate(0) translateX(60vw) ;
@@ -200,18 +242,17 @@ h3 {
         transform: rotate(-25deg) translateX(0) ;
         width: 70vw;
     }
-    
 }
 
-#secondary-bg.hide-secondary-bg {
-    animation-name: hide-secondary-bg;
+#secondary-bg.hide-bg, #tertiary-bg.hide-bg {
+    animation-name: hide-bg;
     animation-duration: 2s;
     animation-fill-mode: both;
     animation-delay: 0s;
 }
 
-#secondary-bg.return-secondary-bg {
-    animation-name: return-secondary-bg;
+#secondary-bg.return-bg, #tertiary-bg.return-bg {
+    animation-name: return-bg;
     animation-duration: 2.5s;
     animation-delay: 0.5s;
     animation-fill-mode: both;
@@ -253,7 +294,6 @@ h3 {
     animation-fill-mode: both;
     z-index: 9999;
 }
-
 
 #name.hide-name {
     animation-name: hide-name;
@@ -829,12 +869,16 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    overflow: auto;
+    overflow-y: auto;
     height: 70vh;
     animation-name: fade-in-translate;
     animation-duration: 1s;
     animation-delay: 1s;
     animation-fill-mode: both;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    margin-left: -1rem;
 }
 
 .card {
@@ -843,6 +887,8 @@ h3 {
     position: relative;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    border-radius: 12px;
+    transition: box-shadow 0.4s ease-out, transform 0.4s ease-out;
 }
 
 
@@ -858,17 +904,22 @@ h3 {
     
 @media (hover: hover) {
     .card:hover .card-body {
-        border: 6px solid var(--emphasis);
+        border: 4px solid var(--emphasis);
     }
-    .card:hover .top-image {
-        height: 100%;
-        border-radius: 12px;
-        z-index: 1;
+    .card:hover {
+        box-shadow: 0 0 10px 0 var(--emphasis);
+        transform: scale(1.01);
     }
 }
 
 .card .top-image-back {
     border-radius: 12px 12px 0 0;
+}
+
+.card .top-image.expand {
+    height: 100%;
+    border-radius: 12px;
+    z-index: 1;
 }
 
 .card .top-image {
@@ -878,11 +929,12 @@ h3 {
     object-fit: cover;
     border-radius: 12px 12px 0 0;
     transition: height 0.4s ease-out, border-radius 0.4s ease-out;
+    cursor: pointer;
 }
 
 .card-body {
     padding: 1rem;
-    border: 6px solid var(--heading-1);
+    border: 4px solid var(--heading-1);
     border-radius: 0 0 12px 12px;
     transition: color 0.4s ease-out, border 0.4s ease-out;
 }
@@ -1175,8 +1227,14 @@ h3 {
 }
 
 @media(max-width: 1670px) {
+    #header-cover {
+        width: 60rem;
+    }
     #secondary-bg {
         left: 55%;
+    }
+    #tertiary-bg {
+        left: 54%;
     }
     @keyframes slash {
         0% {
@@ -1191,16 +1249,39 @@ h3 {
         }
         60% {
             height: 180vh;
-            transform: rotate(-25deg) translateX(2vw);
+            transform: rotate(-30deg) translateX(2vw);
             width: 0.5vw;
         }
         100% {
             height: 180vh;
-            transform: rotate(-25deg) translateX(-2vw) ;
+            transform: rotate(-30deg) translateX(-2vw) ;
             width: 70vw;
         }
     }
-    @keyframes hide-secondary-bg {
+
+    @keyframes tertiary-slash {
+        0% {
+            height: 0;
+            transform: rotate(0) translateX(-2vw);
+            width: 0.5vw;
+        }
+        30% {
+            height: 180vh;
+            transform: rotate(0) translateX(-2vw);
+            width: 0.5vw;
+        }
+        60% {
+            height: 180vh;
+            transform: rotate(-30deg) translateX(0);
+            width: 0.5vw;
+        }
+        100% {
+            height: 180vh;
+            transform: rotate(-30deg) translateX(-2vw) ;
+            width: 70vw;
+        }
+    }
+    @keyframes hide-bg {
         0% {
             height: 180vh;
             transform: rotate(-25deg) translateX(-8vw) ;
@@ -1218,7 +1299,7 @@ h3 {
         }
     }
     
-    @keyframes return-secondary-bg {
+    @keyframes return-bg {
         0% {
             height: 180vh;
             transform: rotate(0) translateX(60vw) ;
@@ -1550,6 +1631,9 @@ h3 {
 }
 
 @media(max-width: 1100px) {
+    #header-cover{
+        width: 50rem;
+    }
      .third-header-logos, .second-header-logos, .first-header-logos {
         padding-top: 55px;
     }
@@ -1928,71 +2012,107 @@ h3 {
     @keyframes slash {
         0% {
             height: 210vh;
-            transform: rotate(-70deg) translateX(0);
-            width: 0.5vw;
+            transform: rotate(-73deg) translateX(0) scaleX(0);
         }
         100% {
             height: 210vh;
-            transform: rotate(-70deg) translateX(4vh);
-            width: 90vw;
+            transform: rotate(-73deg) translateX(4vh) scaleX(1);
         }
     }
+
+    @keyframes tertiary-slash {
+        0% {
+            height: 210vh;
+            transform: rotate(-30deg) translateX(0) scaleX(0);
+        }
+        100% {
+            height: 210vh;
+            transform: rotate(-30deg) translateX(0) scaleX(1);
+        }
+    }
+
     #secondary-bg {
-        width: 100vw;
+        width: 90vw;
         top: -100vh;
-        left: 65%;
+        left: 60%;
         animation-duration: 1s;
+    }
+
+    #tertiary-bg {
+        transform-origin: right;
+        width: 60vw;
+        left: 70%;
+        animation-duration: 1s;
+        animation-delay: 0.2s;
     }
 
     #header-cover {
        display: none;
     }
 
+    #tertiary-bg.hide-bg {
+        animation-name: hide-tertiary-bg;
+    }
+
+    #tertiary-bg.return-bg {
+        animation-name: return-tertiary-bg;
+    }
+
+    @keyframes hide-tertiary-bg {
+        0% {
+            transform: rotate(-30deg) translateX(0) scaleX(1);
+        }
+        100% {
+            transform: rotate(-30deg) translateX(0) scaleX(0);
+        }
+    }
+
+    @keyframes return-tertiary-bg {
+        0% {
+            transform: rotate(-30deg) translateX(0) scaleX(0);
+        }
+        100% {
+            transform: rotate(-30deg) translateX(0) scaleX(1);
+        }
+    }
+
     h1 {
         font-size: 90px;
     }
     #name {
-        animation-delay: 0s;
+        animation-delay: 0.25s;
+        top: 7vh;
+        right: 5vw;
+        font-size: 110px;
     }
 
-    @keyframes hide-secondary-bg {
+    @keyframes hide-bg {
         0% {
             height: 210vh;
-            transform: rotate(-70deg) translateX(2vh);
-            width: 70vw;
+            transform: rotate(-73deg) translateX(2vh) scaleX(1);
         }
         25% {
             height: 210vh;
-            transform: rotate(-90deg) translateX(10vh);
-            width: 70vw;
+            transform: rotate(-90deg) translateX(10vh) scaleX(1);
         }
         100% {
             height: 210vh;
-            transform: rotate(-90deg) translateX(40vh);
-            width: 70vw;
+            transform: rotate(-90deg) translateX(10vh) scaleX(0);
         }
     }
     
-    @keyframes return-secondary-bg {
+    @keyframes return-bg {
         0% {
             height: 210vh;
-            transform: rotate(-90deg) translateX(40vh) ;
-            width: 70vw;
+            transform: rotate(-90deg) translateX(10vh) scaleX(0);
         }
         50% {
             height: 210vh;
-            transform: rotate(-90deg) translateX(4vh) ;
-            width: 70vw;
-        }
-        60% {
-            height: 210vh;
-            transform: rotate(-90) translateX(4vh) ;
-            width: 70vw;
+            transform: rotate(-90deg) translateX(10vh) scaleX(1);
         }
         100% {
             height: 210vh;
-            transform: rotate(-70deg) translateX(0) ;
-            width: 70vw;
+            transform: rotate(-73deg) translateX(0) scaleX(1);
         }
     }
     @keyframes hide-name {
@@ -2056,10 +2176,10 @@ h3 {
         animation-duration: 1s;
     }
 
-    @keyframes hide-secondary-bg {
+    @keyframes hide-bg {
         0% {
             height: 210vh;
-            transform: rotate(-70deg) translateX(12vh);
+            transform: rotate(-73deg) translateX(12vh);
             width: 70vw;
         }
         25% {
@@ -2074,7 +2194,7 @@ h3 {
         }
     }
     
-    @keyframes return-secondary-bg {
+    @keyframes return-bg {
         0% {
             height: 210vh;
             transform: rotate(-90deg) translateX(60vh) ;
@@ -2085,14 +2205,9 @@ h3 {
             transform: rotate(-90deg) translateX(12vh) ;
             width: 70vw;
         }
-        60% {
-            height: 210vh;
-            transform: rotate(-90) translateX(12vh) ;
-            width: 70vw;
-        }
         100% {
             height: 210vh;
-            transform: rotate(-70deg) translateX(4vh) ;
+            transform: rotate(-73deg) translateX(4vh) ;
             width: 70vw;
         }
     }
@@ -2123,6 +2238,10 @@ h3 {
 }
 
 @media (max-width: 760px) {
+
+    #tertiary-bg {
+        width: 30rem;
+    }
     #first-header-body, #second-header-body, #third-header-body {
         position: absolute;
     }
@@ -2136,9 +2255,22 @@ h3 {
     #headshot {
         transform: translateY(-70px) translateX(-100px)
     }
+
+    #name {
+        font-size: 95px;
+    }
 }
 
 @media (max-width: 600px) {
+    #name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: right;
+        right: 0;
+        font-size: 80px;
+    }
     .third-header-logos, .second-header-logos, .first-header-logos {
         padding-top: 35px;
     }
@@ -2214,10 +2346,10 @@ h3 {
         }
     }
 
-    @keyframes hide-secondary-bg {
+    @keyframes hide-bg {
         0% {
             height: 210vh;
-            transform: rotate(-70deg) translateX(0);
+            transform: rotate(-73deg) translateX(0);
             width: 70vw;
         }
         25% {
@@ -2232,7 +2364,7 @@ h3 {
         }
     }
     
-    @keyframes return-secondary-bg {
+    @keyframes return-bg {
         0% {
             height: 210vh;
             transform: rotate(-90deg) translateX(40vh) ;
@@ -2243,14 +2375,9 @@ h3 {
             transform: rotate(-90deg) translateX(0vh) ;
             width: 70vw;
         }
-        60% {
-            height: 210vh;
-            transform: rotate(-90) translateX(0) ;
-            width: 70vw;
-        }
         100% {
             height: 210vh;
-            transform: rotate(-70deg) translateX(0) ;
+            transform: rotate(-73deg) translateX(0) ;
             width: 70vw;
         }
     }
@@ -2264,6 +2391,10 @@ h3 {
         100% {
             transform: translateY(-30vh);
         }
+    }
+
+    #tertiary-bg {
+        left: 80%;
     }
     
     @keyframes return-name {
@@ -2304,6 +2435,9 @@ h3 {
 }
 
 @media (max-width: 480px) {
+    #name {
+        font-size: 70px;
+    }
     #headshot {
         transform: translateX(-240px) translateY(-50px);
     }
@@ -2315,12 +2449,19 @@ h3 {
         font-size: 70px;;
     }
 
+    #tertiary-bg {
+        left: 85%;
+    }
+
     .third-header-logos, .second-header-logos, .first-header-logos {
         padding-top: 30px;
     }
 }
 
 @media (max-width: 440px) {
+    #name {
+        font-size: 60px;
+    }
     h1 {
         font-size: 60px;
     }

@@ -107,7 +107,7 @@ async function testfn() {
 }
 
 function renderNewPage(currentHeaderEl) {
-    hideSecondaryBg();
+    hideBg();
     const headers = ["first-header", "second-header", "third-header"];
     const currentHeaderId = currentHeaderEl.id;
     const otherHeaders = headers.filter((e) => e !== currentHeaderId);
@@ -176,7 +176,7 @@ function renderNewPage(currentHeaderEl) {
 }
 
 function returnHome() {
-    showSecondaryBg();
+    showBg();
 
     const currentHeaderId = document.getElementsByClassName("top-header")[0].id;
 
@@ -347,27 +347,35 @@ function moveImageUpwards() {
     headshotWell.style.top = `-${scrollBarPosition}px`;
 }
 
-function showSecondaryBg() {
+function showBg() {
     const secondaryBg = document.getElementById("secondary-bg");
+    const tertiaryBg = document.getElementById("tertiary-bg");
     const name = document.getElementById("name");
-    secondaryBg.classList.remove("hide-secondary-bg");
-    secondaryBg.style.display = "block";
-    secondaryBg.classList.add("return-secondary-bg");
+    secondaryBg.classList.remove("hide-bg");
+    tertiaryBg.classList.remove("hide-bg");
+    secondaryBg.style.visibility = "visible";
+    tertiaryBg.style.visibility = "visible";
+    secondaryBg.classList.add("return-bg");
+    tertiaryBg.classList.add("return-bg");
     name.classList.remove("hide-name");
-    name.style.display = "block";
+    name.style.visibility = "visible";
     name.classList.add("return-name");
 }
 
-function hideSecondaryBg() {
+function hideBg() {
     const secondaryBg = document.getElementById("secondary-bg");
+    const tertiaryBg = document.getElementById("tertiary-bg");
     const name = document.getElementById("name");
-    secondaryBg.classList.remove("return-secondary-bg");
-    secondaryBg.classList.add("hide-secondary-bg");
+    secondaryBg.classList.remove("return-bg");
+    tertiaryBg.classList.remove("return-bg");
+    secondaryBg.classList.add("hide-bg");
+    tertiaryBg.classList.add("hide-bg");
     name.classList.remove("return-name");
     name.classList.add("hide-name");
     setTimeout(() => {
-        secondaryBg.style.display = "none";
-        name.style.display = "none";
+        secondaryBg.style.visibility = "invisible";
+        tertiaryBg.style.visibility = "invisible";
+        name.style.visibility = "invisible";
     }, 2000);
 }
 
@@ -496,6 +504,14 @@ function resetThirdHeaders() {
     THFH.className = "first-header active-header left";
     THSH.className = "second-header middle";
     // THTH.className = 'third-header right';
+}
+
+function toggleImageExpand(image) {
+    if(image.classList.contains('expand')){
+        image.classList.remove('expand');
+    } else {
+        image.classList.add('expand');
+    }
 }
 
 window.onload = () => {

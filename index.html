@@ -110,7 +110,7 @@
             <div id='second-header-body' class="hidden-well">
                 <div class="card">
                     <div class="top-image-back"></div>
-                    <img class="top-image" src="/Images/curling_rooney.png" alt="player squatting on a sheet of curling ice"/>
+                    <img class="top-image" src="/Images/curling_rooney.png" onclick="toggleImageExpand(this)" alt="player squatting on a sheet of curling ice"/>
                     <div class="card-body">
                         <h3>
                             Curling
@@ -129,7 +129,7 @@
                 </div>
                 <div class="card">
                     <div class="top-image-back"></div>
-                    <img class="top-image" src="/Images/coffee_house.jpg" alt="playing guitar on stage"/>
+                    <img class="top-image" src="/Images/coffee_house.jpg" onclick="toggleImageExpand(this)" alt="playing guitar on stage"/>
                     <div class="card-body">
                         <h3>
                             Guitar
@@ -148,7 +148,7 @@
                 </div>
                 <div class="card">
                     <div class="top-image-back"></div>
-                    <img class="top-image" src="/Images/bender.jpeg" alt="hockey player"/>
+                    <img class="top-image" src="/Images/bender.jpeg" onclick="toggleImageExpand(this)" alt="hockey player"/>
                     <div class="card-body">
                         <h3>
                             Hockey
@@ -167,7 +167,7 @@
                 </div>
                 <div class="card">
                     <div class="top-image-back"></div>
-                    <img class="top-image" src="/Images/frisbee.jpg" alt="jumping catching a frisbee"/>
+                    <img class="top-image" src="/Images/frisbee.jpg" onclick="toggleImageExpand(this)" alt="jumping catching a frisbee"/>
                     <div class="card-body">
                         <h3>
                             Frisbee
@@ -190,7 +190,7 @@
                 </div>
                 <div class="card">
                     <div class="top-image-back"></div>
-                    <img class="top-image" src="/Images/chess.png" alt="player squatting on a sheet of curling ice"/>
+                    <img class="top-image" src="/Images/chess.png" onclick="toggleImageExpand(this)" alt="player squatting on a sheet of curling ice"/>
                     <div class="card-body">
                         <h3>
                             Chess
@@ -206,78 +206,6 @@
                     </div>
                     <img class="bottom-logo" id="bottom-chess-logo" src="/Images/curling.png" alt="curling rock"/>
                 </div>
-                
-                <!-- <div class="img-text-row">
-                    <div class="row-img" id="curling-row">
-                        <img id="curling-logo" src="./Images/curling.png" alt="Curling rock">
-                    </div>
-                    <h3 class="row-title">Curling</h3>
-                    <div>   
-                        <p id="curling-p" style="margin-bottom: 5px"> 
-                            I've been <b>curling</b> competitively for {YEARS} years, a sport I adore (yes, it's a real sport!).
-                            I love the small team aspect of curling, teaching me how to quickly mesh and connect with my teammates.
-                            <br><br>
-                        </p>
-                        <p style="margin: 2.5vh 0 1vh 0">
-                            Some <b>achievements I'm proud of:</b>
-                        </p>
-                        <ul>
-                            <li><b>First</b> place in 2 "slam series" tournaments</li>
-                            <li><b>Third</b> place at the 2022 U21 Ontario Provincials</li>
-                            <li><b>Fourth</b> place at the 2020 U21 Ontario Provincials</li>
-                        </ul>
-                        <p>
-                            The goal for this year is first place at the 2023 U21 Ontario Provincials to qualify for Nationals!
-                        </p>
-                    </div>
-                </div>
-                <div class="img-text-row">
-                    <div class="row-img">
-                        <img id="guitar-logo" src="./Images/guitar.png" alt="An acoustic guitar">
-                    </div>
-                    <h3 class="row-title">Guitar</h3>
-                    <p> 
-                        I love to play <b>guitar</b>, having taken lessons for years. I no longer take lessons,
-                        but I love to play guitar casually whenever I find free time.
-                        <br><br>
-                        Don’t ask me to play Stairway to Heaven. 
-                    </p>
-                </div>
-                <div class="img-text-row">
-                    <div class="row-img">
-                        <img id="hockey-logo" src="./Images/hockey.png" alt="A hockey stick and puck">
-                    </div>
-                    <h3 class="row-title">Hockey</h3>
-                    <p> 
-                        I picked up <b>hockey</b> this past year thanks to my wonderful hockey-playing friends. The moment I started, 
-                        I fell in love with the sport and have been training HARD for the next hockey season. I’ve yet to score 
-                        a goal in intramurals, but that’s going to change!
-                        <br><br>
-                        Dangles getting dirtier by the day.
-                    </p>
-                </div>
-                <div class="img-text-row">
-                    <div class="row-img">
-                        <img id="frisbee-logo" src="./Images/frisbee.png" alt="A frisbee flying through the air">
-                    </div>
-                    <h3 class="row-title">Ultimate Frisbee</h3>
-                    <p> 
-                        Whether it’s <b>Ultimate Frisbee</b>, <b>Disc golf</b>, or just tossing a <b>frisbee</b> around in the park, I have a 
-                        special place in my heart for that small flying saucer. 
-                        <br><br>
-                        I’m always down to throw a frisbee around, the best bonding exercise in my opinion
-                    </p>
-                </div>
-                <div class="img-text-row">
-                    <div class="row-img">
-                        <img id="video-games-logo" src="./Images/video_games.png" alt="A video game controller">
-                    </div>
-                    <h3 class="row-title">Video Games</h3>
-                    <p> 
-                        My guilty pleasure: <b>video games</b>. I definitely don’t have time for the hours and hours of video games I used to play, 
-                        but I’ll hop on some good ‘ol <b>CS:GO</b> or <b>Minecraft</b> every now and then
-                    </p>
-                </div> -->
             </div>
             <div id='third-header-body' class="hidden-well">
                 <div id='third-header-body-headers'>
@@ -374,6 +302,7 @@
         </button>
         <div id="header-cover"></div>
         <div id="secondary-bg"></div>
+        <div id="tertiary-bg"></div>
         <h1 id="name">Christopher<br>Oka</h1>
     </body>
     <!--                 <div class="img-text-row">
