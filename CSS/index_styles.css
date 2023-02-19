@@ -2022,11 +2022,9 @@ h3 {
 
     @keyframes tertiary-slash {
         0% {
-            height: 210vh;
             transform: rotate(-30deg) translateX(0) scaleX(0);
         }
         100% {
-            height: 210vh;
             transform: rotate(-30deg) translateX(0) scaleX(1);
         }
     }
