@@ -611,7 +611,7 @@ h3 {
 }
 
 .hidden-well {
-    display: none;
+    display: none !important;
 }
 
 #first-header-body, #second-header-body, #third-header-body {
@@ -831,6 +831,10 @@ h3 {
     gap: 1rem;
     overflow: auto;
     height: 70vh;
+    animation-name: fade-in-translate;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
 }
 
 .card {
@@ -1172,7 +1176,7 @@ h3 {
 
 @media(max-width: 1670px) {
     #secondary-bg {
-        left: 50%;
+        left: 55%;
     }
     @keyframes slash {
         0% {
