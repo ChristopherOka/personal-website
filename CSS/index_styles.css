@@ -603,7 +603,7 @@ h3 {
     transition-delay: 0.3s;
 }
 
-#python, #video-games {
+#python, #chess {
     transition-delay: 0.4s;
 }
 
@@ -1220,7 +1220,7 @@ h3.active-header {
         font-size: 35px;
     }
     .third-header-logos, .second-header-logos, .first-header-logos {
-        padding-top: 80px;
+        padding-top: 85px;
     }
 
     .first-paragraph {
@@ -1839,8 +1839,28 @@ h3.active-header {
     }
 
     #curling {
-        width: 5vh;
-        height: auto;
+        height: 2.5rem;
+        width: auto;
+    }
+
+    #guitar {
+        height: 4.5rem;
+        width: auto;
+    }
+
+    #hockey {
+        height: 3.5rem;
+        width: auto;
+    }
+
+    #frisbee {
+        height: 3rem;
+        width: auto;
+    }
+
+    #chess {
+        height: 3rem;
+        width: auto;
     }
 
     #tdsb {
@@ -1852,7 +1872,7 @@ h3.active-header {
     }
     
     #code {
-        height: 5vh;
+        height: 2rem;
     }
 
     #first-header-body {
@@ -1897,21 +1917,6 @@ h3.active-header {
         font-size: 25px;
         padding-top: 35vh;
         width: 100%;
-    }
-    
-    #curling {
-        height: 4vh;
-    }
-    
-    #guitar {
-        height: 8vh;
-        width: auto;
-        padding: 0 2vw;
-    }
-    
-    #hockey {
-        height: 6vh;
-        width: auto;
     }
     
     .img-text-row {
@@ -2433,6 +2438,26 @@ h3.active-header {
     .blue-right-arrow img {
         height: 100%;
         width: 100%;
+    }
+
+    #curling {
+        height: 2rem;
+    }
+    
+    #guitar {
+        height: 3.5rem;
+        width: auto;
+        padding: 0 2vw;
+    }
+    
+    #hockey {
+        height: 2.5rem;
+        width: auto;
+    }
+
+    #chess {
+        height: 2rem;
+        width: auto;
     }
 }
 
