@@ -2084,35 +2084,40 @@ h3.active-header {
         font-size: 90px;
     }
     #name {
-        animation-delay: 0.25s;
+        animation-delay: 0s;
         top: 7vh;
         right: 5vw;
         font-size: 110px;
     }
 
+    #name.return-name {
+        animation-duration: 2s;
+        animation-delay: 0.5s;
+    }
+
     @keyframes hide-bg {
         0% {
             height: 210vh;
-            transform: rotate(-73deg) translateX(2vh) scaleX(1);
+            transform: rotate(-73deg) translateX(0) scaleX(1);
         }
         25% {
             height: 210vh;
-            transform: rotate(-90deg) translateX(10vh) scaleX(1);
+            transform: rotate(-90deg) translateX(14vh) scaleX(1);
         }
         100% {
             height: 210vh;
-            transform: rotate(-90deg) translateX(10vh) scaleX(0);
+            transform: rotate(-90deg) translateX(14vh) scaleX(0);
         }
     }
     
     @keyframes return-bg {
         0% {
             height: 210vh;
-            transform: rotate(-90deg) translateX(10vh) scaleX(0);
+            transform: rotate(-90deg) translateX(14vh) scaleX(0);
         }
         50% {
             height: 210vh;
-            transform: rotate(-90deg) translateX(10vh) scaleX(1);
+            transform: rotate(-90deg) translateX(14vh) scaleX(1);
         }
         100% {
             height: 210vh;
@@ -2127,13 +2132,13 @@ h3.active-header {
             transform: translateY(0);
         }
         100% {
-            transform: translateY(-30vh);
+            transform: translateY(-43vh);
         }
     }
     
     @keyframes return-name {
         0% {
-            transform: translateY(-30vh);
+            transform: translateY(-43vh);
         }
         60% {
             transform: translateX(0);
@@ -2175,9 +2180,39 @@ h3.active-header {
 @media (max-width: 830px) {
     #secondary-bg {
         width: 100vw;
-        top: -90vh;
+        top: -100vh;
         left: 65%;
         animation-duration: 1s;
+    }
+
+    @keyframes hide-bg {
+        0% {
+            height: 210vh;
+            transform: rotate(-73deg) translateX(0) scaleX(1);
+        }
+        25% {
+            height: 210vh;
+            transform: rotate(-90deg) translateX(14vh) scaleX(1);
+        }
+        100% {
+            height: 210vh;
+            transform: rotate(-90deg) translateX(14vh) scaleX(0);
+        }
+    }
+
+    @keyframes return-bg {
+        0% {
+            height: 210vh;
+            transform: rotate(-90deg) translateX(14vh) scaleX(0);
+        }
+        50% {
+            height: 210vh;
+            transform: rotate(-90deg) translateX(14vh) scaleX(1);
+        }
+        100% {
+            height: 210vh;
+            transform: rotate(-73deg) translateX(0) scaleX(1);
+        }
     }
 
     @keyframes hide-name {
@@ -2328,6 +2363,40 @@ h3.active-header {
 
     #tertiary-bg {
         left: 80%;
+    }
+
+    #secondary-bg {
+        top: -90vh;
+    }
+
+    @keyframes hide-bg {
+        0% {
+            height: 210vh;
+            transform: rotate(-73deg) translateX(0) scaleX(1);
+        }
+        25% {
+            height: 210vh;
+            transform: rotate(-90deg) translateX(16vh) scaleX(1);
+        }
+        100% {
+            height: 210vh;
+            transform: rotate(-90deg) translateX(16vh) scaleX(0);
+        }
+    }
+
+    @keyframes return-bg {
+        0% {
+            height: 210vh;
+            transform: rotate(-90deg) translateX(16vh) scaleX(0);
+        }
+        50% {
+            height: 210vh;
+            transform: rotate(-90deg) translateX(16vh) scaleX(1);
+        }
+        100% {
+            height: 210vh;
+            transform: rotate(-73deg) translateX(0) scaleX(1);
+        }
     }
     
     @keyframes return-name {
