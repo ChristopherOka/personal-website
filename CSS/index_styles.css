@@ -30,7 +30,7 @@
 }
 
 @font-face {
-    font-family: SignikaNegativeBold;
+    font-family: SignikaNegativeBold, sans-serif;;
     src: url('../Fonts/SignikaNegative-Bold.ttf');
 }
 
@@ -40,7 +40,7 @@
 }
 
 @font-face {
-    font-family: SignikaNegativeLight;
+    font-family: SignikaNegativeLight, sans-serif;
     src: url('../Fonts/SignikaNegative-Light.ttf');
 }
 
@@ -79,7 +79,7 @@ html, body {
 }
 
 p, ul {
-    font-family: SignikaNegativeLight;
+    font-family: SignikaNegativeLight, sans-serif;
 }
 
 h1 {
@@ -761,7 +761,7 @@ h3 {
     animation-delay: 0s !important;
 }
 
-#second-header-body, #paragraphs{
+#paragraphs{
     width: 94vw;
     height: 62vh;
     overflow-x: hidden;
@@ -823,6 +823,76 @@ h3 {
 
 #second-header-body .img-text-row img {
     height: 65px;
+}
+
+#second-header-body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+}
+
+.card {
+    width: 290px;
+    height: 550px;
+    transition: transform 0.4s ease-out;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card:hover .card-body {
+    border: 6px solid var(--emphasis);
+}
+
+.card:hover .top-image {
+    height: 100%;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+.card .top-image-back {
+    border-radius: 12px 12px 0 0;
+}
+
+.card .top-image {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    transition: height 0.4s ease-out, border-radius 0.4s ease-out;
+}
+
+.card-body {
+    padding: 1rem;
+    border: 6px solid var(--heading-1);
+    border-radius: 0 0 12px 12px;
+    transition: color 0.4s ease-out, border 0.4s ease-out;
+}
+
+.card-body i {
+    font-family: SignikaNegativeBold, sans-serif;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.card-body p {
+    font-size: 17px;
+    margin: 0.75rem 0;
+}
+
+.card .bottom-logo {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 1rem 1rem 0;
+
 }
 
 #first-header-code-img {
