@@ -519,9 +519,41 @@ function toggleImageExpand(image) {
     }
 }
 
-window.onload = () => {
+function swipeDown() {
+    let startY = 0;
+    let isPulling = false;
+
+    document.addEventListener("touchstart", function (event) {
+        startY = event.touches[0].pageY;
+        isPulling = false;
+    });
+
+    document.addEventListener("touchmove", function (event) {
+        var currentY = event.touches[0].pageY;
+        if (currentY < startY) {
+            // The user is scrolling down, allow the default behavior
+            return;
+        } else {
+            // The user is pulling to refresh
+            isPulling = true;
+        }
+    });
+
+    document.addEventListener("touchend", function () {
+        if (isPulling) {
+            // Remove the overflow: hidden property from the html and body elements
+            document.documentElement.style.overflow = "";
+            document.body.style.overflow = "";
+            // Refresh the page
+            location.reload();
+        }
+    });
+}
+
+window.onload = function () {
     showIcons();
     detectParagraphScroll();
     window.addEventListener("resize", detectWindowResize);
+    swipeDown();
     // updateLiveParagraphVals();
 };
