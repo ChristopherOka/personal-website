@@ -158,8 +158,13 @@ function renderNewPage(currentHeaderEl) {
     }
 
     const canHover = window.matchMedia("(hover: hover)").matches;
+    const viewportWidth = window.innerWidth;
+    const isMobile =
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+        );
 
-    if (!canHover) {
+    if (!canHover || viewportWidth < 600 || isMobile) {
         currentHeader.classList.remove("enabled");
         firstOtherHeader.classList.remove("enabled");
         secondOtherHeader.classList.remove("enabled");
@@ -230,7 +235,13 @@ function returnHome() {
     }, 1000);
 
     const canHover = window.matchMedia("(hover: hover)").matches;
-    if (!canHover) {
+    const viewportWidth = window.innerWidth;
+    const isMobile =
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+        );
+
+    if (!canHover || viewportWidth < 600 || isMobile) {
         currentHeader.classList.remove(
             `${currentHeaderId}-to-top`,
             "top-header"
@@ -255,7 +266,12 @@ function showIcons() {
     const thirdHeader = document.getElementById("third-header");
     const viewportWidth = window.innerWidth;
     const canHover = window.matchMedia("(hover: hover)").matches;
-    if (canHover) {
+    const isMobile =
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+        );
+
+    if (canHover && viewportWidth > 600 && !isMobile) {
         setTimeout(() => {
             firstHeader.classList.add("hover");
         }, 2800);
@@ -276,7 +292,7 @@ function showIcons() {
             thirdHeader.classList.add("hover");
         }, 300);
     }
-    if (canHover) {
+    if (canHover && viewportWidth > 600 && !isMobile) {
         setTimeout(() => {
             firstHeader.classList.remove("hover");
         }, 4000);
@@ -299,7 +315,12 @@ function detectWindowResize() {
     const secondHeader = document.getElementById("second-header");
     const thirdHeader = document.getElementById("third-header");
     const canHover = window.matchMedia("(hover: hover)").matches;
-    if (canHover) {
+    const viewportWidth = window.innerWidth;
+    const isMobile =
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+        );
+    if (canHover && viewportWidth > 600 && !isMobile) {
         firstHeader.classList.add("enabled");
         firstHeader.classList.remove("hover");
         secondHeader.classList.add("enabled");
@@ -481,5 +502,5 @@ window.onload = () => {
     showIcons();
     detectParagraphScroll();
     window.addEventListener("resize", detectWindowResize);
-    updateLiveParagraphVals();
+    // updateLiveParagraphVals();
 };
