@@ -2042,6 +2042,8 @@ h3.active-header {
         top: -100vh;
         left: 60%;
         animation-duration: 1s;
+        box-shadow: 4px 3px 24px -5px #000000
+
     }
 
     #tertiary-bg {
