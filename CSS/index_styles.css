@@ -892,9 +892,6 @@ h3 {
 
 
 @media screen and (max-width: 500px) {
-    #second-header-body {
-        padding-bottom: 2rem;
-    }
     .card {
         width: 330px;
         height: 500px;
