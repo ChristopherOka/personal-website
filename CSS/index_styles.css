@@ -1130,13 +1130,13 @@ h3.active-header {
         height: 0;
     }
     100% {
-        height: 62vh;
+        height: 60vh;
     }
 }
 
 @keyframes well-close {
     0% {
-        height: 62vh;
+        height: 60vh;
     }
     100% {
         height: 0;
