@@ -1156,7 +1156,7 @@ h3.active-header {
 }
 
 #TH-FH-body {
-    margin-top: 10vh;
+    margin-top: 7vh;
     overflow-y: scroll;
     height: 62vh;
     border-bottom: 1px solid var(--default-text);
@@ -2010,7 +2010,7 @@ h3.active-header {
 
     #first-header-body, #second-header-body, #third-header-body {
         position: absolute;
-        margin-top: 23vh;
+        margin-top: 21vh;
     }
 
     #third-header-body, #second-header-body{
@@ -2530,7 +2530,7 @@ h3.active-header {
         padding-top: 20px;
     }
     #third-header-body-headers > h3 {
-        font-size: 35px;
+        font-size: 28px;
         cursor: pointer;
         color: var(--blue);
     }
@@ -2567,8 +2567,8 @@ h3.active-header {
         position: absolute;
         right: 5rem;
         top: 0.3rem;
-        height: 30px;
-        width: 30px;
+        height: 25px;
+        width: 25px;
         cursor: pointer;
     }
 }
