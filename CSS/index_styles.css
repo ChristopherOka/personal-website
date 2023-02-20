@@ -870,6 +870,7 @@ h3 {
     gap: 1rem;
     overflow-y: auto;
     height: 70vh;
+    height: 70svh;
     animation-name: fade-in-translate;
     animation-duration: 1s;
     animation-delay: 1s;
