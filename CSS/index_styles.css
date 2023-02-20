@@ -79,11 +79,8 @@ html, body {
     height: 100%;
     margin: 0;
     background-color: var(--bg-color);
-}
-
-body {
-    position: relative;
     overflow: hidden;
+    position: relative;
 }
 
 p, ul {
