@@ -265,7 +265,13 @@ function returnHome() {
     }
 }
 
-function showIcons() {
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function showIcons() {
+    console.log('showIcons!!')
+    await sleep(1000);
     const firstHeader = document.getElementById("first-header");
     const secondHeader = document.getElementById("second-header");
     const thirdHeader = document.getElementById("third-header");
@@ -550,10 +556,13 @@ function swipeDown() {
     });
 }
 
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function () {
     showIcons();
     detectParagraphScroll();
     window.addEventListener("resize", detectWindowResize);
+});
+
+window.onload = function () {
     // swipeDown();
     // updateLiveParagraphVals();
 };
