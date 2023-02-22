@@ -880,9 +880,10 @@ span {
     animation-duration: 1s;
     animation-delay: 1s;
     animation-fill-mode: both;
-    padding-top: 1rem;
+    padding: 1rem 0;
     padding-left: 1rem;
     margin-left: -1rem;
+    border-bottom: 1px solid var(--default-text);
 }
 
 .card {
@@ -900,7 +901,7 @@ span {
 @media screen and (max-width: 500px) {
     .card {
         width: 330px;
-        height: 500px;
+        height: 430px;
     }
     .card:last-child {
         margin-bottom: 2rem;
@@ -956,6 +957,18 @@ span {
     max-width: 160px;
     cursor: default;
 }
+
+@media screen and (max-width: 500px) {
+    #third-header-body .card .top-image {
+        max-width: 130px;
+    }
+
+    #third-header-body .card {
+        height: 440px;
+    }
+}
+
+
 
 #third-header-body .top-image-back, #third-header-body .bottom-logo {
     display: none;
@@ -1232,6 +1245,12 @@ h3.active-header {
     padding-bottom: 2rem;
     padding-left: 1rem;
     margin-left: -1rem;
+}
+
+@media screen and (max-width: 440px) {
+    .third-header-body {
+        margin-top: 3rem;
+    }
 }
 
 .blue-right-arrow {
