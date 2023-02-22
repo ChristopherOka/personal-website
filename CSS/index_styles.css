@@ -80,6 +80,7 @@ html, body {
     margin: 0;
     background-color: var(--bg-color);
     position: relative;
+    font-family: SignikaNegativeRegular, sans-serif;
 }
 
 p, ul {
@@ -87,23 +88,27 @@ p, ul {
 }
 
 h1 {
-    font-family: SecularOne;
+    font-family: SecularOne, sans-serif;
     font-size: 140px;
     margin: 0;
     line-height: 1;
 }
 
 h2 {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-size: 100px;
     margin: 0;
     font-weight: 400;
 }
 
 h3 {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-size: 30px;
     margin: 0;
+}
+
+span {
+    font-family: Montserrat, sans-serif;
 }
 
 @keyframes slash {
@@ -598,11 +603,11 @@ h3 {
     transition-delay: 0.2s;
 }
 
-#hack-the-north, #frisbee {
+#vividseats, #frisbee {
     transition-delay: 0.3s;
 }
 
-#python, #chess {
+#creature-world, #chess {
     transition-delay: 0.4s;
 }
 
@@ -888,6 +893,7 @@ h3 {
     grid-template-rows: 1fr 1fr;
     border-radius: 12px;
     transition: box-shadow 0.4s ease-out, transform 0.4s ease-out;
+    margin-top: 1rem;
 }
 
 
@@ -908,6 +914,9 @@ h3 {
     .card:hover {
         box-shadow: 0 0 10px 0 var(--emphasis);
         transform: scale(1.01);
+    }
+    #third-header-body .card:hover {
+        border: 4px solid var(--emphasis)
     }
 }
 
@@ -931,11 +940,36 @@ h3 {
     cursor: pointer;
 }
 
+#third-header-body .card {
+    border: 4px solid var(--heading-1);
+}
+
+#third-header-body .card .top-image-well {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#third-header-body .card .top-image {
+    object-fit: cover;
+    position: relative;
+    height: auto;
+    max-width: 160px;
+    cursor: default;
+}
+
+#third-header-body .top-image-back, #third-header-body .bottom-logo {
+    display: none;
+}
+
 .card-body {
     padding: 1rem;
     border: 4px solid var(--heading-1);
     border-radius: 0 0 12px 12px;
     transition: color 0.4s ease-out, border 0.4s ease-out;
+}
+
+#third-header-body .card-body {
+    border: none;
 }
 
 .card-body i {
@@ -956,6 +990,32 @@ h3 {
     bottom: 0;
     right: 0;
     margin: 0 1rem 1rem 0;
+}
+
+#third-header-body .creature-well {
+    position: relative;
+}
+
+#third-header-body .creature-well img.top-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#third-header-body img#idle-back.top-image {
+    height: 342px;
+    width: 197px;
+    max-width: none;
+    transform: translate(30px, -19px);
+    z-index: -1;
+}
+
+#third-header-body img#idle-front.top-image {
+    height: 26px;
+    width: 32px;
+    max-width: none;
+    transform: translate(66px,-20px);
+    z-index: 1;
 }
 
 #bottom-guitar-logo {
@@ -1090,19 +1150,19 @@ h3.active-header {
 
 #third-header-body-headers .first-header.middle {
     position: absolute;
-    left: 30%;
+    left: 20rem;
     transition: left 1s ease, color 1s ease;
 }
 
 #third-header-body-headers .second-header.middle {
     position: absolute;
-    left: 28%;
+    left: 20rem;
     transition: left 1s ease, color 1s ease;
 }
 
 #third-header-body-headers .third-header.middle {
     position: absolute;
-    left: 38%;
+    left: 20rem;
     transition: left 1s ease, color 1s ease;
 
 }
@@ -1128,6 +1188,9 @@ h3.active-header {
 @keyframes well-open {
     0% {
         height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 5rem;
     }
     100% {
         height: 60vh;
@@ -1140,6 +1203,9 @@ h3.active-header {
     }
     100% {
         height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 5rem;
     }
 }
 
@@ -1155,25 +1221,17 @@ h3.active-header {
     animation-fill-mode: both;
 }
 
-#TH-FH-body {
-    margin-top: 7vh;
-    overflow-y: scroll;
+.third-header-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 5rem;
+    overflow-y: auto;
     height: 62vh;
     border-bottom: 1px solid var(--default-text);
-}
-
-#TH-SH-body {
-    margin-top: 10vh;
-    overflow-y: scroll;
-    height: 62vh;
-    border-bottom: 1px solid var(--default-text);
-}
-
-#TH-TH-body {
-    margin-top: 10vh;
-    overflow-y: scroll;
-    height: 62vh;
-    border-bottom: 1px solid var(--default-text);
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    margin-left: -1rem;
 }
 
 .blue-right-arrow {
@@ -1376,13 +1434,13 @@ h3.active-header {
 
     #third-header-body-headers .first-header.middle {
         position: absolute;
-        left: 30%;
+        left: 20rem;
         transition: left 1s ease, color 1s ease;
     }
     
     #third-header-body-headers .second-header.middle {
         position: absolute;
-        left: 40%;
+        left: 15rem;
         transition: left 1s ease, color 1s ease;
     }
     
@@ -1445,13 +1503,13 @@ h3.active-header {
 
     #third-header-body-headers .first-header.middle {
         position: absolute;
-        left: 30%;
+        left: 18rem;
         transition: left 1s ease, color 1s ease;
     }
     
     #third-header-body-headers .second-header.middle {
         position: absolute;
-        left: 30%;
+        left: 13rem;
         transition: left 1s ease, color 1s ease;
     }
     
@@ -1520,16 +1578,6 @@ h3.active-header {
     }
     .img-text-row img#frisbee-logo {
         height: 65px;
-    }
-    #third-header-body-headers .first-header.middle {
-        position: absolute;
-        left: 30%;
-        transition: left 1s ease, color 1s ease;
-    }
-    #third-header-body-headers .second-header.middle {
-        position: absolute;
-        left: 30%;
-        transition: left 1s ease, color 1s ease;
     }
     
 }
