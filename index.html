@@ -1,309 +1,465 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="./CSS/index_styles.css">
+<link rel="stylesheet" href="./CSS/index_styles.css" />
 <html lang="en-US">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/x-icon" href="./Images/favicon.ico?">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="./Images/favicon.ico?"
+        />
         <script src="./Scripts/main.js"></script>
         <title>Christopher Oka</title>
     </head>
     <body>
         <div style="position: relative; overflow: hidden; height: 100%">
-        <div id="main-headers">
-            <div id="first-header" class="enabled header" onclick="renderNewPage(this)">
-                <b>
-                    <h2 class='larger-text'>Who I Am</h2>
-                    <h2 class='smaller-text'><span class="about-gap"></span>About</h2>
-                </b>
-                <div class="first-header-logos">
-                    <div>
-                        <img id="uofw" src="./Images/uofw.png" alt="university of waterloo logo">
-                    </div>
-                    <div>
-                        <img id="code" src="./Images/code.png" alt="carats used while coding">
-                    </div>
-                </div>
-            </div>
-            <div id="second-header" class="enabled header" onclick="renderNewPage(this)">
-                <b>
-                <h2 class="larger-text">What I Love</h2>
-                <h2 class='smaller-text'>Hobbies</h2>
-                </b>
-                <div class="second-header-logos">
-                    <div>
-                        <img id='curling' src="./Images/curling.png" alt="curling rock">
-                    </div>
-                    <div>
-                        <img id='guitar' src="./Images/guitar.png" alt="guitar">
-                    </div>
-                    <div>
-                        <img id="hockey" src="./Images/hockey.png" alt="hockey stick and puck">
-                    </div>
-                    <div>
-                        <img id="frisbee" src="./Images/frisbee.png" alt="frisbee flying through the air">
-                    </div>
-                    <div>
-                        <img id="chess" src="./Images/queen.png" alt="chess queen">
-                    </div>
-                </div>
-            </div>
-            <div id="third-header" class="enabled header" onclick="renderNewPage(this)">
-                <b>
-                    <h2 class="larger-text">What I've Done</h2>
-                    <h2 class='smaller-text'>Experience</h2>
-                </b>
-                <div class="third-header-logos">
-                    <div>
-                        <img id='tdsb' src="./Images/tdsb.png" alt="Toronto District School Board logo">
-                    </div>
-                    <div>
-                        <img id='front-rush' src="./Images/front_rush.png" alt="Front Rush logo">
-                    </div>
-                    <div>
-                        <img id="tbits" src="./Images/tbits.png" alt="Tradable Bits logo">
-                    </div>
-                    <div>
-                        <img id="vividseats" src="./Images/vividseats.png" alt="Vivid Seats logo">
-                    </div>
-                    <div>
-                        <img id="creature-world" src="./Images/creature_world.png" alt="Creature world logo">
-                    </div>
-                </div>
-            </div>
-            <div id='first-header-body'  class="hidden-well">
-                <div id="blackout" class="hidden-well"></div>
-                <div id="paragraphs">
-                    <p class="first-paragraph">
-                        Hi! My name's <b>Christopher</b>, usually I go by <b>Chris</b>.
-                        <br><br>
-                        I'm an aspiring <b>Software Developer</b>, working primarily in <b>web development!</b>
-                        <br><br>
-                        I'm love anything <b>sports</b> or <b>fitness</b> related, and making <b>awful, awful puns</b> (according to my friends at least. I think they're amazing)
-                    </p>
-                    <div class="img-text-row">
-                        <div class="row-img">
-                            <img id="first-header-uofw-img" src="./Images/uofw.png" alt="University of Waterloo logo">
+            <div id="main-headers">
+                <div
+                    id="first-header"
+                    class="enabled header"
+                    onclick="renderNewPage(this)"
+                >
+                    <b>
+                        <h2 class="larger-text">Who I Am</h2>
+                        <h2 class="smaller-text">
+                            <span class="about-gap"></span>About
+                        </h2>
+                    </b>
+                    <div class="first-header-logos">
+                        <div>
+                            <img
+                                id="uofw"
+                                src="./Images/uofw.png"
+                                alt="university of waterloo logo"
+                            />
                         </div>
-                        <h3 class="row-title">Studies</h3>
-                        <p id="school-p">
-                            I'm currently studying <b>Systems Design Engineering</b> at the <b>University of Waterloo</b> in my 
-                            {TERM} term. I've enjoyed basically all the courses I've taken so far, being a huge math/physics <b>nerd</b>
-                            and loving everything STEM-related!
-                        </p>
-                    </div>
-                    <div class="img-text-row">
-                        <div class="row-img">
-                            <img id="first-header-code-img" src="./Images/code.png" alt="carats used while coding">
+                        <div>
+                            <img
+                                id="code"
+                                src="./Images/code.png"
+                                alt="carats used while coding"
+                            />
                         </div>
-                        <h3 class="row-title">Coding!</h3>
-                        <p>
-                            I intially hated coding when I first tried it, many years ago. I picked it back up a couple years back
-                            and I've loved it ever since. From hackathons to side projects, school courses, and work terms, I've 
-                            *developed* my programming skills to where they are now.
-                        </p>
                     </div>
                 </div>
-                <a id='headshot-well' href="https://www.linkedin.com/in/christopher-oka/" target="_blank">
-                    <img id="headshot" src="./Images/blurred_headshot.png" alt="A headshot of me" loading="lazy">
-                </a>
-            </div>
-            <div id='second-header-body' class="hidden-well">
-                <div class="card">
-                    <div class="top-image-back"></div>
-                    <img class="top-image" src="./Images/curling_rooney.png" onclick="toggleImageExpand(this)" alt="player squatting on a sheet of curling ice" loading="lazy"/>
-                    <div class="card-body">
-                        <h3>
-                            Curling
+                <div
+                    id="second-header"
+                    class="enabled header"
+                    onclick="renderNewPage(this)"
+                >
+                    <b>
+                        <h2 class="larger-text">What I Love</h2>
+                        <h2 class="smaller-text">Hobbies</h2>
+                    </b>
+                    <div class="second-header-logos">
+                        <div>
+                            <img
+                                id="curling"
+                                src="./Images/curling.png"
+                                alt="curling rock"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                id="guitar"
+                                src="./Images/guitar.png"
+                                alt="guitar"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                id="hockey"
+                                src="./Images/hockey.png"
+                                alt="hockey stick and puck"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                id="frisbee"
+                                src="./Images/frisbee.png"
+                                alt="frisbee flying through the air"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                id="chess"
+                                src="./Images/queen.png"
+                                alt="chess queen"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div
+                    id="third-header"
+                    class="enabled header"
+                    onclick="renderNewPage(this)"
+                >
+                    <b>
+                        <h2 class="larger-text">What I've Done</h2>
+                        <h2 class="smaller-text">Experience</h2>
+                    </b>
+                    <div class="third-header-logos">
+                        <div>
+                            <img
+                                id="tdsb"
+                                src="./Images/tdsb.png"
+                                alt="Toronto District School Board logo"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                id="front-rush"
+                                src="./Images/front_rush.png"
+                                alt="Front Rush logo"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                id="tbits"
+                                src="./Images/tbits.png"
+                                alt="Tradable Bits logo"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                id="vividseats"
+                                src="./Images/vividseats.png"
+                                alt="Vivid Seats logo"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                id="creature-world"
+                                src="./Images/creature_world.png"
+                                alt="Creature world logo"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div id="first-header-body" class="hidden-well">
+                    <div id="blackout" class="hidden-well"></div>
+                    <div id="paragraphs">
+                        <p class="first-paragraph">
+                            Hi! My name's <b>Christopher</b>, usually I go by
+                            <b>Chris</b>. <br /><br />
+                            I'm an aspiring <b>Software Developer</b>, working
+                            primarily in <b>web development!</b> <br /><br />
+                            I'm love anything <b>sports</b> or
+                            <b>fitness</b> related, and making
+                            <b>awful, awful puns</b> (according to my friends at
+                            least. I think they're amazing)
+                        </p>
+                        <div class="img-text-row">
+                            <div class="row-img">
+                                <img
+                                    id="first-header-uofw-img"
+                                    src="./Images/uofw.png"
+                                    alt="University of Waterloo logo"
+                                />
+                            </div>
+                            <h3 class="row-title">Studies</h3>
+                            <p id="school-p">
+                                I'm currently studying
+                                <b>Systems Design Engineering</b> at the
+                                <b>University of Waterloo</b> in my {TERM} term.
+                                I've enjoyed basically all the courses I've
+                                taken so far, being a huge math/physics
+                                <b>nerd</b>
+                                and loving everything STEM-related!
+                            </p>
+                        </div>
+                        <div class="img-text-row">
+                            <div class="row-img">
+                                <img
+                                    id="first-header-code-img"
+                                    src="./Images/code.png"
+                                    alt="carats used while coding"
+                                />
+                            </div>
+                            <h3 class="row-title">Coding!</h3>
+                            <p>
+                                I intially hated coding when I first tried it,
+                                many years ago. I picked it back up a couple
+                                years back and I've loved it ever since. From
+                                hackathons to side projects, school courses, and
+                                work terms, I've *developed* my programming
+                                skills to where they are now.
+                            </p>
+                        </div>
+                    </div>
+                    <a
+                        id="headshot-well"
+                        href="https://www.linkedin.com/in/christopher-oka/"
+                        target="_blank"
+                    >
+                        <img
+                            id="headshot"
+                            src="./Images/blurred_headshot.png"
+                            alt="A headshot of me"
+                            loading="lazy"
+                        />
+                    </a>
+                </div>
+                <div id="second-header-body" class="hidden-well">
+                    <div class="card">
+                        <div class="top-image-back"></div>
+                        <img
+                            class="top-image"
+                            src="./Images/curling_rooney.png"
+                            onclick="toggleImageExpand(this)"
+                            alt="player squatting on a sheet of curling ice"
+                            loading="lazy"
+                        />
+                        <div class="card-body">
+                            <h3>Curling</h3>
+                            <p>
+                                <i>I love this sport</i>
+                            </p>
+                            <p>I've been playing competitively since 2016</p>
+                            <p>
+                                My goal? To represent Canada on the world stage
+                            </p>
+                        </div>
+                        <img
+                            class="bottom-logo"
+                            id="bottom-curling-logo"
+                            src="./Images/curling.png"
+                            alt="curling rock"
+                        />
+                    </div>
+                    <div class="card">
+                        <div class="top-image-back"></div>
+                        <img
+                            class="top-image"
+                            src="./Images/coffee_house.jpg"
+                            onclick="toggleImageExpand(this)"
+                            alt="playing guitar on stage"
+                        />
+                        <div class="card-body">
+                            <h3>Guitar</h3>
+                            <p>
+                                <i
+                                    >You could say I'm somewhat of an Ed Sheeran
+                                    fan...</i
+                                >
+                            </p>
+                            <p>Used to take lessons, now I play for fun</p>
+                            <p>Next steps: write my own song!</p>
+                        </div>
+                        <img
+                            class="bottom-logo"
+                            id="bottom-guitar-logo"
+                            src="./Images/guitar.png"
+                            alt="guitar"
+                        />
+                    </div>
+                    <div class="card">
+                        <div class="top-image-back"></div>
+                        <img
+                            class="top-image"
+                            src="./Images/bender.jpeg"
+                            onclick="toggleImageExpand(this)"
+                            alt="hockey player"
+                        />
+                        <div class="card-body">
+                            <h3>Hockey</h3>
+                            <p>
+                                <i>"The best skater in Canada" - me</i>
+                            </p>
+                            <p>Hard to argue with that!</p>
+                            <p>
+                                I picked up hockey in 2022, and have loved it
+                                ever since
+                            </p>
+                        </div>
+                        <img
+                            class="bottom-logo"
+                            id="bottom-hockey-logo"
+                            src="./Images/hockey.png"
+                            alt="hockey stick"
+                        />
+                    </div>
+                    <div class="card">
+                        <div class="top-image-back"></div>
+                        <img
+                            class="top-image"
+                            src="./Images/frisbee.jpg"
+                            onclick="toggleImageExpand(this)"
+                            alt="jumping catching a frisbee"
+                        />
+                        <div class="card-body">
+                            <h3>Frisbee</h3>
+                            <p>
+                                <i>Or a &apos;disc&apos; if you're fancy</i>
+                            </p>
+                            <p>
+                                Anything involving a rotating plastic disc - I'm
+                                there
+                            </p>
+                            <p>Am I any good at it? Debatable</p>
+                            <p>Do I love it? Yes</p>
+                        </div>
+                        <img
+                            class="bottom-logo"
+                            id="bottom-frisbee-logo"
+                            src="./Images/frisbee.png"
+                            alt="frisbee"
+                        />
+                    </div>
+                    <div class="card">
+                        <div class="top-image-back"></div>
+                        <img
+                            class="top-image"
+                            src="./Images/chess.png"
+                            onclick="toggleImageExpand(this)"
+                            alt="A chess board"
+                        />
+                        <div class="card-body">
+                            <h3>Chess</h3>
+                            <p>
+                                <i>Still learning how the knight moves</i>
+                            </p>
+                            <p>
+                                I picked up chess during the first lockdown, it
+                                was a great way to pass the time
+                            </p>
+                            <p>
+                                I’m always down for a game (if you’re brave
+                                enough)!
+                            </p>
+                        </div>
+                        <img
+                            class="bottom-logo"
+                            id="bottom-chess-logo"
+                            src="./Images/queen.png"
+                            alt="chess queen"
+                        />
+                    </div>
+                </div>
+                <div id="third-header-body" class="hidden-well">
+                    <div id="third-header-body-headers">
+                        <h3 id="TH-FH" class="first-header active-header left">
+                            <a onclick="swapThirdHeaders(this)">Work</a>
                         </h3>
-                        <p>
-                            <i>I love this sport</i>
-                        </p>
-                        <p>
-                            I've been playing competitively since 2016
-                        </p>
-                        <p>
-                            My goal? To represent Canada on the world stage
-                        </p>
-                    </div>
-                    <img class="bottom-logo" id="bottom-curling-logo" src="./Images/curling.png" alt="curling rock"/>
-                </div>
-                <div class="card">
-                    <div class="top-image-back"></div>
-                    <img class="top-image" src="./Images/coffee_house.jpg" onclick="toggleImageExpand(this)" alt="playing guitar on stage"/>
-                    <div class="card-body">
-                        <h3>
-                            Guitar
+                        <h3 id="TH-SH" class="second-header middle">
+                            <a onclick="swapThirdHeaders(this)">Projects</a>
                         </h3>
-                        <p>
-                            <i>You could say I'm somewhat of an Ed Sheeran fan...</i>
-                        </p>
-                        <p>
-                            Used to take lessons, now I play for fun
-                        </p>
-                        <p>
-                            Next steps: write my own song!
-                        </p>
-                    </div>
-                    <img class="bottom-logo" id="bottom-guitar-logo" src="./Images/guitar.png" alt="guitar"/>
-                </div>
-                <div class="card">
-                    <div class="top-image-back"></div>
-                    <img class="top-image" src="./Images/bender.jpeg" onclick="toggleImageExpand(this)" alt="hockey player"/>
-                    <div class="card-body">
-                        <h3>
-                            Hockey
-                        </h3>
-                        <p>
-                            <i>"The best skater in Canada" - me</i>
-                        </p>
-                        <p>
-                            Hard to argue with that!
-                        </p>
-                        <p>
-                            I picked up hockey in 2022, and have loved it ever since
-                        </p>
-                    </div>
-                    <img class="bottom-logo" id="bottom-hockey-logo" src="./Images/hockey.png" alt="hockey stick"/>
-                </div>
-                <div class="card">
-                    <div class="top-image-back"></div>
-                    <img class="top-image" src="./Images/frisbee.jpg" onclick="toggleImageExpand(this)" alt="jumping catching a frisbee"/>
-                    <div class="card-body">
-                        <h3>
-                            Frisbee
-                        </h3>
-                        <p>
-                            <i>Or a &apos;disc&apos; if you're fancy</i>
-                        </p>
-                        <p>
-                            Anything involving a rotating plastic disc - I'm there
-                        </p>
-                        <p>
-                            Am I any good at it? Debatable
-                        </p>
-                        <p>
-                            Do I love it? Yes
-                        </p>
-
-                    </div>
-                    <img class="bottom-logo" id="bottom-frisbee-logo" src="./Images/frisbee.png" alt="frisbee"/>
-                </div>
-                <div class="card">
-                    <div class="top-image-back"></div>
-                    <img class="top-image" src="./Images/chess.png" onclick="toggleImageExpand(this)" alt="A chess board"/>
-                    <div class="card-body">
-                        <h3>
-                            Chess
-                        </h3>
-                        <p>
-                            <i>Still learning how the knight moves</i>
-                        </p>
-                        <p>
-                            I picked up chess during the first lockdown, it was a great way to pass the time                        </p>
-                        <p>
-                            I’m always down for a game (if you’re brave enough)!
-                        </p>
-                    </div>
-                    <img class="bottom-logo" id="bottom-chess-logo" src="./Images/queen.png" alt="chess queen"/>
-                </div>
-            </div>
-            <div id='third-header-body' class="hidden-well">
-                <div id='third-header-body-headers'>
-                    <h3 id="TH-FH" class='first-header active-header left'><a onclick="swapThirdHeaders(this)">Work</a></h3>
-                    <h3 id="TH-SH" class="second-header middle"><a onclick="swapThirdHeaders(this)">Projects</a></h3>
-                    <!-- <button class="blue-right-arrow" onclick="toggleSwapThirdHeaders()">
+                        <!-- <button class="blue-right-arrow" onclick="toggleSwapThirdHeaders()">
                         <img src="./Images/blue_right_arrow.svg"/>
                     </button> -->
-                    <!-- <h3 id="TH-TH" class="third-header right"><a onclick="swapThirdHeaders(this)">Hackathons</a></h3> -->
-                </div>
-                
-                <div id='TH-FH-body' class="third-header-body hidden-well active-body">
-                    <div class="card">
-                        <div class="top-image-back"></div>
-                        <div class="top-image-well">
-                            <img class="top-image" src="./Images/vividseats.png" alt="Vivid Seats logo" loading="lazy"/>
-                        </div>
-                        <div class="card-body">
-                            <h3>
-                                Vivid Seats
-                            </h3>
-                            <p>
-                                <i>Software Engineer</i>
-                            </p>
-                            <p>
-                                I'm currently working here!
-                            </p>
-                            <p>
-                                Implementing B2C checkout using modern web frameworks
-                            </p>
-                        </div>
+                        <!-- <h3 id="TH-TH" class="third-header right"><a onclick="swapThirdHeaders(this)">Hackathons</a></h3> -->
                     </div>
-                    <div class="card">
-                        <div class="top-image-back"></div>
-                        <div class="top-image-well">
-                            <img class="top-image" src="./Images/tbits.png" alt="Tradable Bits logo" loading="lazy"/>
+
+                    <div
+                        id="TH-FH-body"
+                        class="third-header-body hidden-well active-body"
+                    >
+                        <div class="card">
+                            <div class="top-image-back"></div>
+                            <div class="top-image-well">
+                                <img
+                                    class="top-image"
+                                    src="./Images/vividseats.png"
+                                    alt="Vivid Seats logo"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-body">
+                                <div class="divider"></div>
+                                <h3>Vivid Seats</h3>
+                                <p class="subtitle">
+                                    <i>Software Engineer</i>
+                                </p>
+                                <p>I'm currently working here!</p>
+                                <p>
+                                    Implementing B2C checkout using modern web
+                                    frameworks
+                                </p>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h3>
-                                Tradable Bits
-                            </h3>
-                            <p>
-                                <i>Full-Stack Software Developer</i>
-                            </p>
-                            <p>
-                                Overhauled the UI of 20+ client-facing pages
-                            </p>
-                            <p>
-                                Added a custom font upload feature
-                            </p>
-                            <p>
-                                Organized a successful company-wide Chess tournament!
-                            </p>
+                        <div class="card">
+                            <div class="top-image-back"></div>
+                            <div class="top-image-well">
+                                <img
+                                    class="top-image"
+                                    src="./Images/tbits.png"
+                                    alt="Tradable Bits logo"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-body">
+                                <div class="divider"></div>
+                                <h3>Tradable Bits</h3>
+                                <p class="subtitle">
+                                    <i>Full-Stack Software Developer</i>
+                                </p>
+                                <p>
+                                    Organized a successful company-wide Chess
+                                    tournament!
+                                </p>
+                                <p>
+                                    Overhauled the UI of 20+ client-facing pages
+                                </p>
+                                <p>Added a custom font upload feature</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="top-image-back"></div>
-                        <div class="top-image-well">
-                            <img class="top-image" src="./Images/front_rush.png" alt="Front Rush logo" loading="lazy"/>
+                        <div class="card">
+                            <div class="top-image-back"></div>
+                            <div class="top-image-well">
+                                <img
+                                    class="top-image"
+                                    src="./Images/front_rush.png"
+                                    alt="Front Rush logo"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-body">
+                                <div class="divider"></div>
+                                <h3>Front Rush</h3>
+                                <p class="subtitle">
+                                    <i>Technical Implementation Specialist</i>
+                                </p>
+                                <p>
+                                    Created Python scripts that automated manual
+                                    inventory data entry
+                                </p>
+                                <p>
+                                    Added new page to integrate B2C sales of
+                                    Henry Schien goods
+                                </p>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h3>
-                                Front Rush
-                            </h3>
-                            <p>
-                                <i>Technical Implementation Specialist</i>
-                            </p>
-                            <p>
-                                Created Python scripts that automated manual inventory data entry
-                            </p>
-                            <p>
-                                Added new page to integrate B2C sales of Henry Schien goods
-                            </p>
+                        <div class="card">
+                            <div class="top-image-back"></div>
+                            <div class="top-image-well">
+                                <img
+                                    class="top-image"
+                                    src="./Images/tdsb.png"
+                                    alt="Toronto District School Board logo"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-body">
+                                <div class="divider"></div>
+                                <h3>TDSB</h3>
+                                <span style="font-size: 1rem"
+                                    >Toronto District School Board</span
+                                >
+                                <p class="subtitle">
+                                    <i>Systems Remediation Specialist</i>
+                                </p>
+                                <p>
+                                    Remediated documents, making them accessible
+                                    for those with visual impairments
+                                </p>
+                                <p>
+                                    Volunteered to create workflow diagrams,
+                                    improving team efficiency
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="top-image-back"></div>
-                        <div class="top-image-well">
-                            <img class="top-image" src="./Images/tdsb.png" alt="Toronto District School Board logo" loading="lazy"/>
-                        </div>
-                        <div class="card-body">
-                            <h3>
-                                TDSB 
-                            </h3>
-                            <span style="font-size: 1rem">Toronto District School Board</span>
-                            <p>
-                                <i>Systems Remediation Specialist</i>
-                            </p>
-                            <p>
-                                Remediated documents, making them accessible for those with visual impairments
-                            </p>
-                            <p>
-                                Volunteered to create workflow diagrams, improving team efficiency
-                            </p>
-                        </div>
-                    </div>
-                    <!-- <div class="img-text-row">
+                        <!-- <div class="img-text-row">
                         <div class="row-img">
                             <img id="tbits-logo" src="./Images/tbits.png" alt="Tradable Bits logo">
                         </div>
@@ -343,29 +499,195 @@
                             content using a screen reader. I learned tons about accessibility and making the web more inclusive.
                         </p>
                     </div> -->
-                </div>
-                <div id="TH-SH-body" class="third-header-body hidden-well">
-                    <div class="card">
-                        <div class="creature-well">
-                            <img id="idle-back" class="top-image" src="./Images/idle_back.gif" alt="Swinging creature" loading="lazy"/>
-                            <img id="idle-front" class="top-image" src="./Images/idle_front.gif" alt="Swinging creature" loading="lazy"/>
-                        </div>
-                        <div class="card-body">
-                            <h3>
-                                Creature World 
-                            </h3>
-                            <p>
-                                <i>Systems Remediation Specialist</i>
-                            </p>
-                            <p>
-                                Remediated documents, making them accessible for those with visual impairments
-                            </p>
-                            <p>
-                                Volunteered to create workflow diagrams, improving team efficiency
-                            </p>
-                        </div>
                     </div>
-                    <!-- <div class="img-text-row">
+                    <div id="TH-SH-body" class="third-header-body hidden-well">
+                        <div class="card">
+                            <a
+                                class="creature-well"
+                                href="https://creature.world"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    id="idle-back"
+                                    class="top-image"
+                                    src="./Images/idle_back.gif"
+                                    alt="Swinging creature"
+                                    loading="lazy"
+                                />
+                                <img
+                                    id="idle-front"
+                                    class="top-image"
+                                    src="./Images/idle_front.gif"
+                                    alt="Swinging creature"
+                                    loading="lazy"
+                                />
+                            </a>
+                            <div class="card-body">
+                                <div
+                                    class="divider"
+                                    style="z-index: -2; position: relative"
+                                ></div>
+                                <h3>creature.world</h3>
+                                <p>
+                                    Created
+                                    <a
+                                        href="https://creature.world"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        >creature.world</a
+                                    >, the main hub for New York-based artist
+                                    <a
+                                        href="https://instagram.com/dannycoleee"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        >Danny Cole's</a
+                                    >
+                                    Creature World series.
+                                </p>
+                                <p>
+                                    Integrated a custom CMS to allow Danny to
+                                    easily update the site's content
+                                </p>
+                                <p>
+                                    Built out a custom Shopify store, processing
+                                    hundreds of monthly orders
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="top-image-back"></div>
+                            <a
+                                class="top-image-well"
+                                href="https://martharave.com"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    class="top-image"
+                                    style="
+                                        border-radius: 8px;
+                                        max-width: 120px;
+                                        padding: 0.5rem;
+                                        background-color: #161616;
+                                        box-shadow: 0 0 16px 1px
+                                            rgb(255, 158, 245);
+                                    "
+                                    src="./Images/martha_rave_cookies.png"
+                                    alt="Martha Rave Cookies logo"
+                                    loading="lazy"
+                                />
+                            </a>
+                            <div class="card-body">
+                                <div class="divider"></div>
+                                <h3 id="martha-rave-header">
+                                    Martha Rave Cookies
+                                </h3>
+                                <p>
+                                    Designed and developed a custom
+                                    point-of-sale and order-management system
+                                    for my aunt's cookie business
+                                </p>
+                                <p>
+                                    Ported entire website off of paid website
+                                    builder, bringing operating costs down the
+                                    price of a single domain name!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="top-image-back"></div>
+                            <a
+                                class="top-image-well"
+                                href="https://docs.google.com/document/d/1DJur6Pjvuu48JaWt9U-ZDWhLcfI8xrmuesleUt94EfE/edit?usp=sharing"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    style="box-shadow: 0 0 16px 2px #9991f2"
+                                    class="top-image"
+                                    src="./Images/sour_graduation.PNG"
+                                    alt="SOUR Graduation album cover"
+                                    loading="lazy"
+                                />
+                            </a>
+                            <div class="card-body">
+                                <div class="divider"></div>
+                                <h3>Sour Graduation</h3>
+                                <p class="subtitle"><i>Mashup Album</i></p>
+                                <p>
+                                    Remediated documents, making them accessible
+                                    for those with visual impairments
+                                </p>
+                                <p>
+                                    Volunteered to create workflow diagrams,
+                                    improving team efficiency
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="top-image-back"></div>
+                            <a
+                                class="top-image-well"
+                                href="https://github.com/ChristopherOka/Image-Recognition-Model-Generator"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    class="top-image"
+                                    style="max-width: none"
+                                    src="./Images/dogs.jpg"
+                                    alt="Dogs on Google Images"
+                                    loading="lazy"
+                                />
+                            </a>
+                            <div class="card-body">
+                                <div class="divider"></div>
+                                <h3>Model Generator</h3>
+                                <p class="subtitle">
+                                    <i>ML Image Recognition</i>
+                                </p>
+                                <p>
+                                    Remediated documents, making them accessible
+                                    for those with visual impairments
+                                </p>
+                                <p>
+                                    Volunteered to create workflow diagrams,
+                                    improving team efficiency
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="top-image-back"></div>
+                            <a
+                                class="top-image-well"
+                                href="https://devpost.com/software/rally-fq67si"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    class="top-image"
+                                    style="max-width: none"
+                                    src="./Images/dogs.jpg"
+                                    alt="Dogs on Google Images"
+                                    loading="lazy"
+                                />
+                            </a>
+                            <div class="card-body">
+                                <div class="divider"></div>
+                                <h3>rally</h3>
+                                <p class="subtitle"><i>Hack the North Submission</i></p>
+                                <p>
+                                    Remediated documents, making them accessible
+                                    for those with visual impairments
+                                </p>
+                                <p>
+                                    Volunteered to create workflow diagrams,
+                                    improving team efficiency
+                                </p>
+                            </div>
+                        </div>
+                        <!-- <div class="img-text-row">
                         <div class="row-img">
                             <img id="python-logo" src="./Images/python.png" alt="Python logo">
                         </div>
@@ -381,8 +703,8 @@
                             </ul>
                         </div>
                     </div> -->
-                </div>
-                <!-- <div id="TH-TH-body" class="hidden-well">
+                    </div>
+                    <!-- <div id="TH-TH-body" class="hidden-well">
                     <div class="img-text-row">
                         <div class="row-img">
                             <img id="vividseats-logo" src="./Images/hack_the_north.png" alt="Hack the North logo">
@@ -400,17 +722,25 @@
                         </ul>
                     </div>
                 </div>  -->
+                </div>
             </div>
+            <button id="back-btn" class="hidden-well" onclick="returnHome()">
+                <img
+                    id="left-arrow"
+                    src="./Images/yellow_back_arrow.svg"
+                    alt="left arrow"
+                />
+                <img
+                    id="gold-back-arrow"
+                    src="./Images/gold_back_arrow.png"
+                    alt="back arrow"
+                />
+            </button>
+            <div id="header-cover"></div>
+            <div id="secondary-bg"></div>
+            <div id="tertiary-bg"></div>
+            <h1 id="name">Christopher<br />Oka</h1>
         </div>
-        <button id="back-btn" class="hidden-well" onclick="returnHome()">
-            <img id="left-arrow" src="./Images/yellow_back_arrow.svg" alt="left arrow" />
-            <img id="gold-back-arrow" src="./Images/gold_back_arrow.png" alt="back arrow"/>
-        </button>
-        <div id="header-cover"></div>
-        <div id="secondary-bg"></div>
-        <div id="tertiary-bg"></div>
-        <h1 id="name">Christopher<br>Oka</h1>
-    </div>
     </body>
     <!--                 <div class="img-text-row">
                     <div class="row-img">
