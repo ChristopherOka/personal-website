@@ -1049,7 +1049,6 @@ span {
     color: var(--blue);
     text-decoration: none;
     font-weight: bold;
-    font-size: 17px;
 }
 
 #third-header-body .card-body {
@@ -1073,8 +1072,8 @@ span {
     color: var(--emphasis);
 }
 
-.card-body p {
-    font-size: 17px;
+.card-body p:not(.subtitle) {
+    font-size: 19px;
     margin: 0.75rem 0;
 }
 
