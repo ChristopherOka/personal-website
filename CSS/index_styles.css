@@ -325,7 +325,7 @@ span {
 #main-headers > .header {
     position: absolute;
     cursor: pointer;    
-    margin: 2.5vh 0;
+    margin: 1rem 0;
     transition: transform 1s ease, color 0.5s ease;
     display: grid;
     grid-template-rows: 0.9fr 0.1fr;
@@ -345,7 +345,7 @@ span {
 }
 
 #main-headers > .header.enabled:hover, #main-headers > #third-header.enabled.hover {
-    transform: translateY(-5vh);
+    transform: translateY(-3rem);
     z-index: 999;
 }
 
@@ -377,7 +377,7 @@ span {
 }
 
 #main-headers .header > b {
-    height: 9vh;
+    height: 4rem;
 }
 
 .smaller-text {
@@ -427,7 +427,7 @@ span {
         top: 30vh;
     }
     100% {
-        top: 4vh;
+        top: 2.5rem;
     }
 }
 
@@ -436,7 +436,7 @@ span {
         top: 49vh;
     }
     100% {
-        top: 4vh;
+        top: 2.5rem;
     }
 }
 
@@ -452,7 +452,7 @@ span {
         top: 68vh;
     }
     100% {
-        top: 4vh;
+        top: 2.5rem;
     }
 }
 
@@ -465,7 +465,7 @@ span {
 
 @keyframes first-header-initial-position {
     0% {
-        top: 4vh;
+        top: 2.5rem;
     }
     100% {
         top: 35vh;
@@ -481,7 +481,7 @@ span {
 
 @keyframes second-header-initial-position {
     0% {
-        top: 4vh;
+        top: 2.5rem;
     }
     100% {
         top: 54vh;
@@ -497,7 +497,7 @@ span {
 
 @keyframes third-header-initial-position {
     0% {
-        top: 4vh;
+        top: 2.5rem;
     }
     100% {
         top: 73vh;
@@ -529,7 +529,6 @@ span {
     align-items: center;
     justify-content: flex-start;
     height: 0;
-    padding-top: 75px;
     z-index: 1;
 }
 
@@ -553,10 +552,23 @@ span {
 
 .third-header-logos img, .second-header-logos img, .first-header-logos img {
     height: 80px;
-    padding: 0 1vw;
+    padding-left: 0.5rem;
+    padding-right: 1.5rem;
     opacity: 0;
     transform: translateY(-7vh) rotate(-5deg) scale(0.8);
     transition: opacity 0.3s ease, transform 0.6s;
+}
+
+.first-header-logos {
+    padding-top: 85px;
+}
+
+.second-header-logos {
+    padding-top: 90px;
+}
+
+.third-header-logos {
+    padding-top: 88px;
 }
 
 .third-header-logos div, .second-header-logos div {
@@ -587,7 +599,7 @@ span {
 #guitar {
     height: 100px;
     width: auto;
-    padding: 0 2vw;
+    padding-right: 1.5rem;
 }
 
 #hockey {
@@ -660,7 +672,7 @@ span {
 
 #first-header-body, #second-header-body, #third-header-body {
     position: absolute;
-    margin-top: 26vh;
+    margin-top: 13rem;
     width: 90vw;
 }
 
@@ -758,7 +770,7 @@ span {
     border: none;
     background-color: rgba(255, 186, 223, 0.1);
     left: 0;
-    top: 5vh;
+    top: 3rem;
     height: 15vh;
     border-radius: 0 20px 20px 0;
     width: 3vw;
@@ -770,7 +782,7 @@ span {
     overflow: hidden;
 }
 
-#back-btn-text {
+#gold-back-arrow {
     display: none;
 }
 
@@ -874,14 +886,15 @@ span {
     flex-wrap: wrap;
     gap: 1rem;
     overflow-y: auto;
-    height: 70vh;
-    height: 70svh;
+    height: 70vh; 
+    height: calc(68svh - 20px);
+    margin-bottom: 2rem;
     animation-name: fade-in-translate;
     animation-duration: 1s;
     animation-delay: 1s;
     animation-fill-mode: both;
-    padding: 1rem 0;
     padding-left: 1rem;
+    padding-bottom: 2rem;
     margin-left: -1rem;
     border-bottom: 1px solid var(--default-text);
 }
@@ -943,6 +956,8 @@ span {
 
 #third-header-body .card {
     border: 4px solid var(--heading-1);
+    height: 480px;
+    grid-template-rows: 1fr 1.1fr;
 }
 
 #third-header-body .card .top-image-well {
@@ -954,7 +969,7 @@ span {
     object-fit: cover;
     position: relative;
     height: auto;
-    max-width: 160px;
+    max-width: 140px;
     cursor: default;
 }
 
@@ -967,8 +982,6 @@ span {
         height: 440px;
     }
 }
-
-
 
 #third-header-body .top-image-back, #third-header-body .bottom-logo {
     display: none;
@@ -983,6 +996,7 @@ span {
 
 #third-header-body .card-body {
     border: none;
+    padding-top: 0;
 }
 
 .card-body i {
@@ -1251,36 +1265,32 @@ h3.active-header {
     .third-header-body {
         margin-top: 3rem;
     }
+    @keyframes well-open {
+        0% {
+            height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-top: 3rem;
+        }
+        100% {
+            height: 60vh;
+        }
+    }
+    @keyframes well-close {
+        0% {
+            height: 60vh;
+        }
+        100% {
+            height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-top: 3rem;
+        }
+    }
 }
 
 .blue-right-arrow {
     display: none;
-}
-
-
-@media (max-width: 2560px) {
-    h1 {
-        font-size: 160px;
-    }
-    h2 {
-        font-size: 120px;
-    }
-    h3 {
-        font-size: 45px;
-    }
-    .third-header-logos, .second-header-logos, .first-header-logos {
-        padding-top: 95px;
-    }
-
-    .first-paragraph {
-        font-size: 38px;
-    }
-
-    .img-text-row {
-        font-size: 30px;
-    }
-
-
 }
 
 @media (max-width: 1920px) {
@@ -1292,9 +1302,6 @@ h3.active-header {
     }
     h3 {
         font-size: 35px;
-    }
-    .third-header-logos, .second-header-logos, .first-header-logos {
-        padding-top: 85px;
     }
 
     .first-paragraph {
@@ -1504,15 +1511,49 @@ h3.active-header {
     }
 
     .first-header-logos img, .second-header-logos img, .third-header-logos img {
-        height: 6vh;
+        height: 4.5rem;
+        padding-left: 0.5rem;
+        padding-right: 1rem;
+    }
+
+    .about-gap {
+        margin-left: 0.5rem;
+    }
+
+    .second-header-logos {
+        padding-top: 89px;
+    }
+
+    .third-header-logos {
+        padding-top: 90px;
     }
 
     #uofw {
-        height: 6vh;
+        height: 4.5rem;
     }
 
     #code {
         height: 6vh;
+    }
+
+    #curling {
+        height: 3.5rem;
+    }
+
+    #guitar {
+        height: 5.5rem;
+    }
+
+    #hockey {
+        height: 4.5rem;
+    }
+
+    #frisbee {
+        height: 4rem;
+    }
+
+    #chess {
+        height: 4rem;
     }
 
     #third-header-body-headers > h3 {
@@ -1625,8 +1666,50 @@ h3.active-header {
         height: 50px;
         width: 70px;
     }
-    .third-header-logos, .second-header-logos, .first-header-logos {
-        padding-top: 60px;
+    .third-header-logos img, .second-header-logos img, .first-header-logos img {
+        padding-left: 0.5rem;
+        padding-right: 1rem;
+        height: 4rem;
+    }
+
+    .about-gap {
+        margin-left: 0.5rem;
+    }
+
+    #uofw {
+        height: 4.5rem;
+    }
+
+    #curling {
+        height: 3rem;
+    }
+
+    #guitar {
+        height: 5rem;
+    }
+
+    #hockey {
+        height: 4rem;
+    }
+
+    #frisbee {
+        height: 3.5rem;
+    }
+
+    #chess {
+        height: 3.5rem;
+    }
+
+    .first-header-logos {
+        padding-top: 70px;
+    }
+
+    .second-header-logos {
+        padding-top: 70px;
+    }
+
+    .third-header-logos {
+        padding-top: 70px;
     }
 
     #first-header {
@@ -1646,7 +1729,7 @@ h3.active-header {
             top: 35vh;
         }
         100% {
-            top: 8vh;
+            top: 3rem;
         }
     }
     
@@ -1655,7 +1738,7 @@ h3.active-header {
             top: 53vh;
         }
         100% {
-            top: 8vh;
+            top: 3rem;
         }
     }
     
@@ -1664,13 +1747,13 @@ h3.active-header {
             top: 69vh;
         }
         100% {
-            top: 8vh;
+            top: 3rem;
         }
     }
     
     @keyframes first-header-initial-position {
         0% {
-            top: 8vh;
+            top: 3rem;
         }
         100% {
             top: 40vh;
@@ -1679,7 +1762,7 @@ h3.active-header {
     
     @keyframes second-header-initial-position {
         0% {
-            top: 8vh;
+            top: 3rem;
         }
         100% {
             top: 58vh;
@@ -1688,7 +1771,7 @@ h3.active-header {
     
     @keyframes third-header-initial-position {
         0% {
-            top: 8vh;
+            top: 3rem;
         }
         100% {
             top: 75vh;
@@ -1703,9 +1786,6 @@ h3.active-header {
 @media(max-width: 1100px) {
     #header-cover{
         width: 50rem;
-    }
-     .third-header-logos, .second-header-logos, .first-header-logos {
-        padding-top: 55px;
     }
     #headshot {
         transform: translateX(40px);
@@ -1751,6 +1831,57 @@ h3.active-header {
     #first-header-code-img {
         height: 45px;
         width: 65px;
+    }
+
+    .first-header-logos img, .second-header-logos img, .third-header-logos img {
+        padding-left: 0.5rem;
+        padding-right: 1rem;
+        height: 3.5rem;
+    }
+
+    .second-header-logos {
+        padding-top: 60px;
+    }
+
+    .third-header-logos {
+        padding-top: 60px;
+    }
+
+    #uofw {
+        height: 3.5rem;
+    }
+
+    #code {
+        height: 3rem;
+    }
+
+    #curling {
+        height: 3rem;
+    }
+
+    #guitar {
+        height: 4.5rem;
+        padding-right: 1.5rem;
+    }
+
+    #hockey {
+        height: 4rem;
+    }
+
+    #frisbee {
+        height: 3.5rem;
+    }
+
+    #chess {
+        height: 3.5rem;
+    }
+
+    #tdsb {
+        height: 2.5rem;
+    }
+
+    .about-gap {
+        margin-left: 0.5rem;
     }
 
 }
@@ -1819,34 +1950,34 @@ h3.active-header {
 
     @keyframes first-header-to-top {
         0% {
-            top: 35vh;
+            top: calc(40vh - 50px);
         }
         100% {
-            top: 8vh;
+            top: 3rem;
         }
     }
     
     @keyframes second-header-to-top {
         0% {
-            top: 53vh;
+            top: calc(58vh - 47px);
         }
         100% {
-            top: 8vh;
+            top: 3rem;
         }
     }
     
     @keyframes third-header-to-top {
         0% {
-            top: 69vh;
+            top: calc(75vh - 47px);
         }
         100% {
-            top: 8vh;
+            top: 3rem;
         }
     }
     
     @keyframes first-header-initial-position {
         0% {
-            top: 8vh;
+            top: 96px;
         }
         100% {
             top: 40vh;
@@ -1855,7 +1986,7 @@ h3.active-header {
     
     @keyframes second-header-initial-position {
         0% {
-            top: 8vh;
+            top: 96px;
         }
         100% {
             top: 58vh;
@@ -1864,7 +1995,7 @@ h3.active-header {
     
     @keyframes third-header-initial-position {
         0% {
-            top: 8vh;
+            top: 96px;
         }
         100% {
             top: 75vh;
@@ -1880,18 +2011,27 @@ h3.active-header {
         animation-delay: 0.75s;
     }
 
-    .third-header-logos, .second-header-logos, .first-header-logos {
-        padding-top: 45px;
+    .first-header-logos {
+        padding-top: 50px;
     }
 
+    .second-header-logos {
+        padding-top: 55px;
+    }
+
+    .third-header-logos {
+        padding-top: 60px;
+    } 
+
     #main-headers > #third-header.enabled.hover, #main-headers > #first-header.enabled.hover, #main-headers > #second-header.enabled.hover {
-        transform: translateY(-6vh);
+        transform: translateY(-3rem);
         z-index: 999;
     }
 
     .third-header-logos img, .second-header-logos img, .first-header-logos img {
-        height: 5vh;
-        padding: 0 2vw;
+        height: 3.5rem;
+        padding-left: 0.5rem;
+        padding-right: 1rem;
         opacity: 0;
         transform: translateY(-7vh) rotate(-5deg) scale(0.8);
         transition: opacity 0.3s ease, transform 0.6s;
@@ -1918,7 +2058,7 @@ h3.active-header {
     }
 
     #frisbee {
-        height: 3rem;
+        height: 2.8rem;
         width: auto;
     }
 
@@ -1928,15 +2068,19 @@ h3.active-header {
     }
 
     #tdsb {
-        height: 4vh;   
+        height: 2.2rem;   
     }
     
     #uofw {
-        height: 5vh;
+        height: 3rem;
     }
     
     #code {
-        height: 2rem;
+        height: 2.2rem;
+    }
+
+    .about-gap {
+        margin-left: 0.25rem;
     }
 
     #first-header-body {
@@ -2048,36 +2192,54 @@ h3.active-header {
         padding: 16px 0 0 89px;
     }
 
-    #back-btn:hover {
-        box-shadow: 0 0 10px 0 var(--emphasis) inset, 0 0 15px 2px var(--emphasis);;
-        width: 30vw;
+    #back-btn:hover, #back-btn:active {
+        width: 5rem;
+        top: 2rem;
+        box-shadow: 0 0 0 2px var(--emphasis);
+        border-radius: 5px;
     }
 
     #back-btn {
-        border: 2px solid var(--emphasis);
+        /* border: 2px solid var(--emphasis); */
         outline: none;
-        border-radius: 20px;
+        border-radius: 5px;
         height: 35px;
-        width: 30vw;
+        width: 5rem;
         margin: 0 7vw;
         transition: box-shadow 0.4s ease;
         z-index: 9999;
+        top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+    }
+
+    img#gold-back-arrow {
+        height: 20px;
+        width: auto;
+    }
+
+    @keyframes back-btn-slide-in {
+        0% {
+            transform: translateY(-10rem);
+        }
+        100% {
+            transform: translateY(0);
+        }
     }
 
     #left-arrow {
         display: none;
     }
 
-    #back-btn-text {
+    #gold-back-arrow {
         display: block;
-        font-size: 25px;
-        margin-top: 0;
-        color: var(--emphasis);
     }
 
     #first-header-body, #second-header-body, #third-header-body {
         position: absolute;
-        margin-top: 21vh;
+        margin-top: 11rem;
     }
 
     #third-header-body, #second-header-body{
@@ -2368,34 +2530,34 @@ h3.active-header {
 
     @keyframes first-header-to-top {
         0% {
-            top: 34vh;
+            top: calc(40vh - 50px);
         }
         100% {
-            top: 10vh;
+            top: 3rem;
         }
     }
     
     @keyframes second-header-to-top {
         0% {
-            top: 52vh;
+            top: calc(58vh - 47px);
         }
         100% {
-            top: 10vh;
+            top: 3rem;
         }
     }
     
     @keyframes third-header-to-top {
         0% {
-            top: 69vh;
+            top: calc(75vh - 47px);
         }
         100% {
-            top: 10vh;
+            top: 3rem;
         }
     }
     
     @keyframes first-header-initial-position {
         0% {
-            top: 16vh;
+            top: 96px;
         }
         100% {
             top: 40vh;
@@ -2404,7 +2566,7 @@ h3.active-header {
     
     @keyframes second-header-initial-position {
         0% {
-            top: 16vh;
+            top: 96px;
         }
         100% {
             top: 58vh;
@@ -2413,7 +2575,7 @@ h3.active-header {
     
     @keyframes third-header-initial-position {
         0% {
-            top: 16vh;
+            top: 96px;
         }
         100% {
             top: 75vh;
@@ -2482,9 +2644,21 @@ h3.active-header {
         }
     }
 
-    .second-header {
-        opacity: 0;
-        display: none;
+    #third-header-body-headers > h3 {
+        font-size: 40px;
+    }
+
+    #third-header-body-headers .first-header.middle {
+        left: 14rem;
+    }
+
+    #third-header-body-headers .second-header.middle {
+        left: 10.5rem;
+    }
+
+    #first-header-body, #second-header-body, #third-header-body {
+        width: 90vw;
+        margin-top: 10rem;
     }
 
     .blue-right-arrow {
@@ -2494,8 +2668,8 @@ h3.active-header {
         background: none;
         border: none;
         position: absolute;
-        right: 5rem;
-        top: 0.6rem;
+        left: 13rem;
+        top: 0.9rem;
         height: 30px;
         width: 30px;
         cursor: pointer;
@@ -2509,21 +2683,55 @@ h3.active-header {
     #curling {
         height: 2rem;
     }
+
+    #frisbee {
+        padding-left: 0;
+        padding-right: 0.5rem;
+        height: 2.3rem;
+    }
     
     #guitar {
-        height: 3.5rem;
+        height: 3rem;
         width: auto;
-        padding: 0 2vw;
+        padding-right: 1rem;
     }
     
     #hockey {
-        height: 2.5rem;
+        height: 2.8rem;
         width: auto;
     }
 
     #chess {
-        height: 2rem;
+        height: 2.3rem;
         width: auto;
+    }
+
+    #uofw {
+        height: 2.5rem;
+    }
+
+    #code {
+        height: 2rem;
+    }
+    
+    .first-header-logos {
+        padding-top: 35px;
+    }
+
+    .second-header-logos {
+        padding-top: 45px;
+    }
+
+    .third-header-logos {
+        padding-top: 45px;
+    }
+
+    #back-btn {
+        top: 1.5rem;
+    }
+
+    #back-btn:hover, #back-btn:active {
+        top: 1.5rem;
     }
 }
 
@@ -2534,9 +2742,6 @@ h3.active-header {
     #headshot {
         transform: translateX(-240px) translateY(-50px);
     }
-    h2 {
-        font-size: 65px;
-    }
 
     h1 {
         font-size: 70px;;
@@ -2544,10 +2749,6 @@ h3.active-header {
 
     #tertiary-bg {
         left: 85%;
-    }
-
-    .third-header-logos, .second-header-logos, .first-header-logos {
-        padding-top: 30px;
     }
 }
 
@@ -2597,10 +2798,55 @@ h3.active-header {
         padding-top: 20px;
     }
     #third-header-body-headers > h3 {
-        font-size: 28px;
+        font-size: 32px;
         cursor: pointer;
         color: var(--blue);
     }
+
+    #third-header-body-headers .first-header.middle {
+        left: 12rem;
+    }
+
+    #third-header-body-headers .second-header.middle {
+        left: 9rem;
+    }
+
+    #first-header-body, #second-header-body, #third-header-body {
+        width: 88vw;
+        margin-top: 9rem;
+    }
+
+    .blue-right-arrow {
+        left: 9rem;
+        top: 0.3rem;
+        height: 25px;
+        width: 25px;
+    }
+
+    .third-header-logos img, .second-header-logos img, .first-header-logos img {
+        padding-left: 0.25rem;
+        padding-right: 0.75rem;
+        height: 2.5rem;
+    }
+
+    .first-header-logos {
+        padding-top: 23px;
+    }
+
+    .second-header-logos {
+        padding-top: 25px;
+    }
+
+    .third-header-logos {
+        padding-top: 25px;
+    }
+#tdsb {
+    height: 1.5rem;
+}
+#curling {
+    height: 2rem;
+}
+    
 }
 
 @media (max-width: 400px) {
@@ -2626,17 +2872,10 @@ h3.active-header {
     }
 
     .blue-right-arrow {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: none;
-        border: none;
-        position: absolute;
-        right: 5rem;
+        left: 8.5rem;
         top: 0.3rem;
         height: 25px;
         width: 25px;
-        cursor: pointer;
     }
 }
 

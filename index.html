@@ -14,7 +14,7 @@
             <div id="first-header" class="enabled header" onclick="renderNewPage(this)">
                 <b>
                     <h2 class='larger-text'>Who I Am</h2>
-                    <h2 class='smaller-text'>About</h2>
+                    <h2 class='smaller-text'><span class="about-gap"></span>About</h2>
                 </b>
                 <div class="first-header-logos">
                     <div>
@@ -212,9 +212,9 @@
                 <div id='third-header-body-headers'>
                     <h3 id="TH-FH" class='first-header active-header left'><a onclick="swapThirdHeaders(this)">Work</a></h3>
                     <h3 id="TH-SH" class="second-header middle"><a onclick="swapThirdHeaders(this)">Projects</a></h3>
-                    <button class="blue-right-arrow" onclick="toggleSwapThirdHeaders()">
+                    <!-- <button class="blue-right-arrow" onclick="toggleSwapThirdHeaders()">
                         <img src="./Images/blue_right_arrow.svg"/>
-                    </button>
+                    </button> -->
                     <!-- <h3 id="TH-TH" class="third-header right"><a onclick="swapThirdHeaders(this)">Hackathons</a></h3> -->
                 </div>
                 
@@ -403,8 +403,8 @@
             </div>
         </div>
         <button id="back-btn" class="hidden-well" onclick="returnHome()">
-            <img id="left-arrow" src="./Images/yellow_back_arrow.svg" alt="left arrow">
-            <p id="back-btn-text">Back</p>
+            <img id="left-arrow" src="./Images/yellow_back_arrow.svg" alt="left arrow" />
+            <img id="gold-back-arrow" src="./Images/gold_back_arrow.png" alt="back arrow"/>
         </button>
         <div id="header-cover"></div>
         <div id="secondary-bg"></div>

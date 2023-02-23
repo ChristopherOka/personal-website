@@ -270,7 +270,6 @@ function sleep(ms) {
 }
 
 async function showIcons() {
-    console.log('showIcons!!')
     await sleep(1000);
     const firstHeader = document.getElementById("first-header");
     const secondHeader = document.getElementById("second-header");
