@@ -1036,6 +1036,7 @@ span {
 
 .card-body {
     padding: 1rem;
+    padding-bottom: 0;
     border: 4px solid var(--heading-1);
     border-radius: 0 0 12px 12px;
     transition: color 0.4s ease-out, border 0.4s ease-out;
@@ -1061,7 +1062,7 @@ span {
     margin-bottom: 0.5rem;
 }
 
-#third-header-body .card-body p.subtitle {
+.card-body p.subtitle {
     margin-top: 0.25rem;
 }
 
@@ -1134,6 +1135,10 @@ span {
 @media screen and (max-width: 500px) {
     .card-body p {
         font-size: 15px;
+    }
+    .card-body p:not(.subtitle) {
+        font-size: 16px;
+        margin: 0.5rem 0;
     }
     .card .bottom-logo {
         height: 30px;
@@ -2853,7 +2858,7 @@ h3.active-header {
         font-size: 55px;
     }
     h3 {
-        font-size: 22px;
+        font-size: 24px;
     }
     .img-text-row p,
     ul {
