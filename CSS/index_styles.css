@@ -801,7 +801,7 @@ span {
     color: var(--default-text);
 }
 
-#vertical-divider {
+#divider {
     animation: fade-in 2s ease-out both;
     display: flex;
     align-items: center;
@@ -810,7 +810,7 @@ span {
     height: 100%;
 }
 
-#vertical-divider div {
+#divider div {
     border-left: 2px solid var(--emphasis);
     width: 1px;
     height: 100%;
@@ -1967,6 +1967,10 @@ h3.active-header {
     #resume {
         top: 15.5vh;
     }
+
+    #first-header-body {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -2076,6 +2080,17 @@ h3.active-header {
 @media (max-width: 1000px) {
     #headshot {
         transform: translateX(60px);
+    }
+    #first-header-body .card {
+        flex-direction: column;
+    }
+
+    #first-header-body .left-image {
+        padding: 1rem 0;
+    }
+
+    #first-header-body .right-text {
+        padding: 0 1rem 1rem;
     }
 }
 
@@ -2255,8 +2270,7 @@ h3.active-header {
     }
 
     #first-header-body {
-        height: 60vh;
-        overflow: none;
+        height: 70vh;
     }
 
     #headshot-well {
@@ -2631,6 +2645,10 @@ h3.active-header {
             transform: translateY(0);
         }
     }
+
+    #horizontal-divider {
+        display: none;
+    }
 }
 
 @media (max-width: 760px) {
@@ -2655,6 +2673,37 @@ h3.active-header {
 
     #name {
         font-size: 95px;
+    }
+
+    #first-header-body {
+        display: block;
+        overflow-y: auto;
+    }
+
+    #divider {
+        height: 1px;
+        margin: 2rem 0;
+    }
+
+    #divider div {
+        border-bottom: 2px solid var(--emphasis);
+        border-left: none;
+        width: 100%;
+        height: 1px;
+    }
+
+    #paragraphs {
+        text-align: center;
+        padding: 0;
+    }
+
+    #paragraphs p:first-of-type {
+        margin-top: 2rem;
+    }
+
+    #right-card-scroller {
+        max-height: none;
+        padding: 0;
     }
 }
 
