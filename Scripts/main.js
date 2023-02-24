@@ -188,8 +188,17 @@ function returnHome() {
     const firstOtherHeader = document.getElementById(otherHeaders[0]);
     const secondOtherHeader = document.getElementById(otherHeaders[1]);
 
+    const header_body_ids = [
+        `#${currentHeaderId}-body`,
+        `#${currentHeaderId}-body a`,
+        "#back-btn",
+        "#paragraphs",
+        "#right-card-scroller",
+        "#vertical-divider",
+    ];
+
     const header_body_els = document.querySelectorAll(
-        `#${currentHeaderId}-body, #${currentHeaderId}-body a, #back-btn, #paragraphs, #resume`
+        header_body_ids.join(", ")
     );
 
     for (const el of header_body_els) {
@@ -230,7 +239,7 @@ function returnHome() {
         document.getElementById("back-btn").classList.add("hidden-well");
 
         const header_body_elmnts = document.querySelectorAll(
-            `#${currentHeaderId}-body, #${currentHeaderId}-body a, #back-btn, #paragraphs`
+            header_body_ids.join(", ")
         );
         for (const el of header_body_elmnts) {
             el.classList.remove("reverse-animation");
@@ -266,7 +275,7 @@ function returnHome() {
 }
 
 function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function showIcons() {
@@ -557,7 +566,7 @@ function swipeDown() {
 
 document.addEventListener("DOMContentLoaded", function () {
     showIcons();
-    detectParagraphScroll();
+    // detectParagraphScroll();
     window.addEventListener("resize", detectWindowResize);
 });
 
