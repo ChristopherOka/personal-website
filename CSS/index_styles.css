@@ -706,6 +706,17 @@ span {
     }
 }
 
+@keyframes fade-in-translate-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-50vh);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
 .hidden-well {
     display: none !important;
 }
@@ -2714,7 +2725,7 @@ h3.active-header {
         max-height: none;
         padding: 0;
         padding-top: 2rem;
-        animation-name: fade-in-translate;
+        animation-name: fade-in-translate-down;
     }
 }
 

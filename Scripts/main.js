@@ -151,10 +151,6 @@ function renderNewPage(currentHeaderEl) {
                 .classList.remove("hidden-well");
             document.getElementById("TH-FH-body").classList.add("well-open");
         }, 1500);
-    } else if (currentHeaderId === "first-header") {
-        setTimeout(() => {
-            document.getElementById("blackout").classList.remove("hidden-well");
-        }, 1500);
     }
 
     const canHover = window.matchMedia("(hover: hover)").matches;
@@ -264,13 +260,6 @@ function returnHome() {
         currentHeader.classList.add("enabled", "hover");
         firstOtherHeader.classList.add("enabled", "hover");
         secondOtherHeader.classList.add("enabled", "hover");
-        setTimeout(() => {
-            if (currentHeaderId === "first-header") {
-                document
-                    .getElementById("blackout")
-                    .classList.add("hidden-well");
-            }
-        }, 500);
     }
 }
 
@@ -351,7 +340,6 @@ function detectWindowResize() {
         secondHeader.classList.add("hover");
         thirdHeader.classList.add("hover");
     }
-    moveImageUpwards();
 }
 
 function detectParagraphScroll() {
