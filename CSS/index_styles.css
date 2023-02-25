@@ -1008,8 +1008,8 @@ span {
     flex-wrap: wrap;
     gap: 1rem;
     overflow-y: auto;
-    height: 70vh;
-    height: calc(68svh - 20px);
+    height: calc(70vh - 10px);
+    height: calc(70svh - 10px);
     margin-bottom: 2rem;
     animation-name: fade-in-translate;
     animation-duration: 1s;
@@ -1018,7 +1018,6 @@ span {
     padding-left: 1rem;
     padding-bottom: 2rem;
     margin-left: -1rem;
-    border-bottom: 1px solid var(--default-text);
 }
 
 .card {
