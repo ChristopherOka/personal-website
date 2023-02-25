@@ -2682,7 +2682,6 @@ h3.active-header {
 
     #divider {
         height: 1px;
-        margin: 2rem 0;
     }
 
     #divider div {
@@ -2692,18 +2691,30 @@ h3.active-header {
         height: 1px;
     }
 
+    .paragraph-well {
+        overflow: hidden;
+    }
+
     #paragraphs {
         text-align: center;
         padding: 0;
+        padding-bottom: 1rem;
+        animation-name: fade-in-translate;
     }
 
     #paragraphs p:first-of-type {
         margin-top: 2rem;
     }
 
+    .right-card-well {
+        overflow: hidden;
+    }
+
     #right-card-scroller {
         max-height: none;
         padding: 0;
+        padding-top: 2rem;
+        animation-name: fade-in-translate;
     }
 }
 

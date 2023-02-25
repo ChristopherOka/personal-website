@@ -194,7 +194,7 @@ function returnHome() {
         "#back-btn",
         "#paragraphs",
         "#right-card-scroller",
-        "#vertical-divider",
+        "#divider",
     ];
 
     const header_body_els = document.querySelectorAll(
