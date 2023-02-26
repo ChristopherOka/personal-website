@@ -1457,8 +1457,22 @@ h3.active-header {
     z-index: 9999;
     bottom: 0rem;
     right: 5vw;
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
     border-radius: 0.5rem 0.5rem 0 0;
+    animation: pop-up 1s ease 2s both;
+}
+
+.socials-bar a {
+    display: flex;
+}
+
+@keyframes pop-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .links {
@@ -1874,6 +1888,27 @@ h3.active-header {
     #third-header-body-headers > h3 {
         font-size: 45px;
         cursor: pointer;
+    }
+
+    .socials-bar {
+        right: 0;
+        bottom: 16rem;
+        border: 4px solid var(--bg-color);
+        border-right: 0;
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    @keyframes pop-up {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .links {
+        flex-direction: column;
     }
 }
 
@@ -2628,9 +2663,25 @@ h3.active-header {
     #pdf-desc {
         margin-top: 0;
     }
+
+    .socials-bar {
+        border: none;
+        top: 30rem;
+    }
+
+    .links a:nth-child(1) {
+        padding-right: 4rem;
+    }
+
+    .links a:nth-child(2) {
+        padding-right: 2rem;
+    }
 }
 
 @media (max-width: 830px) {
+    .socials-bar {
+        top: 25rem;
+    }
     @keyframes hide-bg {
         0% {
             height: 105rem;
@@ -2686,6 +2737,18 @@ h3.active-header {
 
     #horizontal-divider {
         display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .socials-bar {
+        top: 23rem;
+    }
+    .links {
+        gap: 0.5rem;
+    }
+    .links img {
+        max-width: 2.5rem;
     }
 }
 
@@ -2757,6 +2820,10 @@ h3.active-header {
 }
 
 @media (max-width: 600px) {
+    .socials-bar {
+        top: 17rem;
+        padding-right: 0.5rem;
+    }
     #name {
         display: flex;
         justify-content: center;
@@ -3013,6 +3080,25 @@ h3.active-header {
 }
 
 @media (max-width: 480px) {
+    .socials-bar {
+        top: 16rem;
+    }
+
+    .links {
+        gap: 0.25rem;
+    }
+
+    .links a:nth-child(1) {
+        padding-right: 3rem;
+    }
+
+    .links a:nth-child(2) {
+        padding-right: 1.5rem;
+    }
+
+    .links img {
+        max-width: 2rem; 
+    }
     #name {
         font-size: 70px;
     }
