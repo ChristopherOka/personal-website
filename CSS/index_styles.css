@@ -1491,6 +1491,84 @@ h3.active-header {
     transform: scale(1.1);
 }
 
+.thats-me-well {
+    z-index: 999999;
+    float: right;
+    margin-top: 15rem;
+    margin-right: 4rem;
+    position: relative;
+}
+
+#thats-me-line {
+    stroke-dasharray: 1162;
+    stroke-dashoffset: 1162;
+    animation: arrow-line 1s ease-in-out 3s both;
+}
+
+@keyframes arrow-line {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+.arrow-head svg:first-child {
+    position: absolute;
+    top: 2px;
+    left: 99px;
+}
+
+.arrow-head svg:nth-child(2) {
+    position: absolute;
+    top: 2px;
+    left: 123px;
+}
+
+#arrow-top {
+    stroke-dasharray: 30;
+    stroke-dashoffset: 30;
+    animation: arrow-top 0.2s ease-in-out 4.5s both;
+}
+
+@keyframes arrow-top {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#arrow-right {
+    stroke-dasharray: 27;
+    stroke-dashoffset: 27;
+    animation: arrow-right 0.2s ease-in-out 4.7s both;
+}
+
+@keyframes arrow-right {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.thats-me-text {
+    font-size: 2rem;
+    position: relative;
+    top: -3.6rem;
+    left: 20.5rem;
+    color: var(--bg-color);
+    animation: pop-and-fade-in 0.5s ease 2.5s both;
+    width: fit-content;
+}
+
+@keyframes pop-and-fade-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 @media (max-width: 1920px) {
     h1 {
         font-size: 150px;
@@ -2176,6 +2254,10 @@ h3.active-header {
 }
 
 @media (max-width: 915px) {
+
+    .thats-me-well {
+        display: none;
+    }
     h2 {
         font-size: 70px;
     }
@@ -2824,8 +2906,6 @@ h3.active-header {
         max-width: 2.5rem;
     }
 }
-
-
 
 @media (max-width: 600px) {
     .socials-bar {

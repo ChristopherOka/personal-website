@@ -287,7 +287,7 @@ function sleep(ms) {
 }
 
 async function showIcons() {
-    await sleep(1000);
+    await sleep(2500);
     const firstHeader = document.getElementById("first-header");
     const secondHeader = document.getElementById("second-header");
     const thirdHeader = document.getElementById("third-header");
