@@ -1450,6 +1450,34 @@ h3.active-header {
     display: none;
 }
 
+.socials-bar {
+    border: 4px solid var(--bg-color);
+    border-bottom: none;
+    position: absolute;
+    z-index: 9999;
+    bottom: 0rem;
+    right: 5vw;
+    padding: 1rem 2rem 2rem 2rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.links {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: fit-content;
+    gap: 1rem;
+}
+
+.links img {
+    max-width: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.links img:hover {
+    transform: scale(1.1);
+}
+
 @media (max-width: 1920px) {
     h1 {
         font-size: 150px;
