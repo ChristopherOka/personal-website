@@ -108,6 +108,7 @@ async function testfn() {
 
 function renderNewPage(currentHeaderEl) {
     hideBg();
+    hideSocials();
     const headers = ["first-header", "second-header", "third-header"];
     const currentHeaderId = currentHeaderEl.id;
     const otherHeaders = headers.filter((e) => e !== currentHeaderId);
@@ -173,6 +174,7 @@ function renderNewPage(currentHeaderEl) {
 
 function returnHome() {
     showBg();
+    showSocials();
 
     const currentHeaderId = document.getElementsByClassName("top-header")[0].id;
 
@@ -261,6 +263,23 @@ function returnHome() {
         firstOtherHeader.classList.add("enabled", "hover");
         secondOtherHeader.classList.add("enabled", "hover");
     }
+}
+
+function hideSocials() {
+    const socialsBar = document.getElementById("socials-bar");
+    socialsBar.classList.add("reverse-animation");
+    socialsBar.style.animation = "none";
+    socialsBar.offsetHeight; /* trigger reflow */
+    socialsBar.style.animation = null;
+}
+
+async function showSocials() {
+    const socialsBar = document.getElementById("socials-bar");
+    sleep(2000);
+    socialsBar.classList.remove("reverse-animation");
+    socialsBar.style.animation = "none";
+    socialsBar.offsetHeight; /* trigger reflow */
+    socialsBar.style.animation = null;
 }
 
 function sleep(ms) {
