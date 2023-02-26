@@ -1017,6 +1017,7 @@ span {
     animation-fill-mode: both;
     padding-left: 1rem;
     padding-bottom: 2rem;
+    padding-right: 0.25rem;
     margin-left: -1rem;
 }
 
@@ -1415,6 +1416,7 @@ h3.active-header {
     border-bottom: 1px solid var(--default-text);
     padding-bottom: 2rem;
     padding-left: 1rem;
+    padding-right: 0.25rem;
     margin-left: -1rem;
 }
 
@@ -1494,8 +1496,8 @@ h3.active-header {
 .thats-me-well {
     z-index: 999999;
     float: right;
-    margin-top: 15rem;
-    margin-right: 4rem;
+    margin-top: 17rem;
+    margin-right: 8rem;
     position: relative;
 }
 
@@ -3285,7 +3287,7 @@ h3.active-header {
     #first-header-body,
     #second-header-body,
     #third-header-body {
-        width: 88vw;
+        width: 90vw;
         margin-top: 9rem;
     }
 
