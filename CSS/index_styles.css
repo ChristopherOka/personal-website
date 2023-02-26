@@ -1017,7 +1017,7 @@ span {
     animation-fill-mode: both;
     padding-left: 1rem;
     padding-bottom: 2rem;
-    padding-right: 0.25rem;
+    padding-right: 0.5rem;
     margin-left: -1rem;
 }
 
@@ -1416,7 +1416,7 @@ h3.active-header {
     border-bottom: 1px solid var(--default-text);
     padding-bottom: 2rem;
     padding-left: 1rem;
-    padding-right: 0.25rem;
+    padding-right: 0.5rem;
     margin-left: -1rem;
 }
 
