@@ -287,7 +287,6 @@ function sleep(ms) {
 }
 
 async function showIcons() {
-    await sleep(2500);
     const firstHeader = document.getElementById("first-header");
     const secondHeader = document.getElementById("second-header");
     const thirdHeader = document.getElementById("third-header");
@@ -299,6 +298,7 @@ async function showIcons() {
         );
 
     if (canHover && viewportWidth > 600 && !isMobile) {
+        await sleep(2500);
         setTimeout(() => {
             firstHeader.classList.add("hover");
         }, 2800);
@@ -309,6 +309,7 @@ async function showIcons() {
             thirdHeader.classList.add("hover");
         }, 3000);
     } else {
+        await sleep(1000);
         setTimeout(() => {
             firstHeader.classList.add("hover");
         }, 100);

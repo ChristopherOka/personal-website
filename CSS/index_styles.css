@@ -1661,6 +1661,9 @@ h3.active-header {
 }
 
 @media (max-width: 1670px) {
+    .thats-me-well {
+        margin-right: 3rem;
+    }
     #header-cover {
         width: 60rem;
     }
@@ -1836,6 +1839,11 @@ h3.active-header {
 }
 
 @media (max-width: 1541px) {
+    .thats-me-well {
+        transform: scale(0.9);
+        margin-right: 0;
+        margin-top: 13rem;
+    }
     #main-headers .smaller-text {
         display: block;
     }
@@ -1958,6 +1966,11 @@ h3.active-header {
 }
 
 @media (max-width: 1300px) {
+    .thats-me-well {
+        transform: scale(0.7);
+        margin-right: -4rem;
+        margin-top: 10rem;
+    }
     #headshot {
         float: right;
         width: 455px;
