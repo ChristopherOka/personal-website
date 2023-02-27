@@ -327,6 +327,30 @@ span {
     animation-delay: 0.5s;
 }
 
+@keyframes hide-thats-me {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(70rem);
+    }
+}
+
+@keyframes return-thats-me {
+    0% {
+        transform: translateX(70rem);
+    }
+    60% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 #main-headers {
     position: absolute;
     height: 100%;
@@ -2021,7 +2045,7 @@ h3.active-header {
             transform: translateX(80rem) scale(0.7);
         }
     }
-    
+
     @keyframes return-thats-me {
         0% {
             transform: translateX(80rem) scale(0.7);
@@ -2613,7 +2637,7 @@ h3.active-header {
         top: 2rem;
         box-shadow: 0 0 4px 4px var(--emphasis);
         border-radius: 30px;
-        border: 1px solid var(--gold)
+        border: 1px solid var(--gold);
     }
 
     #back-btn {

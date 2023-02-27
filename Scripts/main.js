@@ -300,12 +300,21 @@ async function showIcons() {
     if (canHover && viewportWidth > 600 && !isMobile) {
         await sleep(2500);
         setTimeout(() => {
+            if (document.getElementsByClassName("top-header")[0]) {
+                return;
+            }
             firstHeader.classList.add("hover");
         }, 2800);
         setTimeout(() => {
+            if (document.getElementsByClassName("top-header")[0]) {
+                return;
+            }
             secondHeader.classList.add("hover");
         }, 2900);
         setTimeout(() => {
+            if (document.getElementsByClassName("top-header")[0]) {
+                return;
+            }
             thirdHeader.classList.add("hover");
         }, 3000);
     } else {
@@ -386,7 +395,7 @@ function showBg() {
     secondaryBg.classList.add("return-bg");
     tertiaryBg.classList.add("return-bg");
     name.classList.remove("hide-name");
-    thatsMe.classList.remove("hide-name")
+    thatsMe.classList.remove("hide-name");
     name.style.visibility = "visible";
     thatsMe.style.visibility = "visible";
     name.classList.add("return-name");
