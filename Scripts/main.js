@@ -108,10 +108,12 @@ async function testfn() {
 
 function renderNewPage(currentHeaderEl) {
     hideBg();
-    hideSocials();
     const headers = ["first-header", "second-header", "third-header"];
     const currentHeaderId = currentHeaderEl.id;
     const otherHeaders = headers.filter((e) => e !== currentHeaderId);
+    if (currentHeaderId === "first-header") {
+        showSocials();
+    }
 
     const firstOtherHeaderId = otherHeaders[0];
     const secondOtherHeaderId = otherHeaders[1];
@@ -161,7 +163,7 @@ function renderNewPage(currentHeaderEl) {
             navigator.userAgent
         );
 
-    if (!canHover || viewportWidth < 600 || isMobile) {
+    if (!canHover || viewportWidth < 915 || isMobile) {
         currentHeader.classList.remove("enabled");
         firstOtherHeader.classList.remove("enabled");
         secondOtherHeader.classList.remove("enabled");
@@ -174,9 +176,11 @@ function renderNewPage(currentHeaderEl) {
 
 function returnHome() {
     showBg();
-    showSocials();
 
     const currentHeaderId = document.getElementsByClassName("top-header")[0].id;
+    if (currentHeaderId === "first-header") {
+        hideSocials();
+    }
 
     const headers = ["first-header", "second-header", "third-header"];
     const otherHeaders = headers.filter((e) => e !== currentHeaderId);
@@ -253,7 +257,7 @@ function returnHome() {
             navigator.userAgent
         );
 
-    if (!canHover || viewportWidth < 600 || isMobile) {
+    if (!canHover || viewportWidth < 915 || isMobile) {
         currentHeader.classList.remove(
             `${currentHeaderId}-to-top`,
             "top-header"
@@ -276,6 +280,7 @@ function hideSocials() {
 async function showSocials() {
     const socialsBar = document.getElementById("socials-bar");
     sleep(2000);
+    socialsBar.classList.add("animate");
     socialsBar.classList.remove("reverse-animation");
     socialsBar.style.animation = "none";
     socialsBar.offsetHeight; /* trigger reflow */
@@ -332,7 +337,7 @@ async function showIcons() {
             navigator.userAgent
         );
 
-    if (canHover && viewportWidth > 600 && !isMobile) {
+    if (canHover && viewportWidth > 915 && !isMobile) {
         await sleep(2500);
         setTimeout(() => {
             if (document.getElementsByClassName("top-header")[0]) {
@@ -364,7 +369,7 @@ async function showIcons() {
             thirdHeader.classList.add("hover");
         }, 300);
     }
-    if (canHover && viewportWidth > 600 && !isMobile) {
+    if (canHover && viewportWidth > 915 && !isMobile) {
         setTimeout(() => {
             firstHeader.classList.remove("hover");
         }, 4000);
@@ -392,7 +397,7 @@ function detectWindowResize() {
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
             navigator.userAgent
         );
-    if (canHover && viewportWidth > 600 && !isMobile) {
+    if (canHover && viewportWidth > 915 && !isMobile) {
         firstHeader.classList.add("enabled");
         firstHeader.classList.remove("hover");
         secondHeader.classList.add("enabled");
