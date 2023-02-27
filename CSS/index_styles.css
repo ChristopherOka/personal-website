@@ -1538,7 +1538,7 @@ h3.active-header {
     z-index: 999999;
     float: right;
     margin-top: 20rem;
-    margin-right: 8rem;
+    margin-right: 5vw;
     position: relative;
     animation-fill-mode: both;
 }
