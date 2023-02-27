@@ -1544,6 +1544,19 @@ h3.active-header {
     animation: arrow-line 1s ease-in-out 3s both;
 }
 
+@media screen and (max-height: 870px) {
+    .thats-me-well {
+        margin-top: 13rem;
+        scale: 0.8;
+    }
+}
+
+@media screen and (max-height: 780px) {
+    .thats-me-well {
+        display: none;
+    }
+}
+
 @keyframes arrow-line {
     to {
         stroke-dashoffset: 0;
