@@ -282,6 +282,41 @@ async function showSocials() {
     socialsBar.style.animation = null;
 }
 
+function getRandomDarkColor() {
+    let letters = "012345".split("");
+    let color = "#";
+    color += letters[Math.round(Math.random() * 5)];
+    letters = "0123456789ABCDEF".split("");
+    for (var i = 0; i < 5; i++) {
+        color += letters[Math.round(Math.random() * 15)];
+    }
+    return color;
+}
+
+function reanimateThatsMe() {
+    const thatsMeLine = document.getElementById("thats-me-line");
+    const arrowTop = document.getElementById("arrow-top");
+    const arrowRight = document.getElementById("arrow-right");
+    const thatsMeText = document.getElementById("thats-me-text");
+    const thatsMeWell = document.getElementById("thats-me-well");
+    const randomStrokeWidth = Math.floor(Math.random() * 10) + 2;
+    const randomStrokeColour = getRandomDarkColor();
+
+    thatsMeLine.style.strokeWidth = `${randomStrokeWidth}px`;
+    thatsMeLine.style.stroke = `${randomStrokeColour}`;
+    arrowTop.style.strokeWidth = `${randomStrokeWidth}px`;
+    arrowTop.style.stroke = `${randomStrokeColour}`;
+    arrowRight.style.strokeWidth = `${randomStrokeWidth}px`;
+    arrowRight.style.stroke = `${randomStrokeColour}`;
+    thatsMeLine.style.animationDelay = "0.2s";
+    arrowTop.style.animationDelay = "1.5s";
+    arrowRight.style.animationDelay = "1.7s";
+    thatsMeText.style.animationDelay = "0s";
+    thatsMeWell.remove();
+    thatsMeWell.classList.remove("return-name", "hide-name");
+    document.body.querySelector("div").appendChild(thatsMeWell);
+}
+
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }

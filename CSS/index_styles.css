@@ -1538,6 +1538,10 @@ h3.active-header {
     animation-fill-mode: both;
 }
 
+.thats-me-well svg {
+    overflow: visible;
+}
+
 #thats-me-line {
     stroke-dasharray: 1162;
     stroke-dashoffset: 1162;
@@ -1600,13 +1604,20 @@ h3.active-header {
 }
 
 .thats-me-text {
+    all: unset;
+    cursor: pointer;
     font-size: 2rem;
     position: relative;
-    top: -3.6rem;
-    left: 20.5rem;
+    top: -1.6rem;
+    left: 20rem;
     color: var(--bg-color);
     animation: pop-and-fade-in 0.5s ease 2.5s both;
     width: fit-content;
+    transition: scale 0.3s ease;
+}
+
+.thats-me-text:hover {
+    scale: 1.1;
 }
 
 @keyframes pop-and-fade-in {
@@ -1707,11 +1718,65 @@ h3.active-header {
             transform: translateX(0);
         }
     }
+
+    @keyframes hide-thats-me {
+        0% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(10rem);
+        }
+        100% {
+            transform: translateX(75rem);
+        }
+    }
+
+    @keyframes return-thats-me {
+        0% {
+            transform: translateX(75rem);
+        }
+        50% {
+            transform: translateX(10rem);
+        }
+        60% {
+            transform: translateX(10rem);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
 }
 
 @media (max-width: 1670px) {
     .thats-me-well {
         margin-right: 3rem;
+    }
+
+    @keyframes hide-thats-me {
+        0% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(15rem);
+        }
+        100% {
+            transform: translateX(80rem);
+        }
+    }
+
+    @keyframes return-thats-me {
+        0% {
+            transform: translateX(80rem);
+        }
+        50% {
+            transform: translateX(15rem);
+        }
+        60% {
+            transform: translateX(15rem);
+        }
+        100% {
+            transform: translateX(0);
+        }
     }
     #header-cover {
         width: 60rem;
@@ -2073,12 +2138,7 @@ h3.active-header {
             transform: translateX(0) scale(0.7);
         }
     }
-    #headshot {
-        float: right;
-        width: 455px;
-        height: 270px;
-        transform: translateX(30px);
-    }
+
     #third-header-body-headers > h3 {
         font-size: 45px;
         cursor: pointer;
@@ -2100,6 +2160,9 @@ h3.active-header {
 
     .links {
         flex-direction: column;
+    }
+    #name {
+        font-size: 100px;
     }
 }
 
