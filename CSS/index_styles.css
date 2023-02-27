@@ -1047,7 +1047,7 @@ span {
 
 @media screen and (max-width: 500px) {
     .card {
-        width: 330px;
+        width: 345px;
         height: 430px;
     }
     .card:last-child {
@@ -2609,18 +2609,19 @@ h3.active-header {
 
     #back-btn:hover,
     #back-btn:active {
-        width: 5rem;
+        width: 35px;
         top: 2rem;
-        box-shadow: 0 0 0 2px var(--emphasis);
-        border-radius: 5px;
+        box-shadow: 0 0 4px 4px var(--emphasis);
+        border-radius: 30px;
+        border: 1px solid var(--gold)
     }
 
     #back-btn {
-        /* border: 2px solid var(--emphasis); */
         outline: none;
-        border-radius: 5px;
         height: 35px;
-        width: 5rem;
+        width: 35px;
+        border-radius: 30px;
+        padding: 0;
         margin: 0 7vw;
         transition: box-shadow 0.4s ease;
         z-index: 9999;
@@ -2632,8 +2633,8 @@ h3.active-header {
     }
 
     img#gold-back-arrow {
-        height: 20px;
-        width: auto;
+        height: 35px;
+        width: 35px;
     }
 
     @keyframes back-btn-slide-in {
@@ -3056,20 +3057,20 @@ h3.active-header {
     }
 
     #first-header {
-        top: 38vh;
+        top: 35vh;
     }
 
     #second-header {
-        top: 51vh;
+        top: 48vh;
     }
 
     #third-header {
-        top: 65vh;
+        top: 61vh;
     }
 
     @keyframes first-header-to-top {
         0% {
-            top: calc(38vh - 48px);
+            top: calc(35vh - 48px);
         }
         100% {
             top: 3rem;
@@ -3078,7 +3079,7 @@ h3.active-header {
 
     @keyframes second-header-to-top {
         0% {
-            top: calc(51vh - 47px);
+            top: calc(48vh - 47px);
         }
         100% {
             top: 3rem;
@@ -3087,7 +3088,7 @@ h3.active-header {
 
     @keyframes third-header-to-top {
         0% {
-            top: calc(65vh - 47px);
+            top: calc(61vh - 47px);
         }
         100% {
             top: 3rem;
@@ -3099,7 +3100,7 @@ h3.active-header {
             top: 96px;
         }
         100% {
-            top: 38vh;
+            top: 35vh;
         }
     }
 
@@ -3108,7 +3109,7 @@ h3.active-header {
             top: 96px;
         }
         100% {
-            top: 51vh;
+            top: 48vh;
         }
     }
 
@@ -3117,7 +3118,7 @@ h3.active-header {
             top: 96px;
         }
         100% {
-            top: 65vh;
+            top: 61vh;
         }
     }
 
