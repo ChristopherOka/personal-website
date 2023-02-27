@@ -613,15 +613,15 @@ span {
 }
 
 .first-header-logos {
-    padding-top: 85px;
+    padding-top: 80px;
 }
 
 .second-header-logos {
-    padding-top: 90px;
+    padding-top: 85px;
 }
 
 .third-header-logos {
-    padding-top: 88px;
+    padding-top: 83px;
 }
 
 .third-header-logos div,
@@ -635,7 +635,7 @@ span {
 }
 
 #uofw {
-    height: 4rem;
+    height: 5rem;
 }
 
 #code {
@@ -659,6 +659,14 @@ span {
 #hockey {
     height: 80px;
     width: auto;
+}
+
+#frisbee {
+    height: 65px;
+}
+
+#chess {
+    height: 65px;
 }
 
 #front-rush,
@@ -2015,12 +2023,16 @@ h3.active-header {
         margin-left: 0.5rem;
     }
 
+    .first-header-logos {
+        padding-top: 75px;
+    }
+
     .second-header-logos {
-        padding-top: 89px;
+        padding-top: 80px;
     }
 
     .third-header-logos {
-        padding-top: 90px;
+        padding-top: 80px;
     }
 
     #uofw {
@@ -2535,7 +2547,7 @@ h3.active-header {
     }
 
     .first-header-logos {
-        padding-top: 50px;
+        padding-top: 45px;
     }
 
     .second-header-logos {
@@ -2543,7 +2555,7 @@ h3.active-header {
     }
 
     .third-header-logos {
-        padding-top: 60px;
+        padding-top: 55px;
     }
 
     #main-headers > #third-header.enabled.hover,
