@@ -378,6 +378,7 @@ function showBg() {
     const secondaryBg = document.getElementById("secondary-bg");
     const tertiaryBg = document.getElementById("tertiary-bg");
     const name = document.getElementById("name");
+    const thatsMe = document.getElementById("thats-me-well");
     secondaryBg.classList.remove("hide-bg");
     tertiaryBg.classList.remove("hide-bg");
     secondaryBg.style.visibility = "visible";
@@ -385,24 +386,31 @@ function showBg() {
     secondaryBg.classList.add("return-bg");
     tertiaryBg.classList.add("return-bg");
     name.classList.remove("hide-name");
+    thatsMe.classList.remove("hide-name")
     name.style.visibility = "visible";
+    thatsMe.style.visibility = "visible";
     name.classList.add("return-name");
+    thatsMe.classList.add("return-name");
 }
 
 function hideBg() {
     const secondaryBg = document.getElementById("secondary-bg");
     const tertiaryBg = document.getElementById("tertiary-bg");
     const name = document.getElementById("name");
+    const thatsMe = document.getElementById("thats-me-well");
     secondaryBg.classList.remove("return-bg");
     tertiaryBg.classList.remove("return-bg");
     secondaryBg.classList.add("hide-bg");
     tertiaryBg.classList.add("hide-bg");
     name.classList.remove("return-name");
+    thatsMe.classList.remove("return-name");
     name.classList.add("hide-name");
+    thatsMe.classList.add("hide-name");
     setTimeout(() => {
         secondaryBg.style.visibility = "invisible";
         tertiaryBg.style.visibility = "invisible";
         name.style.visibility = "invisible";
+        thatsMe.style.visibility = "invisible";
     }, 2000);
 }
 

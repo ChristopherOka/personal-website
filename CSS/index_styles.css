@@ -315,6 +315,18 @@ span {
     animation-delay: 0.5s;
 }
 
+.thats-me-well.hide-name {
+    animation-name: hide-thats-me;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+
+.thats-me-well.return-name {
+    animation-name: return-thats-me;
+    animation-duration: 2.5s;
+    animation-delay: 0.5s;
+}
+
 #main-headers {
     position: absolute;
     height: 100%;
@@ -1499,6 +1511,7 @@ h3.active-header {
     margin-top: 17rem;
     margin-right: 8rem;
     position: relative;
+    animation-fill-mode: both;
 }
 
 #thats-me-line {
@@ -1512,7 +1525,6 @@ h3.active-header {
         stroke-dashoffset: 0;
     }
 }
-
 
 .arrow-head svg:first-child {
     position: absolute;
@@ -1844,6 +1856,33 @@ h3.active-header {
         margin-right: 0;
         margin-top: 13rem;
     }
+
+    @keyframes hide-thats-me {
+        0% {
+            transform: translateX(0) scale(0.9);
+        }
+        25% {
+            transform: translateX(15rem) scale(0.9);
+        }
+        100% {
+            transform: translateX(80rem) scale(0.9);
+        }
+    }
+
+    @keyframes return-thats-me {
+        0% {
+            transform: translateX(80rem) scale(0.9);
+        }
+        50% {
+            transform: translateX(15rem) scale(0.9);
+        }
+        60% {
+            transform: translateX(15rem) scale(0.9);
+        }
+        100% {
+            transform: translateX(0) scale(0.9);
+        }
+    }
     #main-headers .smaller-text {
         display: block;
     }
@@ -1971,6 +2010,32 @@ h3.active-header {
         margin-right: -4rem;
         margin-top: 10rem;
     }
+    @keyframes hide-thats-me {
+        0% {
+            transform: translateX(0) scale(0.7);
+        }
+        25% {
+            transform: translateX(15rem) scale(0.7);
+        }
+        100% {
+            transform: translateX(80rem) scale(0.7);
+        }
+    }
+    
+    @keyframes return-thats-me {
+        0% {
+            transform: translateX(80rem) scale(0.7);
+        }
+        50% {
+            transform: translateX(15rem) scale(0.7);
+        }
+        60% {
+            transform: translateX(15rem) scale(0.7);
+        }
+        100% {
+            transform: translateX(0) scale(0.7);
+        }
+    }
     #headshot {
         float: right;
         width: 455px;
@@ -2069,7 +2134,7 @@ h3.active-header {
     }
 
     #third-header {
-        top: 75vh;
+        top: 73vh;
     }
 
     @keyframes first-header-to-top {
@@ -2092,7 +2157,7 @@ h3.active-header {
 
     @keyframes third-header-to-top {
         0% {
-            top: 69vh;
+            top: 67vh;
         }
         100% {
             top: 3rem;
@@ -2122,7 +2187,7 @@ h3.active-header {
             top: 3rem;
         }
         100% {
-            top: 75vh;
+            top: 73vh;
         }
     }
 
@@ -2269,7 +2334,6 @@ h3.active-header {
 }
 
 @media (max-width: 915px) {
-
     .thats-me-well {
         display: none;
     }
@@ -2289,7 +2353,7 @@ h3.active-header {
     }
 
     #third-header {
-        top: 75vh;
+        top: 72vh;
     }
 
     @keyframes first-header-to-top {
@@ -2312,7 +2376,7 @@ h3.active-header {
 
     @keyframes third-header-to-top {
         0% {
-            top: calc(75vh - 47px);
+            top: calc(72vh - 47px);
         }
         100% {
             top: 3rem;
@@ -2342,7 +2406,7 @@ h3.active-header {
             top: 96px;
         }
         100% {
-            top: 75vh;
+            top: 72vh;
         }
     }
 
@@ -2991,9 +3055,21 @@ h3.active-header {
         font-size: 55px;
     }
 
+    #first-header {
+        top: 38vh;
+    }
+
+    #second-header {
+        top: 51vh;
+    }
+
+    #third-header {
+        top: 65vh;
+    }
+
     @keyframes first-header-to-top {
         0% {
-            top: calc(44vh - 48px);
+            top: calc(38vh - 48px);
         }
         100% {
             top: 3rem;
@@ -3002,7 +3078,7 @@ h3.active-header {
 
     @keyframes second-header-to-top {
         0% {
-            top: calc(58vh - 47px);
+            top: calc(51vh - 47px);
         }
         100% {
             top: 3rem;
@@ -3011,7 +3087,7 @@ h3.active-header {
 
     @keyframes third-header-to-top {
         0% {
-            top: calc(72vh - 47px);
+            top: calc(65vh - 47px);
         }
         100% {
             top: 3rem;
@@ -3023,7 +3099,7 @@ h3.active-header {
             top: 96px;
         }
         100% {
-            top: 44vh;
+            top: 38vh;
         }
     }
 
@@ -3032,7 +3108,7 @@ h3.active-header {
             top: 96px;
         }
         100% {
-            top: 58vh;
+            top: 51vh;
         }
     }
 
@@ -3041,13 +3117,10 @@ h3.active-header {
             top: 96px;
         }
         100% {
-            top: 72vh;
+            top: 65vh;
         }
     }
 
-    #third-header {
-        top: 72vh;
-    }
     #tertiary-bg {
         left: 80%;
     }
