@@ -111,10 +111,7 @@ function renderNewPage(currentHeaderEl) {
     const headers = ["first-header", "second-header", "third-header"];
     const currentHeaderId = currentHeaderEl.id;
     const otherHeaders = headers.filter((e) => e !== currentHeaderId);
-    if (currentHeaderId === "first-header") {
-        showSocials();
-    }
-
+    showSocials(currentHeaderId);
     const firstOtherHeaderId = otherHeaders[0];
     const secondOtherHeaderId = otherHeaders[1];
     const currentHeader = document.getElementById(currentHeaderId);
@@ -178,9 +175,7 @@ function returnHome() {
     showBg();
 
     const currentHeaderId = document.getElementsByClassName("top-header")[0].id;
-    if (currentHeaderId === "first-header") {
-        hideSocials();
-    }
+    hideSocials(currentHeaderId);
 
     const headers = ["first-header", "second-header", "third-header"];
     const otherHeaders = headers.filter((e) => e !== currentHeaderId);
@@ -269,22 +264,54 @@ function returnHome() {
     }
 }
 
-function hideSocials() {
+async function hideSocials(currentHeaderId) {
     const socialsBar = document.getElementById("socials-bar");
+    const viewportWidth = window.innerWidth;
     socialsBar.classList.add("reverse-animation");
     socialsBar.style.animation = "none";
     socialsBar.offsetHeight; /* trigger reflow */
     socialsBar.style.animation = null;
+
+    if (viewportWidth < 915) {
+        await sleep(1000);
+        if (!socialsBar.classList.contains("initial")) {
+            socialsBar.classList.add("initial", "animation-delay");
+        }
+        socialsBar.classList.remove("reverse-animation");
+        socialsBar.style.animation = "none";
+        socialsBar.offsetHeight; /* trigger reflow */
+        socialsBar.style.animation = null;
+    } else {
+        await sleep(1000);
+    }
+    if (currentHeaderId === "first-header") {
+        socialsBar.classList.remove("animate");
+    }
 }
 
-async function showSocials() {
+async function showSocials(currentHeaderId) {
     const socialsBar = document.getElementById("socials-bar");
-    sleep(2000);
-    socialsBar.classList.add("animate");
-    socialsBar.classList.remove("reverse-animation");
-    socialsBar.style.animation = "none";
-    socialsBar.offsetHeight; /* trigger reflow */
-    socialsBar.style.animation = null;
+    const viewportWidth = window.innerWidth;
+    if (viewportWidth < 915) {
+        socialsBar.classList.add("reverse-animation");
+        socialsBar.style.animation = "none";
+        socialsBar.offsetHeight; /* trigger reflow */
+        socialsBar.style.animation = null;
+
+        await sleep(1000);
+        if (socialsBar.classList.contains("initial")) {
+            socialsBar.classList.remove("initial");
+        }
+    } else {
+        await sleep(1000);
+    }
+    if (currentHeaderId === "first-header") {
+        socialsBar.classList.add("animate");
+        socialsBar.classList.remove("reverse-animation");
+        socialsBar.style.animation = "none";
+        socialsBar.offsetHeight; /* trigger reflow */
+        socialsBar.style.animation = null;
+    }
 }
 
 function getRandomDarkColor() {
@@ -304,7 +331,7 @@ function reanimateThatsMe() {
     const arrowRight = document.getElementById("arrow-right");
     const thatsMeText = document.getElementById("thats-me-text");
     const thatsMeWell = document.getElementById("thats-me-well");
-    const randomStrokeWidth = Math.floor(Math.random() * 10) + 2;
+    const randomStrokeWidth = Math.floor(Math.random() * 12) + 2;
     const randomStrokeColour = getRandomDarkColor();
 
     thatsMeLine.style.strokeWidth = `${randomStrokeWidth}px`;
