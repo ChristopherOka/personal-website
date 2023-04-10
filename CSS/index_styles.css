@@ -669,7 +669,7 @@ span {
     height: 65px;
 }
 
-#front-rush,
+#vividseats,
 #guitar,
 #uofw {
     transition-delay: 0.1s;
@@ -681,12 +681,12 @@ span {
     transition-delay: 0.2s;
 }
 
-#vividseats,
+#front-rush,
 #frisbee {
     transition-delay: 0.3s;
 }
 
-#creature-world,
+#tdsb,
 #chess {
     transition-delay: 0.4s;
 }
@@ -995,43 +995,6 @@ span {
     animation-fill-mode: both;
     animation-duration: 0.8s !important;
     animation-delay: 0s !important;
-}
-
-#resume.hidden-well {
-    display: none;
-}
-
-#resume {
-    font-size: 35px;
-    color: var(--emphasis);
-    display: flex;
-    align-items: flex-end;
-    overflow: hidden;
-    height: auto;
-    position: fixed;
-    top: 14vh;
-    right: 5vw;
-    animation-name: fade-in;
-    animation-duration: 1s;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-}
-
-#resume-download {
-    display: flex;
-    text-decoration: none;
-}
-
-#pdf-icon {
-    width: 30px;
-    height: 37px;
-    margin: 0 8px 6px 30px;
-}
-
-#pdf-desc {
-    color: white;
-    margin: 10px 0 0 0;
-    font-size: 25px;
 }
 
 .img-text-row {
