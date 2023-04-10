@@ -1041,6 +1041,10 @@ span {
     margin-top: 1rem;
 }
 
+#second-header-body .card {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 500px) {
     .card {
         width: 345px;

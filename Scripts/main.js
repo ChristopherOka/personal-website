@@ -617,11 +617,11 @@ function resetThirdHeaders() {
     // THTH.className = 'third-header right';
 }
 
-function toggleImageExpand(image) {
-    if (image.classList.contains("expand")) {
-        image.classList.remove("expand");
+function toggleImageExpand(card) {
+    if (card.querySelector("img").classList.contains("expand")) {
+        card.querySelector("img").classList.remove("expand");
     } else {
-        image.classList.add("expand");
+        card.querySelector("img").classList.add("expand");
     }
 }
 
