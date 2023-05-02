@@ -223,7 +223,7 @@ span {
     }
     25% {
         height: 180vh;
-        transform: rotate(0) translateX(0);
+        transform: rotate(0) translateX(-5rem);
         width: 70vw;
     }
     100% {
@@ -241,7 +241,7 @@ span {
     }
     60% {
         height: 180vh;
-        transform: rotate(0) translateX(0);
+        transform: rotate(0) translateX(-5rem);
         width: 70vw;
     }
     100% {
@@ -275,13 +275,13 @@ span {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(70rem);
+        transform: translateX(75rem);
     }
 }
 
 @keyframes return-name {
     0% {
-        transform: translateX(70rem);
+        transform: translateX(75rem);
     }
     60% {
         transform: translateX(0);
@@ -1331,6 +1331,17 @@ span {
     margin-right: 1rem;
 }
 
+.card-expanded .content {
+    border-top: 1px solid var(--default-text);
+    border-bottom: 1px solid var(--default-text);
+    margin: 0 2rem;
+    margin-bottom: 2rem;
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem 2rem;
+}
+
+
 @media screen and (max-width: 700px) {
     .card-expanded h3 {
         font-size: 2.5rem;
@@ -1392,17 +1403,10 @@ span {
     #vividseats-card-expanded .header img {
         height: 60px;
     }
-}
 
-
-.card-expanded .content {
-    border-top: 1px solid var(--default-text);
-    border-bottom: 1px solid var(--default-text);
-    margin: 0 1rem;
-    margin-bottom: 2rem;
-    flex: 1;
-    overflow-y: auto;
-    padding: 1rem 2rem;
+    .card-expanded .content {
+        margin: 0 1rem;
+    }
 }
 
 .card-expanded .content p {
