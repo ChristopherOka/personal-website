@@ -30,6 +30,11 @@
     background-color: #a3a3a3;
 }
 
+::selection {
+    color: var(--bg-color);
+    background-color: var(--gold);
+}
+
 @font-face {
     font-family: SignikaNegativeBold, sans-serif;
     src: url("../Fonts/SignikaNegative-Bold.ttf");
@@ -1030,7 +1035,7 @@ span {
 }
 
 .card {
-    width: 330px;
+    width: 375px;
     height: 550px;
     position: relative;
     display: grid;
@@ -2093,7 +2098,7 @@ h3.active-header {
 
     #third-header-body-headers .second-header.middle {
         position: absolute;
-        left: 15rem;
+        left: 20rem;
         transition: left 1s ease, color 1s ease;
     }
 
@@ -2233,7 +2238,7 @@ h3.active-header {
 
     #third-header-body-headers .second-header.middle {
         position: absolute;
-        left: 13rem;
+        left: 18rem;
         transition: left 1s ease, color 1s ease;
     }
 
@@ -3561,7 +3566,7 @@ h3.active-header {
     }
 
     #third-header-body-headers .second-header.middle {
-        left: 10.5rem;
+        left: 13rem;
     }
 
     #first-header-body,
@@ -3731,11 +3736,11 @@ h3.active-header {
     }
 
     #third-header-body-headers .first-header.middle {
-        left: 12rem;
+        left: 10rem;
     }
 
     #third-header-body-headers .second-header.middle {
-        left: 9rem;
+        left: 10rem;
     }
 
     #first-header-body,
