@@ -137,7 +137,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="first-header-body" class="hidden-well">
+                <div id="first-header-body" class="hidden">
                     <div class="paragraph-well">
                         <div id="paragraphs">
                             <p>
@@ -249,12 +249,12 @@
                         </div>
                     </div>
                 </div>
-                <div id="second-header-body" class="hidden-well">
+                <div id="second-header-body" class="hidden">
                     <div class="card" onclick="toggleImageExpand(this)">
                         <div class="top-image-back"></div>
                         <img
                             class="top-image"
-                            src="./Images/curling_rooney.png"
+                            src="./Images/curling_rooney.jpg"
                             alt="player squatting on a sheet of curling ice"
                             loading="lazy"
                         />
@@ -380,7 +380,7 @@
                         />
                     </div>
                 </div>
-                <div id="third-header-body" class="hidden-well">
+                <div id="third-header-body" class="hidden">
                     <div id="third-header-body-headers">
                         <h3 id="TH-FH" class="first-header active-header left">
                             <a onclick="swapThirdHeaders(this)">Work</a>
@@ -391,15 +391,14 @@
                     </div>
                     <div
                         id="TH-FH-body"
-                        class="third-header-body hidden-well active-body"
+                        class="third-header-body hidden active-body"
                     >
-                        <div class="card">
-                            <a
-                                class="creature-well"
-                                href="https://creature.world"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
+                        <div
+                            class="card"
+                            id="creature-world-card"
+                            onclick="openExpandedCard(this)"
+                        >
+                            <div class="creature-well">
                                 <img
                                     id="idle-back"
                                     class="top-image"
@@ -412,7 +411,7 @@
                                     src="./Images/idle_front.gif"
                                     alt="Swinging creature"
                                 />
-                            </a>
+                            </div>
                             <div class="card-body">
                                 <div
                                     class="divider"
@@ -422,7 +421,7 @@
                                     creature.world
                                 </h3>
                                 <p class="subtitle">
-                                    <i>Portfolio Website</i>
+                                    <i>Software Engineer</i>
                                 </p>
                                 <p>
                                     Created
@@ -442,48 +441,45 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="card">
+                        <div
+                            class="card"
+                            id="vividseats-card"
+                            onclick="openExpandedCard(this)"
+                        >
                             <div class="top-image-back"></div>
-                            <a
-                                class="top-image-well"
-                                href="https://www.vividseats.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
+                            <div class="top-image-well">
                                 <img
                                     class="top-image"
                                     src="./Images/vividseats.png"
                                     alt="Vivid Seats logo"
                                 />
-                            </a>
+                            </div>
                             <div class="card-body">
                                 <div class="divider"></div>
                                 <h3>Vivid Seats</h3>
                                 <p class="subtitle">
                                     <i>Software Engineer</i>
                                 </p>
-                                <p>Currently working here!</p>
                                 <p>
-                                    Porting entire checkout flow from legacy to
+                                    Ported entire checkout flow from legacy to
                                     modern tech stack.
                                 </p>
                                 <p>Building other cool features on the side.</p>
                             </div>
                         </div>
-                        <div class="card">
+                        <div
+                            class="card"
+                            id="tbits-card"
+                            onclick="openExpandedCard(this)"
+                        >
                             <div class="top-image-back"></div>
-                            <a
-                                class="top-image-well"
-                                href="https://www.tradablebits.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
+                            <div class="top-image-well">
                                 <img
                                     class="top-image"
                                     src="./Images/tbits.png"
                                     alt="Tradable Bits logo"
                                 />
-                            </a>
+                            </div>
                             <div class="card-body">
                                 <div class="divider"></div>
                                 <h3>Tradable Bits</h3>
@@ -500,20 +496,19 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="card">
+                        <div
+                            class="card"
+                            id="front-rush-card"
+                            onclick="openExpandedCard(this)"
+                        >
                             <div class="top-image-back"></div>
-                            <a
-                                class="top-image-well"
-                                href="https://www.frontrush.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
+                            <div class="top-image-well">
                                 <img
                                     class="top-image"
                                     src="./Images/front_rush.png"
                                     alt="Front Rush logo"
                                 />
-                            </a>
+                            </div>
                             <div class="card-body">
                                 <div class="divider"></div>
                                 <h3>Front Rush</h3>
@@ -530,21 +525,20 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="card">
+                        <div
+                            class="card"
+                            id="tdsb-card"
+                            onclick="openExpandedCard(this)"
+                        >
                             <div class="top-image-back"></div>
-                            <a
-                                class="top-image-well"
-                                href="https://www.tdsb.on.ca/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
+                            <div class="top-image-well">
                                 <img
                                     class="top-image"
                                     src="./Images/tdsb.png"
                                     alt="Toronto District School Board logo"
                                     loading="lazy"
                                 />
-                            </a>
+                            </div>
                             <div class="card-body">
                                 <div class="divider"></div>
                                 <h3>TDSB</h3>
@@ -564,21 +558,20 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="card">
+                        <div
+                            class="card"
+                            id="pedalheads-card"
+                            onclick="openExpandedCard(this)"
+                        >
                             <div class="top-image-back"></div>
-                            <a
-                                class="top-image-well"
-                                href="https://www.pedalheads.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
+                            <div class="top-image-well">
                                 <img
                                     class="top-image"
                                     src="./Images/pedalheads.png"
                                     alt="Pedalheads logo"
                                     loading="lazy"
                                 />
-                            </a>
+                            </div>
                             <div class="card-body">
                                 <div class="divider"></div>
                                 <h3>Pedalheads</h3>
@@ -597,7 +590,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="TH-SH-body" class="third-header-body hidden-well">
+                    <div id="TH-SH-body" class="third-header-body hidden">
                         <div class="card">
                             <div class="top-image-back"></div>
                             <a
@@ -758,7 +751,146 @@
                     </div>
                 </div>
             </div>
-            <button id="back-btn" class="hidden-well" onclick="returnHome()">
+            <div class="card-expanded hidden" id="creature-world-card-expanded">
+                <div class="header">
+                    <div class="image-well">
+                        <img
+                            class="top-image"
+                            src="./Images/creature_world.png"
+                            alt="Creature world logo"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div>
+                        <h3>creature.world</h3>
+                        <p class="subtitle gold">
+                            <i>Software Engineer</i>
+                        </p>
+                    </div>
+                </div>
+                <div class="content"></div>
+                <button class="close-button" onclick="closeExpandedCard(this)">
+                    <div></div>
+                    <div></div>
+                </button>
+            </div>
+            <div class="card-expanded hidden" id="vividseats-card-expanded">
+                <div class="header">
+                    <div class="image-well">
+                        <img
+                            class="top-image"
+                            src="./Images/vividseats.png"
+                            alt="Vivid Seats logo"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div>
+                        <h3>Vivid Seats</h3>
+                        <p class="subtitle gold">
+                            <i>Software Engineer</i>
+                        </p>
+                    </div>
+                </div>
+                <div class="content"></div>
+                <button class="close-button" onclick="closeExpandedCard(this)">
+                    <div></div>
+                    <div></div>
+                </button>
+            </div>
+            <div class="card-expanded hidden" id="tbits-card-expanded">
+                <div class="header">
+                    <div class="image-well">
+                        <img
+                            class="top-image"
+                            src="./Images/tbits.png"
+                            alt="Tradable Bits logo"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div>
+                        <h3>Tradable Bits</h3>
+                        <p class="subtitle gold">
+                            <i>Full-Stack Software Developer</i>
+                        </p>
+                    </div>
+                </div>
+                <div class="content"></div>
+                <button class="close-button" onclick="closeExpandedCard(this)">
+                    <div></div>
+                    <div></div>
+                </button>
+            </div>
+            <div class="card-expanded hidden" id="front-rush-card-expanded">
+                <div class="header">
+                    <div class="image-well">
+                        <img
+                            class="top-image"
+                            src="./Images/front_rush.png"
+                            alt="Front Rush logo"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div>
+                        <h3>Front Rush</h3>
+                        <p class="subtitle gold">
+                            <i>Technical Implementation Specialist</i>
+                        </p>
+                    </div>
+                </div>
+                <div class="content"></div>
+                <button class="close-button" onclick="closeExpandedCard(this)">
+                    <div></div>
+                    <div></div>
+                </button>
+            </div>
+            <div class="card-expanded hidden" id="tdsb-card-expanded">
+                <div class="header">
+                    <div class="image-well">
+                        <img
+                            class="top-image"
+                            src="./Images/tdsb.png"
+                            alt="Toronto District School Board logo"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div>
+                        <h3>TDSB</h3>
+                        <div>Toronto District School Board</div>
+                        <p class="subtitle gold">
+                            <i>Systems Remediation Specialist</i>
+                        </p>
+                    </div>
+                </div>
+                <div class="content"></div>
+                <button class="close-button" onclick="closeExpandedCard(this)">
+                    <div></div>
+                    <div></div>
+                </button>
+            </div>
+            <div class="card-expanded hidden" id="pedalheads-card-expanded">
+                <div class="header">
+                    <div class="image-well">
+                        <img
+                            class="top-image"
+                            src="./Images/pedalheads.png"
+                            alt="Pedalheads logo"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div>
+                        <h3>Pedalheads</h3>
+                        <p class="subtitle gold">
+                            <i>Instructor</i>
+                        </p>
+                    </div>
+                </div>
+                <div class="content"></div>
+                <button class="close-button" onclick="closeExpandedCard(this)">
+                    <div></div>
+                    <div></div>
+                </button>
+            </div>
+            <button id="back-btn" class="hidden" onclick="returnHome()">
                 <img
                     id="left-arrow"
                     src="./Images/yellow_back_arrow.svg"

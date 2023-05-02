@@ -762,7 +762,7 @@ span {
     }
 }
 
-.hidden-well {
+.hidden {
     display: none !important;
 }
 
@@ -1039,6 +1039,7 @@ span {
     transition: box-shadow 0.4s ease-out, transform 0.4s ease-out,
         border 0.4s ease-out;
     margin-top: 1rem;
+    cursor: pointer;
 }
 
 #second-header-body .card {
@@ -1246,6 +1247,191 @@ span {
         height: 40px;
     }
 }
+
+.card-expanded {
+    height: 94vh;
+    width: 93vw;
+    border: 4px solid var(--heading-1);
+    background-color: var(--bg-color);
+    border-radius: 16px;
+    position: absolute;
+    top: 2vh;
+    left: 4vw;
+    z-index: 999999;
+    color: var(--default-text);
+    display: flex;
+    flex-direction: column;
+    animation: translate-up 0.6s ease-out;
+}
+
+.close-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    transition: scale 0.2s ease-out;
+}
+
+.close-button:hover {
+    scale: 1.2;
+}
+
+.close-button div {
+    background-color: var(--gold);
+    height: 3px;
+    width: 50px;
+    position: relative;
+}
+
+.close-button div:first-child {
+    transform: rotate(45deg) translate(2px, 2.5px);
+}
+
+.close-button div:last-child {
+    transform: rotate(-45deg);
+}
+
+.card-expanded .header {
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+}
+
+.card-expanded .header .top-image {
+    height: 100px;
+    width: auto;
+    margin-right: 1rem;
+}
+
+.card-expanded h3 {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin: 0;
+}
+
+.card-expanded .subtitle {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#tdsb-card-expanded .header img {
+    height: 50px;
+    width: auto;
+    margin-right: 1rem;
+}
+
+#vividseats-card-expanded .header img {
+    height: 80px;
+    width: auto;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+    .card-expanded h3 {
+        font-size: 2.5rem;
+    }
+
+    .card-expanded .header {
+        padding: 1.5rem;
+    }
+
+    .card-expanded .header .top-image {
+        height: 70px;
+    }
+
+    .card-expanded .subtitle {
+        font-size: 1rem;
+    }
+
+    #tdsb-card-expanded .header img {
+        height: 40px;
+    }
+    
+    #vividseats-card-expanded .header img {
+        height: 70px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .card-expanded h3 {
+        font-size: 2rem;
+    }
+
+    .card-expanded .header {
+        margin-top: 2rem;
+    }
+
+    .card-expanded .header .top-image {
+        height: 50px;
+        margin-right: 0.5rem;
+    }
+
+    .close-button {
+        height: 40px;
+        width: 40px;
+    }
+
+    .close-button div {
+        background-color: var(--gold);
+        height: 3px;
+        width: 40px;
+        position: relative;
+    }
+
+    #tdsb-card-expanded .header img {
+        height: 30px;
+        margin-right: 0.75rem;
+    }
+    
+    #vividseats-card-expanded .header img {
+        height: 60px;
+    }
+}
+
+
+.card-expanded .content {
+    border-top: 1px solid var(--default-text);
+    border-bottom: 1px solid var(--default-text);
+    margin: 0 1rem;
+    margin-bottom: 2rem;
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem 2rem;
+}
+
+.card-expanded .content p {
+    font-size: 1.2rem;
+}
+
+.translate-down {
+    animation: translate-down 0.6s ease-out forwards;
+}
+
+@keyframes translate-up {
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes translate-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+
 
 #first-header-code-img {
     width: 100px;

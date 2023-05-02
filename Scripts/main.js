@@ -141,14 +141,12 @@ function renderNewPage(currentHeaderEl) {
 
     document
         .getElementById(`${currentHeaderId}-body`)
-        .classList.remove("hidden-well");
-    document.getElementById("back-btn").classList.remove("hidden-well");
+        .classList.remove("hidden");
+    document.getElementById("back-btn").classList.remove("hidden");
 
     if (currentHeaderId === "third-header") {
         setTimeout(() => {
-            document
-                .getElementById("TH-FH-body")
-                .classList.remove("hidden-well");
+            document.getElementById("TH-FH-body").classList.remove("hidden");
             document.getElementById("TH-FH-body").classList.add("well-open");
         }, 1500);
     }
@@ -232,8 +230,8 @@ function returnHome() {
     setTimeout(() => {
         document
             .getElementById(`${currentHeaderId}-body`)
-            .classList.add("hidden-well");
-        document.getElementById("back-btn").classList.add("hidden-well");
+            .classList.add("hidden");
+        document.getElementById("back-btn").classList.add("hidden");
 
         const header_body_elmnts = document.querySelectorAll(
             header_body_ids.join(", ")
@@ -262,6 +260,8 @@ function returnHome() {
         firstOtherHeader.classList.add("enabled", "hover");
         secondOtherHeader.classList.add("enabled", "hover");
     }
+
+    closeAllExpandedCards();
 }
 
 async function hideSocials(currentHeaderId) {
@@ -569,8 +569,8 @@ function swapThirdHeaders(el) {
     activeBody.classList.add("well-close");
     activeBody.classList.remove("active-body");
     setTimeout(() => {
-        activeBody.classList.add("hidden-well");
-        headerBody.classList.remove("hidden-well", "well-close");
+        activeBody.classList.add("hidden");
+        headerBody.classList.remove("hidden", "well-close");
         headerBody.classList.add("active-body", "well-open");
     }, 1000);
     let headerBody;
@@ -602,9 +602,9 @@ function resetThirdHeaders() {
     const THFHbody = document.getElementById("TH-FH-body");
     const THSHbody = document.getElementById("TH-SH-body");
     // const THTHbody = document.getElementById('TH-TH-body');
-    THFHbody.classList.add("hidden-well", "active-body");
-    THSHbody.classList.add("hidden-well");
-    // THTHbody.classList.add('hidden-well');
+    THFHbody.classList.add("hidden", "active-body");
+    THSHbody.classList.add("hidden");
+    // THTHbody.classList.add('hidden');
     THFHbody.classList.remove("well-open", "well-close");
     THSHbody.classList.remove("active-body", "well-open", "well-close");
     // THTHbody.classList.remove('active-body', 'well-open', 'well-close');
@@ -625,44 +625,33 @@ function toggleImageExpand(card) {
     }
 }
 
-function swipeDown() {
-    let startY = 0;
-    let isPulling = false;
+function closeExpandedCard(button) {
+    const card = button.closest(".card-expanded");
+    card.classList.add("translate-down");
+    setTimeout(() => {
+        card.classList.add("hidden");
+        card.classList.remove("translate-down");
+    }, 500);
+}
 
-    document.addEventListener("touchstart", function (event) {
-        startY = event.touches[0].pageY;
-        isPulling = false;
-    });
+function openExpandedCard(card) {
+    const cardId = card.id;
+    const cardExpanded = document.getElementById(`${cardId}-expanded`);
+    cardExpanded.classList.remove("hidden");
+}
 
-    document.addEventListener("touchmove", function (event) {
-        var currentY = event.touches[0].pageY;
-        if (currentY < startY) {
-            // The user is scrolling down, allow the default behavior
-            return;
-        } else {
-            // The user is pulling to refresh
-            isPulling = true;
-        }
-    });
-
-    document.addEventListener("touchend", function () {
-        if (isPulling) {
-            // Remove the overflow: hidden property from the html and body elements
-            document.documentElement.style.overflow = "";
-            document.body.style.overflow = "";
-            // Refresh the page
-            location.reload();
-        }
-    });
+function closeAllExpandedCards() {
+    const cards = document.getElementsByClassName("card-expanded");
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].classList.add("translate-down");
+        setTimeout(() => {
+            cards[i].classList.add("hidden");
+            cards[i].classList.remove("translate-down");
+        }, 500);
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
     showIcons();
-    // detectParagraphScroll();
     window.addEventListener("resize", detectWindowResize);
 });
-
-window.onload = function () {
-    // swipeDown();
-    // updateLiveParagraphVals();
-};
