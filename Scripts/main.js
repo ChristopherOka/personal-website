@@ -627,27 +627,35 @@ function toggleImageExpand(card) {
 
 function closeExpandedCard(button) {
     const card = button.closest(".card-expanded");
-    card.classList.add("translate-down");
+    card.classList.add("collapse-into-close-button");
+    card.classList.add("animating", "fade-out");
     setTimeout(() => {
         card.classList.add("hidden");
-        card.classList.remove("translate-down");
-    }, 500);
+        card.classList.remove("animating", "fade-out");
+        card.classList.remove("collapse-into-close-button");
+    }, 1000);
 }
 
 function openExpandedCard(card) {
     const cardId = card.id;
     const cardExpanded = document.getElementById(`${cardId}-expanded`);
+    cardExpanded.classList.add("animating", "fade-in");
+    setTimeout(() => {
+        cardExpanded.classList.remove("animating", "fade-in");
+    }, 1000);
     cardExpanded.classList.remove("hidden");
 }
 
 function closeAllExpandedCards() {
     const cards = document.getElementsByClassName("card-expanded");
     for (let i = 0; i < cards.length; i++) {
-        cards[i].classList.add("translate-down");
+        cards[i].classList.add("collapse-into-close-button");
+        cards[i].classList.add("animating", "fade-out");
         setTimeout(() => {
             cards[i].classList.add("hidden");
-            cards[i].classList.remove("translate-down");
-        }, 500);
+            cards[i].classList.remove("animating", "fade-out");
+            cards[i].classList.remove("collapse-into-close-button");
+        }, 1000);
     }
 }
 

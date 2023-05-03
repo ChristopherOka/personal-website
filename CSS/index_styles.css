@@ -440,7 +440,7 @@ span {
         opacity: 0;
     }
     100% {
-        opacity: 100%;
+        opacity: 1;
     }
 }
 
@@ -756,7 +756,7 @@ span {
     }
 }
 
-@keyframes fade-in-translate-down {
+@keyframes fade-in-collapse-into-close-button {
     0% {
         opacity: 0;
         transform: translateY(-50vh);
@@ -1262,12 +1262,25 @@ span {
     border-radius: 16px;
     position: absolute;
     top: 2vh;
-    left: 4vw;
+    right: 2vw;
     z-index: 999999;
     color: var(--default-text);
     display: flex;
     flex-direction: column;
-    animation: translate-up 0.6s ease-out;
+    animation: expand-from-close-button 1s ease-out both;
+    overflow: hidden;
+}
+
+.card-expanded.fade-out .header, .card-expanded.fade-out .content {
+    animation: fade-out 0.5s ease-out both;
+}
+
+.card-expanded.fade-in .header, .card-expanded.fade-in .content {
+    animation: fade-in 0.5s ease-out 0.3s both;
+}
+
+.card-expanded.animating h3 {
+    white-space: nowrap;
 }
 
 .close-button {
@@ -1347,7 +1360,6 @@ span {
     padding: 1rem 2rem;
 }
 
-
 @media screen and (max-width: 700px) {
     .card-expanded h3 {
         font-size: 2.5rem;
@@ -1368,11 +1380,10 @@ span {
     #tdsb-card-expanded .header img {
         height: 40px;
     }
-    
+
     #vividseats-card-expanded .header img {
         height: 70px;
     }
-
 }
 
 @media screen and (max-width: 500px) {
@@ -1405,7 +1416,7 @@ span {
         height: 30px;
         margin-right: 0.75rem;
     }
-    
+
     #vividseats-card-expanded .header img {
         height: 60px;
     }
@@ -1419,29 +1430,50 @@ span {
     font-size: 1.2rem;
 }
 
-.translate-down {
-    animation: translate-down 0.6s ease-out forwards;
+.collapse-into-close-button {
+    animation: collapse-into-close-button 1s ease-out forwards;
 }
 
-@keyframes translate-up {
+@keyframes expand-from-close-button {
     0% {
-        transform: translateY(100vh);
+        opacity: 0;
+        width: 70px;
+        height: 70px;
+    }
+    25% {
+        opacity: 1;
+        width: 70px;
+        height: 70px;
     }
     100% {
-        transform: translateY(0);
+        width: 93vw;
+        height: 94vh;
+        height: 94svh;
     }
 }
 
-@keyframes translate-down {
+@keyframes collapse-into-close-button {
     0% {
-        transform: translateY(0);
+        width: 93vw;
+        height: 94vh;
+        height: 94svh;
+    }
+    65% {
+        opacity: 1;
+        width: 70px;
+        height: 70px;
+    }
+    75% {
+        opacity: 1;
+        width: 70px;
+        height: 70px;
     }
     100% {
-        transform: translateY(100vh);
+        opacity: 0;
+        width: 70px;
+        height: 70px;
     }
 }
-
-
 
 #first-header-code-img {
     width: 100px;
@@ -3295,7 +3327,7 @@ h3.active-header {
         max-height: none;
         padding: 0;
         padding-top: 2rem;
-        animation-name: fade-in-translate-down;
+        animation-name: fade-in-collapse-into-close-button;
     }
 }
 
