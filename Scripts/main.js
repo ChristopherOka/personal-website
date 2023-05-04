@@ -628,10 +628,10 @@ function toggleImageExpand(card) {
 function closeExpandedCard(button) {
     const card = button.closest(".card-expanded");
     card.classList.add("collapse-into-close-button");
-    card.classList.add("animating", "fade-out");
+    card.classList.add("fade-out");
     setTimeout(() => {
         card.classList.add("hidden");
-        card.classList.remove("animating", "fade-out");
+        card.classList.remove("fade-out");
         card.classList.remove("collapse-into-close-button");
     }, 1000);
 }
@@ -639,9 +639,9 @@ function closeExpandedCard(button) {
 function openExpandedCard(card) {
     const cardId = card.id;
     const cardExpanded = document.getElementById(`${cardId}-expanded`);
-    cardExpanded.classList.add("animating", "fade-in");
+    cardExpanded.classList.add("fade-in");
     setTimeout(() => {
-        cardExpanded.classList.remove("animating", "fade-in");
+        cardExpanded.classList.remove("fade-in");
     }, 1000);
     cardExpanded.classList.remove("hidden");
 }

@@ -1265,8 +1265,6 @@ span {
     right: 2vw;
     z-index: 999999;
     color: var(--default-text);
-    display: flex;
-    flex-direction: column;
     animation: expand-from-close-button 1s ease-out both;
     overflow: hidden;
 }
@@ -1277,10 +1275,6 @@ span {
 
 .card-expanded.fade-in .header, .card-expanded.fade-in .content {
     animation: fade-in 0.5s ease-out 0.3s both;
-}
-
-.card-expanded.animating h3 {
-    white-space: nowrap;
 }
 
 .close-button {
@@ -1360,6 +1354,63 @@ span {
     padding: 1rem 2rem;
 }
 
+.card-expanded .inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 94vh;
+    height: 94svh;
+    width: 93vw;
+}
+
+.card-expanded .content p {
+    font-size: 1.2rem;
+}
+
+.collapse-into-close-button {
+    animation: collapse-into-close-button 1s ease-out forwards;
+}
+
+@keyframes expand-from-close-button {
+    0% {
+        opacity: 0;
+        width: 70px;
+        height: 70px;
+    }
+    25% {
+        opacity: 1;
+        width: 70px;
+        height: 70px;
+    }
+    100% {
+        width: 93vw;
+        height: 94vh;
+        height: 94svh;
+    }
+}
+
+@keyframes collapse-into-close-button {
+    0% {
+        width: 93vw;
+        height: 94vh;
+        height: 94svh;
+    }
+    65% {
+        opacity: 1;
+        width: 70px;
+        height: 70px;
+    }
+    75% {
+        opacity: 1;
+        width: 70px;
+        height: 70px;
+    }
+    100% {
+        opacity: 0;
+        width: 70px;
+        height: 70px;
+    }
+}
+
 @media screen and (max-width: 700px) {
     .card-expanded h3 {
         font-size: 2.5rem;
@@ -1424,55 +1475,48 @@ span {
     .card-expanded .content {
         margin: 0 1rem;
     }
-}
 
-.card-expanded .content p {
-    font-size: 1.2rem;
-}
+    @keyframes expand-from-close-button {
+        0% {
+            opacity: 0;
+            width: 58px;
+            height: 58px;
+        }
+        25% {
+            opacity: 1;
+            width: 58px;
+            height: 58px;
+        }
+        100% {
+            width: 93vw;
+            height: 94vh;
+            height: 94svh;
+        }
+    }
+    
+    @keyframes collapse-into-close-button {
+        0% {
+            width: 93vw;
+            height: 94vh;
+            height: 94svh;
+        }
+        65% {
+            opacity: 1;
+            width: 58px;
+            height: 58px;
+        }
+        75% {
+            opacity: 1;
+            width: 58px;
+            height: 58px;
+        }
+        100% {
+            opacity: 0;
+            width: 58px;
+            height: 58px;
+        }
+    }
 
-.collapse-into-close-button {
-    animation: collapse-into-close-button 1s ease-out forwards;
-}
-
-@keyframes expand-from-close-button {
-    0% {
-        opacity: 0;
-        width: 70px;
-        height: 70px;
-    }
-    25% {
-        opacity: 1;
-        width: 70px;
-        height: 70px;
-    }
-    100% {
-        width: 93vw;
-        height: 94vh;
-        height: 94svh;
-    }
-}
-
-@keyframes collapse-into-close-button {
-    0% {
-        width: 93vw;
-        height: 94vh;
-        height: 94svh;
-    }
-    65% {
-        opacity: 1;
-        width: 70px;
-        height: 70px;
-    }
-    75% {
-        opacity: 1;
-        width: 70px;
-        height: 70px;
-    }
-    100% {
-        opacity: 0;
-        width: 70px;
-        height: 70px;
-    }
 }
 
 #first-header-code-img {
