@@ -884,6 +884,7 @@ span {
     display: flex;
     margin: 0.5rem;
     margin-bottom: 1rem;
+    cursor: default;
 }
 
 #first-header-body .card:hover {
@@ -1032,7 +1033,7 @@ span {
     padding-bottom: 2rem;
     padding-right: 0.5rem;
     margin-left: -1rem;
-    border-bottom: 1px solid var(--default-text)
+    border-bottom: 1px solid var(--default-text);
 }
 
 .card {
@@ -1270,11 +1271,13 @@ span {
     overflow: hidden;
 }
 
-.card-expanded.fade-out .header, .card-expanded.fade-out .content {
+.card-expanded.fade-out .header,
+.card-expanded.fade-out .content {
     animation: fade-out 0.5s ease-out both;
 }
 
-.card-expanded.fade-in .header, .card-expanded.fade-in .content {
+.card-expanded.fade-in .header,
+.card-expanded.fade-in .content {
     animation: fade-in 0.5s ease-out 0.3s both;
 }
 
@@ -1288,11 +1291,29 @@ span {
     cursor: pointer;
     border: none;
     padding: 0;
-    transition: scale 0.2s ease-out;
+    transition: scale 0.2s ease-out, rotate 0.2s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .close-button:hover {
     scale: 1.2;
+}
+
+.close-button.rotate-90 {
+    rotate: 90deg;
+}
+
+.close-button.open-up div:first-child {
+    /* transform: rotate(0) translate(0, 2px); */
+    width: 0px;
+}
+
+.close-button.open-up div:last-child {
+    /* transform: rotate(0); */
+    width: 0px;
 }
 
 .close-button div {
@@ -1303,10 +1324,12 @@ span {
 }
 
 .close-button div:first-child {
+    transition: transform 0.2s ease-out, width 0.2s ease-out;
     transform: rotate(45deg) translate(2px, 2.5px);
 }
 
 .close-button div:last-child {
+    transition: transform 0.2s ease-out, width 0.2s ease-out;
     transform: rotate(-45deg);
 }
 
@@ -1375,12 +1398,12 @@ span {
     0% {
         opacity: 0;
         width: 70px;
-        height: 70px;
+        height: 66px;
     }
     25% {
         opacity: 1;
         width: 70px;
-        height: 70px;
+        height: 66px;
     }
     100% {
         width: 93vw;
@@ -1398,17 +1421,17 @@ span {
     65% {
         opacity: 1;
         width: 70px;
-        height: 70px;
+        height: 66px;
     }
     75% {
         opacity: 1;
         width: 70px;
-        height: 70px;
+        height: 66px;
     }
     100% {
         opacity: 0;
         width: 70px;
-        height: 70px;
+        height: 66px;
     }
 }
 
@@ -1494,7 +1517,7 @@ span {
             height: 94svh;
         }
     }
-    
+
     @keyframes collapse-into-close-button {
         0% {
             width: 93vw;
@@ -1517,7 +1540,6 @@ span {
             height: 58px;
         }
     }
-
 }
 
 #first-header-code-img {

@@ -626,12 +626,14 @@ function toggleImageExpand(card) {
 }
 
 function closeExpandedCard(button) {
+    button.classList.add("rotate-90");
     const card = button.closest(".card-expanded");
     card.classList.add("collapse-into-close-button");
     card.classList.add("fade-out");
     setTimeout(() => {
         card.classList.add("hidden");
         card.classList.remove("fade-out");
+        button.classList.remove("rotate-90");
         card.classList.remove("collapse-into-close-button");
     }, 1000);
 }
@@ -639,11 +641,14 @@ function closeExpandedCard(button) {
 function openExpandedCard(card) {
     const cardId = card.id;
     const cardExpanded = document.getElementById(`${cardId}-expanded`);
+    const closeButton = cardExpanded.querySelector(".close-button");
+    cardExpanded.classList.remove("hidden");
+    closeButton.classList.add('open-up');
     cardExpanded.classList.add("fade-in");
     setTimeout(() => {
         cardExpanded.classList.remove("fade-in");
+        closeButton.classList.remove('open-up');
     }, 1000);
-    cardExpanded.classList.remove("hidden");
 }
 
 function closeAllExpandedCards() {
