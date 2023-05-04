@@ -1032,6 +1032,7 @@ span {
     padding-bottom: 2rem;
     padding-right: 0.5rem;
     margin-left: -1rem;
+    border-bottom: 1px solid var(--default-text)
 }
 
 .card {
