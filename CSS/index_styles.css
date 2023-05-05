@@ -1503,13 +1503,13 @@ span {
     @keyframes expand-from-close-button {
         0% {
             opacity: 0;
-            width: 60px;
-            height: 60px;
+            width: 62px;
+            height: 56px;
         }
         25% {
             opacity: 1;
-            width: 60px;
-            height: 60px;
+            width: 62px;
+            height: 56px;
         }
         100% {
             width: 93vw;
@@ -1526,18 +1526,18 @@ span {
         }
         65% {
             opacity: 1;
-            width: 60px;
-            height: 60px;
+            width: 62px;
+            height: 56px;
         }
         75% {
             opacity: 1;
-            width: 60px;
-            height: 60px;
+            width: 62px;
+            height: 56px;
         }
         100% {
             opacity: 0;
-            width: 60px;
-            height: 60px;
+            width: 62px;
+            height: 56px;
         }
     }
 }
