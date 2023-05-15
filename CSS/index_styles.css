@@ -1375,7 +1375,8 @@ span {
     margin-bottom: 2rem;
     flex: 1;
     overflow-y: auto;
-    padding: 1rem 2rem;
+    padding: 0.5rem 0;
+    padding-bottom: 2rem;
 }
 
 .card-expanded .inner-wrapper {
@@ -1387,7 +1388,13 @@ span {
 }
 
 .card-expanded .content p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 500px) {
+    .card-expanded .content p {
+        font-size: 1.2rem;
+    }
 }
 
 .collapse-into-close-button {
@@ -1539,6 +1546,236 @@ span {
             width: 62px;
             height: 56px;
         }
+    }
+}
+#martha-rave-cookies-card-expanded .title {
+    font-size: 1.5rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: normal;
+}
+
+#martha-rave-cookies-card-expanded .image-well {
+    padding-right: 0.75rem;
+}
+
+#martha-rave-cookies-card-expanded .subhead {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#martha-rave-cookies-card-expanded .content > * {
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#martha-rave-cookies-card-expanded .content img {
+    transition: scale 0.2s ease-out;
+    border-radius: 1rem;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#martha-rave-cookies-card-expanded .content img:hover {
+    scale: 1.02;
+}
+
+img.splitscreen-dashboards {
+    display: flex;
+    margin: 1.5rem auto;
+    width: fit-content;
+    overflow: hidden;
+    box-shadow: 0 0 20px 2px var(--gold);
+    width: 100%;
+    height: auto;
+}
+
+#martha-rave-cookies-card-expanded h3 {
+    color: var(--gold);
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+#martha-rave-cookies-card-expanded .tools {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 500px;
+    margin-top: 0.5rem;
+}
+
+#martha-rave-cookies-card-expanded .tools-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0;
+}
+
+#martha-rave-cookies-card-expanded .tools img {
+    height: 24px;
+    width: auto;
+}
+
+#martha-rave-cookies-card-expanded .tools #tailwind img {
+    height: 22px;
+    width: auto;
+    margin-left: -7px;
+    margin-right: -3px;
+}
+
+#martha-rave-cookies-card-expanded .tools span {
+    font-family: SignikaNegativeRegular, sans-serif;
+    font-size: 1rem;
+}
+
+#martha-rave-cookies-card-expanded .spreadsheet-of-doom img {
+    width: 100%;
+    height: auto;
+}
+
+#martha-rave-cookies-card-expanded .spreadsheet-of-doom p {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+#martha-rave-cookies-card-expanded .step-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#martha-rave-cookies-card-expanded .step-card {
+    border: 2px solid var(--blue);
+    transition: box-shadow 0.4s ease-out, transform 0.4s ease-out,
+        border 0.4s ease-out;
+    width: 240px;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+#martha-rave-cookies-card-expanded .step-card:hover {
+    box-shadow: 0 0 10px 0 var(--blue);
+    transform: scale(1.01);
+}
+
+#martha-rave-cookies-card-expanded .card-head {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid var(--blue);
+}
+
+#martha-rave-cookies-card-expanded .card-head img {
+    width: 56px;
+    height: auto;
+}
+
+#martha-rave-cookies-card-expanded .card-title {
+    font-size: 1.25rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: normal;
+}
+
+#martha-rave-cookies-card-expanded .card-subhead {
+    color: var(--gold);
+    font-size: 0.9rem;
+}
+
+#martha-rave-cookies-card-expanded .step-card-body .body-header {
+    font-size: 1.2rem;
+    font-family: Montserrat, sans-serif;
+}
+
+#martha-rave-cookies-card-expanded .step-card-body p,
+#martha-rave-cookies-card-expanded .step-card-body ul {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+#martha-rave-cookies-card-expanded .step-card-body span,
+#martha-rave-cookies-card-expanded li span,
+#martha-rave-cookies-card-expanded div.ol span {
+    font-family: SignikaNegativeRegular, sans-serif;
+}
+
+#martha-rave-cookies-card-expanded div.ol,
+#martha-rave-cookies-card-expanded ol {
+    font-size: 1rem;
+}
+
+#martha-rave-cookies-card-expanded .success-li {
+    font-size: 1rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+#martha-rave-cookies-card-expanded .step-header {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#martha-rave-cookies-card-expanded .step-header h3 {
+    margin: 0;
+    color: var(--blue);
+}
+
+#martha-rave-cookies-card-expanded .step-header img {
+    width: 50px;
+    height: auto;
+}
+
+#martha-rave-cookies-card-expanded .canadian-protein {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+#martha-rave-cookies-card-expanded .canadian-protein img {
+    max-width: 400px;
+    width: unset;
+}
+
+#martha-rave-cookies-card-expanded .mfps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+@media screen and (min-width: 500px) {
+    #martha-rave-cookies-card-expanded .title {
+        font-size: 2.5rem;
+    }
+    #martha-rave-cookies-card-expanded .subhead {
+        font-size: 2.5rem;
+    }
+    #martha-rave-cookies-card-expanded .content {
+        padding: 1rem 2rem;
+    }
+    #martha-rave-cookies-card-expanded h3 {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    #martha-rave-cookies-card-expanded .tools {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 500px;
+        margin-top: 0.5rem;
+    }
+    #martha-rave-cookies-card-expanded .tools span,
+    #martha-rave-cookies-card-expanded div.ol,
+    #martha-rave-cookies-card-expanded ol,
+    #martha-rave-cookies-card-expanded .success-li {
+        font-size: 1.2rem;
+    }
+    #martha-rave-cookies-card-expanded .success-li {
+        padding-left: 3rem;
     }
 }
 
