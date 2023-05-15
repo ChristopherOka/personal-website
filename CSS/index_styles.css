@@ -1335,18 +1335,18 @@ span {
 
 .card-expanded .header {
     display: flex;
-    padding: 2rem;
+    padding: 1.5rem 2rem;
     align-items: center;
 }
 
 .card-expanded .header .top-image {
-    height: 100px;
+    height: 60px;
     width: auto;
     margin-right: 1rem;
 }
 
-.card-expanded h3 {
-    font-size: 3.5rem;
+.card-expanded h1 {
+    font-size: 2.5rem;
     line-height: 1;
     margin: 0;
 }
@@ -1443,8 +1443,8 @@ span {
 }
 
 @media screen and (max-width: 700px) {
-    .card-expanded h3 {
-        font-size: 2.5rem;
+    .card-expanded h1 {
+        font-size: 2rem;
     }
 
     .card-expanded .header {
@@ -1548,7 +1548,8 @@ span {
         }
     }
 }
-#martha-rave-cookies-card-expanded .title {
+
+.card-expanded h1.title{
     font-size: 1.5rem;
     font-family: Montserrat, sans-serif;
     font-weight: normal;
@@ -1754,7 +1755,7 @@ span {
 
 
 @media screen and (min-width: 500px) {
-    #martha-rave-cookies-card-expanded .title {
+    .card-expanded h1.title {
         font-size: 2.5rem;
     }
     #martha-rave-cookies-card-expanded .subhead {
