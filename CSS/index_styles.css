@@ -1581,7 +1581,7 @@ span {
     scale: 1.02;
 }
 
-img.splitscreen-dashboards {
+#martha-rave-cookies-card-expanded img.splitscreen-dashboards {
     display: flex;
     margin: 1.5rem auto;
     width: fit-content;
@@ -1589,6 +1589,11 @@ img.splitscreen-dashboards {
     box-shadow: 0 0 20px 2px var(--gold);
     width: 100%;
     height: auto;
+    transition: scale 0.4s ease-out, box-shadow 0.4s ease-out;
+}
+
+#martha-rave-cookies-card-expanded img.splitscreen-dashboards:hover {
+    box-shadow: 0 0 40px 2px var(--gold);
 }
 
 #martha-rave-cookies-card-expanded h3 {
