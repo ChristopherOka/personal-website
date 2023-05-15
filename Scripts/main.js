@@ -630,6 +630,8 @@ function closeExpandedCard(button) {
     const card = button.closest(".card-expanded");
     card.classList.add("collapse-into-close-button");
     card.classList.add("fade-out");
+    //reset url back to root
+    window.history.pushState({ card: null }, "card", "/");
     setTimeout(() => {
         card.classList.add("hidden");
         card.classList.remove("fade-out");
@@ -645,6 +647,12 @@ function openExpandedCard(card) {
     cardExpanded.classList.remove("hidden");
     closeButton.classList.add('open-up');
     cardExpanded.classList.add("fade-in");
+    //update url with cardId
+    window.history.pushState(
+        { card: cardId },
+        "card",
+        `?card=${cardId}`
+    );
     setTimeout(() => {
         cardExpanded.classList.remove("fade-in");
         closeButton.classList.remove('open-up');
