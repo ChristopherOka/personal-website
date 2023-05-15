@@ -1594,6 +1594,28 @@ span {
     }
 }
 
+.card-expanded .content .languages-and-tools-block {
+    display: flex;
+    gap: 1rem;
+}
+
+.card-expanded .content .languages-and-tools-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.card-expanded .content .languages-and-tools-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-expanded .content .languages-and-tools-row img {
+    height: 28px;
+    width: auto;
+}
+
 #martha-rave-cookies-card-expanded .image-well {
     padding-right: 0.75rem;
 }
