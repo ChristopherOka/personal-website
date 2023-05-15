@@ -1597,12 +1597,14 @@ span {
 .card-expanded .content .languages-and-tools-block {
     display: flex;
     gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
 }
 
 .card-expanded .content .languages-and-tools-column {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.5rem;
 }
 
 .card-expanded .content .languages-and-tools-row {
@@ -1611,9 +1613,27 @@ span {
     gap: 0.5rem;
 }
 
+.card-expanded .content .languages-and-tools-row span {
+    font-family: SignikaNegativeRegular, sans-serif;
+}
+
 .card-expanded .content .languages-and-tools-row img {
-    height: 28px;
-    width: auto;
+    width: 16px;
+    height: auto;
+}
+
+#figma-logo {
+    width: 12px;
+}
+
+@media screen and (min-width: 500px) {
+    .card-expanded .content .languages-and-tools-row img {
+        width: 23px;
+        height: auto;
+    }
+    #figma-logo {
+        width: 16px;
+    }
 }
 
 #martha-rave-cookies-card-expanded .image-well {
