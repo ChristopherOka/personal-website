@@ -664,7 +664,20 @@ function closeAllExpandedCards() {
     }
 }
 
+function openExpandedCardByUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    console.log(urlParams.get("card"))
+    const cardId = urlParams.get("card");
+    const thirdHeader = document.getElementById("third-header");
+    if (cardId) {
+        const card = document.getElementById(cardId);
+        renderNewPage(thirdHeader);
+        openExpandedCard(card);
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     showIcons();
     window.addEventListener("resize", detectWindowResize);
+    openExpandedCardByUrl();
 });
