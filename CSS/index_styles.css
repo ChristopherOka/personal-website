@@ -1571,7 +1571,6 @@ span {
 
 #martha-rave-cookies-card-expanded .content img {
     transition: scale 0.2s ease-out;
-    border-radius: 1rem;
     display: block;
     width: 100%;
     height: auto;
@@ -1590,6 +1589,7 @@ span {
     width: 100%;
     height: auto;
     transition: scale 0.4s ease-out, box-shadow 0.4s ease-out;
+    border-radius: 1rem;
 }
 
 #martha-rave-cookies-card-expanded img.splitscreen-dashboards:hover {
