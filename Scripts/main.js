@@ -644,21 +644,18 @@ function openExpandedCard(card) {
     const cardExpanded = document.getElementById(`${cardId}-expanded`);
     const closeButton = cardExpanded.querySelector(".close-button");
     cardExpanded.classList.remove("hidden");
-    closeButton.classList.add('open-up');
+    closeButton.classList.add("open-up");
     cardExpanded.classList.add("fade-in");
-    window.history.pushState(
-        { card: cardId },
-        "card",
-        `?card=${cardId}`
-    );
+    window.history.pushState({ card: cardId }, "card", `?card=${cardId}`);
     setTimeout(() => {
         cardExpanded.classList.remove("fade-in");
-        closeButton.classList.remove('open-up');
+        closeButton.classList.remove("open-up");
     }, 1000);
 }
 
 function closeAllExpandedCards() {
     const cards = document.getElementsByClassName("card-expanded");
+    window.history.pushState({ card: null }, "card", "/");
     for (let i = 0; i < cards.length; i++) {
         cards[i].classList.add("collapse-into-close-button");
         cards[i].classList.add("animating", "fade-out");
@@ -672,7 +669,7 @@ function closeAllExpandedCards() {
 
 function openExpandedCardByUrl() {
     const urlParams = new URLSearchParams(window.location.search);
-    console.log(urlParams.get("card"))
+    console.log(urlParams.get("card"));
     const cardId = urlParams.get("card");
     const thirdHeader = document.getElementById("third-header");
     if (cardId) {

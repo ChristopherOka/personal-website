@@ -1149,7 +1149,6 @@ span {
 
 .card a {
     color: var(--blue);
-    text-decoration: none;
 }
 
 #third-header-body .card-body {
@@ -1375,8 +1374,7 @@ span {
     margin-bottom: 2rem;
     flex: 1;
     overflow-y: auto;
-    padding: 0.5rem 0;
-    padding-bottom: 2rem;
+    padding: 2rem 0;
 }
 
 .card-expanded .inner-wrapper {
@@ -1549,10 +1547,51 @@ span {
     }
 }
 
-.card-expanded h1.title{
+.card-expanded h1.title {
     font-size: 1.5rem;
     font-family: Montserrat, sans-serif;
     font-weight: normal;
+}
+
+.card-expanded h2 {
+    font-size: 1.25rem;
+    font-family: Montserrat, sans-serif;
+    color: var(--blue);
+}
+
+.card-expanded h3 {
+    font-size: 1rem;
+    font-family: Montserrat, sans-serif;
+    color: var(--gold);
+    margin-top: 1rem;
+    margin-bottom: -0.5rem;
+}
+
+.card-expanded li {
+    font-size: 1rem;
+}
+
+.card-expanded a {
+    color: var(--blue);
+}
+
+.card-expanded p span.gold,
+.card-expanded li span.gold {
+    font-family: SignikaNegativeRegular, sans-serif;
+}
+
+@media screen and (min-width: 500px) {
+    .card-expanded h2 {
+        font-size: 2rem;
+    }
+
+    .card-expanded h3 {
+        font-size: 1.5rem;
+    }
+
+    .card-expanded li {
+        font-size: 1.2rem;
+    }
 }
 
 #martha-rave-cookies-card-expanded .image-well {
@@ -1595,6 +1634,10 @@ span {
 
 #martha-rave-cookies-card-expanded img.splitscreen-dashboards:hover {
     box-shadow: 0 0 40px 2px var(--gold);
+}
+
+#martha-rave-cookies-card-expanded h2 {
+    color: var(--default-text);
 }
 
 #martha-rave-cookies-card-expanded h3 {
@@ -1752,7 +1795,6 @@ span {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
 
 @media screen and (min-width: 500px) {
     .card-expanded h1.title {
