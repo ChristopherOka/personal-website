@@ -1661,7 +1661,7 @@ span {
     text-align: center;
 }
 
-#martha-rave-cookies-card-expanded .content > * {
+.card-expanded .inner-wrapper .content > * {
     max-width: 860px;
     margin-left: auto;
     margin-right: auto;
