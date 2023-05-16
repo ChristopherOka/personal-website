@@ -1646,6 +1646,12 @@ span {
     }
 }
 
+.more-details {
+    font-size: 2rem;
+    font-family: Montserrat, sans-serif;
+    color: var(--gold);
+}
+
 #martha-rave-cookies-card-expanded .image-well {
     padding-right: 0.75rem;
 }
