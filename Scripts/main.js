@@ -669,7 +669,6 @@ function closeAllExpandedCards() {
 
 function openExpandedCardByUrl() {
     const urlParams = new URLSearchParams(window.location.search);
-    console.log(urlParams.get("card"));
     const cardId = urlParams.get("card");
     const thirdHeader = document.getElementById("third-header");
     if (cardId) {

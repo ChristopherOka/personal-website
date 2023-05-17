@@ -618,6 +618,15 @@ span {
     transition: opacity 0.3s ease, transform 0.6s;
 }
 
+.third-header-logos img#creature-world, .third-header-logos img#vividseats {
+    padding-right: 0rem;
+}
+
+.third-header-logos img#martha-rave-cookies {
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+}
+
 .first-header-logos {
     padding-top: 80px;
 }
@@ -636,8 +645,8 @@ span {
     justify-content: center;
 }
 
-#tdsb {
-    height: 3rem;
+#martha-rave-cookies {
+    height: 4.2rem;
 }
 
 #uofw {
@@ -675,24 +684,24 @@ span {
     height: 65px;
 }
 
-#vividseats,
+#creature-world,
 #guitar,
 #uofw {
     transition-delay: 0.1s;
 }
 
-#tbits,
+#vividseats,
 #hockey,
 #code {
     transition-delay: 0.2s;
 }
 
-#front-rush,
+#tbits,
 #frisbee {
     transition-delay: 0.3s;
 }
 
-#tdsb,
+#front-rush,
 #chess {
     transition-delay: 0.4s;
 }
@@ -2893,6 +2902,10 @@ h3.active-header {
         height: 3.5rem;
     }
 
+    #martha-rave-cookies {
+        height: 3.5rem;
+    }
+
     .first-header-logos {
         padding-top: 65px;
     }
@@ -3079,8 +3092,8 @@ h3.active-header {
         height: 3.5rem;
     }
 
-    #tdsb {
-        height: 2.5rem;
+    #martha-rave-cookies {
+        height: 2.8rem;
     }
 
     .about-gap {
@@ -3633,41 +3646,9 @@ h3.active-header {
     #pdf-desc {
         margin-top: 0;
     }
-
-    /* @keyframes pop-up {
-        0% {
-            transform: translateX(14rem);
-        }
-        100% {
-            transform: translateX(0);
-        }
-    } */
-
-    /* .socials-bar {
-        left: unset;
-        border: none;
-        top: 18rem;
-        right: 1rem;
-        padding: 0;
-    }
-
-    .links {
-        flex-direction: row;
-    }
-
-    .links a:nth-child(3) {
-        padding-top: 5rem;
-    }
-
-    .links a:nth-child(2) {
-        padding-top: 2.5rem;
-    } */
 }
 
 @media (max-width: 830px) {
-    /* .socials-bar {
-        top: 17rem;
-    } */
     @keyframes hide-bg {
         0% {
             height: 105rem;
@@ -3727,10 +3708,6 @@ h3.active-header {
 }
 
 @media (max-width: 760px) {
-    /* .socials-bar {
-        top: 16rem;
-    } */
-
     #tertiary-bg {
         width: 30rem;
     }
@@ -3795,18 +3772,6 @@ h3.active-header {
         padding-top: 2rem;
         animation-name: fade-in-collapse-into-close-button;
     }
-}
-
-@media (max-width: 700px) {
-    /* .socials-bar {
-        top: 16rem;
-    }
-    .links {
-        gap: 0.5rem;
-    }
-    .links img {
-        max-width: 2.5rem;
-    } */
 }
 
 @media screen and (max-height: 600px) {
@@ -3876,13 +3841,7 @@ h3.active-header {
         }
     }
 
-    /* .socials-bar {
-        padding: 1rem;
-    }
 
-    .socials-bar img {
-        max-width: 2rem;
-    } */
 }
 
 @media (max-width: 600px) {
@@ -4128,6 +4087,10 @@ h3.active-header {
         height: 2rem;
     }
 
+    .third-header-logos img#martha-rave-cookies {
+        margin-right: 0.5rem;
+    }
+
     .first-header-logos {
         padding-top: 25px;
     }
@@ -4223,11 +4186,13 @@ h3.active-header {
         width: 50px;
     }
 
-    .third-header-logos,
+    
     .second-header-logos,
     .first-header-logos {
         padding-top: 20px;
     }
+
+
     #third-header-body-headers > h3 {
         font-size: 32px;
         cursor: pointer;
@@ -4273,10 +4238,10 @@ h3.active-header {
     }
 
     .third-header-logos {
-        padding-top: 17px;
+        padding-top: 20px;
     }
-    #tdsb {
-        height: 1.5rem;
+    #martha-rave-cookies {
+        height: 2rem;
     }
     #curling {
         height: 2rem;
@@ -4298,10 +4263,14 @@ h3.active-header {
         align-items: flex-start;
         gap: 0;
     }
-    .third-header-logos,
+    
     .second-header-logos,
     .first-header-logos {
         padding-top: 15px;
+    }
+
+    .third-header-logos {
+        padding-top: 20px;
     }
     #headshot {
         transform: translateX(-250px) translateY(-55px);
