@@ -1375,6 +1375,7 @@ span {
     margin-bottom: 2rem;
     flex: 1;
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 2rem 0;
 }
 
@@ -1637,7 +1638,7 @@ span {
     .card-expanded .content .languages-and-tools-row span {
         font-size: 1.2rem;
     }
-    
+
     .card-expanded .content .languages-and-tools-row img {
         width: 23px;
         height: auto;
@@ -1764,6 +1765,10 @@ span {
     border-radius: 12px;
 }
 
+#martha-rave-cookies-card-expanded .step-card li {
+    font-size: 1rem;
+}
+
 #martha-rave-cookies-card-expanded .step-card:hover {
     box-shadow: 0 0 10px 0 var(--purple);
     transform: scale(1.01);
@@ -1844,7 +1849,7 @@ span {
         margin: 0;
         font-size: 2.75rem;
         color: var(--purple);
-    }  
+    }
     #martha-rave-cookies-card-expanded .step-header img {
         width: 50px;
         height: auto;
@@ -1857,16 +1862,24 @@ span {
     margin-right: auto;
 }
 
-
 #martha-rave-cookies-card-expanded .canadian-protein {
-    display: flex;
-    justify-content: space-around;
-    gap: 1rem;
+    display: block;
 }
 
 #martha-rave-cookies-card-expanded .canadian-protein img {
     max-width: 400px;
-    width: unset;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 500px) {
+    #martha-rave-cookies-card-expanded .canadian-protein {
+        display: flex;
+        justify-content: space-around;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
 }
 
 #martha-rave-cookies-card-expanded .mfps {
@@ -1924,7 +1937,7 @@ span {
 .bar-header h4 {
     font-family: Montserrat, sans-serif;
     font-weight: normal;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color: var(--purple);
 }
 
