@@ -8,8 +8,9 @@
     --title: #d9d9d9;
     --emphasis: rgb(199, 158, 33);
     --neutral: #f4f4ed;
+    --purple: #9f5dcf;
+    --light-purple: #a05dcfa1;
     --blue: #8acdea;
-    --light-blue: rgba(138, 205, 234, 0.5);
     --gold: rgb(199, 158, 33);
     --distance-from-top: 42vh;
 }
@@ -1556,7 +1557,7 @@ span {
 .card-expanded h2 {
     font-size: 1.25rem;
     font-family: Montserrat, sans-serif;
-    color: var(--blue);
+    color: var(--purple);
 }
 
 .card-expanded h3 {
@@ -1755,7 +1756,7 @@ span {
 }
 
 #martha-rave-cookies-card-expanded .step-card {
-    border: 2px solid var(--blue);
+    border: 2px solid var(--purple);
     transition: box-shadow 0.4s ease-out, transform 0.4s ease-out,
         border 0.4s ease-out;
     width: 240px;
@@ -1764,7 +1765,7 @@ span {
 }
 
 #martha-rave-cookies-card-expanded .step-card:hover {
-    box-shadow: 0 0 10px 0 var(--blue);
+    box-shadow: 0 0 10px 0 var(--purple);
     transform: scale(1.01);
 }
 
@@ -1773,7 +1774,7 @@ span {
     gap: 1rem;
     padding-bottom: 0.75rem;
     margin-bottom: 0.75rem;
-    border-bottom: 1px solid var(--blue);
+    border-bottom: 1px solid var(--purple);
 }
 
 #martha-rave-cookies-card-expanded .card-head img {
@@ -1829,13 +1830,33 @@ span {
 
 #martha-rave-cookies-card-expanded .step-header h3 {
     margin: 0;
-    color: var(--blue);
+    font-size: 2rem;
+    color: var(--purple);
 }
 
 #martha-rave-cookies-card-expanded .step-header img {
-    width: 50px;
+    width: 40px;
     height: auto;
 }
+
+@media screen and (min-width: 500px) {
+    #martha-rave-cookies-card-expanded .step-header h3 {
+        margin: 0;
+        font-size: 2.75rem;
+        color: var(--purple);
+    }  
+    #martha-rave-cookies-card-expanded .step-header img {
+        width: 50px;
+        height: auto;
+    }
+}
+
+.max-width-650 {
+    max-width: 650px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 #martha-rave-cookies-card-expanded .canadian-protein {
     display: flex;
@@ -1883,6 +1904,28 @@ span {
     #martha-rave-cookies-card-expanded .success-li {
         padding-left: 3rem;
     }
+}
+
+.bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-bar {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gold);
+}
+
+.bar-header h4 {
+    font-family: Montserrat, sans-serif;
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: var(--purple);
 }
 
 #first-header-code-img {
@@ -1963,15 +2006,15 @@ span {
 #third-header-body-headers > h3 {
     font-size: 60px;
     cursor: pointer;
-    color: var(--blue);
+    color: var(--purple);
 }
 
 #third-header-body-headers > h3:hover {
-    color: var(--blue);
+    color: var(--purple);
 }
 
 #third-header-body-headers > h3:not(.active-header) {
-    color: var(--light-blue);
+    color: var(--light-purple);
 }
 
 h3.active-header {
@@ -4175,7 +4218,7 @@ h3.active-header {
     #third-header-body-headers > h3 {
         font-size: 32px;
         cursor: pointer;
-        color: var(--blue);
+        color: var(--purple);
     }
 
     #third-header-body-headers .first-header.middle {

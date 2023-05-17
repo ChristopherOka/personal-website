@@ -1602,7 +1602,7 @@
                             Designing a <span class="gold">smarter</span> system
                             for <span class="gold">order placement</span>,
                             <span class="gold">management</span>, and
-                            <span class="gold">fulfilment</span>
+                            <span class="gold">fulfillment</span>
                         </h2>
                         <img
                             class="splitscreen-dashboards"
@@ -1798,7 +1798,9 @@
                                         <img src="./Images/circle_three.svg" />
                                     </div>
                                     <div>
-                                        <div class="card-title">Fulfilment</div>
+                                        <div class="card-title">
+                                            Fulfillment
+                                        </div>
                                         <div class="card-subhead">
                                             Knowing order details and order
                                             status
@@ -1918,7 +1920,8 @@
                         <img src="./Images/lfp_dashboard.webp" loading="lazy" />
                         <p>
                             I came up with a dashboard that would display only
-                            the information she needed, on a per-week basis. It
+                            the information she needed, which could be filtered
+                            to display only what was necessary for that week. It
                             also had the ability to add and remove the number of
                             items that had already been baked.
                         </p>
@@ -1962,6 +1965,45 @@
                             src="./Images/mfp_dashboard_print.webp"
                             loading="lazy"
                         />
+                        <p>
+                            The last thing I needed to add in the management
+                            step was a way for my aunt to modify orders. In
+                            hindsight, there are so many better was I could have
+                            implemented this feature, but I was working with
+                            time constraints and I needed a solution that would
+                            be relatively easy to implement into code.
+                        </p>
+                        <p>Here's what I came up with:</p>
+                        <img
+                            src="./Images/all_orders.webp"
+                            style="max-width: 650px"
+                            loading="lazy"
+                            alt="a table displaying order details"
+                        />
+                        <p>
+                            Yep, a spreadsheet. A boring old spreadsheet. Not my
+                            proudest moment, as I sought to remove all the
+                            problems spreadsheets brought with them when I began
+                            this project. However, I did optimize the many pain
+                            points my aunt was facing, even while working within
+                            the constraints of a spreadsheet.
+                        </p>
+                        <p>
+                            First was using colours to distinguish between
+                            spreadsheet rows. Second, I added protection to
+                            editing a row and deleting an order. Since my aunt
+                            has to click on the edit button, then click
+                            “confirm”, it prevents accidentally wiping any
+                            records from the spreadsheet.
+                        </p>
+                        <p>
+                            I figured, since order won’t be inputted manually,
+                            there would be a low likelihood that my aunt would
+                            need to edit orders at all, so by sticking to a
+                            straight-forward and easy to implement solution, I
+                            could spend time on the more important parts of the
+                            platform.
+                        </p>
                         <div class="step-header">
                             <img src="./Images/circle_one.svg" />
                             <h3>Placement</h3>
@@ -2035,11 +2077,17 @@
                             <img
                                 src="./Images/mfp_products.webp"
                                 loading="lazy"
+                                style="max-width: 650px"
                             />
-                            <img src="./Images/mfp_cart.webp" loading="lazy" />
+                            <img
+                                src="./Images/mfp_cart.webp"
+                                loading="lazy"
+                                style="max-width: 650px"
+                            />
                             <img
                                 src="./Images/mfp_checkout.webp"
                                 loading="lazy"
+                                style="max-width: 650px"
                             />
                         </div>
                         <p>
@@ -2071,10 +2119,11 @@
                         <img
                             src="./Images/thank_you_page.webp"
                             loading="lazy"
+                            style="max-width: 650px"
                         />
                         <p>
-                            The final feature I wanted to implement in this step is an
-                            email that is sent to the user upon order
+                            The final feature I wanted to implement in this step
+                            is an email that is sent to the user upon order
                             completion. This email would contain all of their
                             order information as well as total cost, which is
                             effectively their order receipt. This removes the
@@ -2086,7 +2135,7 @@
                         </p>
                         <div class="step-header">
                             <img src="./Images/circle_three.svg" />
-                            <h3>Fulfilment</h3>
+                            <h3>Fulfillment</h3>
                         </div>
                         <p>
                             The final step in the process was fulfillment. The
@@ -2129,6 +2178,7 @@
                             src="./Images/hfp_order_dashboard.webp"
                             loading="lazy"
                             alt=""
+                            style="max-width: 650px"
                         />
                         <p>
                             The first change I made is placing order status
@@ -2162,64 +2212,151 @@
                             src="./Images/order_dashboard_print.webp"
                             loading="lazy"
                             alt=""
+                            style="max-width: 500px"
                         />
                         <p></p>
-                        <h3>Final Designs</h3>
-                        <p></p>
+                        <h3>Final Design</h3>
+                        <p>
+                            After receiving more feedback on the high-fidelity
+                            prototypes, I got to work implementing the website
+                            in code.
+                        </p>
+                        <p>
+                            I used a Next.js and tailwindcss front-end (hosted
+                            on Vercel) and a PostgreSQL back-end (hosted on
+                            Supabase). For my data queries I used custom
+                            PostgreSQL functions, to optimize query efficiency.
+                        </p>
+                        <div class="bar-header">
+                            <div class="header-bar"></div>
+                            <h4>Placement</h4>
+                            <div class="header-bar"></div>
+                        </div>
                         <img
                             src="./Images/products_final.webp"
                             alt="storefront with different types of cookies"
                             loading="lazy"
+                            class="max-width-650"
                         />
+                        <ul>
+                            <li>
+                                The total cost is calculated and displayed to
+                                the customer
+                            </li>
+                            <li>
+                                Product names and costs are visible, as well as
+                                how each quantity is measured (per cookie,
+                                donzens, etc.)
+                            </li>
+                            <li>
+                                Quantities can be updated either directly on the
+                                storefront or in the cart that can be toggled
+                                open or closed
+                            </li>
+                            <li>
+                                If it exists, the description of the item can be
+                                viewed by clicking on the product card. It will
+                                flip over to reveal more details
+                            </li>
+                        </ul>
                         <img
                             src="./Images/checkout_final.webp"
                             alt="checkout with some products in the cart"
                             loading="lazy"
+                            class="max-width-650"
                         />
+                        <ul>
+                            <li>Required fields are clearly denoted</li>
+                            <li>
+                                Order quantities can be updated in the checkout
+                            </li>
+                            <li>
+                                Back button in case customer wants to add
+                                further items to their cart
+                            </li>
+                            <li>
+                                Large “PLACE ORDER” button with secondary colour
+                                to draw customer’s attention and minimize
+                                confusion
+                            </li>
+                        </ul>
                         <img
                             src="./Images/thank_you_page_final.webp"
                             alt="website thank you for ordering page"
                             loading="lazy"
+                            class="max-width-650"
                         />
+                        <ul>
+                            <li>
+                                Thank you page to inform the customer to check
+                                their email
+                            </li>
+                            <li>Option to place another order</li>
+                        </ul>
                         <img
                             src="./Images/email_final.webp"
                             alt="an email from Martha Rave Cookies displaying a customer's order"
                             loading="lazy"
+                            class="max-width-650"
                         />
+                        <ul>
+                            <li>
+                                An email is sent to the customer with names,
+                                pictures, quantities, and costs of each item to
+                                avoid confusion
+                            </li>
+                            <li>
+                                Order details are also contained in the email so
+                                the customer can double-check they have the
+                                right information
+                            </li>
+                        </ul>
+                        <div class="bar-header">
+                            <div class="header-bar"></div>
+                            <h4>Management</h4>
+                            <div class="header-bar"></div>
+                        </div>
                         <img
                             src="./Images/home_dashboard_final.webp"
                             alt="a table displaying a breakdown of order quantities"
                             loading="lazy"
+                            class="max-width-650"
                         />
                         <img
                             src="./Images/home_print_layout_final.webp"
                             alt="a print layout of the same table with circles next to each table entry"
                             loading="lazy"
+                            style="max-width: 500px"
                         />
                         <img
                             src="./Images/order_dashboard_final.webp"
                             alt="dashboard displaying each customer order"
                             loading="lazy"
+                            class="max-width-650"
                         />
                         <img
                             src="./Images/order_dashboard_email_final.webp"
                             alt="popup with text field and send button, designed to send an email to a customer"
                             loading="lazy"
+                            class="max-width-650"
                         />
                         <img
                             src="./Images/order_dashboard_print_final.webp"
                             alt="print layout of orders, showing each order in a neat manner"
                             loading="lazy"
+                            style="max-width: 500px"
                         />
                         <img
                             src="./Images/all_orders_final.webp"
                             alt="table displaying order details"
                             loading="lazy"
+                            class="max-width-650"
                         />
                         <img
                             src="./Images/finances_final.webp"
                             alt="a graph of finances"
                             loading="lazy"
+                            class="max-width-650"
                         />
                     </div>
                 </div>
