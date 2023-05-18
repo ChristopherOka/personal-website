@@ -618,7 +618,8 @@ span {
     transition: opacity 0.3s ease, transform 0.6s;
 }
 
-.third-header-logos img#creature-world, .third-header-logos img#vividseats {
+.third-header-logos img#creature-world,
+.third-header-logos img#vividseats {
     padding-right: 0rem;
 }
 
@@ -1948,6 +1949,75 @@ span {
     font-weight: normal;
     font-size: 1.75rem;
     color: var(--purple);
+}
+
+.phone-hero {
+    overflow-x: none;
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-hero .phone {
+    height: 400px;
+    width: auto;
+    z-index: 2;
+    position: relative;
+    animation: out-and-back 2s cubic-bezier(0.63,-0.05, 0.43, 0.97) 1s both;
+}
+
+.phone-hero .phone img {
+    height: 100%;
+    width: auto;
+}
+
+@keyframes out-and-back {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-300px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes down-under {
+    from {
+        z-index: 3;
+    }
+    to {
+        z-index: 2;
+    }
+}
+
+.phone-hero .gold-bg {
+    background-color: var(--gold);
+    height: 150px;
+    width: 300%;
+    position: absolute;
+    top: 120px;
+    left: -100%;
+    z-index: 1;
+    rotate: 7deg;
+    box-shadow: 0 0 10px 0px var(--bg-color);
+    z-index: 3;
+    animation: down-under 2s ease 1.5s both;
+}
+
+.phone-hero .white-bg {
+    background-color: var(--default-text);
+    height: 150px;
+    width: 300%;
+    position: absolute;
+    top: 120px;
+    left: -100%;
+    z-index: 1;
+    rotate: -7deg;
+    z-index: 1;
 }
 
 #first-header-code-img {
@@ -3840,8 +3910,6 @@ h3.active-header {
             width: 80rem;
         }
     }
-
-
 }
 
 @media (max-width: 600px) {
@@ -4186,12 +4254,10 @@ h3.active-header {
         width: 50px;
     }
 
-    
     .second-header-logos,
     .first-header-logos {
         padding-top: 20px;
     }
-
 
     #third-header-body-headers > h3 {
         font-size: 32px;
@@ -4263,7 +4329,7 @@ h3.active-header {
         align-items: flex-start;
         gap: 0;
     }
-    
+
     .second-header-logos,
     .first-header-logos {
         padding-top: 15px;
