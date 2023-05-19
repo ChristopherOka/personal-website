@@ -1965,7 +1965,7 @@ span {
     width: auto;
     z-index: 2;
     position: relative;
-    animation: out-and-back 1.8s cubic-bezier(0.78,-0.04, 0.46, 0.99) 1s both;
+    animation: out-and-back 3s cubic-bezier(0.78,-0.04, 0.46, 0.99) 1s both;
     transition: scale 0.2s ease-out, rotate 0.2s ease-out, translate 0.2s ease-out;
 }
 
@@ -2018,11 +2018,11 @@ span {
     0% {
         transform: translateY(0px);
     }
-    40% {
+    30% {
         transform: translateY(-350px);
     }
-    75% {
-        transform: translateY(20px);
+    60% {
+        transform: translateY(30px);
     }
     100% {
         transform: translateY(0px);
@@ -2049,7 +2049,7 @@ span {
     rotate: 7deg;
     box-shadow: 0 0 10px 0px var(--bg-color);
     z-index: 3;
-    animation: down-under 1s ease 1.5s both;
+    animation: down-under 1.6s ease 1.5s both;
 }
 
 .phone-hero .white-bg {
