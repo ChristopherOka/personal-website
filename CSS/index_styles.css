@@ -1965,7 +1965,7 @@ span {
     width: auto;
     z-index: 2;
     position: relative;
-    animation: out-and-back 3s cubic-bezier(0.78,-0.04, 0.46, 0.99) 1s both;
+    animation: out-and-back 3s cubic-bezier(0.37,-0.01, 0.32, 0.89) 1s both;
     transition: scale 0.2s ease-out, rotate 0.2s ease-out, translate 0.2s ease-out;
 }
 
@@ -2009,9 +2009,45 @@ span {
     }
 }
 
+.phone-hero .phone .top-block {
+    position: absolute;
+    top: 10px;
+    left: 6px;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 18px;
+}
+
+.phone-hero .phone .top-block.blue {
+    background-color: rgb(43 100 204);
+}
+
+.phone-hero .phone .top-block.white {
+    background-color: white;
+}
+
+.phone-hero .phone video {
+    height: 80%;
+    width: auto;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
 .phone-hero .phone img {
     height: 100%;
     width: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.phone-hero .phone .phone-chin {
+    width: 180px;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    top: unset;
+    left: 10px;
 }
 
 @keyframes out-and-back {
@@ -2022,7 +2058,7 @@ span {
         transform: translateY(-350px);
     }
     60% {
-        transform: translateY(30px);
+        transform: translateY(40px);
     }
     100% {
         transform: translateY(0px);
@@ -2049,7 +2085,7 @@ span {
     rotate: 7deg;
     box-shadow: 0 0 10px 0px var(--bg-color);
     z-index: 3;
-    animation: down-under 1.6s ease 1.5s both;
+    animation: down-under 1.3s ease 1.5s both;
 }
 
 .phone-hero .white-bg {
