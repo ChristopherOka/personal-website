@@ -1402,7 +1402,7 @@ span {
 }
 
 @media screen and (min-width: 500px) {
-    .card-expanded .content p {
+    .card-expanded .content p, .card-expanded .content div {
         font-size: 1.2rem;
     }
 }
@@ -2099,6 +2099,34 @@ span {
     z-index: 1;
     rotate: -7deg;
     z-index: 1;
+}
+
+.card-expanded .horizontal-image-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 960px) {
+    .card-expanded .horizontal-image-row {
+        justify-content: space-between;
+    }
+}
+
+.card-expanded .horizontal-image-row .image-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 270px;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+    gap: 0.5rem;
+}
+
+.card-expanded .horizontal-image-row .image-block img {
+    height: 100%;
 }
 
 #first-header-code-img {
