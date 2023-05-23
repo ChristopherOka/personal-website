@@ -1061,15 +1061,15 @@
                                 <div>Info</div>
                             </div>
                             <div class="image-block">
+                                <img src="./Images/question_mark.png" />
+                                <div>Explore</div>
+                            </div>
+                            <div class="image-block">
                                 <img
                                     src="./Images/lfp_creature_world_store.png"
                                     loading="lazy"
                                 />
                                 <div>Store</div>
-                            </div>
-                            <div class="image-block">
-                                <img src="./Images/question_mark.png" />
-                                <div>Explore</div>
                             </div>
                         </div>
                         <p>
@@ -1089,7 +1089,8 @@
                                 links to other pages
                             </li>
                             <li>
-                                The info page needed Danny’s bio and animations
+                                The info page needed the client's bio and
+                                animations
                             </li>
                             <li>
                                 The store needed a functional storefront and
@@ -1127,10 +1128,323 @@
                             abide by the time limitation? In my opinion - yes.
                         </p>
                         <h2>Homepage</h2>
-
-                        <div class="more-details">
-                            More details coming very very soon!
+                        <p>The homepage was a bit of a struggle.</p>
+                        <p>
+                            The only design provided was for mobile, but we were
+                            making a website that needed to look good on mobile,
+                            tablet, AND desktop.
+                        </p>
+                        <p>
+                            The problem here was the animations we wanted on the
+                            page. We wanted the “creatures” to jump in from the
+                            right-hand side. This means we needed the text that
+                            the creatures jumped onto to always be close to the
+                            right-hand side.
+                        </p>
+                        <p>
+                            Since we didn’t have the funding or time to
+                            implement two completely different designs with
+                            different animations on the homepage, I decided to
+                            find a different solution.
+                        </p>
+                        <p>
+                            To make life easier, why not keep the exact same
+                            design on every screen size, and simply keep the
+                            text right-aligned always? Then on larger screens we
+                            can fill the empty space with something else and
+                            call it a day!
+                        </p>
+                        <p>
+                            The client liked that idea, so we went forward with
+                            it.
+                        </p>
+                        <p>
+                            After implementing some gif techno-wizardry, this is
+                            the result we ended up with:
+                        </p>
+                        <div class="horizontal-image-row phone-laptop">
+                            <div class="image-block phone">
+                                <img
+                                    src="./Images/creature_world_homepage_phone.webp"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="image-block laptop">
+                                <img
+                                    src="./Images/creature_world_homepage_laptop.png"
+                                    loading="lazy"
+                                />
+                            </div>
                         </div>
+                        <h2>Info</h2>
+                        <p>This was the most straight-forward of the pages.</p>
+                        <p>
+                            I received a medium-fidelity design, and simply had
+                            to put it into code with minor revisions some
+                            personal flair.
+                        </p>
+                        <p>Here’s what the info page ended up looking like:</p>
+                        <div class="horizontal-image-row phone-laptop">
+                            <div class="image-block phone">
+                                <img
+                                    src="./Images/creature_world_info_phone.png"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="image-block laptop">
+                                <img
+                                    src="./Images/creature_world_info_laptop.png"
+                                    loading="lazy"
+                                />
+                            </div>
+                        </div>
+                        <h2>Explore</h2>
+                        <p>
+                            I had the most creative freedom for this page, which
+                            was scary at first, but became a lot of fun once I
+                            got going.
+                        </p>
+                        <p>
+                            The client knew they wanted a “featured articles”
+                            section, a gallery to show off their artwork, and an
+                            archive section to show off previous work.
+                        </p>
+                        <p>
+                            I took inspiration from their previous portfolio
+                            website, dannycole.co and implemented a similar
+                            design to the archive pages.
+                        </p>
+                        <img
+                            src="./Images/dannycole_portfolio_site.png"
+                            class="constrained-width-image"
+                            loading="lazy"
+                            alt="a table displaying order details"
+                        />
+                        <p>
+                            I jumped into Figma and got to designing! Here's
+                            what I came up with:
+                        </p>
+                        <img
+                            src="./Images/lfp_explore.png"
+                            class="constrained-width-image"
+                            loading="lazy"
+                            alt="a table displaying order details"
+                        />
+                        <p>
+                            The initial idea was to have the featured projects
+                            jump the user down to the project in the archive,
+                            and the gallery would be an infinitely scrolling
+                            carousel.
+                        </p>
+                        <p>
+                            After showing the first-pass design to the client -
+                            much to my surprise - they really liked it and
+                            didn’t have any major changes. Who needs multiple
+                            iterations when the first one works, I guess!
+                        </p>
+                        <p>
+                            After putting it into code (and multiple design
+                            iterations), here’s what we ended up with:
+                        </p>
+                        <img
+                            src="./Images/creature_world_explore_final.png"
+                            class="constrained-width-image"
+                            loading="lazy"
+                            alt="a table displaying order details"
+                        />
+                        <p>
+                            The one major change we made between the prototype
+                            and the implementation was how the selected projects
+                            took you to the project block. Instead of making the
+                            page scroll down to the archive project (which could
+                            be 50 projects down), I came up with the idea of
+                            displaying the article right beneath the selected
+                            project block when clicking on it.
+                        </p>
+                        <p>Here’s what that looks like:</p>
+                        <img
+                            src="./Images/creature_world_explore_selected.png"
+                            class="constrained-width-image"
+                            loading="lazy"
+                            alt="a table displaying order details"
+                        />
+                        <p>
+                            Another fun challenge was the requirement that
+                            everything on the explore page should be
+                            customizable with out needing code.
+                        </p>
+                        <p>
+                            I’d never done this before, so I started looking
+                            into CMS’s and what each of them offered.
+                        </p>
+                        <p>
+                            My friend had used Strapi before, and after further
+                            research it appeared to be a trusted, well-used, and
+                            well-loved CMS. For these reasons, I decided to go
+                            forward with it!
+                        </p>
+                        <p>
+                            I ended up hosting my Strapi CMS on a Heroku
+                            database, since it was easy to set up and relatively
+                            cheap.
+                        </p>
+                        <p>
+                            I then used Cloudinary for content-delivery since
+                            the Heroku filesystem is ephemeral (it deletes all
+                            files after every restart).
+                        </p>
+                        <p>
+                            In the end, I had a clean dashboard that could be
+                            used by anybody (no coding knowledge necessary!) to
+                            update content on the site. The CMS ended up being
+                            used on almost every page, delivering content to the
+                            homepage, info page, and explore page.
+                        </p>
+                        <img
+                            src="./Images/strapi_dashboard.png"
+                            loading="lazy"
+                            alt="a table displaying order details"
+                            style="margin-bottom: 3rem; display: block"
+
+                        />
+                        <h2>Store</h2>
+                        <p>
+                            The requirements for the store were pretty simple.
+                            Display the featured items on the storefront, have a
+                            functional checkout, and use Shopify for everything.
+                        </p>
+                        <p>Easy enough, right?</p>
+                        <p>Well, no.</p>
+                        <p>
+                            I ran into multiple problems when implementing the
+                            store.
+                        </p>
+                        <p>
+                            First off, Shopify doesn’t let you put a Shopify
+                            store under a domain subfolder. Every other page on
+                            the site is creature.world/{page}, like
+                            creature.world/info and creature.world/explore, so I
+                            really wanted creature.world/store to be the store
+                            page.
+                        </p>
+                        <p>
+                            Unfortunately, if you want your store to live in a
+                            subfolder you have build your Shopify store from
+                            scratch, using their API as your only help. At this
+                            point in the project, I only had a couple weeks left
+                            before launch so I didn’t physically have enough
+                            time to build a checkout flow from scratch. I needed
+                            to use a Shopify template, and therefore I had to
+                            host the site on Shopify and couldn’t link it to a
+                            subfolder.
+                        </p>
+                        <p>
+                            This meant I needed to look for another solution.
+                            Either we could buy a new domain, creature.store or
+                            something, but that’s when I learned about
+                            subdomains! AHA! Instead of creature.world/store, I
+                            could put it under store.creature.world. Not as
+                            elegant as the former, but it would allow more
+                            cohesion between the domains rather than pointing
+                            the store at a completely different url.
+                        </p>
+                        <p>
+                            The second issue I faced was building the Shopify
+                            template. Shopify only lets you customize your
+                            template so much before you have to delve into the
+                            code. This meant I had to learn Shopify’s “Liquid”
+                            templating language (in only a couple weeks) for
+                            creating Shopify templates. Although I was new to
+                            the language, it was familiar enough to previous
+                            templating languages I’ve used like underscore.js so
+                            I was able to get the hang of it quickly (thank
+                            goodness).
+                        </p>
+                        <p>
+                            I didn’t even have time to create a low-fidelity
+                            prototype, so I took inspiration from the previous
+                            creature world store and ran with it. I also wanted
+                            to make the Shopify store look as cohesive as
+                            possible with the other parts of the website, so it
+                            wouldn’t look like it’s own separate website (even
+                            though it was).
+                        </p>
+                        <p>Here’s what I ended up with:</p>
+                        <img
+                            src="./Images/creature_world_storefront.png"
+                            class="constrained-width-image"
+                            loading="lazy"
+                            alt="a table displaying order details"
+                            style="margin-bottom: 1rem"
+                        />
+                        <img
+                            src="./Images/creature_world_product_item.png"
+                            class="constrained-width-image"
+                            loading="lazy"
+                            alt="a table displaying order details"
+                            style="margin-bottom: 1rem"
+                        />
+                        <img
+                            src="./Images/creature_world_checkout.png"
+                            class="constrained-width-image"
+                            loading="lazy"
+                            alt="a table displaying order details"
+                            style="margin-bottom: 3rem;"
+
+                        />
+                        <h2>Conclusions</h2>
+                        <p>
+                            Although the project was quite stressful at times
+                            due to the time constraints, it was very rewarding
+                            to have completed my very first big-time real-world
+                            project.
+                        </p>
+                        <p>
+                            And, in the end all that matters is the happiness
+                            and satisfaction of the client.
+                        </p>
+                        <p>So, were they happy?</p>
+                        <p>I’m glad to report he was!</p>
+                        <p>
+                            The client praised the design and implementation of
+                            the site, and liked my work so much that they
+                            referred me to their friends over at Byline to help
+                            them build their website.
+                        </p>
+                        <p>
+                            It felt amazing to have my hard work recognized, and
+                            I’m glad I was given the opportunity to build
+                            something cool with Danny Cole and his team.
+                        </p>
+                        <h3>Takeaways and Areas of Personal Growth</h3>
+                        <ul>
+                            <li>
+                                Refine product requirements BEFORE starting any
+                                work. The worst thing you can do is design
+                                something that wasn’t wanted or needed in the
+                                first place
+                            </li>
+                            <li>
+                                Communication is KEY! Maintaining clear lines of
+                                dialogue about deadlines and your personal
+                                ability to delivery within the given time-frame
+                                will pay off dividends in terms of building
+                                trust in your business relationships
+                            </li>
+                            <li>
+                                Sometimes it’s okay to promise you can build
+                                something even if you’re not sure how to do it.
+                                You can always learn it later!
+                            </li>
+                            <li>
+                                Be careful of scope creep. Not only does this
+                                delay timelines, it also compromises the trust
+                                in your business relationship. Be clear about
+                                what is and isn’t included in the project, and
+                                make small allowances when necessary (you don’t
+                                need to be TOO strict)
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <button class="close-button" onclick="closeExpandedCard(this)">

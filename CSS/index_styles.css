@@ -1402,7 +1402,8 @@ span {
 }
 
 @media screen and (min-width: 500px) {
-    .card-expanded .content p, .card-expanded .content div {
+    .card-expanded .content p,
+    .card-expanded .content div {
         font-size: 1.2rem;
     }
 }
@@ -1966,8 +1967,9 @@ span {
     width: auto;
     z-index: 2;
     position: relative;
-    animation: out-and-back 3s cubic-bezier(0.37,-0.01, 0.32, 0.89) 1s both;
-    transition: scale 0.2s ease-out, rotate 0.2s ease-out, translate 0.2s ease-out;
+    animation: out-and-back 3s cubic-bezier(0.37, -0.01, 0.32, 0.89) 1s both;
+    transition: scale 0.2s ease-out, rotate 0.2s ease-out,
+        translate 0.2s ease-out;
 }
 
 .phone-hero .left-phone:hover {
@@ -2101,17 +2103,48 @@ span {
     z-index: 1;
 }
 
+.card-expanded .inner-wrapper .content .constrained-width-image {
+    max-width: 650px;
+    margin: 0 auto;
+    display: block;
+}
+
 .card-expanded .horizontal-image-row {
     display: flex;
     gap: 2rem;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     margin-bottom: 2rem;
+}
+
+.card-expanded .horizontal-image-row.phone-laptop {
+    gap: 0;
+}
+
+.card-expanded .horizontal-image-row.phone-laptop .image-block.laptop {
+    height: 180px;
 }
 
 @media screen and (min-width: 960px) {
     .card-expanded .horizontal-image-row {
         justify-content: space-between;
+    }
+
+    .card-expanded .horizontal-image-row.phone-laptop {
+        justify-content: center;
+    }
+
+    .card-expanded .horizontal-image-row.phone-laptop .image-block {
+        height: 320px;
+    }
+
+    .card-expanded .horizontal-image-row.phone-laptop {
+        gap: 2rem;
+    }
+
+    .card-expanded .horizontal-image-row.phone-laptop .image-block.laptop {
+        height: 320px;
     }
 }
 
