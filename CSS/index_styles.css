@@ -2123,6 +2123,12 @@ span {
     gap: 0;
 }
 
+@media screen and (min-width: 580px) {
+    .card-expanded .horizontal-image-row.phone-laptop {
+        gap: 1rem;
+    }
+}
+
 .card-expanded .horizontal-image-row.phone-laptop .image-block.laptop {
     height: 180px;
 }
