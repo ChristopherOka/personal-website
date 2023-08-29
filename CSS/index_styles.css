@@ -1367,26 +1367,53 @@ span {
 #byline-card #byline-card-logo {
     max-width: 240px;
     border-radius: 12px;
+}
+
+#byline-card .box-shadow-well {
+    position: relative;
     animation: byline-card-logo 12s ease-in-out 1s both infinite;
+}
+
+#byline-card .box-shadow-well #box-shadow {
+    box-shadow: 0 10px 16px 0px rgb(0, 0, 255);
+    animation: byline-box-shadow 12s ease-in-out 1s both infinite;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    position: absolute;
+    top: -4px;
+    left: 0;
 }
 
 @keyframes byline-card-logo {
     0%,
     100% {
         transform: translateY(0);
-        box-shadow: none;
     }
     10% {
         transform: translateY(0);
-        box-shadow: none;
     }
     50% {
         transform: translateY(-6px);
-        box-shadow: 0 10px 16px 0px rgb(0, 0, 255);
     }
     90% {
         transform: translateY(-6px);
-        box-shadow: 0 10px 16px 0px rgb(0, 0, 255);
+    }
+}
+
+@keyframes byline-box-shadow {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
     }
 }
 
