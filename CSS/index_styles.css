@@ -1731,7 +1731,10 @@ span {
     }
 
     .card-expanded .content {
-        margin: 0 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     @keyframes expand-from-close-button {
@@ -1954,6 +1957,12 @@ span {
     scale: 1;
 }
 
+@media screen and (max-width: 640px) {
+    #martha-rave-cookies-card-expanded img.splitscreen-dashboards {
+        width: 90%;
+    }
+}
+
 @keyframes fade-in-scale {
     0% {
         opacity: 0;
@@ -1973,7 +1982,8 @@ span {
 }
 
 #martha-rave-cookies-card-expanded img.splitscreen-dashboards:hover {
-    box-shadow: 0 0 40px 2px var(--gold);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 16px 20px -7px var(--gold),
+        0 -16px 20px -7px var(--gold);
 }
 
 #martha-rave-cookies-card-expanded h2 {
