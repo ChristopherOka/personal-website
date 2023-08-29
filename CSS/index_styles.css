@@ -1,10 +1,8 @@
 :root {
     --bg-color: #202020;
     --bg-color-2: #8acdea;
-    /* --title: #8ACDEA; */
     --heading-1: #d9d9d9;
     --default-text: #d9d9d9;
-    /* --heading-2: #8093F1; */
     --title: #d9d9d9;
     --emphasis: rgb(199, 158, 33);
     --neutral: #f4f4ed;
@@ -1366,6 +1364,197 @@ span {
     margin: 0;
 }
 
+#byline-card #byline-card-logo {
+    max-width: 240px;
+    border-radius: 12px;
+    animation: byline-card-logo 12s ease-in-out 1s both infinite;
+}
+
+@keyframes byline-card-logo {
+    0%,
+    100% {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+    10% {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+    50% {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 16px 0px rgb(0, 0, 255);
+    }
+    90% {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 16px 0px rgb(0, 0, 255);
+    }
+}
+
+.byline-svg {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.byline-svg svg {
+    width: 70%;
+    height: auto;
+    padding: 3rem;
+    z-index: 1;
+    transition: scale 0.5s ease;
+}
+
+.byline-svg:hover svg {
+    scale: 1.04;
+}
+
+@keyframes rainbow {
+    100%,
+    0% {
+        fill: rgb(0, 0, 255);
+    }
+    8% {
+        fill: rgb(127, 0, 255);
+    }
+    16% {
+        fill: rgb(255, 0, 255);
+    }
+    25% {
+        fill: rgb(255, 0, 127);
+    }
+    33% {
+        fill: rgb(255, 0, 0);
+    }
+    41% {
+        fill: rgb(255, 127, 0);
+    }
+    50% {
+        fill: rgb(255, 255, 0);
+    }
+    58% {
+        fill: rgb(127, 255, 0);
+    }
+    66% {
+        fill: rgb(0, 255, 0);
+    }
+    75% {
+        fill: rgb(0, 255, 127);
+    }
+    83% {
+        fill: rgb(0, 255, 255);
+    }
+    91% {
+        fill: rgb(0, 127, 255);
+    }
+}
+
+.byline-svg path {
+    fill: var(--bg-color);
+    transition: fill 0.5s ease, stroke 0.5s ease, stroke-width 0.5s ease;
+}
+
+.byline-svg:hover path {
+}
+
+#byline-b {
+    stroke-dasharray: 2323;
+    stroke-dashoffset: 2323;
+    animation: byline-logo 2s ease-in-out 1s both;
+}
+
+#byline-y {
+    stroke-dasharray: 2828;
+    stroke-dashoffset: 2828;
+    animation: byline-logo 2s ease-in-out 1.1s both;
+}
+
+#byline-l {
+    stroke-dasharray: 3289;
+    stroke-dashoffset: 3289;
+    animation: byline-logo 2s ease-in-out 1.2s both;
+}
+
+#byline-i {
+    stroke-dasharray: 1167;
+    stroke-dashoffset: 1167;
+    animation: byline-logo 2s ease-in-out 1.3s both;
+}
+
+#byline-n {
+    stroke-dasharray: 2319;
+    stroke-dashoffset: 2319;
+    animation: byline-logo 2s ease-in-out 1.4s both;
+}
+
+#byline-e {
+    stroke-dasharray: 1780;
+    stroke-dashoffset: 1780;
+    animation: byline-logo 2s ease-in-out 1.5s both;
+}
+
+#byline-logo-background {
+    height: 100%;
+    width: 0;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: byline-background 2s ease-in-out 2.2s both;
+}
+
+@keyframes byline-logo {
+    0% {
+        filter: unset;
+        fill: var(--bg-color);
+        stroke: var(--gold);
+        stroke-width: 12px;
+    }
+    10% {
+        filter: drop-shadow(2px 4px 6px black);
+        fill: var(--bg-color);
+        stroke: var(--gold);
+        stroke-width: 12px;
+    }
+    60% {
+        stroke-dashoffset: 0;
+        fill: var(--bg-color);
+        stroke-width: 12px;
+        filter: unset;
+    }
+    80% {
+        stroke-dashoffset: 0;
+        fill: var(--bg-color);
+        stroke: var(--bg-color);
+        stroke-width: 12px;
+        filter: unset;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: blue;
+        stroke-width: 0;
+        filter: unset;
+    }
+}
+
+@keyframes byline-background {
+    0% {
+        border-radius: 0;
+    }
+    50% {
+        width: 100%;
+        border-radius: 0;
+    }
+    70% {
+        width: 100%;
+        border-radius: 0;
+    }
+    100% {
+        width: 100%;
+        border-radius: 16px;
+    }
+}
+
 #tdsb-card-expanded .header img {
     height: 50px;
     width: auto;
@@ -1665,6 +1854,39 @@ span {
     color: var(--gold);
 }
 
+#martha-rave-cookies-card .border-well {
+    position: relative;
+}
+
+#martha-rave-cookies-card #martha-rave-logo-card {
+    border-radius: 24px;
+    max-width: 120px;
+    padding: 0.75rem;
+    background-color: #161616;
+}
+
+#martha-rave-cookies-card .top-image-well #border {
+    border-radius: 24px;
+    box-shadow: 0 0 20px 2px rgb(255, 158, 245);
+    border: 4px solid rgb(255, 158, 245);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -4px;
+    left: -4px;
+    animation: martha-rave-logo-card 6s ease-in-out 1s both infinite;
+}
+
+@keyframes martha-rave-logo-card {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
+
 #martha-rave-cookies-card-expanded .image-well {
     padding-right: 0.75rem;
 }
@@ -1701,6 +1923,26 @@ span {
     height: auto;
     transition: scale 0.4s ease-out, box-shadow 0.4s ease-out;
     border-radius: 1rem;
+    animation: fade-in-scale 3s ease 1s both;
+    scale: 1;
+}
+
+@keyframes fade-in-scale {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.05);
+    }
+    60% {
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 #martha-rave-cookies-card-expanded img.splitscreen-dashboards:hover {

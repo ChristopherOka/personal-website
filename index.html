@@ -421,19 +421,15 @@
                         >
                             <div class="top-image-back"></div>
                             <div class="top-image-well">
-                                <img
-                                    class="top-image"
-                                    style="
-                                        border-radius: 8px;
-                                        max-width: 120px;
-                                        padding: 0.5rem;
-                                        background-color: #161616;
-                                        box-shadow: 0 0 16px 1px
-                                            rgb(255, 158, 245);
-                                    "
-                                    src="./Images/martha_rave_cookies.png"
-                                    alt="Martha Rave Cookies logo"
-                                />
+                                <div class="border-well">
+                                    <img
+                                        class="top-image"
+                                        id="martha-rave-logo-card"
+                                        src="./Images/martha_rave_cookies.png"
+                                        alt="Martha Rave Cookies logo"
+                                    />
+                                    <div id="border"></div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <div class="divider"></div>
@@ -448,6 +444,33 @@
                                     spent on emails, reading spreadsheets, and
                                     organizing stacks of paper while minimizing
                                     operating costs.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="card"
+                            id="byline-card"
+                            onclick="openExpandedCard(this)"
+                        >
+                            <div class="top-image-back"></div>
+                            <div class="top-image-well">
+                                <img
+                                    class="top-image"
+                                    src="./Images/byline_site_logo.png"
+                                    id="byline-card-logo"
+                                    alt="Byline logo"
+                                />
+                            </div>
+                            <div class="card-body">
+                                <div class="divider"></div>
+                                <h3 id="byline-header">Byline</h3>
+                                <p class="subtitle" style="margin-top: 0.5rem">
+                                    <i>Online Magazine</i>
+                                </p>
+                                <p>
+                                    Built a unique and customizable online
+                                    magazine that hosts creative writing from
+                                    all demographics and subject-areas.
                                 </p>
                             </div>
                         </div>
@@ -1445,6 +1468,193 @@
                                 (you don’t need to be TOO strict)
                             </li>
                         </ul>
+                    </div>
+                </div>
+                <button class="close-button" onclick="closeExpandedCard(this)">
+                    <div></div>
+                    <div></div>
+                </button>
+            </div>
+            <div class="card-expanded hidden" id="byline-card-expanded">
+                <div class="inner-wrapper">
+                    <div class="header">
+                        <div class="image-well">
+                            <img
+                                class="top-image"
+                                src="./Images/IMG_2328.jpg"
+                                style="
+                                    padding: 0.25rem;
+                                    background-color: white;
+                                    border-radius: 8px;
+                                "
+                                alt="Creature world logo"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div>
+                            <h1 class="title">Byline</h1>
+                            <p class="subtitle gold">
+                                <i>Online Magazine</i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <a
+                            class="byline-svg"
+                            href="https://www.bylinebyline.com"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <div id="byline-logo-background"></div>
+                            <svg
+                                width="1578"
+                                height="537"
+                                viewBox="0 0 1578 537"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    id="byline-b"
+                                    d="M267.89 280.43C205.17 342.65 143.95 381.38 86.9798 381.38C42.2498 381.38 17.7598 357.64 17.7598 322.66C17.7598 299.17 28.2498 281.43 46.4998 256.94L199.67 48.8001C202.17 45.3001 201.42 41.8001 197.67 41.8001C195.17 41.8001 192.67 43.0501 188.17 46.3001L127.7 91.0301L110.21 68.2901L167.43 25.8101C178.92 17.3101 189.17 13.0701 202.91 13.0701C220.9 13.0701 232.65 24.0601 232.65 40.3101C232.65 48.3101 228.9 57.0501 222.4 65.8001L134.7 185.23C238.65 112.52 280.63 96.0201 312.61 96.0201C342.35 96.0201 362.34 112.76 362.59 140.5C362.84 167.24 336.35 212.47 267.89 280.43ZM334.1 140.5C334.1 129.51 326.1 124.26 312.61 124.51C279.38 125.26 230.15 148.75 81.4698 257.45L69.2298 273.94C56.2398 291.68 46.2398 305.67 46.2398 322.42C46.2398 342.66 59.7298 352.91 86.9698 352.91C132.7 352.91 186.67 320.68 247.64 260.46C298.62 209.97 334.1 162.24 334.1 140.5Z"
+                                    stroke="var(--gold)"
+                                    stroke-width="12"
+                                />
+                                <path
+                                    id="byline-y"
+                                    d="M657.99 128.01L656.24 211.22L563.79 337.4C491.33 436.35 419.61 472.83 357.39 472.83C302.17 472.83 278.43 449.59 278.43 409.61C278.43 394.87 282.93 376.88 292.17 359.39L317.91 371.63C310.41 386.37 306.92 400.12 306.92 409.61C306.92 433.6 318.91 444.34 357.39 444.34C407.12 444.34 470.34 416.1 540.3 321.15L575.78 273.17L515.56 319.4C447.84 371.37 415.86 382.12 392.62 382.12C361.63 382.12 343.64 362.63 343.89 339.64C344.14 320.9 352.39 309.65 374.38 279.17L454.09 168.72L481.33 131.74C483.83 128.24 482.33 124.74 479.08 124.74C476.58 124.74 474.58 125.74 468.09 130.49L409.37 173.97L392.13 151.23L449.35 109C460.85 100.5 470.84 96.01 484.58 96.01C502.57 96.01 514.32 107.01 514.32 123.25C514.32 131.25 510.57 139.99 504.07 148.74L479.58 181.97L397.62 295.66C379.88 320.4 372.38 329.64 372.38 339.64C372.38 348.64 380.13 353.88 392.62 353.63C408.86 353.38 436.1 344.38 498.32 296.66L628.01 197.46L629.51 128.74C629.51 125.49 628.51 124.49 626.51 124.49C624.51 124.49 622.76 125.49 618.76 128.49L556.79 174.22L539.8 151.5L598.77 107.77C610.26 99.27 620.01 96.02 631.75 96.02C648.5 96.02 658.49 107.27 657.99 128.01Z"
+                                    stroke="var(--gold)"
+                                    stroke-width="12"
+                                />
+                                <path
+                                    id="byline-i"
+                                    d="M950.43 123.26C950.43 131.26 946.93 140 940.68 148.75L825.24 309.17L797.75 346.15C795 349.9 796 353.65 799.75 353.65C802.5 353.65 805.5 352.4 810.49 348.65L857.47 314.17L874.46 336.41L830.23 368.89C817.99 377.89 806.99 382.13 793.75 382.13C775.01 382.13 765.51 371.14 765.51 355.14C765.51 346.89 769.01 338.65 775.76 329.4L918.44 131.75C920.94 128.25 919.94 124.5 916.19 124.5C913.44 124.5 910.44 125.75 905.45 129.5L858.47 163.98L841.48 141.74L885.71 109.26C897.2 100.76 908.95 96.0201 921.69 96.0201C938.94 96.0201 950.43 107.02 950.43 123.26ZM1002.41 51.5401C1002.41 63.2801 993.41 72.53 981.92 72.53C970.42 72.53 961.43 63.2801 961.43 51.5401C961.43 40.0401 970.43 30.8 981.92 30.8C993.41 30.8 1002.41 39.8001 1002.41 51.5401Z"
+                                    stroke="var(--gold)"
+                                    stroke-width="12"
+                                />
+                                <path
+                                    id="byline-n"
+                                    d="M1282.85 137.75C1282.6 157.49 1274.35 171.23 1232.12 227.71L1172.15 309.17L1142.41 348.65C1140.91 350.65 1140.66 351.4 1140.66 352.15C1140.66 353.15 1141.41 353.65 1142.41 353.65C1143.41 353.65 1144.91 353.15 1145.91 352.4L1203.63 309.42L1220.62 332.16L1172.14 368.39C1158.9 378.14 1150.9 382.13 1137.91 382.13C1121.67 382.13 1111.17 371.14 1111.17 356.14C1111.17 347.14 1114.67 338.15 1121.42 329.15L1149.41 291.92L1206.38 214.46C1246.86 159.99 1254.36 148.99 1254.36 137.75C1254.36 128.25 1246.61 124.51 1235.12 124.51C1206.13 124.51 1168.15 143.5 1009.48 260.94L974.999 309.17L945.259 348.65C943.759 350.65 943.509 351.4 943.509 352.15C943.509 353.15 944.259 353.65 945.259 353.65C946.259 353.65 947.759 353.15 948.759 352.4L1006.48 309.42L1023.47 332.16L974.999 368.39C961.759 378.14 953.759 382.13 940.769 382.13C924.529 382.13 914.029 371.14 914.029 356.14C914.029 347.14 917.529 338.15 924.279 329.15L952.269 291.92L1040.73 168.73L1067.97 131.75C1070.47 128.25 1068.97 124.75 1065.97 124.75C1063.72 124.75 1061.72 125.75 1058.22 128.25L995.999 173.98L978.759 151.24L1035.98 109.01C1047.47 100.51 1057.47 96.02 1071.21 96.02C1089.2 96.02 1100.95 107.02 1100.95 123.26C1100.95 131.26 1097.2 140 1090.71 148.75L1066.72 181.48L1062.22 187.73C1173.17 107.52 1206.15 96.02 1235.14 96.02C1264.11 96.02 1283.1 114.01 1282.85 137.75Z"
+                                    stroke="var(--gold)"
+                                    stroke-width="12"
+                                />
+                                <path
+                                    id="byline-e"
+                                    d="M1552.54 192.73L1550.04 216.72L1313.66 252.2C1295.67 279.94 1286.17 303.18 1286.17 320.67C1286.17 342.91 1297.91 352.9 1321.4 352.9C1359.13 352.9 1402.11 326.16 1450.34 283.68L1468.83 305.42C1409.61 356.89 1364.63 381.38 1321.4 381.38C1280.17 381.38 1257.68 357.14 1257.68 320.66C1257.68 295.67 1270.67 261.94 1301.41 219.96C1357.14 144 1433.6 96.02 1486.33 96.02C1538.3 96.02 1559.54 129.01 1552.54 192.73ZM1337.65 219.71L1524.31 191.72C1527.81 144.99 1523.06 124.5 1486.33 124.5C1447.85 124.51 1386.88 160.24 1337.65 219.71Z"
+                                    stroke="var(--gold)"
+                                    stroke-width="12"
+                                />
+                                <path
+                                    id="byline-l"
+                                    d="M1536.9 372.39C1370.64 494.49 1190.41 490.11 1190.41 490.11C1052.14 491.48 952.311 420.34 952.311 420.34C952.311 420.34 887.221 372.79 798.581 423.49C723.171 467.96 672.321 494.1 631.591 494.78C600.611 495.3 583.161 483.1 582.711 456.37C582.361 435.38 593.29 416.71 613.54 387.62L660.131 323.31L806.97 121.01L831.461 87.78C837.961 79.03 841.711 70.2901 841.711 62.2901C841.711 46.0501 829.97 35.05 811.97 35.05C798.23 35.05 788.231 39.5501 776.741 48.0401L758.701 62.18L775.941 84.92L797.23 68.3001C801.73 65.0501 804.23 63.8 806.73 63.8C810.48 63.8 811.23 67.3001 808.73 70.8001L781.491 107.78L636.97 306.75L590.021 371.03C565.131 406.69 553.51 429.38 553.98 456.86C554.65 496.83 582.111 524.36 632.081 523.52C675.181 522.79 734.591 501.66 814.051 447.68C814.571 447.33 815.101 447 815.641 446.69C823.901 441.98 886.511 408.24 932.561 440.78C932.561 440.78 1047.64 513.62 1186.98 513.38C1186.98 513.38 1380.39 519.21 1553.91 388.54L1536.9 372.39Z"
+                                    stroke="var(--gold)"
+                                    stroke-width="12"
+                                />
+                            </svg>
+                        </a>
+                        <h2>Tools</h2>
+                        <div class="languages-and-tools-block">
+                            <div class="languages-and-tools-column">
+                                <div class="languages-and-tools-row">
+                                    <img
+                                        class="languages-and-tools-image"
+                                        src="./Images/nextjs_logo.png"
+                                        alt="Next.js logo"
+                                        loading="lazy"
+                                    />
+                                    <span>Next.js</span>
+                                </div>
+                                <div class="languages-and-tools-row">
+                                    <img
+                                        class="languages-and-tools-image"
+                                        src="./Images/javascript_logo.png"
+                                        alt="JavaScript logo"
+                                        loading="lazy"
+                                    />
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="languages-and-tools-row">
+                                    <img
+                                        class="languages-and-tools-image"
+                                        src="./Images/html_logo.png"
+                                        alt="HTML logo"
+                                        loading="lazy"
+                                    />
+                                    <span>HTML</span>
+                                </div>
+                                <div class="languages-and-tools-row">
+                                    <img
+                                        class="languages-and-tools-image"
+                                        src="./Images/css_logo.png"
+                                        alt="CSS logo"
+                                        loading="lazy"
+                                    />
+                                    <span>CSS</span>
+                                </div>
+                            </div>
+                            <div class="languages-and-tools-column">
+                                <div class="languages-and-tools-row">
+                                    <img
+                                        class="languages-and-tools-image"
+                                        src="./Images/github.png"
+                                        alt="GitHub logo"
+                                        loading="lazy"
+                                    />
+                                    <span>GitHub</span>
+                                </div>
+                                <div class="languages-and-tools-row">
+                                    <img
+                                        class="languages-and-tools-image"
+                                        src="./Images/heroku_logo.png"
+                                        alt="Heroku logo"
+                                        loading="lazy"
+                                    />
+                                    <span>Heroku</span>
+                                </div>
+                                <div class="languages-and-tools-row">
+                                    <img
+                                        class="languages-and-tools-image"
+                                        src="./Images/vercel_logo.png"
+                                        alt="Vercel logo"
+                                        loading="lazy"
+                                    />
+                                    <span>Vercel</span>
+                                </div>
+                            </div>
+                            <div class="languages-and-tools-column">
+                                <div class="languages-and-tools-row">
+                                    <img
+                                        class="languages-and-tools-image"
+                                        src="./Images/figma_logo.png"
+                                        alt="Figma logo"
+                                        loading="lazy"
+                                        id="figma-logo"
+                                    />
+                                    <span>Figma</span>
+                                </div>
+                            </div>
+                            <div class="languages-and-tools-column">
+                                <div class="languages-and-tools-row">
+                                    <img
+                                        class="languages-and-tools-image"
+                                        src="./Images/strapi_logo.png"
+                                        alt="Strapi logo"
+                                        loading="lazy"
+                                    />
+                                    <span>Strapi</span>
+                                </div>
+                                <div class="languages-and-tools-row">
+                                    <img
+                                        class="languages-and-tools-image"
+                                        src="./Images/aws_logo.png"
+                                        alt="AWS S3 logo"
+                                        loading="lazy"
+                                    />
+                                    <span>AWS S3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Synopsis</h2>
                     </div>
                 </div>
                 <button class="close-button" onclick="closeExpandedCard(this)">
