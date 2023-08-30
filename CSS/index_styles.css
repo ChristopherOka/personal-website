@@ -1421,7 +1421,7 @@ span {
     display: flex;
     justify-content: center;
     position: relative;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .byline-svg svg {
@@ -1582,10 +1582,25 @@ span {
     }
 }
 
+#byline-card-expanded .content img:not(.languages-and-tools-image) {
+    display: block;
+    width: 100%;
+}
+
 #tdsb-card-expanded .header img {
     height: 50px;
     width: auto;
     margin-right: 1rem;
+}
+
+.third-header-body .card .top-image-well img {
+    transition: transform 0.6s ease-out 0.1s;
+}
+
+#vividseats-card:hover img,
+#tbits-card:hover img,
+#front-rush-card:hover img {
+    transform: scale(1.1);
 }
 
 #vividseats-card-expanded .header img {
