@@ -1675,8 +1675,7 @@ span {
     }
 
     .card-expanded .header {
-        padding: 1.5rem;
-        padding-right: 3.5rem;
+        padding: 1rem 3.5rem 1rem 1.5rem;
     }
 
     .card-expanded .header .top-image {
