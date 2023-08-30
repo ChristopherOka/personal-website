@@ -1676,6 +1676,7 @@ span {
 
     .card-expanded .header {
         padding: 1.5rem;
+        padding-right: 3.5rem;
     }
 
     .card-expanded .header .top-image {
@@ -1698,10 +1699,6 @@ span {
 @media screen and (max-width: 500px) {
     .card-expanded h3 {
         font-size: 2rem;
-    }
-
-    .card-expanded .header {
-        margin-top: 2rem;
     }
 
     .card-expanded .header .top-image {
