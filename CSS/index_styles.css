@@ -1837,6 +1837,26 @@ span {
     }
 }
 
+#desktop-web-scraper-diagram,
+#mobile-web-scraper-diagram {
+    width: 100%;
+    margin-top: 1rem;
+    display: block;
+}
+
+#mobile-web-scraper-diagram {
+    display: none;
+}
+
+@media screen and (max-width: 760px) {
+    #mobile-web-scraper-diagram {
+        display: block;
+    }
+    #desktop-web-scraper-diagram {
+        display: none;
+    }
+}
+
 .card-expanded .content .languages-and-tools-block {
     display: flex;
     gap: 1rem;
