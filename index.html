@@ -1699,7 +1699,7 @@
                             >
                                 bylinebyline.com
                             </a>
-                            from the ground up, making a platform that is
+                            from the ground up, making a platform that's
                             blazingly fast and easily modified by non-technical
                             editors.
                         </p>
@@ -1709,15 +1709,114 @@
                             loading="lazy"
                         />
                         <img
-                            src="./Images/SCR-20230830-iwpd.jpeg"
+                            src="./Images/SCR-20230830-qaeb.jpeg"
                             loading="lazy"
-                            style="margin-top: 2rem"
+                            style="margin-top: 1.5rem"
                         />
                         <img
-                            src="./Images/SCR-20230830-pyxg.jpeg"
+                            src="./Images/SCR-20230830-iwpd.jpeg"
                             loading="lazy"
-                            style="margin-top: 2rem"
+                            style="margin: 1.5rem auto"
                         />
+                        <h2>Infrastructure</h2>
+                        <p>
+                            They needed a website, and they needed it quick.
+                            They also needed to be scrappy, considering there
+                            was currently no monetization scheme in place. I had
+                            to think of solutions that were consistent,
+                            performant, quick to build with, and most of all
+                            cheap.
+                        </p>
+                        <p>
+                            First was the language/framework of choice. I’m
+                            familiar with Next.js, but had only used the pages
+                            directory before. With all the new features that
+                            Next.js 13 and the app router were boasting, I had
+                            to give it a shot. I wanted this site to be as fast
+                            as humanly possible, and the app router with server
+                            components seemed like it could get me there.
+                        </p>
+                        <p>
+                            I chose Vercel to host the site. From using Vercel
+                            before, I knew the free tier was quite lenient and
+                            the pro tier was on the cheaper side as well. Since
+                            I was aiming for fast development, using a tool I’m
+                            familiar with would also speed up the process.
+                        </p>
+                        <p>
+                            I needed a CMS for the editors to manage site
+                            content without touching the code. I decided to go
+                            with Strapi because I’d used it before and because
+                            the “Dynamic Zones” were a perfect solution for
+                            creating customizable articles with hot-swappable
+                            components. I’d host all of this on Heroku, which
+                            provides an intuitive UI and minimal setup and
+                            maintenance.
+                        </p>
+                        <p>
+                            Finally to host images, videos, and other files, I
+                            decided to use AWS S3 because of the pay-as-you-use
+                            price model which seems to be one of the cheapest
+                            file storage solutions out there. I was also aware
+                            of the ability to create replicas to serve content
+                            in other regions should we need to decrease latency
+                            in the future.
+                        </p>
+                        <p>
+                            Here’s a diagram I drew up to visualize the
+                            infrastructure of the site:
+                        </p>
+                        <img
+                            src="./Images/byline infrastructure.png"
+                            alt=""
+                            loading="lazy"
+                            style="max-width: 650px; margin-bottom: 1.5rem"
+                        />
+                        <h2>Building</h2>
+                        <p>
+                            This process was relatively straight-forward. Since
+                            this was my third major project, I’d gotten the hang
+                            of working with a team and working with deadlines in
+                            place. I noticed I would hit less roadblocks because
+                            I’ve experienced many of these problems already.
+                        </p>
+                        <p>
+                            I was fortunate to work with an experienced graphic
+                            designer on the project, allowing us to move
+                            quickly. She would make a design, we’d discuss as a
+                            team, and I’d implement it shortly after.
+                        </p>
+                        <p>
+                            Although most of the project was smooth-sailing,
+                            there was one continuous and unique challenge that
+                            we had to work through. The graphic designer on the
+                            project specialized in creating designs for print
+                            media like Bloomberg and the New York Times, and
+                            this was the first website they’d ever designed.
+                            This meant I had to familiarize them with
+                            web-specific considerations like screen size
+                            responsiveness, interaction design, and
+                            accessibility.
+                        </p>
+                        <p>
+                            Luckily, they were quick to learn and were able to
+                            crank out designs like no tomorrow once they got the
+                            hang of designing for mobile and desktop
+                            simultaneously, and other considerations like
+                            placement, colour, and size of text and buttons.
+                        </p>
+                        <p>
+                            After some hard work and a few ideas from me as well
+                            (like the colour-changing button on the homepage),
+                            we finished the site within the initial 12 week
+                            timeline!
+                        </p>
+                        <h3>Takeaways and Areas of Personal Growth</h3>
+                        <ul>
+                            <li>
+                                
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <button class="close-button" onclick="closeExpandedCard(this)">
