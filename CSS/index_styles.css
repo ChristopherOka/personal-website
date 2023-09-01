@@ -1612,12 +1612,11 @@ span {
 .card-expanded .content {
     border-top: 1px solid var(--default-text);
     border-bottom: 1px solid var(--default-text);
-    margin: 0 2rem;
     margin-bottom: 2rem;
     flex: 1;
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 2rem 0;
+    padding: 2rem;
 }
 
 .card-expanded .inner-wrapper {
@@ -2013,8 +2012,7 @@ span {
 }
 
 #martha-rave-cookies-card-expanded img.splitscreen-dashboards:hover {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 16px 20px -7px var(--gold),
-        0 -16px 20px -7px var(--gold);
+    box-shadow: 0 0 30px 4px var(--gold);
 }
 
 #martha-rave-cookies-card-expanded h2 {
