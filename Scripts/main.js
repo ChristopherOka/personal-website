@@ -44,10 +44,19 @@ function renderNewPage(currentHeaderEl, skipAnimation = false) {
     document.getElementById("back-btn").classList.remove("hidden");
 
     if (currentHeaderId === "third-header") {
-        setTimeout(() => {
+        if (skipAnimation) {
             document.getElementById("TH-FH-body").classList.remove("hidden");
             document.getElementById("TH-FH-body").classList.add("well-open");
-        }, 1500);
+        } else {
+            setTimeout(() => {
+                document
+                    .getElementById("TH-FH-body")
+                    .classList.remove("hidden");
+                document
+                    .getElementById("TH-FH-body")
+                    .classList.add("well-open");
+            }, 1500);
+        }
     }
 
     const canHover = window.matchMedia("(hover: hover)").matches;
@@ -389,7 +398,7 @@ function hideHeaderCover() {
     headerCover.style.visibility = "hidden";
 }
 
-function swapThirdHeaders(el) {
+function swapThirdHeaders(el, skipAnimation = false) {
     const activeHeader = document.getElementsByClassName("active-header")[0];
     const currentHeader = el.parentElement;
     if (activeHeader == currentHeader) {
@@ -520,24 +529,41 @@ function openExpandedCardByUrl() {
     const secondHeader = document.getElementById("second-header");
     const thirdHeader = document.getElementById("third-header");
     const designHeader = document.getElementById("TH-SH").querySelector("a");
+    const urlParams = new URLSearchParams(window.location.search);
+    const cardId = urlParams.get("card");
 
-    if (pathname === "/about") {
+    if (pathname.includes("/experience") || cardId) {
+        renderNewPage(thirdHeader, true);
+        hideHeaderCover();
+        if (cardId) {
+            const card = document.getElementById(cardId);
+            openExpandedCard(card);
+            return;
+        }
+        if (pathname.includes("/experience/design")) {
+            swapThirdHeaders(designHeader);
+            const card = document.getElementById(pathname.split("/")[3]);
+            if (!card) return;
+            openExpandedCard(card);
+            return;
+        }
+        const card = document.getElementById(pathname.split("/")[2]);
+        if (!card) return;
+        openExpandedCard(card);
+    } else if (pathname === "/about") {
         renderNewPage(firstHeader, true);
         hideHeaderCover();
     } else if (pathname === "/hobbies") {
         renderNewPage(secondHeader, true);
         hideHeaderCover();
-    } else if (pathname.includes("/experience")) {
-        renderNewPage(thirdHeader, true);
-        hideHeaderCover();
-        if (pathname.includes("/experience/design")) {
-            swapThirdHeaders(designHeader);
-            const card = document.getElementById(pathname.split("/")[3]);
-            if (!cart) return;
-            openExpandedCard(card);
-        }
-        const card = document.getElementById(pathname.split("/")[2]);
-        if (!card) return;
+    }
+}
+
+function openExpandedCardBySearchParam() {
+    const thirdHeader = document.getElementById("third-header");
+    if (cardId) {
+        const card = document.getElementById(cardId);
+        renderNewPage(thirdHeader);
         openExpandedCard(card);
     }
 }

@@ -2815,7 +2815,7 @@ h3.active-header {
 
 .thats-me-text {
     all: unset;
-    cursor: pointer;
+    cursor: pointer !important;
     font-size: 2rem;
     position: relative;
     top: -1.6rem;
