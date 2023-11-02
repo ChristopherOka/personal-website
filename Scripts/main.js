@@ -4,8 +4,8 @@ const ROUTE_MAP = {
     "third-header": "/experience",
 };
 
-function renderNewPage(currentHeaderEl) {
-    hideBg();
+function renderNewPage(currentHeaderEl, skipAnimation = false) {
+    hideBg(skipAnimation);
     const headers = ["first-header", "second-header", "third-header"];
     const currentHeaderId = currentHeaderEl.id;
     window.history.pushState(undefined, undefined, ROUTE_MAP[currentHeaderId]);
@@ -356,7 +356,7 @@ function showBg() {
     thatsMe.classList.add("return-name");
 }
 
-function hideBg() {
+function hideBg(skipAnimation = false) {
     const secondaryBg = document.getElementById("secondary-bg");
     const tertiaryBg = document.getElementById("tertiary-bg");
     const name = document.getElementById("name");
@@ -369,12 +369,24 @@ function hideBg() {
     thatsMe.classList.remove("return-name");
     name.classList.add("hide-name");
     thatsMe.classList.add("hide-name");
+    if (skipAnimation) {
+        secondaryBg.style.visibility = "hidden";
+        tertiaryBg.style.visibility = "hidden";
+        name.style.visibility = "hidden";
+        thatsMe.style.visibility = "hidden";
+        return;
+    }
     setTimeout(() => {
-        secondaryBg.style.visibility = "invisible";
-        tertiaryBg.style.visibility = "invisible";
-        name.style.visibility = "invisible";
-        thatsMe.style.visibility = "invisible";
+        secondaryBg.style.visibility = "hidden";
+        tertiaryBg.style.visibility = "hidden";
+        name.style.visibility = "hidden";
+        thatsMe.style.visibility = "hidden";
     }, 2000);
+}
+
+function hideHeaderCover() {
+    const headerCover = document.getElementById("header-cover");
+    headerCover.style.visibility = "hidden";
 }
 
 function swapThirdHeaders(el) {
@@ -510,11 +522,14 @@ function openExpandedCardByUrl() {
     const designHeader = document.getElementById("TH-SH").querySelector("a");
 
     if (pathname === "/about") {
-        renderNewPage(firstHeader);
+        renderNewPage(firstHeader, true);
+        hideHeaderCover();
     } else if (pathname === "/hobbies") {
-        renderNewPage(secondHeader);
+        renderNewPage(secondHeader, true);
+        hideHeaderCover();
     } else if (pathname.includes("/experience")) {
-        renderNewPage(thirdHeader);
+        renderNewPage(thirdHeader, true);
+        hideHeaderCover();
         if (pathname.includes("/experience/design")) {
             swapThirdHeaders(designHeader);
             const card = document.getElementById(pathname.split("/")[3]);
