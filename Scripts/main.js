@@ -517,9 +517,12 @@ function openExpandedCardByUrl() {
         renderNewPage(thirdHeader);
         if (pathname.includes("/experience/design")) {
             swapThirdHeaders(designHeader);
+            const card = document.getElementById(pathname.split("/")[3]);
+            if (!cart) return;
+            openExpandedCard(card);
         }
-        const card = document.getElementById(pathname.split("/")[3]);
-        if (!cart) return;
+        const card = document.getElementById(pathname.split("/")[2]);
+        if (!card) return;
         openExpandedCard(card);
     }
 }
