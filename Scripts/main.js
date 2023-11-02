@@ -1,7 +1,14 @@
+const ROUTE_MAP = {
+    "first-header": "/about",
+    "second-header": "/hobbies",
+    "third-header": "/experience",
+};
+
 function renderNewPage(currentHeaderEl) {
     hideBg();
     const headers = ["first-header", "second-header", "third-header"];
     const currentHeaderId = currentHeaderEl.id;
+    window.history.pushState(undefined, undefined, ROUTE_MAP[currentHeaderId]);
     const otherHeaders = headers.filter((e) => e !== currentHeaderId);
     showSocials(currentHeaderId);
     const firstOtherHeaderId = otherHeaders[0];
@@ -401,8 +408,10 @@ function swapThirdHeaders(el) {
     let headerBody;
     if (classList.includes("first-header")) {
         headerBody = document.getElementById("TH-FH-body");
+        window.history.pushState(undefined, undefined, "/experience");
     } else if (classList.includes("second-header")) {
         headerBody = document.getElementById("TH-SH-body");
+        window.history.pushState(undefined, undefined, "/experience/design");
     } else if (classList.includes("third-header")) {
         headerBody = document.getElementById("TH-TH-body");
     }
@@ -455,7 +464,7 @@ function closeExpandedCard(button) {
     const card = button.closest(".card-expanded");
     card.classList.add("collapse-into-close-button");
     card.classList.add("fade-out");
-    window.history.pushState({ card: null }, "card", "/");
+    window.history.back();
     setTimeout(() => {
         card.classList.add("hidden");
         card.classList.remove("fade-out");
@@ -471,7 +480,8 @@ function openExpandedCard(card) {
     cardExpanded.classList.remove("hidden");
     closeButton.classList.add("open-up");
     cardExpanded.classList.add("fade-in");
-    window.history.pushState({ card: cardId }, "card", `?card=${cardId}`);
+    const currentPath = window.location.pathname;
+    window.history.pushState(undefined, undefined, `${currentPath}/${cardId}`);
     setTimeout(() => {
         cardExpanded.classList.remove("fade-in");
         closeButton.classList.remove("open-up");
@@ -480,7 +490,7 @@ function openExpandedCard(card) {
 
 function closeAllExpandedCards() {
     const cards = document.getElementsByClassName("card-expanded");
-    window.history.pushState({ card: null }, "card", "/");
+    window.history.pushState(undefined, undefined, "/");
     for (let i = 0; i < cards.length; i++) {
         cards[i].classList.add("collapse-into-close-button");
         cards[i].classList.add("animating", "fade-out");
@@ -493,12 +503,23 @@ function closeAllExpandedCards() {
 }
 
 function openExpandedCardByUrl() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const cardId = urlParams.get("card");
+    const pathname = window.location.pathname;
+    const firstHeader = document.getElementById("first-header");
+    const secondHeader = document.getElementById("second-header");
     const thirdHeader = document.getElementById("third-header");
-    if (cardId) {
-        const card = document.getElementById(cardId);
+    const designHeader = document.getElementById("TH-SH").querySelector("a");
+
+    if (pathname === "/about") {
+        renderNewPage(firstHeader);
+    } else if (pathname === "/hobbies") {
+        renderNewPage(secondHeader);
+    } else if (pathname.includes("/experience")) {
         renderNewPage(thirdHeader);
+        if (pathname.includes("/experience/design")) {
+            swapThirdHeaders(designHeader);
+        }
+        const card = document.getElementById(pathname.split("/")[3]);
+        if (!cart) return;
         openExpandedCard(card);
     }
 }
