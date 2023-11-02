@@ -15,12 +15,13 @@
     <body>
         <div style="position: relative; overflow: hidden; height: 100%">
             <div id="main-headers">
-                <div
+                <a
                     id="first-header"
                     class="enabled header"
-                    onclick="renderNewPage(this)"
-                    onkeypress="renderNewPage(this)"
-                    tabindex="0"
+                    onclick="renderNewPage(event, this)"
+                    onkeypress="renderNewPage(event, this)"
+                    tabindex="1"
+                    href="/about"
                 >
                     <b>
                         <h2 class="larger-text">Who I Am</h2>
@@ -44,13 +45,14 @@
                             />
                         </div>
                     </div>
-                </div>
-                <div
+                </a>
+                <a
                     id="second-header"
                     class="enabled header"
-                    onclick="renderNewPage(this)"
-                    onkeypress="renderNewPage(this)"
-                    tabindex="0"
+                    onclick="renderNewPage(event, this)"
+                    onkeypress="renderNewPage(event, this)"
+                    tabindex="2"
+                    href="/hobbies"
                 >
                     <b>
                         <h2 class="larger-text">What I Love</h2>
@@ -93,13 +95,14 @@
                             />
                         </div>
                     </div>
-                </div>
-                <div
+                </a>
+                <a
                     id="third-header"
                     class="enabled header"
-                    onclick="renderNewPage(this)"
-                    onkeypress="renderNewPage(this)"
-                    tabindex="0"
+                    onclick="renderNewPage(event, this)"
+                    onkeypress="renderNewPage(event, this)"
+                    tabindex="3"
+                    href="/experience"
                 >
                     <b>
                         <h2 class="larger-text">What I've Done</h2>
@@ -148,7 +151,7 @@
                             />
                         </div>
                     </div>
-                </div>
+                </a>
                 <div id="first-header-body" class="hidden">
                     <div class="paragraph-well">
                         <div id="paragraphs">
@@ -3690,7 +3693,12 @@
                     <div></div>
                 </button>
             </div>
-            <button id="back-btn" class="hidden" onclick="returnHome()">
+            <button
+                id="back-btn"
+                class="hidden"
+                onclick="returnHome()"
+                tabindex="0"
+            >
                 <img
                     id="left-arrow"
                     src="/Images/yellow_back_arrow.svg"

@@ -367,6 +367,10 @@ span {
     overflow: hidden;
 }
 
+#main-headers > a {
+    text-decoration: none;
+}
+
 #main-headers > .header {
     position: absolute;
     cursor: pointer;

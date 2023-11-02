@@ -4,7 +4,10 @@ const ROUTE_MAP = {
     "third-header": "/experience",
 };
 
-function renderNewPage(currentHeaderEl, skipAnimation = false) {
+function renderNewPage(e, currentHeaderEl, skipAnimation = false) {
+    if (e) {
+        e.preventDefault();
+    }
     hideBg(skipAnimation);
     const headers = ["first-header", "second-header", "third-header"];
     const currentHeaderId = currentHeaderEl.id;
@@ -533,7 +536,7 @@ function openExpandedCardByUrl() {
     const cardId = urlParams.get("card");
 
     if (pathname.includes("/experience") || cardId) {
-        renderNewPage(thirdHeader, true);
+        renderNewPage(undefined, thirdHeader, true);
         hideHeaderCover();
         if (cardId) {
             const card = document.getElementById(cardId);
@@ -551,20 +554,11 @@ function openExpandedCardByUrl() {
         if (!card) return;
         openExpandedCard(card);
     } else if (pathname === "/about") {
-        renderNewPage(firstHeader, true);
+        renderNewPage(undefined, firstHeader, true);
         hideHeaderCover();
     } else if (pathname === "/hobbies") {
-        renderNewPage(secondHeader, true);
+        renderNewPage(undefined, secondHeader, true);
         hideHeaderCover();
-    }
-}
-
-function openExpandedCardBySearchParam() {
-    const thirdHeader = document.getElementById("third-header");
-    if (cardId) {
-        const card = document.getElementById(cardId);
-        renderNewPage(thirdHeader);
-        openExpandedCard(card);
     }
 }
 
