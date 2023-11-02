@@ -4,6 +4,12 @@ const ROUTE_MAP = {
     "third-header": "/experience",
 };
 
+const TITLE_MAP = {
+    "first-header": "About",
+    "second-header": "Hobbies",
+    "third-header": "Experience",
+};
+
 function renderNewPage(e, currentHeaderEl, skipAnimation = false) {
     if (e) {
         e.preventDefault();
@@ -12,6 +18,8 @@ function renderNewPage(e, currentHeaderEl, skipAnimation = false) {
     const headers = ["first-header", "second-header", "third-header"];
     const currentHeaderId = currentHeaderEl.id;
     window.history.pushState(undefined, undefined, ROUTE_MAP[currentHeaderId]);
+    document.getElementById("title").innerHTML =
+        TITLE_MAP[currentHeaderId] + " - Christopher Oka";
     const otherHeaders = headers.filter((e) => e !== currentHeaderId);
     showSocials(currentHeaderId);
     const firstOtherHeaderId = otherHeaders[0];
@@ -82,6 +90,7 @@ function renderNewPage(e, currentHeaderEl, skipAnimation = false) {
 
 function returnHome() {
     showBg();
+    document.getElementById("title").innerHTML = "Christopher Oka";
 
     const currentHeaderId = document.getElementsByClassName("top-header")[0].id;
     hideSocials(currentHeaderId);
