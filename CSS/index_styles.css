@@ -45,33 +45,8 @@
 }
 
 @font-face {
-    font-family: SignikaNegativeLight, sans-serif;
-    src: url("../Fonts/SignikaNegative-Light.ttf");
-}
-
-@font-face {
     font-family: SecularOne;
     src: url("../Fonts/SecularOne-Regular.ttf");
-}
-
-@font-face {
-    font-family: Sriracha;
-    src: url("../Fonts/Sriracha-Regular.ttf");
-}
-
-@font-face {
-    font-family: PatrickHand;
-    src: url("../Fonts/PatrickHand-Regular.ttf");
-}
-
-@font-face {
-    font-family: BreeSerif;
-    src: url("../Fonts/BreeSerif-Regular.ttf");
-}
-
-@font-face {
-    font-family: MerriweatherSans;
-    src: url("../Fonts/MerriweatherSans-VariableFont_wght.ttf");
 }
 
 @font-face {
