@@ -410,7 +410,10 @@ function hideHeaderCover() {
     headerCover.style.visibility = "hidden";
 }
 
-function swapThirdHeaders(el, skipAnimation = false) {
+function swapThirdHeaders(el, e) {
+    if (e) {
+        e.preventDefault();
+    }
     const activeHeader = document.getElementsByClassName("active-header")[0];
     const currentHeader = el.parentElement;
     if (activeHeader == currentHeader) {
