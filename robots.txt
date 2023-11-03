@@ -1,0 +1,4 @@
+User-Agent: *
+
+Host: https://www.christopheroka.com
+Sitemap: https://www.christopheroka.com/sitemap.xml
