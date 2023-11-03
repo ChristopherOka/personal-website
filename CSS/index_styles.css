@@ -10,6 +10,7 @@
     --light-purple: #a05dcfa1;
     --blue: #8acdea;
     --gold: rgb(199, 158, 33);
+    --light-gold: rgba(199, 158, 33, 0.5);
     --distance-from-top: 42vh;
 }
 
@@ -2534,15 +2535,22 @@ span {
 #third-header-body-headers > h3 {
     font-size: 60px;
     cursor: pointer;
-    color: var(--purple);
+    transition: left 1s ease, color 1s ease, opacity 1s ease, scale 0.25s ease;
+}
+
+#third-header-body-headers a {
+    text-decoration: none;
+    color: var(--gold);
+    transition: opacity 0.5s ease;
 }
 
 #third-header-body-headers > h3:hover {
-    color: var(--purple);
+    color: var(--gold);
+    scale: 1.05;
 }
 
-#third-header-body-headers > h3:not(.active-header) {
-    color: var(--light-purple);
+#third-header-body-headers > h3:not(.active-header) a {
+    opacity: 0.5;
 }
 
 h3.active-header {
@@ -2552,43 +2560,36 @@ h3.active-header {
 #third-header-body-headers .left {
     position: absolute;
     left: 0;
-    transition: left 1s ease, color 1s ease, opacity 1s ease;
 }
 
 #third-header-body-headers .first-header.middle {
     position: absolute;
     left: 20rem;
-    transition: left 1s ease, color 1s ease;
 }
 
 #third-header-body-headers .second-header.middle {
     position: absolute;
     left: 20rem;
-    transition: left 1s ease, color 1s ease;
 }
 
 #third-header-body-headers .third-header.middle {
     position: absolute;
     left: 20rem;
-    transition: left 1s ease, color 1s ease;
 }
 
 #third-header-body-headers .first-header.right {
     position: absolute;
     left: 80%;
-    transition: left 1s ease, color 1s ease;
 }
 
 #third-header-body-headers .second-header.right {
     position: absolute;
     left: 76%;
-    transition: left 1s ease, color 1s ease;
 }
 
 #third-header-body-headers .third-header.right {
     position: absolute;
     left: 78%;
-    transition: left 1s ease, color 1s ease;
 }
 
 @keyframes well-open {
@@ -3107,37 +3108,31 @@ h3.active-header {
     #third-header-body-headers .first-header.middle {
         position: absolute;
         left: 20rem;
-        transition: left 1s ease, color 1s ease;
     }
 
     #third-header-body-headers .second-header.middle {
         position: absolute;
         left: 20rem;
-        transition: left 1s ease, color 1s ease;
     }
 
     #third-header-body-headers .third-header.middle {
         position: absolute;
         left: 38%;
-        transition: left 1s ease, color 1s ease;
     }
 
     #third-header-body-headers .first-header.right {
         position: absolute;
         left: 75%;
-        transition: left 1s ease, color 1s ease;
     }
 
     #third-header-body-headers .second-header.right {
         position: absolute;
         left: 74%;
-        transition: left 1s ease, color 1s ease;
     }
 
     #third-header-body-headers .third-header.right {
         position: absolute;
         left: 75%;
-        transition: left 1s ease, color 1s ease;
     }
 }
 
@@ -3247,37 +3242,29 @@ h3.active-header {
     #third-header-body-headers .first-header.middle {
         position: absolute;
         left: 18rem;
-        transition: left 1s ease, color 1s ease;
     }
 
     #third-header-body-headers .second-header.middle {
         position: absolute;
         left: 18rem;
-        transition: left 1s ease, color 1s ease;
     }
-
     #third-header-body-headers .third-header.middle {
         position: absolute;
         left: 38%;
-        transition: left 1s ease, color 1s ease;
     }
 
     #third-header-body-headers .first-header.right {
         position: absolute;
         left: 75%;
-        transition: left 1s ease, color 1s ease;
     }
 
     #third-header-body-headers .second-header.right {
         position: absolute;
         left: 74%;
-        transition: left 1s ease, color 1s ease;
     }
-
     #third-header-body-headers .third-header.right {
         position: absolute;
         left: 76%;
-        transition: left 1s ease, color 1s ease;
     }
 }
 
