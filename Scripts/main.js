@@ -593,11 +593,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 window.addEventListener("popstate", function (e) {
     const pathname = window.location.pathname;
-    console.log(e.originalEvent.state);
     if (pathname === "/") {
         returnHome();
+        return;
     }
     if (pathname === "/experience" || pathname === "/experience/design") {
-        closeAllExpandedCards();
+        console.log(document.querySelector(".card-expanded:not(.hidden)"));
+        if (document.querySelector(".card-expanded:not(.hidden)")) {
+            closeAllExpandedCards();
+            return;
+        }
+        returnHome();
+        return;
     }
 });
