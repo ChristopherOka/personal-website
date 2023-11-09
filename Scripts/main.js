@@ -510,14 +510,18 @@ function closeExpandedCard(button) {
 }
 
 function openExpandedCard(card) {
-    const cardId = card.id;
-    const cardExpanded = document.getElementById(`${cardId}-expanded`);
+    const cardName = card.dataset.name;
+    const cardExpanded = document.getElementById(`${cardName}-card-expanded`);
     const closeButton = cardExpanded.querySelector(".close-button");
     cardExpanded.classList.remove("hidden");
     closeButton.classList.add("open-up");
     cardExpanded.classList.add("fade-in");
     const currentPath = window.location.pathname;
-    window.history.pushState(undefined, undefined, `${currentPath}/${cardId}`);
+    window.history.pushState(
+        undefined,
+        undefined,
+        `${currentPath}/${cardName}`
+    );
     setTimeout(() => {
         cardExpanded.classList.remove("fade-in");
         closeButton.classList.remove("open-up");
@@ -572,6 +576,9 @@ function openExpandedCardByUrl() {
         renderNewPage(undefined, secondHeader, true);
         hideHeaderCover();
     }
+}
+function cancelClick(e) {
+    e.preventDefault();
 }
 
 document.addEventListener("DOMContentLoaded", function () {

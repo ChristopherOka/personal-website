@@ -4,11 +4,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            rel="icon"
-            type="image/x-icon"
-            href="/Images/favicon.ico"
-        />
+        <link rel="icon" type="image/x-icon" href="/Images/favicon.ico" />
         <script src="/Scripts/main.js"></script>
         <title id="title">Christopher Oka</title>
         <meta
@@ -443,10 +439,15 @@
                         <div
                             class="card"
                             id="byline-card"
+                            data-name="byline"
                             onclick="openExpandedCard(this)"
                         >
                             <div class="top-image-back"></div>
-                            <div class="top-image-well">
+                            <a
+                                href="/experience/byline"
+                                onclick="cancelClick(event)"
+                                class="top-image-well"
+                            >
                                 <div class="box-shadow-well">
                                     <img
                                         class="top-image"
@@ -456,7 +457,7 @@
                                     />
                                     <div id="box-shadow"></div>
                                 </div>
-                            </div>
+                            </a>
                             <div class="card-body">
                                 <div class="divider"></div>
                                 <h3 id="byline-header">Byline</h3>
@@ -473,10 +474,15 @@
                         <div
                             class="card"
                             id="martha-rave-cookies-card"
+                            data-name="martha-rave-cookies"
                             onclick="openExpandedCard(this)"
                         >
                             <div class="top-image-back"></div>
-                            <div class="top-image-well">
+                            <a
+                                href="/experience/martha-rave-cookies"
+                                onclick="cancelClick(event)"
+                                class="top-image-well"
+                            >
                                 <div class="border-well">
                                     <img
                                         class="top-image"
@@ -486,7 +492,7 @@
                                     />
                                     <div id="border"></div>
                                 </div>
-                            </div>
+                            </a>
                             <div class="card-body">
                                 <div class="divider"></div>
                                 <h3 id="martha-rave-header">
@@ -507,9 +513,14 @@
                         <div
                             class="card"
                             id="creature-world-card"
+                            data-name="creature-world"
                             onclick="openExpandedCard(this)"
                         >
-                            <div class="creature-well">
+                            <a
+                                href="/experience/creature-world"
+                                onclick="cancelClick(event)"
+                                class="creature-well"
+                            >
                                 <img
                                     id="idle-back"
                                     class="top-image"
@@ -522,7 +533,7 @@
                                     src="/Images/idle_front.gif"
                                     alt="Swinging creature"
                                 />
-                            </div>
+                            </a>
                             <div class="card-body">
                                 <div
                                     class="divider"
@@ -555,16 +566,21 @@
                         <div
                             class="card"
                             id="vividseats-card"
+                            data-name="vividseats"
                             onclick="openExpandedCard(this)"
                         >
                             <div class="top-image-back"></div>
-                            <div class="top-image-well">
+                            <a
+                                href="/experience/vividseats"
+                                onclick="cancelClick(event)"
+                                class="top-image-well"
+                            >
                                 <img
                                     class="top-image"
                                     src="/Images/vividseats.png"
                                     alt="Vivid Seats logo"
                                 />
-                            </div>
+                            </a>
                             <div class="card-body">
                                 <div class="divider"></div>
                                 <h3>Vivid Seats</h3>
@@ -581,16 +597,21 @@
                         <div
                             class="card"
                             id="tbits-card"
+                            data-name="tbits"
                             onclick="openExpandedCard(this)"
                         >
                             <div class="top-image-back"></div>
-                            <div class="top-image-well">
+                            <a
+                                href="/experience/tbits"
+                                onclick="cancelClick(event)"
+                                class="top-image-well"
+                            >
                                 <img
                                     class="top-image"
                                     src="/Images/tbits.png"
                                     alt="Tradable Bits logo"
                                 />
-                            </div>
+                            </a>
                             <div class="card-body">
                                 <div class="divider"></div>
                                 <h3>Tradable Bits</h3>
@@ -610,16 +631,21 @@
                         <div
                             class="card"
                             id="front-rush-card"
+                            data-name="front-rush"
                             onclick="openExpandedCard(this)"
                         >
                             <div class="top-image-back"></div>
-                            <div class="top-image-well">
+                            <a
+                                href="/experience/front-rush"
+                                onclick="cancelClick(event)"
+                                class="top-image-well"
+                            >
                                 <img
                                     class="top-image"
                                     src="/Images/front_rush.png"
                                     alt="Front Rush logo"
                                 />
-                            </div>
+                            </a>
                             <div class="card-body">
                                 <div class="divider"></div>
                                 <h3>Front Rush</h3>
@@ -638,11 +664,16 @@
                         </div>
                         <div
                             class="card"
-                            id="website-card"
+                            id="personal-website-card"
+                            data-name="personal-website"
                             onclick="openExpandedCard(this)"
                         >
                             <div class="top-image-back"></div>
-                            <div class="top-image-well">
+                            <a
+                                href="/experience/personal-website"
+                                onclick="cancelClick(event)"
+                                class="top-image-well"
+                            >
                                 <img
                                     style="max-width: none"
                                     class="top-image"
@@ -650,7 +681,7 @@
                                     alt="The homepage of christopheroka.com"
                                     loading="lazy"
                                 />
-                            </div>
+                            </a>
                             <div class="card-body">
                                 <div class="divider"></div>
                                 <h3>This Website</h3>
@@ -669,10 +700,15 @@
                         <div
                             class="card"
                             id="model-generator-card"
+                            data-name="model-generator"
                             onclick="openExpandedCard(this)"
                         >
                             <div class="top-image-back"></div>
-                            <div class="top-image-well">
+                            <a
+                                href="/experience/model-generator"
+                                onclick="cancelClick(event)"
+                                class="top-image-well"
+                            >
                                 <img
                                     class="top-image"
                                     style="max-width: none"
@@ -680,7 +716,7 @@
                                     alt="Dogs on Google Images"
                                     loading="lazy"
                                 />
-                            </div>
+                            </a>
                             <div class="card-body">
                                 <div class="divider"></div>
                                 <h3>Model Generator</h3>
@@ -699,10 +735,15 @@
                         <div
                             class="card"
                             id="martha-rave-cookies-card"
+                            data-name="martha-rave-cookies"
                             onclick="openExpandedCard(this)"
                         >
                             <div class="top-image-back"></div>
-                            <div class="top-image-well">
+                            <a
+                                href="/experience/design/martha-rave-cookies"
+                                onclick="cancelClick(event)"
+                                class="top-image-well"
+                            >
                                 <img
                                     class="top-image"
                                     style="
@@ -716,7 +757,7 @@
                                     src="/Images/martha_rave_cookies.png"
                                     alt="Martha Rave Cookies logo"
                                 />
-                            </div>
+                            </a>
                             <div class="card-body">
                                 <div class="divider"></div>
                                 <h3 id="martha-rave-header">
@@ -736,9 +777,14 @@
                         <div
                             class="card"
                             id="creature-world-card"
+                            data-name="creature-world"
                             onclick="openExpandedCard(this)"
                         >
-                            <div class="creature-well">
+                            <a
+                                href="/experience/designs/creature-world"
+                                onclick="cancelClick(event)"
+                                class="creature-well"
+                            >
                                 <img
                                     id="idle-back"
                                     class="top-image"
@@ -751,7 +797,7 @@
                                     src="/Images/idle_front.gif"
                                     alt="Swinging creature"
                                 />
-                            </div>
+                            </a>
                             <div class="card-body">
                                 <div
                                     class="divider"
@@ -783,11 +829,16 @@
                         </div>
                         <div
                             class="card"
-                            id="website-card"
+                            id="personal-website-card"
+                            data-name="personal-website"
                             onclick="openExpandedCard(this)"
                         >
                             <div class="top-image-back"></div>
-                            <div class="top-image-well">
+                            <a
+                                href="/experience/design/personal-website"
+                                onclick="cancelClick(event)"
+                                class="top-image-well"
+                            >
                                 <img
                                     style="max-width: none"
                                     class="top-image"
@@ -795,7 +846,7 @@
                                     alt="The homepage of christopheroka.com"
                                     loading="lazy"
                                 />
-                            </div>
+                            </a>
                             <div class="card-body">
                                 <div class="divider"></div>
                                 <h3>This Website</h3>
@@ -814,10 +865,15 @@
                         <div
                             class="card"
                             id="rally-card"
+                            data-name="rally"
                             onclick="openExpandedCard(this)"
                         >
                             <div class="top-image-back"></div>
-                            <div class="top-image-well">
+                            <a
+                                href="/experience/design/rally"
+                                onclick="cancelClick(event)"
+                                class="top-image-well"
+                            >
                                 <img
                                     style="max-width: 220px"
                                     class="top-image"
@@ -825,7 +881,7 @@
                                     alt="Text that says 'rally'"
                                     loading="lazy"
                                 />
-                            </div>
+                            </a>
                             <div class="card-body">
                                 <div class="divider"></div>
                                 <h3>rally</h3>
@@ -3578,7 +3634,10 @@
                     <div></div>
                 </button>
             </div>
-            <div class="card-expanded hidden" id="website-card-expanded">
+            <div
+                class="card-expanded hidden"
+                id="personal-website-card-expanded"
+            >
                 <div class="inner-wrapper">
                     <div class="header">
                         <div class="image-well">
