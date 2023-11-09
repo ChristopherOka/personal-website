@@ -17,7 +17,13 @@ function renderNewPage(e, currentHeaderEl, skipAnimation = false) {
     hideBg(skipAnimation);
     const headers = ["first-header", "second-header", "third-header"];
     const currentHeaderId = currentHeaderEl.id;
-    window.history.pushState(undefined, undefined, ROUTE_MAP[currentHeaderId]);
+    if (window.location.pathname != ROUTE_MAP[currentHeaderId]) {
+        window.history.pushState(
+            undefined,
+            undefined,
+            ROUTE_MAP[currentHeaderId]
+        );
+    }
     document.getElementById("title").innerHTML =
         TITLE_MAP[currentHeaderId] + " - Christopher Oka";
     const otherHeaders = headers.filter((e) => e !== currentHeaderId);
