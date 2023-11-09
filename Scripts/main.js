@@ -567,12 +567,14 @@ function openExpandedCardByUrl() {
         }
         if (pathname.includes("/experience/design")) {
             swapThirdHeaders(designHeader);
-            const card = document.getElementById(pathname.split("/")[3]);
+            const card = document.getElementById(
+                `${pathname.split("/")[3]}-card`
+            );
             if (!card) return;
             openExpandedCard(card);
             return;
         }
-        const card = document.getElementById(pathname.split("/")[2]);
+        const card = document.getElementById(`${pathname.split("/")[2]}-card`);
         if (!card) return;
         openExpandedCard(card);
     } else if (pathname === "/about") {
