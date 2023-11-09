@@ -96,6 +96,7 @@ function renderNewPage(e, currentHeaderEl, skipAnimation = false) {
 
 function returnHome() {
     showBg();
+    window.history.pushState(undefined, undefined, "/");
     document.getElementById("title").innerHTML = "Christopher Oka";
 
     const currentHeaderId = document.getElementsByClassName("top-header")[0].id;
@@ -477,20 +478,17 @@ function toggleSwapThirdHeaders() {
 function resetThirdHeaders() {
     const THFHbody = document.getElementById("TH-FH-body");
     const THSHbody = document.getElementById("TH-SH-body");
-    // const THTHbody = document.getElementById('TH-TH-body');
+
     THFHbody.classList.add("hidden", "active-body");
     THSHbody.classList.add("hidden");
-    // THTHbody.classList.add('hidden');
     THFHbody.classList.remove("well-open", "well-close");
     THSHbody.classList.remove("active-body", "well-open", "well-close");
-    // THTHbody.classList.remove('active-body', 'well-open', 'well-close');
 
     const THFH = document.getElementById("TH-FH");
     const THSH = document.getElementById("TH-SH");
-    // const THTH = document.getElementById('TH-TH');
+
     THFH.className = "first-header active-header left";
     THSH.className = "second-header middle";
-    // THTH.className = 'third-header right';
 }
 
 function toggleImageExpand(card) {
@@ -536,7 +534,6 @@ function openExpandedCard(card) {
 
 function closeAllExpandedCards() {
     const cards = document.getElementsByClassName("card-expanded");
-    window.history.pushState(undefined, undefined, "/");
     for (let i = 0; i < cards.length; i++) {
         cards[i].classList.add("collapse-into-close-button");
         cards[i].classList.add("animating", "fade-out");
@@ -593,4 +590,14 @@ document.addEventListener("DOMContentLoaded", function () {
     showIcons();
     window.addEventListener("resize", detectWindowResize);
     openExpandedCardByUrl();
+});
+window.addEventListener("popstate", function (e) {
+    const pathname = window.location.pathname;
+    console.log(e.originalEvent.state);
+    if (pathname === "/") {
+        returnHome();
+    }
+    if (pathname === "/experience" || pathname === "/experience/design") {
+        closeAllExpandedCards();
+    }
 });
