@@ -17,7 +17,7 @@ function renderNewPage(e, currentHeaderEl, skipAnimation = false) {
     hideBg(skipAnimation);
     const headers = ["first-header", "second-header", "third-header"];
     const currentHeaderId = currentHeaderEl.id;
-    if (window.location.pathname != ROUTE_MAP[currentHeaderId]) {
+    if (!window.location.pathname.includes(ROUTE_MAP[currentHeaderId])) {
         window.history.pushState(
             undefined,
             undefined,
@@ -513,7 +513,7 @@ function closeExpandedCard(button) {
     }, 1000);
 }
 
-function openExpandedCard(card) {
+function openExpandedCard(card, pushState = true) {
     const cardName = card.dataset.name;
     const cardExpanded = document.getElementById(`${cardName}-card-expanded`);
     const closeButton = cardExpanded.querySelector(".close-button");
@@ -521,11 +521,13 @@ function openExpandedCard(card) {
     closeButton.classList.add("open-up");
     cardExpanded.classList.add("fade-in");
     const currentPath = window.location.pathname;
-    window.history.pushState(
-        undefined,
-        undefined,
-        `${currentPath}/${cardName}`
-    );
+    if (pushState) {
+        window.history.pushState(
+            undefined,
+            undefined,
+            `${currentPath}/${cardName}`
+        );
+    }
     setTimeout(() => {
         cardExpanded.classList.remove("fade-in");
         closeButton.classList.remove("open-up");
@@ -559,7 +561,7 @@ function openExpandedCardByUrl() {
         hideHeaderCover();
         if (cardId) {
             const card = document.getElementById(cardId);
-            openExpandedCard(card);
+            openExpandedCard(card, false);
             return;
         }
         if (pathname.includes("/experience/design")) {
@@ -568,12 +570,12 @@ function openExpandedCardByUrl() {
                 `${pathname.split("/")[3]}-card`
             );
             if (!card) return;
-            openExpandedCard(card);
+            openExpandedCard(card, false);
             return;
         }
         const card = document.getElementById(`${pathname.split("/")[2]}-card`);
         if (!card) return;
-        openExpandedCard(card);
+        openExpandedCard(card, false);
     } else if (pathname === "/about") {
         renderNewPage(undefined, firstHeader, true);
         hideHeaderCover();
@@ -598,7 +600,6 @@ window.addEventListener("popstate", function (e) {
         return;
     }
     if (pathname === "/experience" || pathname === "/experience/design") {
-        console.log(document.querySelector(".card-expanded:not(.hidden)"));
         if (document.querySelector(".card-expanded:not(.hidden)")) {
             closeAllExpandedCards();
             return;
