@@ -496,6 +496,39 @@
                     >
                         <div
                             class="card"
+                            id="internet-art-club-card"
+                            data-name="internet-art-club"
+                            onclick="openExpandedCard(this)"
+                        >
+                            <div class="top-image-back"></div>
+                            <a
+                                href="/experience/internet-art-club"
+                                onclick="cancelClick(event)"
+                                class="top-image-well"
+                            >
+                                <div class="box-shadow-well">
+                                    <img
+                                        class="top-image"
+                                        src="/Images/iac-logo-white.png"
+                                        alt="Internet Art Club logo"
+                                    />
+                                </div>
+                            </a>
+                            <div class="card-body">
+                                <div class="divider"></div>
+                                <h3>Internet Art Club</h3>
+                                <p class="subtitle" style="margin-top: 0.5rem">
+                                    <i>E-commerce Website</i>
+                                </p>
+                                <p>
+                                    Built a clean and unique e-commerce site for
+                                    Internet Art Club - the one stop shop for
+                                    interesting art and fashion.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="card"
                             id="byline-card"
                             data-name="byline"
                             onclick="openExpandedCard(this)"
@@ -1105,6 +1138,34 @@
                         <p></p>
                         <p></p>
                     </div>
+                </div>
+                <button class="close-button" onclick="closeExpandedCard(this)">
+                    <div></div>
+                    <div></div>
+                </button>
+            </div>
+            <div
+                class="card-expanded hidden"
+                id="internet-art-club-card-expanded"
+            >
+                <div class="inner-wrapper">
+                    <div class="header">
+                        <div class="image-well">
+                            <img
+                                class="top-image"
+                                src="/Images/iac-logo-white.png"
+                                alt="Internet Art Club logo"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div>
+                            <h1 class="title">Internet Art Club</h1>
+                            <p class="subtitle gold">
+                                <i>E-commerce Website</i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="content">Coming very very soon!</div>
                 </div>
                 <button class="close-button" onclick="closeExpandedCard(this)">
                     <div></div>
