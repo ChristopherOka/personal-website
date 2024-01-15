@@ -1573,13 +1573,16 @@ span {
     margin-right: 1rem;
 }
 
-.third-header-body .card .top-image-well img {
+.third-header-body .card .top-image-well img,
+.border-well {
     transition: transform 0.6s ease-out 0.1s;
 }
 
 #vividseats-card:hover img,
 #tbits-card:hover img,
-#front-rush-card:hover img {
+#front-rush-card:hover img,
+#martha-rave-cookies-card:hover .border-well,
+#internet-art-club-card:hover img {
     transform: scale(1.1);
 }
 
