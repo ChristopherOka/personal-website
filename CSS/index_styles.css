@@ -1791,6 +1791,7 @@ span {
 
 .card-expanded li {
     font-size: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 .card-expanded a {
