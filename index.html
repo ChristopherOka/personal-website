@@ -792,29 +792,59 @@
                     <div id="TH-SH-body" class="third-header-body hidden">
                         <div
                             class="card"
+                            id="uxr-questrade-card"
+                            data-name="uxr-questrade"
+                            onclick="openExpandedCard(this)"
+                        >
+                            <div class="top-image-back"></div>
+                            <a
+                                href="/experience/design/uxr-questrade"
+                                onclick="cancelClick(event)"
+                                class="top-image-well"
+                            >
+                                <img
+                                    class="top-image"
+                                    src="/Images/questrade.png"
+                                    alt="Questrade logo"
+                                    style="min-width: 170px"
+                                />
+                            </a>
+                            <div class="card-body">
+                                <div class="divider"></div>
+                                <h3 id="martha-rave-header">Questrade</h3>
+                                <p class="subtitle" style="margin-top: 0.5rem">
+                                    <i>User Experience Researcher</i>
+                                </p>
+                                <p>
+                                    Led research studies and user interviews to
+                                    gain further insight into user opinion and
+                                    behaviour, informing decision-making and
+                                    project-direction.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="card"
                             id="martha-rave-cookies-card"
                             data-name="martha-rave-cookies"
                             onclick="openExpandedCard(this)"
                         >
                             <div class="top-image-back"></div>
                             <a
-                                href="/experience/design/martha-rave-cookies"
+                                href="/experience/martha-rave-cookies"
                                 onclick="cancelClick(event)"
                                 class="top-image-well"
                             >
-                                <img
-                                    class="top-image"
-                                    style="
-                                        border-radius: 8px;
-                                        max-width: 120px;
-                                        padding: 0.5rem;
-                                        background-color: #161616;
-                                        box-shadow: 0 0 16px 1px
-                                            rgb(255, 158, 245);
-                                    "
-                                    src="/Images/martha_rave_cookies.png"
-                                    alt="Martha Rave Cookies logo"
-                                />
+                                <div class="border-well">
+                                    <img
+                                        class="top-image"
+                                        id="martha-rave-logo-card"
+                                        src="/Images/martha_rave_cookies.png"
+                                        alt="Martha Rave Cookies logo"
+                                    />
+                                    <div id="border"></div>
+                                </div>
                             </a>
                             <div class="card-body">
                                 <div class="divider"></div>
@@ -832,6 +862,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div
                             class="card"
                             id="creature-world-card"
@@ -959,6 +990,88 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="card-expanded hidden" id="uxr-questrade-card-expanded">
+                <div class="inner-wrapper">
+                    <div class="header">
+                        <div class="image-well">
+                            <img
+                                class="top-image"
+                                src="/Images/questrade.png"
+                                alt="Questrade logo"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div>
+                            <h1 class="title">Questrade</h1>
+                            <p class="subtitle gold">
+                                <i>User Experience Researcher</i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h2>Tools</h2>
+                        <div class="languages-and-tools-block">
+                            <div class="languages-and-tools-column">
+                                <div class="languages-and-tools-row">
+                                    <img
+                                        class="languages-and-tools-image"
+                                        src="/Images/usertesting.png"
+                                        alt="UserTesting logo"
+                                        loading="lazy"
+                                    />
+                                    <span>UserTesting</span>
+                                </div>
+                                <div class="languages-and-tools-row">
+                                    <img
+                                        class="languages-and-tools-image"
+                                        src="/Images/optimalworkshop.webp"
+                                        alt="Optimal Workshop logo"
+                                        loading="lazy"
+                                    />
+                                    <span>Optimal Workshop</span>
+                                </div>
+                                <div class="languages-and-tools-row">
+                                    <img
+                                        class="languages-and-tools-image"
+                                        src="/Images/figma_logo.png"
+                                        alt="Figma logo"
+                                        loading="lazy"
+                                        id="figma-logo"
+                                    />
+                                    <span>Figma</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Synopsis</h2>
+                        <p>
+                            Looking to get more experience in the UI/UX field, I
+                            decided to completely pivot out of Software and try
+                            a User Experience Research role.
+                        </p>
+                        <p>
+                            With the intention to absorb as much information as
+                            possible during this opportunity, I quickly began
+                            leading my own research studies.
+                        </p>
+                        <p>
+                            I managed to pick up valuable skills in the process,
+                            learning how to interpret different opinions than
+                            mine, how to consolidate qualitative research and
+                            turn it into quantitative insights. I learned how to
+                            conduct live interviews and ask thought-provoking
+                            and unbiased questions.
+                        </p>
+                        <p>
+                            Overall, it was an invaluable experience, and will
+                            shape my future journey into design and software.
+                        </p>
+                    </div>
+                </div>
+                <button class="close-button" onclick="closeExpandedCard(this)">
+                    <div></div>
+                    <div></div>
+                </button>
             </div>
             <div class="card-expanded hidden" id="creature-world-card-expanded">
                 <div class="inner-wrapper">
