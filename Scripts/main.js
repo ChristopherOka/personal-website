@@ -504,7 +504,11 @@ function closeExpandedCard(button) {
     const card = button.closest(".card-expanded");
     card.classList.add("collapse-into-close-button");
     card.classList.add("fade-out");
-    window.history.back();
+    const strippedPath = window.location.pathname.match(
+        /(\/experience)(\/design)?/g
+    );
+    window.history.pushState(undefined, undefined, strippedPath[0]);
+
     setTimeout(() => {
         card.classList.add("hidden");
         card.classList.remove("fade-out");
@@ -522,10 +526,12 @@ function openExpandedCard(card, pushState = true) {
     cardExpanded.classList.add("fade-in");
     const currentPath = window.location.pathname;
     if (pushState) {
+        const strippedPath = currentPath.match(/(\/experience)?(\/design)?/g);
+        console.log(strippedPath);
         window.history.pushState(
             undefined,
             undefined,
-            `${currentPath}/${cardName}`
+            `${strippedPath[0]}/${cardName}`
         );
     }
     setTimeout(() => {

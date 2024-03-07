@@ -1850,6 +1850,7 @@ span {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 #tbits-card-expanded.card-expanded .content .languages-and-tools-column {
@@ -4793,4 +4794,42 @@ h3.active-header {
         transform: translateX(-180px) translateY(-40px);
         height: 330px;
     }
+}
+
+.internet-art-club-svg {
+    display: flex;
+    justify-content: center;
+    transition: transform 4s cubic-bezier(0.59, 0.12, 0.34, 0.98),
+        filter 4s cubic-bezier(0.59, 0.12, 0.34, 0.98);
+    animation: iac-svg 8s cubic-bezier(0.59, 0.12, 0.34, 0.98) 1.5s;
+}
+
+.internet-art-club-svg:hover {
+    transform: scale(1.1);
+    filter: hue-rotate(1440deg);
+}
+
+@keyframes iac-svg {
+    0% {
+        transform: scale(1);
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        transform: scale(1.1);
+        filter: hue-rotate(1440deg);
+    }
+    100% {
+        transform: scale(1);
+        filter: hue-rotate(0deg);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .internet-art-club-svg {
+        margin-block: 4rem;
+    }
+}
+
+.internet-art-club-svg svg {
+    width: 100%;
 }
