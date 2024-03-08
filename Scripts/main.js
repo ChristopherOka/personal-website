@@ -527,7 +527,6 @@ function openExpandedCard(card, pushState = true) {
     const currentPath = window.location.pathname;
     if (pushState) {
         const strippedPath = currentPath.match(/(\/experience)?(\/design)?/g);
-        console.log(strippedPath);
         window.history.pushState(
             undefined,
             undefined,
