@@ -1,4 +1,6 @@
+import { inject } from "@vercel/analytics";
 import "./style.css";
+inject();
 
 document.getElementById("app").innerHTML = `
     <div style="position: relative; overflow: hidden; height: 100%">
