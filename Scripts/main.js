@@ -1,5 +1,3 @@
-import { inject } from "@vercel/analytics";
-
 const ROUTE_MAP = {
   "first-header": "/about",
   "second-header": "/hobbies",
@@ -572,7 +570,6 @@ function cancelClick(e) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  inject();
   showIcons();
   window.addEventListener("resize", detectWindowResize);
   openExpandedCardByUrl();
