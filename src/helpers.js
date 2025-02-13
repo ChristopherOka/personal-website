@@ -565,6 +565,7 @@ function openExpandedCardByUrl() {
     hideHeaderCover();
   }
 }
+
 function cancelClick(e) {
   e.preventDefault();
 }
