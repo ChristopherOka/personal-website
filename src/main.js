@@ -1,3 +1,4 @@
+import "./helpers";
 import "./style.css";
 
 document.getElementById("app").innerHTML = `
