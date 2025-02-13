@@ -575,6 +575,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", detectWindowResize);
   openExpandedCardByUrl();
 });
+
 window.addEventListener("popstate", function (e) {
   const pathname = window.location.pathname;
   if (pathname === "/") {

@@ -18,14 +18,14 @@ document.getElementById("app").innerHTML = `
             <div>
               <img
                 id="uofw"
-                src="/Images/uofw.png"
+                src="/uofw.png"
                 alt="university of waterloo logo"
               />
             </div>
             <div>
               <img
                 id="code"
-                src="/Images/code.png"
+                src="/code.png"
                 alt="carats used while coding"
               />
             </div>
@@ -44,27 +44,27 @@ document.getElementById("app").innerHTML = `
           </b>
           <div class="second-header-logos">
             <div>
-              <img id="curling" src="/Images/curling.png" alt="curling rock" />
+              <img id="curling" src="/curling.png" alt="curling rock" />
             </div>
             <div>
-              <img id="guitar" src="/Images/guitar.png" alt="guitar" />
+              <img id="guitar" src="/guitar.png" alt="guitar" />
             </div>
             <div>
               <img
                 id="hockey"
-                src="/Images/hockey.png"
+                src="/hockey.png"
                 alt="hockey stick and puck"
               />
             </div>
             <div>
               <img
                 id="frisbee"
-                src="/Images/frisbee.png"
+                src="/frisbee.png"
                 alt="frisbee flying through the air"
               />
             </div>
             <div>
-              <img id="chess" src="/Images/queen.png" alt="chess queen" />
+              <img id="chess" src="/queen.png" alt="chess queen" />
             </div>
           </div>
         </a>
@@ -83,7 +83,7 @@ document.getElementById("app").innerHTML = `
             <div>
               <img
                 id="martha-rave-cookies"
-                src="/Images/martha_rave_cookies.png"
+                src="/martha_rave_cookies.png"
                 alt="Toronto District School Board logo"
                 style="
                   border-radius: 8px;
@@ -96,28 +96,28 @@ document.getElementById("app").innerHTML = `
             <div>
               <img
                 id="creature-world"
-                src="/Images/creature_world.png"
+                src="/creature_world.png"
                 alt="Creature world logo"
               />
             </div>
             <div>
               <img
                 id="vividseats"
-                src="/Images/vividseats.png"
+                src="/vividseats.png"
                 alt="Vivid Seats logo"
               />
             </div>
             <div>
               <img
                 id="tbits"
-                src="/Images/tbits.png"
+                src="/tbits.png"
                 alt="Tradable Bits logo"
               />
             </div>
             <div>
               <img
                 id="front-rush"
-                src="/Images/front_rush.png"
+                src="/front_rush.png"
                 alt="Front Rush logo"
               />
             </div>
@@ -157,7 +157,7 @@ document.getElementById("app").innerHTML = `
               <div class="card">
                 <div class="left-image">
                   <img
-                    src="/Images/uofw.png"
+                    src="/uofw.png"
                     alt="University of Waterloo logo"
                   />
                 </div>
@@ -177,7 +177,7 @@ document.getElementById("app").innerHTML = `
               </div>
               <div class="card">
                 <div class="left-image">
-                  <img src="/Images/code.png" alt="Coding brackets" />
+                  <img src="/code.png" alt="Coding brackets" />
                 </div>
                 <div class="right-text">
                   <p>
@@ -204,7 +204,7 @@ document.getElementById("app").innerHTML = `
               </div>
               <div class="card">
                 <div class="left-image">
-                  <img src="/Images/curling.png" alt="Curling rock" />
+                  <img src="/curling.png" alt="Curling rock" />
                 </div>
                 <div class="right-text">
                   <p>
@@ -228,7 +228,7 @@ document.getElementById("app").innerHTML = `
             <div class="top-image-back"></div>
             <img
               class="top-image"
-              src="/Images/curling_rooney.webp"
+              src="/curling_rooney.webp"
               alt="Me curling at the 2023 National Championships"
               loading="lazy"
             />
@@ -243,7 +243,7 @@ document.getElementById("app").innerHTML = `
             <img
               class="bottom-logo"
               id="bottom-curling-logo"
-              src="/Images/curling.png"
+              src="/curling.png"
               alt="curling rock"
             />
           </div>
@@ -251,7 +251,7 @@ document.getElementById("app").innerHTML = `
             <div class="top-image-back"></div>
             <img
               class="top-image"
-              src="/Images/coffee_house.jpg"
+              src="/coffee_house.jpg"
               alt="playing guitar on stage"
             />
             <div class="card-body">
@@ -265,7 +265,7 @@ document.getElementById("app").innerHTML = `
             <img
               class="bottom-logo"
               id="bottom-guitar-logo"
-              src="/Images/guitar.png"
+              src="/guitar.png"
               alt="guitar"
             />
           </div>
@@ -273,7 +273,7 @@ document.getElementById("app").innerHTML = `
             <div class="top-image-back"></div>
             <img
               class="top-image"
-              src="/Images/bender.jpeg"
+              src="/bender.jpeg"
               alt="hockey player"
             />
             <div class="card-body">
@@ -287,7 +287,7 @@ document.getElementById("app").innerHTML = `
             <img
               class="bottom-logo"
               id="bottom-hockey-logo"
-              src="/Images/hockey.png"
+              src="/hockey.png"
               alt="hockey stick"
             />
           </div>
@@ -295,7 +295,7 @@ document.getElementById("app").innerHTML = `
             <div class="top-image-back"></div>
             <img
               class="top-image"
-              src="/Images/frisbee.jpg"
+              src="/frisbee.jpg"
               alt="jumping catching a frisbee"
             />
             <div class="card-body">
@@ -310,7 +310,7 @@ document.getElementById("app").innerHTML = `
             <img
               class="bottom-logo"
               id="bottom-frisbee-logo"
-              src="/Images/frisbee.png"
+              src="/frisbee.png"
               alt="frisbee"
             />
           </div>
@@ -318,7 +318,7 @@ document.getElementById("app").innerHTML = `
             <div class="top-image-back"></div>
             <img
               class="top-image"
-              src="/Images/chess.png"
+              src="/chess.png"
               alt="A chess board"
             />
             <div class="card-body">
@@ -335,7 +335,7 @@ document.getElementById("app").innerHTML = `
             <img
               class="bottom-logo"
               id="bottom-chess-logo"
-              src="/Images/queen.png"
+              src="/queen.png"
               alt="chess queen"
             />
           </div>
@@ -371,7 +371,7 @@ document.getElementById("app").innerHTML = `
                 <div class="box-shadow-well">
                   <img
                     class="top-image"
-                    src="/Images/iac-logo-white.png"
+                    src="/iac-logo-white.png"
                     alt="Internet Art Club logo"
                   />
                 </div>
@@ -403,7 +403,7 @@ document.getElementById("app").innerHTML = `
                 <div class="box-shadow-well">
                   <img
                     class="top-image"
-                    src="/Images/byline_site_logo.png"
+                    src="/byline_site_logo.png"
                     id="byline-card-logo"
                     alt="Byline logo"
                   />
@@ -438,7 +438,7 @@ document.getElementById("app").innerHTML = `
                   <img
                     class="top-image"
                     id="martha-rave-logo-card"
-                    src="/Images/martha_rave_cookies.png"
+                    src="/martha_rave_cookies.png"
                     alt="Martha Rave Cookies logo"
                   />
                   <div id="border"></div>
@@ -472,13 +472,13 @@ document.getElementById("app").innerHTML = `
                 <img
                   id="idle-back"
                   class="top-image"
-                  src="/Images/idle_back.gif"
+                  src="/idle_back.gif"
                   alt="Swinging creature"
                 />
                 <img
                   id="idle-front"
                   class="top-image"
-                  src="/Images/idle_front.gif"
+                  src="/idle_front.gif"
                   alt="Swinging creature"
                 />
               </a>
@@ -523,7 +523,7 @@ document.getElementById("app").innerHTML = `
               >
                 <img
                   class="top-image"
-                  src="/Images/vividseats.png"
+                  src="/vividseats.png"
                   alt="Vivid Seats logo"
                 />
               </a>
@@ -553,7 +553,7 @@ document.getElementById("app").innerHTML = `
               >
                 <img
                   class="top-image"
-                  src="/Images/tbits.png"
+                  src="/tbits.png"
                   alt="Tradable Bits logo"
                 />
               </a>
@@ -581,7 +581,7 @@ document.getElementById("app").innerHTML = `
               >
                 <img
                   class="top-image"
-                  src="/Images/front_rush.png"
+                  src="/front_rush.png"
                   alt="Front Rush logo"
                 />
               </a>
@@ -615,7 +615,7 @@ document.getElementById("app").innerHTML = `
                 <img
                   style="max-width: none"
                   class="top-image"
-                  src="/Images/website.jpg"
+                  src="/website.jpg"
                   alt="The homepage of christopheroka.com"
                   loading="lazy"
                 />
@@ -648,8 +648,8 @@ document.getElementById("app").innerHTML = `
                 <img
                   class="top-image"
                   style="max-width: none"
-                  src="/Images/dogs.jpg"
-                  alt="Dogs on Google Images"
+                  src="/dogs.jpg"
+                  alt="Dogs on Google public"
                   loading="lazy"
                 />
               </a>
@@ -681,7 +681,7 @@ document.getElementById("app").innerHTML = `
               >
                 <img
                   class="top-image"
-                  src="/Images/questrade.png"
+                  src="/questrade.png"
                   alt="Questrade logo"
                   style="min-width: 170px"
                 />
@@ -716,7 +716,7 @@ document.getElementById("app").innerHTML = `
                   <img
                     class="top-image"
                     id="martha-rave-logo-card"
-                    src="/Images/martha_rave_cookies.png"
+                    src="/martha_rave_cookies.png"
                     alt="Martha Rave Cookies logo"
                   />
                   <div id="border"></div>
@@ -750,13 +750,13 @@ document.getElementById("app").innerHTML = `
                 <img
                   id="idle-back"
                   class="top-image"
-                  src="/Images/idle_back.gif"
+                  src="/idle_back.gif"
                   alt="Swinging creature"
                 />
                 <img
                   id="idle-front"
                   class="top-image"
-                  src="/Images/idle_front.gif"
+                  src="/idle_front.gif"
                   alt="Swinging creature"
                 />
               </a>
@@ -802,7 +802,7 @@ document.getElementById("app").innerHTML = `
                 <img
                   style="max-width: none"
                   class="top-image"
-                  src="/Images/website.jpg"
+                  src="/website.jpg"
                   alt="The homepage of christopheroka.com"
                   loading="lazy"
                 />
@@ -835,7 +835,7 @@ document.getElementById("app").innerHTML = `
                 <img
                   style="max-width: 220px"
                   class="top-image"
-                  src="/Images/rally.png"
+                  src="/rally.png"
                   alt="Text that says 'rally'"
                   loading="lazy"
                 />
@@ -865,7 +865,7 @@ document.getElementById("app").innerHTML = `
             <div class="image-well">
               <img
                 class="top-image"
-                src="/Images/questrade.png"
+                src="/questrade.png"
                 alt="Questrade logo"
                 loading="lazy"
               />
@@ -884,7 +884,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/usertesting.png"
+                    src="/usertesting.png"
                     alt="UserTesting logo"
                     loading="lazy"
                   />
@@ -893,7 +893,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/optimalworkshop.webp"
+                    src="/optimalworkshop.webp"
                     alt="Optimal Workshop logo"
                     loading="lazy"
                   />
@@ -902,7 +902,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/figma_logo.png"
+                    src="/figma_logo.png"
                     alt="Figma logo"
                     loading="lazy"
                     id="figma-logo"
@@ -981,7 +981,7 @@ document.getElementById("app").innerHTML = `
             <div class="image-well">
               <img
                 class="top-image"
-                src="/Images/iac-logo-white.png"
+                src="/iac-logo-white.png"
                 alt="Internet Art Club logo"
                 loading="lazy"
               />
@@ -2659,7 +2659,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/nextjs_logo.png"
+                    src="/nextjs_logo.png"
                     alt="Next.js logo"
                     loading="lazy"
                   />
@@ -2668,7 +2668,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/javascript_logo.png"
+                    src="/javascript_logo.png"
                     alt="JavaScript logo"
                     loading="lazy"
                   />
@@ -2677,7 +2677,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/html_logo.png"
+                    src="/html_logo.png"
                     alt="HTML logo"
                     loading="lazy"
                   />
@@ -2685,7 +2685,7 @@ document.getElementById("app").innerHTML = `
                 </div>
                 <div class="languages-and-tools-row" id="tailwind">
                   <img
-                    src="/Images/tailwind_logo.png"
+                    src="/tailwind_logo.png"
                     class="languages-and-tools-image"
                     alt="tailwindcss logo"
                     loading="lazy"
@@ -2696,7 +2696,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/digital_ocean_logo.png"
+                    src="/digital_ocean_logo.png"
                     alt="Digital Ocean logo"
                     loading="lazy"
                   />
@@ -2705,7 +2705,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/vercel_logo.png"
+                    src="/vercel_logo.png"
                     alt="Vercel logo"
                     loading="lazy"
                   />
@@ -2714,7 +2714,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/github.png"
+                    src="/github.png"
                     alt="GitHub logo"
                     loading="lazy"
                   />
@@ -2726,7 +2726,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/shopify_logo.png"
+                    src="/shopify_logo.png"
                     alt="Shopify logo"
                     loading="lazy"
                   />
@@ -2735,7 +2735,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/strapi_logo.png"
+                    src="/strapi_logo.png"
                     alt="Strapi logo"
                     loading="lazy"
                   />
@@ -2744,7 +2744,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/aws_logo.png"
+                    src="/aws_logo.png"
                     alt="AWS S3 logo"
                     loading="lazy"
                   />
@@ -2755,7 +2755,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/figma_logo.png"
+                    src="/figma_logo.png"
                     alt="Figma logo"
                     loading="lazy"
                     id="figma-logo"
@@ -2777,7 +2777,7 @@ document.getElementById("app").innerHTML = `
             <div class="image-well">
               <img
                 class="top-image"
-                src="/Images/creature_world.png"
+                src="/creature_world.png"
                 alt="Creature world logo"
                 loading="lazy"
               />
@@ -2801,7 +2801,7 @@ document.getElementById("app").innerHTML = `
               >
                 <div class="top-block blue"></div>
                 <video
-                  src="/Images/creature_world_explore-phone.mp4"
+                  src="/creature_world_explore-phone.mp4"
                   autoplay
                   muted
                   loop
@@ -2810,12 +2810,12 @@ document.getElementById("app").innerHTML = `
                   disableRemotePlayback
                 ></video>
                 <img
-                  src="/Images/phone_chin.png"
+                  src="/phone_chin.png"
                   class="phone-chin"
                   alt="phone displaying creature.world explore page, with a selected projects section, artwork gallery section and project archive"
                 />
                 <img
-                  src="/Images/phone_overlay.png"
+                  src="/phone_overlay.png"
                   alt="phone displaying creature.world explore page, with a selected projects section, artwork gallery section and project archive"
                 />
               </a>
@@ -2828,7 +2828,7 @@ document.getElementById("app").innerHTML = `
                 <div class="top-block white"></div>
 
                 <video
-                  src="/Images/creature_world_homepage_phone.mp4"
+                  src="/creature_world_homepage_phone.mp4"
                   autoplay
                   muted
                   loop
@@ -2837,12 +2837,12 @@ document.getElementById("app").innerHTML = `
                   disableRemotePlayback
                 ></video>
                 <img
-                  src="/Images/phone_chin.png"
+                  src="/phone_chin.png"
                   class="phone-chin"
                   alt="phone displaying creature.world homepage with page headers and animated creatures swinging on the text"
                 />
                 <img
-                  src="/Images/phone_overlay.png"
+                  src="/phone_overlay.png"
                   alt="phone displaying creature.world homepage with page headers and animated creatures swinging on the text"
                 />
               </a>
@@ -2855,7 +2855,7 @@ document.getElementById("app").innerHTML = `
                 <div class="top-block white"></div>
 
                 <video
-                  src="/Images/creature_world_store_phone.mp4"
+                  src="/creature_world_store_phone.mp4"
                   autoplay
                   muted
                   loop
@@ -2864,12 +2864,12 @@ document.getElementById("app").innerHTML = `
                   disableRemotePlayback
                 ></video>
                 <img
-                  src="/Images/phone_chin.png"
+                  src="/phone_chin.png"
                   class="phone-chin"
                   alt="phone displaying creature.world store with products displayed on the storefront"
                 />
                 <img
-                  src="/Images/phone_overlay.png"
+                  src="/phone_overlay.png"
                   alt="phone displaying creature.world store with products displayed on the storefront"
                 />
               </a>
@@ -2880,7 +2880,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/nextjs_logo.png"
+                    src="/nextjs_logo.png"
                     alt="Next.js logo"
                     loading="lazy"
                   />
@@ -2889,7 +2889,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/javascript_logo.png"
+                    src="/javascript_logo.png"
                     alt="JavaScript logo"
                     loading="lazy"
                   />
@@ -2898,7 +2898,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/html_logo.png"
+                    src="/html_logo.png"
                     alt="HTML logo"
                     loading="lazy"
                   />
@@ -2907,7 +2907,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/css_logo.png"
+                    src="/css_logo.png"
                     alt="CSS logo"
                     loading="lazy"
                   />
@@ -2918,7 +2918,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/github.png"
+                    src="/github.png"
                     alt="GitHub logo"
                     loading="lazy"
                   />
@@ -2927,7 +2927,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/heroku_logo.png"
+                    src="/heroku_logo.png"
                     alt="Heroku logo"
                     loading="lazy"
                   />
@@ -2936,7 +2936,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/vercel_logo.png"
+                    src="/vercel_logo.png"
                     alt="Vercel logo"
                     loading="lazy"
                   />
@@ -2947,7 +2947,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/figma_logo.png"
+                    src="/figma_logo.png"
                     alt="Figma logo"
                     loading="lazy"
                     id="figma-logo"
@@ -2959,7 +2959,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/strapi_logo.png"
+                    src="/strapi_logo.png"
                     alt="Strapi logo"
                     loading="lazy"
                   />
@@ -2968,7 +2968,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/cloudinary_logo.png"
+                    src="/cloudinary_logo.png"
                     alt="Cloudinary logo"
                     loading="lazy"
                   />
@@ -2979,7 +2979,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/shopify_logo.png"
+                    src="/shopify_logo.png"
                     alt="Shopify logo"
                     loading="lazy"
                   />
@@ -3014,7 +3014,7 @@ document.getElementById("app").innerHTML = `
             <div class="horizontal-image-row">
               <div class="image-block">
                 <img
-                  src="/Images/lfp_creature_world_homepage.png"
+                  src="/lfp_creature_world_homepage.png"
                   loading="lazy"
                   alt="Hand-drawn prototype of creature world homepage"
                 />
@@ -3022,7 +3022,7 @@ document.getElementById("app").innerHTML = `
               </div>
               <div class="image-block">
                 <img
-                  src="/Images/lfp_creature_world_info.jpeg"
+                  src="/lfp_creature_world_info.jpeg"
                   loading="lazy"
                   alt="Prototype of creature world info page, created in Notion"
                 />
@@ -3030,14 +3030,14 @@ document.getElementById("app").innerHTML = `
               </div>
               <div class="image-block">
                 <img
-                  src="/Images/question_mark.png"
+                  src="/question_mark.png"
                   alt="question mark with box around it"
                 />
                 <div>Explore</div>
               </div>
               <div class="image-block">
                 <img
-                  src="/Images/lfp_creature_world_store.png"
+                  src="/lfp_creature_world_store.png"
                   loading="lazy"
                   alt="Hand-drawn prototype of creature world store page"
                 />
@@ -3120,14 +3120,14 @@ document.getElementById("app").innerHTML = `
             <div class="horizontal-image-row phone-laptop">
               <div class="image-block phone">
                 <img
-                  src="/Images/creature_world_homepage_phone.webp"
+                  src="/creature_world_homepage_phone.webp"
                   loading="lazy"
                   alt="creature.world homepage on a phone, with animated creatures swinging on the text"
                 />
               </div>
               <div class="image-block laptop">
                 <img
-                  src="/Images/creature_world_homepage_laptop.png"
+                  src="/creature_world_homepage_laptop.png"
                   loading="lazy"
                   alt="creature.world homepage on a laptop, with animated creatures swinging on the text"
                 />
@@ -3143,14 +3143,14 @@ document.getElementById("app").innerHTML = `
             <div class="horizontal-image-row phone-laptop">
               <div class="image-block phone">
                 <img
-                  src="/Images/creature_world_info_phone.png"
+                  src="/creature_world_info_phone.png"
                   loading="lazy"
                   alt="creature.world info page on a phone, with a large picture of artwork, and a bio beneath"
                 />
               </div>
               <div class="image-block laptop">
                 <img
-                  src="/Images/creature_world_info_laptop.png"
+                  src="/creature_world_info_laptop.png"
                   loading="lazy"
                   alt="creature.world info page on a laptop, with a large picture of artwork, and a bio beneath"
                 />
@@ -3172,7 +3172,7 @@ document.getElementById("app").innerHTML = `
               pages.
             </p>
             <img
-              src="/Images/dannycole_portfolio_site.png"
+              src="/dannycole_portfolio_site.png"
               class="constrained-width-image"
               loading="lazy"
               alt="Danny Cole's previous portfolio website"
@@ -3182,7 +3182,7 @@ document.getElementById("app").innerHTML = `
               with:
             </p>
             <img
-              src="/Images/lfp_explore.png"
+              src="/lfp_explore.png"
               class="constrained-width-image"
               loading="lazy"
               alt="A prototype of the explore page, created in Figma"
@@ -3202,7 +3202,7 @@ document.getElementById("app").innerHTML = `
               here’s what we ended up with:
             </p>
             <img
-              src="/Images/creature_world_explore_final.png"
+              src="/creature_world_explore_final.png"
               class="constrained-width-image"
               loading="lazy"
               alt="The final design of the creature.world explore page, implemented on the web"
@@ -3217,7 +3217,7 @@ document.getElementById("app").innerHTML = `
             </p>
             <p>Here’s what that looks like:</p>
             <img
-              src="/Images/creature_world_explore_selected.png"
+              src="/creature_world_explore_selected.png"
               class="constrained-width-image"
               loading="lazy"
               alt="The creature.world explore page with a project selected and the article displayed beneath it"
@@ -3251,7 +3251,7 @@ document.getElementById("app").innerHTML = `
               content to the homepage, info page, and explore page.
             </p>
             <img
-              src="/Images/strapi_dashboard.png"
+              src="/strapi_dashboard.png"
               loading="lazy"
               alt="a table displaying order details"
               style="margin-bottom: 3rem; display: block"
@@ -3308,21 +3308,21 @@ document.getElementById("app").innerHTML = `
             </p>
             <p>Here’s what I ended up with:</p>
             <img
-              src="/Images/creature_world_storefront.png"
+              src="/creature_world_storefront.png"
               class="constrained-width-image"
               loading="lazy"
               alt="a table displaying order details"
               style="margin-bottom: 1rem"
             />
             <img
-              src="/Images/creature_world_product_item.png"
+              src="/creature_world_product_item.png"
               class="constrained-width-image"
               loading="lazy"
               alt="a table displaying order details"
               style="margin-bottom: 1rem"
             />
             <img
-              src="/Images/creature_world_checkout.png"
+              src="/creature_world_checkout.png"
               class="constrained-width-image"
               loading="lazy"
               alt="a table displaying order details"
@@ -3392,7 +3392,7 @@ document.getElementById("app").innerHTML = `
             <div class="image-well">
               <img
                 class="top-image"
-                src="/Images/IMG_2328.jpg"
+                src="/IMG_2328.jpg"
                 style="
                   padding: 0.25rem;
                   background-color: white;
@@ -3469,7 +3469,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/nextjs_logo.png"
+                    src="/nextjs_logo.png"
                     alt="Next.js logo"
                     loading="lazy"
                   />
@@ -3478,7 +3478,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/javascript_logo.png"
+                    src="/javascript_logo.png"
                     alt="JavaScript logo"
                     loading="lazy"
                   />
@@ -3487,7 +3487,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/html_logo.png"
+                    src="/html_logo.png"
                     alt="HTML logo"
                     loading="lazy"
                   />
@@ -3496,7 +3496,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/css_logo.png"
+                    src="/css_logo.png"
                     alt="CSS logo"
                     loading="lazy"
                   />
@@ -3507,7 +3507,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/github.png"
+                    src="/github.png"
                     alt="GitHub logo"
                     loading="lazy"
                   />
@@ -3516,7 +3516,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/heroku_logo.png"
+                    src="/heroku_logo.png"
                     alt="Heroku logo"
                     loading="lazy"
                   />
@@ -3525,7 +3525,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/vercel_logo.png"
+                    src="/vercel_logo.png"
                     alt="Vercel logo"
                     loading="lazy"
                   />
@@ -3536,7 +3536,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/figma_logo.png"
+                    src="/figma_logo.png"
                     alt="Figma logo"
                     loading="lazy"
                     id="figma-logo"
@@ -3548,7 +3548,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/strapi_logo.png"
+                    src="/strapi_logo.png"
                     alt="Strapi logo"
                     loading="lazy"
                   />
@@ -3557,7 +3557,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/aws_logo.png"
+                    src="/aws_logo.png"
                     alt="AWS S3 logo"
                     loading="lazy"
                   />
@@ -3599,14 +3599,14 @@ document.getElementById("app").innerHTML = `
               easily modified by non-technical editors.
             </p>
             <p>Here’s what the finished site looks like:</p>
-            <img src="/Images/SCR-20230830-iudc.jpeg" loading="lazy" />
+            <img src="/SCR-20230830-iudc.jpeg" loading="lazy" />
             <img
-              src="/Images/SCR-20230830-qaeb.jpeg"
+              src="/SCR-20230830-qaeb.jpeg"
               loading="lazy"
               style="margin-top: 1.5rem"
             />
             <img
-              src="/Images/SCR-20230830-iwpd.jpeg"
+              src="/SCR-20230830-iwpd.jpeg"
               loading="lazy"
               style="margin: 1.5rem auto"
             />
@@ -3651,7 +3651,7 @@ document.getElementById("app").innerHTML = `
               site:
             </p>
             <img
-              src="/Images/byline infrastructure.png"
+              src="/byline infrastructure.png"
               alt=""
               loading="lazy"
               style="max-width: 650px; margin-bottom: 1.5rem"
@@ -3729,7 +3729,7 @@ document.getElementById("app").innerHTML = `
             <div class="image-well">
               <img
                 class="top-image"
-                src="/Images/vividseats.png"
+                src="/vividseats.png"
                 alt="Vivid Seats logo"
                 loading="lazy"
               />
@@ -3748,7 +3748,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/nextjs_logo.png"
+                    src="/nextjs_logo.png"
                     alt="Next.js logo"
                     loading="lazy"
                   />
@@ -3757,7 +3757,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/javascript_logo.png"
+                    src="/javascript_logo.png"
                     alt="JavaScript logo"
                     loading="lazy"
                   />
@@ -3766,7 +3766,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/html_logo.png"
+                    src="/html_logo.png"
                     alt="HTML logo"
                     loading="lazy"
                   />
@@ -3775,7 +3775,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/css_logo.png"
+                    src="/css_logo.png"
                     alt="CSS logo"
                     loading="lazy"
                   />
@@ -3786,7 +3786,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/javascript_logo.png"
+                    src="/javascript_logo.png"
                     alt="Express.js logo"
                     loading="lazy"
                   />
@@ -3795,7 +3795,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/nodejs_logo.png"
+                    src="/nodejs_logo.png"
                     alt="Node.js logo"
                     loading="lazy"
                   />
@@ -3806,7 +3806,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/github.png"
+                    src="/github.png"
                     alt="GitHub logo"
                     loading="lazy"
                   />
@@ -3815,7 +3815,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/jenkins_logo.png"
+                    src="/jenkins_logo.png"
                     alt="Jenkins logo"
                     loading="lazy"
                   />
@@ -3824,7 +3824,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/skipper_logo.png"
+                    src="/skipper_logo.png"
                     alt="Skipper logo"
                     loading="lazy"
                   />
@@ -3833,7 +3833,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/swagger_logo.png"
+                    src="/swagger_logo.png"
                     alt="Swagger logo"
                     loading="lazy"
                   />
@@ -3844,7 +3844,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/figma_logo.png"
+                    src="/figma_logo.png"
                     alt="Figma logo"
                     loading="lazy"
                     id="figma-logo"
@@ -3856,7 +3856,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/strapi_logo.png"
+                    src="/strapi_logo.png"
                     alt="strapi logo"
                     loading="lazy"
                   />
@@ -3964,7 +3964,7 @@ document.getElementById("app").innerHTML = `
             <div class="image-well">
               <img
                 class="top-image"
-                src="/Images/tbits.png"
+                src="/tbits.png"
                 alt="Tradable Bits logo"
                 loading="lazy"
               />
@@ -3983,7 +3983,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/javascript_logo.png"
+                    src="/javascript_logo.png"
                     alt="JavaScript logo"
                     loading="lazy"
                   />
@@ -4003,7 +4003,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/python_logo.png"
+                    src="/python_logo.png"
                     alt="Python logo"
                     loading="lazy"
                   />
@@ -4023,7 +4023,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/git_logo.png"
+                    src="/git_logo.png"
                     alt="Git logo"
                     loading="lazy"
                   />
@@ -4037,7 +4037,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/postgresql_logo.png"
+                    src="/postgresql_logo.png"
                     alt="PostgreSQL logo"
                     loading="lazy"
                   />
@@ -4049,7 +4049,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/html_logo.png"
+                    src="/html_logo.png"
                     alt="HTML logo"
                     loading="lazy"
                   />
@@ -4060,7 +4060,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/css_logo.png"
+                    src="/css_logo.png"
                     alt="CSS logo"
                     loading="lazy"
                   />
@@ -4071,7 +4071,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/figma_logo.png"
+                    src="/figma_logo.png"
                     alt="Figma logo"
                     loading="lazy"
                     id="figma-logo"
@@ -4153,7 +4153,7 @@ document.getElementById("app").innerHTML = `
             <div class="image-well">
               <img
                 class="top-image"
-                src="/Images/front_rush.png"
+                src="/front_rush.png"
                 alt="Front Rush logo"
                 loading="lazy"
               />
@@ -4172,7 +4172,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/javascript_logo.png"
+                    src="/javascript_logo.png"
                     alt="JavaScript logo"
                     loading="lazy"
                   />
@@ -4186,7 +4186,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/python_logo.png"
+                    src="/python_logo.png"
                     alt="Python logo"
                     loading="lazy"
                   />
@@ -4203,7 +4203,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/sql_logo.png"
+                    src="/sql_logo.png"
                     alt="SQL logo"
                     loading="lazy"
                   />
@@ -4217,7 +4217,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/html_logo.png"
+                    src="/html_logo.png"
                     alt="HTML logo"
                     loading="lazy"
                   />
@@ -4228,7 +4228,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/css_logo.png"
+                    src="/css_logo.png"
                     alt="CSS logo"
                     loading="lazy"
                   />
@@ -4282,7 +4282,7 @@ document.getElementById("app").innerHTML = `
             <div class="image-well">
               <img
                 class="top-image"
-                src="/Images/martha_rave_cookies.png"
+                src="/martha_rave_cookies.png"
                 alt="Martha Rave Cookies logo"
                 loading="lazy"
                 style="
@@ -4310,7 +4310,7 @@ document.getElementById("app").innerHTML = `
             </h2>
             <img
               class="splitscreen-dashboards"
-              src="/Images/splitscreen_dashboards.webp"
+              src="/splitscreen_dashboards.webp"
             />
             <h3>Synopsis</h3>
             <p>
@@ -4325,30 +4325,30 @@ document.getElementById("app").innerHTML = `
               <div class="tools">
                 <div class="tools-column">
                   <div class="tools-row">
-                    <img src="/Images/nextjs_logo.png" /><span>Next.js</span>
+                    <img src="/nextjs_logo.png" /><span>Next.js</span>
                   </div>
                   <div class="tools-row" id="tailwind">
-                    <img src="/Images/tailwind_logo.png" /><span
+                    <img src="/tailwind_logo.png" /><span
                       >tailwindcss</span
                     >
                   </div>
                   <div class="tools-row">
-                    <img src="/Images/vercel_logo.png" /><span>Vercel</span>
+                    <img src="/vercel_logo.png" /><span>Vercel</span>
                   </div>
                 </div>
                 <div class="tools-column">
                   <div class="tools-row">
-                    <img src="/Images/supabase_logo.png" /><span>Supabase</span>
+                    <img src="/supabase_logo.png" /><span>Supabase</span>
                   </div>
                   <div class="tools-row">
-                    <img src="/Images/postgresql_logo.png" /><span
+                    <img src="/postgresql_logo.png" /><span
                       >PostgreSQL</span
                     >
                   </div>
                 </div>
                 <div class="tools-column">
                   <div class="tools-row">
-                    <img src="/Images/figma_logo.png" /><span>Figma</span>
+                    <img src="/figma_logo.png" /><span>Figma</span>
                   </div>
                 </div>
               </div>
@@ -4370,7 +4370,7 @@ document.getElementById("app").innerHTML = `
             </p>
             <p>TL;DR: It was a nightmare.</p>
             <div class="spreadsheet-of-doom">
-              <img src="/Images/spreadsheet_of_doom.webp" loading="lazy" />
+              <img src="/spreadsheet_of_doom.webp" loading="lazy" />
               <p>The spreadsheet of doom...</p>
             </div>
             <p>
@@ -4394,7 +4394,7 @@ document.getElementById("app").innerHTML = `
               <div class="step-card">
                 <div class="card-head">
                   <div>
-                    <img src="/Images/circle_one.svg" />
+                    <img src="/circle_one.svg" />
                   </div>
                   <div>
                     <div class="card-title">Placement</div>
@@ -4422,7 +4422,7 @@ document.getElementById("app").innerHTML = `
               <div class="step-card">
                 <div class="card-head">
                   <div>
-                    <img src="/Images/circle_two.svg" />
+                    <img src="/circle_two.svg" />
                   </div>
                   <div>
                     <div class="card-title">Management</div>
@@ -4465,7 +4465,7 @@ document.getElementById("app").innerHTML = `
               <div class="step-card">
                 <div class="card-head">
                   <div>
-                    <img src="/Images/circle_three.svg" />
+                    <img src="/circle_three.svg" />
                   </div>
                   <div>
                     <div class="card-title">Fulfillment</div>
@@ -4544,7 +4544,7 @@ document.getElementById("app").innerHTML = `
               So, with no experience with any of those tools, I jumped right in.
             </p>
             <div class="step-header">
-              <img src="/Images/circle_two.svg" />
+              <img src="/circle_two.svg" />
               <h3>Management</h3>
             </div>
             <p>
@@ -4573,7 +4573,7 @@ document.getElementById("app").innerHTML = `
               I got to work in Figma, and threw together some low-fidelity
               prototypes as a proof of concept.
             </p>
-            <img src="/Images/lfp_dashboard.webp" loading="lazy" />
+            <img src="/lfp_dashboard.webp" loading="lazy" />
             <p>
               I came up with a dashboard that would display only the information
               she needed, which could be filtered to display only what was
@@ -4593,7 +4593,7 @@ document.getElementById("app").innerHTML = `
             </p>
             <img
               style="max-width: 650px"
-              src="/Images/mfp_dashboard.webp"
+              src="/mfp_dashboard.webp"
               loading="lazy"
             />
             <p>
@@ -4612,7 +4612,7 @@ document.getElementById("app").innerHTML = `
             </p>
             <img
               style="max-width: 450px"
-              src="/Images/mfp_dashboard_print.webp"
+              src="/mfp_dashboard_print.webp"
               loading="lazy"
             />
             <p>
@@ -4624,7 +4624,7 @@ document.getElementById("app").innerHTML = `
             </p>
             <p>Here's what I came up with:</p>
             <img
-              src="/Images/all_orders.webp"
+              src="/all_orders.webp"
               style="max-width: 650px"
               loading="lazy"
               alt="a table displaying order details"
@@ -4650,7 +4650,7 @@ document.getElementById("app").innerHTML = `
               I could spend time on the more important parts of the platform.
             </p>
             <div class="step-header">
-              <img src="/Images/circle_one.svg" />
+              <img src="/circle_one.svg" />
               <h3>Placement</h3>
             </div>
             <p>
@@ -4698,25 +4698,25 @@ document.getElementById("app").innerHTML = `
             </p>
             <div class="canadian-protein">
               <img
-                src="/Images/canadian_protein_storefront.webp"
+                src="/canadian_protein_storefront.webp"
                 loading="lazy"
               />
-              <img src="/Images/canadian_protein_item.webp" loading="lazy" />
+              <img src="/canadian_protein_item.webp" loading="lazy" />
             </div>
             <p>Here are a few of the initial designs:</p>
             <div class="mfps">
               <img
-                src="/Images/mfp_products.webp"
+                src="/mfp_products.webp"
                 loading="lazy"
                 style="max-width: 650px; margin-bottom: 1rem"
               />
               <img
-                src="/Images/mfp_cart.webp"
+                src="/mfp_cart.webp"
                 loading="lazy"
                 style="max-width: 650px; margin-bottom: 1rem"
               />
               <img
-                src="/Images/mfp_checkout.webp"
+                src="/mfp_checkout.webp"
                 loading="lazy"
                 style="max-width: 650px"
               />
@@ -4746,7 +4746,7 @@ document.getElementById("app").innerHTML = `
               is finished checking out:
             </p>
             <img
-              src="/Images/thank_you_page.webp"
+              src="/thank_you_page.webp"
               loading="lazy"
               style="max-width: 650px"
             />
@@ -4761,7 +4761,7 @@ document.getElementById("app").innerHTML = `
               end.
             </p>
             <div class="step-header">
-              <img src="/Images/circle_three.svg" />
+              <img src="/circle_three.svg" />
               <h3>Fulfillment</h3>
             </div>
             <p>
@@ -4775,7 +4775,7 @@ document.getElementById("app").innerHTML = `
             </p>
             <h3>Ideation</h3>
             <p>Here's the low fidelity-prototype I started with:</p>
-            <img src="/Images/lfp_order_dashboard.webp" loading="lazy" alt="" />
+            <img src="/lfp_order_dashboard.webp" loading="lazy" alt="" />
             <p>
               This design attempts to solve all of the given problems, with each
               “card” displaying only what the customer ordered, a checkbox
@@ -4794,7 +4794,7 @@ document.getElementById("app").innerHTML = `
               changes were made between low-fidelity and high-fidelity.
             </p>
             <img
-              src="/Images/hfp_order_dashboard.webp"
+              src="/hfp_order_dashboard.webp"
               loading="lazy"
               alt=""
               style="max-width: 650px"
@@ -4824,7 +4824,7 @@ document.getElementById("app").innerHTML = `
               receiving feedback from my aunt.
             </p>
             <img
-              src="/Images/order_dashboard_print.webp"
+              src="/order_dashboard_print.webp"
               loading="lazy"
               alt=""
               style="max-width: 500px"
@@ -4846,7 +4846,7 @@ document.getElementById("app").innerHTML = `
               <div class="header-bar"></div>
             </div>
             <img
-              src="/Images/products_final.webp"
+              src="/products_final.webp"
               alt="storefront with different types of cookies"
               loading="lazy"
               class="max-width-650"
@@ -4870,7 +4870,7 @@ document.getElementById("app").innerHTML = `
               </li>
             </ul>
             <img
-              src="/Images/checkout_final.webp"
+              src="/checkout_final.webp"
               alt="checkout with some products in the cart"
               loading="lazy"
               class="max-width-650"
@@ -4888,7 +4888,7 @@ document.getElementById("app").innerHTML = `
               </li>
             </ul>
             <img
-              src="/Images/thank_you_page_final.webp"
+              src="/thank_you_page_final.webp"
               alt="website thank you for ordering page"
               loading="lazy"
               class="max-width-650"
@@ -4900,7 +4900,7 @@ document.getElementById("app").innerHTML = `
               <li>Option to place another order</li>
             </ul>
             <img
-              src="/Images/email_final.webp"
+              src="/email_final.webp"
               alt="an email from Martha Rave Cookies displaying a customer's order"
               loading="lazy"
               class="max-width-650"
@@ -4921,7 +4921,7 @@ document.getElementById("app").innerHTML = `
               <div class="header-bar"></div>
             </div>
             <img
-              src="/Images/home_dashboard_final.webp"
+              src="/home_dashboard_final.webp"
               alt="a table displaying a breakdown of order quantities"
               loading="lazy"
               class="max-width-650"
@@ -4940,7 +4940,7 @@ document.getElementById("app").innerHTML = `
               </li>
             </ul>
             <img
-              src="/Images/home_print_layout_final.webp"
+              src="/home_print_layout_final.webp"
               alt="a print layout of the same table with circles next to each table entry"
               loading="lazy"
               style="max-width: 500px"
@@ -4957,7 +4957,7 @@ document.getElementById("app").innerHTML = `
               </li>
             </ul>
             <img
-              src="/Images/all_orders_final.webp"
+              src="/all_orders_final.webp"
               alt="table displaying order information for all orders"
               loading="lazy"
               class="max-width-650"
@@ -4977,14 +4977,14 @@ document.getElementById("app").innerHTML = `
               <div class="header-bar"></div>
             </div>
             <img
-              src="/Images/order_dashboard_final.webp"
+              src="/order_dashboard_final.webp"
               alt="dashboard displaying each customer order"
               loading="lazy"
               class="max-width-650"
               style="margin-bottom: 1rem"
             />
             <img
-              src="/Images/order_dashboard_email_final.webp"
+              src="/order_dashboard_email_final.webp"
               alt="popup with text field and send button, designed to send an email to a customer"
               loading="lazy"
               class="max-width-650"
@@ -5002,7 +5002,7 @@ document.getElementById("app").innerHTML = `
               <li>Ability to send emails to customers directly from the UI</li>
             </ul>
             <img
-              src="/Images/order_dashboard_print_final.webp"
+              src="/order_dashboard_print_final.webp"
               alt="print layout of orders, showing each order in a neat manner"
               loading="lazy"
               style="max-width: 500px"
@@ -5039,7 +5039,7 @@ document.getElementById("app").innerHTML = `
               much she’s spending and when.
             </p>
             <img
-              src="/Images/finances_final.webp"
+              src="/finances_final.webp"
               alt="a graph of finances"
               loading="lazy"
               class="max-width-650"
@@ -5114,7 +5114,7 @@ document.getElementById("app").innerHTML = `
             <div class="image-well">
               <img
                 class="top-image"
-                src="/Images/dogs.jpg"
+                src="/dogs.jpg"
                 alt="Dogs on google images"
                 loading="lazy"
               />
@@ -5133,7 +5133,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/python_logo.png"
+                    src="/python_logo.png"
                     alt="Python logo"
                     loading="lazy"
                   />
@@ -5142,7 +5142,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/selenium.png"
+                    src="/selenium.png"
                     alt="Selenium logo"
                     loading="lazy"
                   />
@@ -5151,7 +5151,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/numpy.png"
+                    src="/numpy.png"
                     alt="NumPy logo"
                     loading="lazy"
                   />
@@ -5160,7 +5160,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/pillow.png"
+                    src="/pillow.png"
                     alt="Pillow logo"
                     loading="lazy"
                   />
@@ -5171,7 +5171,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/tensorflow.png"
+                    src="/tensorflow.png"
                     alt="TensorFlow logo"
                     loading="lazy"
                   />
@@ -5188,12 +5188,12 @@ document.getElementById("app").innerHTML = `
             </p>
             <h2>How It Works</h2>
             <img
-              src="/Images/web_scraper_diagram.png"
+              src="/web_scraper_diagram.png"
               loading="lazy"
               id="desktop-web-scraper-diagram"
             />
             <img
-              src="/Images/web_scraper_diagram_mobile.png"
+              src="/web_scraper_diagram_mobile.png"
               loading="lazy"
               id="mobile-web-scraper-diagram"
             />
@@ -5229,7 +5229,7 @@ document.getElementById("app").innerHTML = `
             <div class="image-well">
               <img
                 class="top-image"
-                src="/Images/rally.png"
+                src="/rally.png"
                 alt="Two phones displaying the rally app"
                 loading="lazy"
               />
@@ -5256,7 +5256,7 @@ document.getElementById("app").innerHTML = `
             <div class="image-well">
               <img
                 class="top-image"
-                src="/Images/website.jpg"
+                src="/website.jpg"
                 alt="A screenshot of christopheroka.com"
                 loading="lazy"
               />
@@ -5275,7 +5275,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/javascript_logo.png"
+                    src="/javascript_logo.png"
                     alt="JavaScript logo"
                     loading="lazy"
                   />
@@ -5286,7 +5286,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/html_logo.png"
+                    src="/html_logo.png"
                     alt="HTML logo"
                     loading="lazy"
                   />
@@ -5297,7 +5297,7 @@ document.getElementById("app").innerHTML = `
                 <div class="languages-and-tools-row">
                   <img
                     class="languages-and-tools-image"
-                    src="/Images/css_logo.png"
+                    src="/css_logo.png"
                     alt="CSS logo"
                     loading="lazy"
                   />
@@ -5381,12 +5381,12 @@ document.getElementById("app").innerHTML = `
       <button id="back-btn" class="hidden" onclick="returnHome()" tabindex="0">
         <img
           id="left-arrow"
-          src="/Images/yellow_back_arrow.svg"
+          src="/yellow_back_arrow.svg"
           alt="left arrow"
         />
         <img
           id="gold-back-arrow"
-          src="/Images/gold_back_arrow.svg"
+          src="/gold_back_arrow.svg"
           alt="back arrow"
         />
       </button>
@@ -5402,7 +5402,7 @@ document.getElementById("app").innerHTML = `
           >
             <img
               class="social-icon"
-              src="/Images/linkedin.png"
+              src="/linkedin.png"
               alt="LinkedIn logo"
             />
           </a>
@@ -5413,14 +5413,14 @@ document.getElementById("app").innerHTML = `
           >
             <img
               class="social-icon"
-              src="/Images/github.png"
+              src="/github.png"
               alt="GitHub logo"
             />
           </a>
           <a href="mailto:chriskroka@gmail.com">
             <img
               class="social-icon"
-              src="/Images/gmail.webp"
+              src="/gmail.webp"
               alt="Email logo"
             />
           </a>
